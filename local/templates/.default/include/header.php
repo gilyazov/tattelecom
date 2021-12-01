@@ -66,23 +66,22 @@
                     </div>
 
                     <div class="header__bottom-block-right gl__bg-hide">
-                        <ul class="header__bottom-menu-list">
-                            <li class="header__bottom-menu-item">
-                                <a href="/mobile/" class="header__bottom-menu-link" data-hover-value="mobile">Мобильная связь</a>
-                            </li>
-                            <li class="header__bottom-menu-item">
-                                <a href="/internet/" class="header__bottom-menu-link" data-hover-value="internet">Интернет</a>
-                            </li>
-                            <li class="header__bottom-menu-item">
-                                <a href="/tv-online.html" class="header__bottom-menu-link" data-hover-value="tv">Телевидение</a>
-                            </li>
-                            <li class="header__bottom-menu-item">
-                                <a href="/promo-intercom" class="header__bottom-menu-link" data-hover-value="doorphone">Домофон</a>
-                            </li>
-                            <li class="header__bottom-menu-item">
-                                <a href="/4g-services.html" class="header__bottom-menu-link" data-hover-value="catalog">Каталог устройств</a>
-                            </li>
-                        </ul>
+                        <?$APPLICATION->IncludeComponent("bitrix:menu", "header__bottom-menu-list", Array(
+                            "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+                            "CHILD_MENU_TYPE" => "",    // Тип меню для остальных уровней
+                            "DELAY" => "N", // Откладывать выполнение шаблона меню
+                            "MAX_LEVEL" => "1", // Уровень вложенности меню
+                            "MENU_CACHE_GET_VARS" => array( // Значимые переменные запроса
+                                0 => "",
+                            ),
+                            "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                            "MENU_CACHE_TYPE" => "N",   // Тип кеширования
+                            "MENU_CACHE_USE_GROUPS" => "Y", // Учитывать права доступа
+                            "ROOT_MENU_TYPE" => "top",  // Тип меню для первого уровня
+                            "USE_EXT" => "Y",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
+                        ),
+                            false
+                        );?>
 
                         <div class="header__btns-container">
                             <button type="button" class="header__bottom-btn header__btn-search">
