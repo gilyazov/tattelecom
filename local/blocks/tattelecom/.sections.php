@@ -10,10 +10,10 @@ use \Bitrix\Main\Localization\Loc;
 return array(
     'content'   => 'Контент',
     'banner'  => 'Банер',
+    'page'  => 'Страницы',
 
     'text'    => 'Текстовой блок',
     'template'  => 'Шаблон',
     'dynamic'  => 'Динамические блоки',
-    'page'  => 'Страницы',
     'intro'  => 'Вступление',
 );

@@ -1,14 +1,14 @@
 <?php
 $arUrlRewrite=array (
-  4 =>
+  4 => 
   array (
     'CONDITION' => '#^/internet/rates/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
-    'PATH' => '/internet/rates/index.php',
+    'PATH' => '/dynamic/internet/rates/index.php',
     'SORT' => 100,
   ),
-  3 =>
+  3 => 
   array (
     'CONDITION' => '#^/mobile/rates/#',
     'RULE' => '',
@@ -16,7 +16,7 @@ $arUrlRewrite=array (
     'PATH' => '/dynamic/mobile/rates/index.php',
     'SORT' => 100,
   ),
-  2 =>
+  2 => 
   array (
     'CONDITION' => '#^/news/#',
     'RULE' => '',
@@ -24,7 +24,7 @@ $arUrlRewrite=array (
     'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
-  5 => 
+  1 =>
   array (
     'CONDITION' => '#^/#',
     'RULE' => NULL,
