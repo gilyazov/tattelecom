@@ -4,6 +4,7 @@
 $eventManager = \Bitrix\Main\EventManager::getInstance();
 
 $eventManager->addEventHandler('main', 'OnPageStart', ['\Tattelecom\Core\EventHandlers\Main\Page', 'OnPageStartHandler']);
+$eventManager->addEventHandler('main', 'OnBeforeProlog', ['\Tattelecom\Core\EventHandlers\Main\Prolog', 'OnBeforePrologAddHandler']);
 
 $eventManager->addEventHandler('landing', 'onDemosGetRepository', ['\Tattelecom\Core\EventHandlers\Landing\Template', 'onDemosGetRepositoryHandler']);
 $eventManager->addEventHandler('landing', 'onHookExec', ['\Tattelecom\Core\EventHandlers\Landing\Hook', 'onHookExecHandler']);

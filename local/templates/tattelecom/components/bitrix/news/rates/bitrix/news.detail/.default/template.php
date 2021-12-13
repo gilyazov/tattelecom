@@ -18,65 +18,36 @@ $this->setFrameMode(true);
 
         <form class="rates-info__content" data-need-validation data-parsley-validate data-parsley-focus="none">
             <div class="rates-info__preview">
-                <div class="rates-info__title">Включено в абонентскую плату:</div>
 
+                <div class="rates-info__title">Включено в абонентскую плату:</div>
                 <ul class="rates-info__preview-list">
-                    <li class="rates-info__preview-item">
-                        <div class="rates-info__preview-caption">Интернет</div>
-                        <ul class="rates-info__preview-rows-list">
-                            <li class="rates-info__preview-row">
-                                <div class="rates-info__preview-rows-caption-wrapper">
-                                    <div class="rates-info__preview-rows-caption">Мобильный интернет</div>
-                                </div>
-                                <div class="rates-info__preview-rows-caption-value">Безлимит</div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="rates-info__preview-item">
-                        <div class="rates-info__preview-caption">Звонки</div>
-                        <ul class="rates-info__preview-rows-list">
-                            <li class="rates-info__preview-row">
-                                <div class="rates-info__preview-rows-caption-wrapper">
-                                    <div class="rates-info__preview-rows-caption">Исходящие вызовы на мобильные и городские номера РТ (за исключением номеров «Летай»)</div>
-                                </div>
-                                <div class="rates-info__preview-rows-caption-value">500 мин./мес.</div>
-                            </li>
-                            <li class="rates-info__preview-row">
-                                <div class="rates-info__preview-rows-caption-wrapper">
-                                    <div class="rates-info__preview-rows-caption">Исходящие вызовы на мобильные и городские номера РФ</div>
-                                </div>
-                                <div class="rates-info__preview-rows-caption-value">300 мин./мес.</div>
-                            </li>
-                            <li class="rates-info__preview-row">
-                                <div class="rates-info__preview-rows-caption-wrapper">
-                                    <div class="rates-info__preview-rows-caption">Исходящие вызовы на номера оператора «Летай»</div>
-                                </div>
-                                <div class="rates-info__preview-rows-caption-value">Без ограничений</div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="rates-info__preview-item">
-                        <div class="rates-info__preview-caption">Сообщения</div>
-                        <ul class="rates-info__preview-rows-list">
-                            <li class="rates-info__preview-row">
-                                <div class="rates-info__preview-rows-caption-wrapper">
-                                    <div class="rates-info__preview-rows-caption">Исходящие SMS на номера мобильных операторов РТ (в том числе на номера оператора «Летай»)</div>
-                                </div>
-                                <div class="rates-info__preview-rows-caption-value">100 SMS/мес.</div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="rates-info__preview-item">
-                        <div class="rates-info__preview-caption">Дополнительно</div>
-                        <ul class="rates-info__preview-rows-list">
-                            <li class="rates-info__preview-row">
-                                <div class="rates-info__preview-rows-caption-wrapper">
-                                    <div class="rates-info__preview-rows-caption">Кэшбэк</div>
-                                </div>
-                                <div class="rates-info__preview-rows-caption-value">20%</div>
-                            </li>
-                        </ul>
-                    </li>
+                    <?foreach ($arResult["CONDITIONS"] as $arConditions):?>
+                        <li class="rates-info__preview-item">
+                            <div class="rates-info__preview-caption"><?=$arConditions["NAME"]?></div>
+                            <ul class="rates-info__preview-rows-list">
+                                <?foreach ($arConditions["PROPS"]["TERMS"]["VALUE"] as $arTerms):?>
+                                    <li class="rates-info__preview-row">
+                                        <div class="rates-info__preview-rows-caption-wrapper">
+                                            <div class="rates-info__preview-rows-caption">
+                                                <span><?=$arTerms["SUB_VALUES"]["TERMS_T"]["VALUE"]?></span>
+                                                <div class="rates-info__preview-rows-caption-tooltip">
+                                                    <div class="btn-info__container">
+                                                        <button type="button" class="btn-info__btn">
+                                                            <svg width="24" height="24" aria-hidden="true" class="btn-info__icon">
+                                                                <use xlink:href="#info-ellipse"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="btn-info__content"><?=$arTerms["SUB_VALUES"]["TERMS_H"]["VALUE"]?></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rates-info__preview-rows-caption-value"><?=$arTerms["SUB_VALUES"]["TERMS_V"]["VALUE"]?></div>
+                                    </li>
+                                <?endforeach;?>
+                            </ul>
+                        </li>
+                    <?endforeach;?>
                 </ul>
 
                 <div class="rates-info__preview-bottom">
@@ -168,3 +139,22 @@ $this->setFrameMode(true);
         </form>
     </div>
 </section>
+
+<?foreach($arResult["PROPERTIES"]["NOTES"]["VALUE"] as $arNote):?>
+    <section class="info-drop-menu">
+        <div class="gl__page-content">
+            <button type="button" class="info-drop-menu__title gl__drop-menu-btn js-drop-menu-btn">
+                <svg width="32" height="32" aria-hidden="true" class="info-drop-menu__title-icon gl__drop-menu-icon">
+                    <use xlink:href="#arrow-down"></use>
+                </svg><?=$arNote["SUB_VALUES"]["NOTES_T"]["VALUE"]?>
+            </button>
+            <div class="gl__drop-menu-container js-drop-menu-container">
+                <div class="gl__drop-menu js-drop-menu">
+                    <div class="gl__text">
+                        <?=$arNote["SUB_VALUES"]["NOTES_V"]["~VALUE"]["TEXT"]?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<?endforeach;?>

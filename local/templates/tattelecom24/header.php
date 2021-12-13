@@ -11,7 +11,10 @@ if (!\Bitrix\Main\Loader::includeModule('landing'))
     return;
 }
 
-\Bitrix\Landing\Connector\Mobile::prologMobileHit();
+if (\Bitrix\Main\Loader::includeModule('intranet')) {
+    \Bitrix\Landing\Connector\Mobile::prologMobileHit();
+}
+
 $language= \Bitrix\Landing\Manager::getLangISO();
 ?><!DOCTYPE html>
 <html xml:lang="<?= $language;?>" lang="<?= $language;?>" class="<?$APPLICATION->ShowProperty('HtmlClass');?>">
@@ -19,7 +22,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <link type="image/png" href="<?=SITE_TEMPLATE_PATH?>/img/common/tattelecom-small-logo.png" rel="icon">
+    <link type="image/png" href="<?=BUILD_PATH?>img/common/tattelecom-small-logo.png" rel="icon">
 
     <title><?$APPLICATION->ShowTitle();?></title>
     <?

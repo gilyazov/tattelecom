@@ -101,7 +101,7 @@
 <div class="modal" id="modal-thanks">
     <div class="modal-thanks__container modal__container mod-small" id="modal-thanks-container">
         <div class="modal__content js-modal-content">
-            <img src="<?=SITE_TEMPLATE_PATH?>/img/modals/background.svg" alt="" class="modal-thanks__background">
+            <img src="<?=BUILD_PATH?>img/modals/background.svg" alt="" class="modal-thanks__background">
 
             <div class="modal-thanks__head">
                 <button type="button" class="modal__btn-close mod-modal-thanks" id="close-thanks-modal">
@@ -116,7 +116,7 @@
             </div>
 
             <div class="modal-thanks__image-wrapper">
-                <img src="<?=SITE_TEMPLATE_PATH?>/img/modals/thanks.svg" alt="" class="modal-thanks__image">
+                <img src="<?=BUILD_PATH?>img/modals/thanks.svg" alt="" class="modal-thanks__image">
             </div>
 
             <div class="modal-thanks__text">
@@ -554,9 +554,9 @@
                                         </label>
 
                                         <div class="card-pay__payment-systems-wrapper">
-                                            <img src="<?=SITE_TEMPLATE_PATH?>/img/common/pay/mastercard.svg" alt="" class="card-pay__payment-system">
-                                            <img src="<?=SITE_TEMPLATE_PATH?>/img/common/pay/mir.svg" alt="" class="card-pay__payment-system">
-                                            <img src="<?=SITE_TEMPLATE_PATH?>/img/common/pay/visa.svg" alt="" class="card-pay__payment-system">
+                                            <img src="<?=BUILD_PATH?>img/common/pay/mastercard.svg" alt="" class="card-pay__payment-system">
+                                            <img src="<?=BUILD_PATH?>img/common/pay/mir.svg" alt="" class="card-pay__payment-system">
+                                            <img src="<?=BUILD_PATH?>img/common/pay/visa.svg" alt="" class="card-pay__payment-system">
                                         </div>
                                     </div>
                                 </div>
@@ -829,9 +829,9 @@
                                         </label>
 
                                         <div class="card-pay__payment-systems-wrapper">
-                                            <img src="<?=SITE_TEMPLATE_PATH?>/img/common/pay/mastercard.svg" alt="" class="card-pay__payment-system">
-                                            <img src="<?=SITE_TEMPLATE_PATH?>/img/common/pay/mir.svg" alt="" class="card-pay__payment-system">
-                                            <img src="<?=SITE_TEMPLATE_PATH?>/img/common/pay/visa.svg" alt="" class="card-pay__payment-system">
+                                            <img src="<?=BUILD_PATH?>img/common/pay/mastercard.svg" alt="" class="card-pay__payment-system">
+                                            <img src="<?=BUILD_PATH?>img/common/pay/mir.svg" alt="" class="card-pay__payment-system">
+                                            <img src="<?=BUILD_PATH?>img/common/pay/visa.svg" alt="" class="card-pay__payment-system">
                                         </div>
                                     </div>
                                 </div>
@@ -1101,9 +1101,9 @@
                                         </label>
 
                                         <div class="card-pay__payment-systems-wrapper">
-                                            <img src="<?=SITE_TEMPLATE_PATH?>/img/common/pay/mastercard.svg" alt="" class="card-pay__payment-system">
-                                            <img src="<?=SITE_TEMPLATE_PATH?>/img/common/pay/mir.svg" alt="" class="card-pay__payment-system">
-                                            <img src="<?=SITE_TEMPLATE_PATH?>/img/common/pay/visa.svg" alt="" class="card-pay__payment-system">
+                                            <img src="<?=BUILD_PATH?>img/common/pay/mastercard.svg" alt="" class="card-pay__payment-system">
+                                            <img src="<?=BUILD_PATH?>img/common/pay/mir.svg" alt="" class="card-pay__payment-system">
+                                            <img src="<?=BUILD_PATH?>img/common/pay/visa.svg" alt="" class="card-pay__payment-system">
                                         </div>
                                     </div>
                                 </div>

@@ -24,10 +24,10 @@ $arUrlRewrite=array (
     'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
-  1 =>
+  5 => 
   array (
     'CONDITION' => '#^/#',
-    'RULE' => NULL,
+    'RULE' => '',
     'ID' => 'bitrix:landing.pub',
     'PATH' => '/index.php',
     'SORT' => 100,

@@ -7,7 +7,6 @@ class Page
 {
     public function OnPageStartHandler()
     {
-
         $server = \Bitrix\Main\Context::getCurrent()->getServer();
         $realPath = GetDirPath($server->get('REAL_FILE_PATH'));
         $realPathArr = explode('/', $realPath);
