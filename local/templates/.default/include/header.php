@@ -30,7 +30,7 @@
                                     <a href="/helpdesk/" class="header__top-menu-items-link">Поддержка</a>
                                 </li>
                                 <li class="header__top-menu-items">
-                                    <a href="" class="header__top-menu-items-link">Офисы продаж</a>
+                                    <a href="/offices/" class="header__top-menu-items-link">Офисы продаж</a>
                                 </li>
                                 <li class="header__top-menu-items">
                                     <a href="/payment/" class="header__top-menu-items-link">Оплата</a>
@@ -376,7 +376,7 @@
                                 "PAGER_BASE_LINK_ENABLE" => "N",    // Включить обработку ссылок
                                 "SET_STATUS_404" => "N",    // Устанавливать статус 404
                                 "SHOW_404" => "N",  // Показ специальной страницы
-                                "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
+                                "MAJOR" => "Y"
                             ),
                                 false
                             );?>
