@@ -11,6 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$this->addExternalJS(BUILD_PATH . "js/common-private-clients.js");
+$this->addExternalJS(BUILD_PATH . "js/rates-mobile-list-page.js");
 ?>
 <ul class="rates-list__list">
     <?foreach($arResult["ITEMS"] as $arItem):?>
@@ -54,14 +56,15 @@ $this->setFrameMode(true);
 
                         <div class="rates-list__slide-price-wrapper">
                             <div class="rates-list__slide-price">
-                                <span class="big"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></span><span class="small">₽/мес</span>
+                                <span class="big"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></span>
+                                <span class="small"><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
                             </div>
                         </div>
 
                         <div class="rates-list__slide-btns-wrapper">
                             <button type="button"
-                                    data-tariff-name="Много интернета"
-                                    data-prise="240"
+                                    data-tariff-name="<?=$arItem["NAME"]?>"
+                                    data-prise="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>"
                                     class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal">
                                 Подключить
                             </button>

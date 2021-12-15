@@ -11,6 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$this->addExternalJS(BUILD_PATH . "js/common-private-clients.js");
+$this->addExternalJS(BUILD_PATH . "js/rates-internet-list-page.js");
 ?>
 <ul class="rates-list__list">
     <?foreach($arResult["ITEMS"] as $arItem):?>
@@ -19,8 +21,7 @@ $this->setFrameMode(true);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
         <li id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-            <a
-                href="<?=$arItem['DETAIL_PAGE_URL']?>"
+            <div
                 class="rates-list__slide rates-list-internet__item gl__no-default-hover gl__white-container <?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?>mod-orange<?endif;?>">
                 <?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?>
                     <img src="<?=BUILD_PATH?>img/rates-internet-list-page/background-mark.svg" alt="" class="rates-list-internet__item-background">
@@ -31,21 +32,30 @@ $this->setFrameMode(true);
                         <div class="rates-list-internet__item-title"><?=$arItem["NAME"]?></div>
                         <div class="rates-list-internet__item-subtitle"><?=$arItem["PROPERTIES"]["SUBTITLE"]["VALUE"]?></div>
                     </div>
-                    <?if($arItem["PROPERTIES"]["BENEFITS"]["VALUE"]):?>
+                    <?if($arBenefits = $arItem["PROPERTIES"]["BENEFITS"]["VALUE"]):?>
                         <div class="rates-list-internet__item-block">
-                            <div class="rates-list-internet__item-proposal">
-                                <img
-                                    src="<?=BUILD_PATH?>img/rates-internet-list-page/receiver<?=($arItem["PROPERTIES"]["ORANGE"]["VALUE"]?"-white":"")?>.svg" alt=""
-                                    class="rates-list-internet__item-proposal-img">
-                                <div class="rates-list-internet__item-proposal-caption"><?=$arItem["PROPERTIES"]["BENEFITS"]["VALUE"]?></div>
+                            <?foreach ($arBenefits as $arBenefit):?>
+                                <div class="rates-list-internet__item-proposal">
+                                    <img
+                                        src="<?=BUILD_PATH?>img/rates-internet-list-page/<?=$arBenefit["SUB_VALUES"]["BENEFITS_I"]["VALUE_XML_ID"]?><?=($arItem["PROPERTIES"]["ORANGE"]["VALUE"]?"-white":"")?>.svg" alt=""
+                                        class="rates-list-internet__item-proposal-img">
+                                    <div class="rates-list-internet__item-proposal-caption"><?=$arBenefit["SUB_VALUES"]["BENEFITS_V"]["VALUE"]?></div>
+                                </div>
+                            <?endforeach;?>
+                        </div>
+                    <?endif?>
+                    <?if($arOptions = $arItem["PROPERTIES"]["OPTIONS"]["VALUE"]):?>
+                        <div class="rates-list-internet__item-block">
+                            <div class="rates-list-internet__item-wifi-wrapper">
+                                <div class="rates-list-internet__item-wifi"><?=$arOptions["SUB_VALUES"]["OPTIONS_V"]["VALUE"]?><div class="rates-list-internet__item-wifi-dropdown">
+                                        <div class="rates-list-internet__item-wifi-dropdown-inner">
+                                            <?=$arOptions["SUB_VALUES"]["OPTIONS_H"]["~VALUE"]["TEXT"]?>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     <?endif?>
-                    <div class="rates-list-internet__item-block">
-                        <div class="rates-list-internet__item-wifi-wrapper">
-                            <div class="rates-list-internet__item-wifi">Wi-Fi за 30 руб/мес</div>
-                        </div>
-                    </div>
                 </div>
                 <div class="rates-list-internet__item-down">
                     <div class="rates-list-internet__item-price-wrapper">
@@ -58,11 +68,11 @@ $this->setFrameMode(true);
                                 class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal<?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?> mod-white<?endif?>"
                                 data-tariff-name="<?=$arItem["NAME"]?>" data-prise="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Подключить</button>
                         <div class="rates-list__slide-link-detailed-wrapper">
-                            <button type="button" class="gl__secondary-btn js-open-about-tariff-modal<?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?> mod-white<?endif?>">Подробнее о тарифе</button>
+                            <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="gl__secondary-btn js-open-about-tariff-modal<?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?> mod-white<?endif?>">Подробнее о тарифе</a>
                         </div>
                     </div>
                 </div>
-            </a>
+            </div>
         </li>
     <?endforeach;?>
 </ul>

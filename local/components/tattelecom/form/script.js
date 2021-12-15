@@ -30,12 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                     alert(response.data.error_text);
                                 }
                                 else{
-                                    const modalElem = document.querySelector('#modal-thanks');
-                                    const modalComponent = new Modal(modalElem);
-                                    modalComponent.onOpenModal();
+                                    window.openThanksModal();
                                 }
 
-                                console.log(response);
                                 BX.closeWait(form, wait);
                             }
                         });

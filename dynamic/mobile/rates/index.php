@@ -74,7 +74,7 @@ $APPLICATION->SetDirProperty("dynamic", "Y");
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_SHOW_ALL" => "N",
-		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TEMPLATE" => "pagination",
 		"DISPLAY_TOP_PAGER" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"PAGER_TITLE" => "Новости",

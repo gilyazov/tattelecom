@@ -39,13 +39,17 @@ class Form extends \CBitrixComponent implements Controllerable
 
     public function sendLeadAction($post)
     {
+        global $APPLICATION;
         $url = $this->buildUrl();
         $phone = $this->parsePhone($post['phone']);
 
         $data = [
             "phone" => $phone,
+            "firstname" => $post['firstname'],
+            "param_comment" => $post['param_comment'],
 
             "service" => 2,
+            "param_referer" => $APPLICATION->GetCurPage(),
             "param_clientstatus" => 1
         ];
 
@@ -64,6 +68,7 @@ class Form extends \CBitrixComponent implements Controllerable
         $parsedPhone = Parser::getInstance()->parse($phone);
         $phone = $parsedPhone->format(Format::E164);
 
+        // api пережует любой формат?
         return str_replace("+7", "", $phone);
     }
 

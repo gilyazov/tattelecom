@@ -40,3 +40,50 @@
         </div>
     </div>
 </div>
+
+<div class="modal" id="modal-send-request-host">
+    <div class="modal__container mod-middle js-modal-container">
+        <div class="modal__content js-modal-content">
+            <div class="modal__head">
+                <div class="modal__title">
+                    Тариф «Много интернета»
+                </div>
+                <button type="button" class="modal__btn-close js-close-send-request-modal">
+                    <svg width="32" height="32" aria-hidden="true" class="modal__close-icon">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="send-request__content">
+                <div class="send-request__info">
+                    <div class="send-request__price">
+                        <span class="number">240</span>₽/мес
+                    </div>
+                    <div class="send-request__info-hint">
+                        <div>Укажите имя и контактный номер телефона.</div>
+                        <div>Мы перезвоним Вам в течение 15 минут.</div>
+                        <div>Клиентская служба работает с 08-00 до 20-00.</div>
+                    </div>
+                </div>
+
+                <div class="send-request__product-wrapper">
+                    <div>
+                        <div class="send-request__product-caption">тип</div>
+                        <div class="send-request__product-value">модель</div>
+                        <div class="send-request__product-price-wrapper">
+                            <span class="send-request__product-price">0</span>₽
+                        </div>
+                    </div>
+                </div>
+
+                <?$APPLICATION->IncludeComponent(
+                    "tattelecom:form",
+                    "form-modal",
+                    [],
+                    false
+                );?>
+            </div>
+        </div>
+    </div>
+</div>

@@ -121,136 +121,22 @@
         <div class="header__popup-container js-header-popup-container">
             <div class="header__popup-wrapper js-header-popup-wrapper">
                 <div class="gl__page-content">
-                    <div class="header__popup-content js-header-popup" data-hover-value="mobile">
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Тарифы</a>
-                            <ul class="header__popup-item-list">
-                                <li><a href="" class="header__popup-item-link">Безлимитный интернет</a></li>
-                                <li><a href="" class="header__popup-item-link">Много звонков</a></li>
-                                <li><a href="" class="header__popup-item-link">Все и сразу</a></li>
-                                <li><a href="" class="header__popup-item-link">Детский</a></li>
-                                <li><a href="" class="header__popup-item-link">Для модемов</a></li>
-                                <li><a href="" class="header__popup-item-link">Для умных устройств</a></li>
-                            </ul>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Стать абонентом Летай</a>
-                            <ul class="header__popup-item-list">
-                                <li><a href="" class="header__popup-item-link">Выбрать красивый номер</a></li>
-                                <li><a href="" class="header__popup-item-link">Перейти со своим номером</a></li>
-                                <li><a href="" class="header__popup-item-link">Заказать доставку сим-карты</a></li>
-                            </ul>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Акции</a>
-                            <ul class="header__popup-item-list">
-                                <li><a href="" class="header__popup-item-link">Вместе выгодно 2.0</a></li>
-                                <li><a href="" class="header__popup-item-link">Вместе выгодно</a></li>
-                            </ul>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Роуминг</a>
-                            <ul class="header__popup-item-list">
-                                <li><a href="" class="header__popup-item-link">В поездках по России</a></li>
-                                <li><a href="" class="header__popup-item-link">В поездках за границей</a></li>
-                            </ul>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Оплата услуг</a>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/mobile/ussd-requests/" class="header__popup-item-caption">Полезные команды</a>
-                        </div>
-                    </div>
-
-                    <div class="header__popup-content js-header-popup" data-hover-value="internet">
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Тарифы</a>
-                            <ul class="header__popup-item-list">
-                                <li><a href="" class="header__popup-item-link">Домашний интернет + ТВ + мобильная связь</a></li>
-                                <li><a href="" class="header__popup-item-link">Домашний интернет</a></li>
-                                <li><a href="" class="header__popup-item-link">Домашний интернет + ТВ</a></li>
-                                <li><a href="" class="header__popup-item-link">Интернет + ТВ для частного дома</a></li>
-                            </ul>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Акции</a>
-                            <ul class="header__popup-item-list">
-                                <li><a href="" class="header__popup-item-link">Вместе выгодно 2.0</a></li>
-                                <li><a href="" class="header__popup-item-link">Вместе выгодно</a></li>
-                            </ul>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Дополнительные услуги</a>
-                            <ul class="header__popup-item-list">
-                                <li><a href="" class="header__popup-item-link">Антивирус</a></li>
-                                <li><a href="" class="header__popup-item-link">Статичный IP</a></li>
-                            </ul>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Оплата услуг</a>
-                        </div>
-                    </div>
-
-                    <div class="header__popup-content js-header-popup" data-hover-value="tv">
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Тарифы</a>
-                            <ul class="header__popup-item-list">
-                                <li><a href="" class="header__popup-item-link">Базовый пакет каналов</a></li>
-                                <li><a href="" class="header__popup-item-link">Дополнительные пакеты каналов</a></li>
-                            </ul>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Акции</a>
-                            <ul class="header__popup-item-list">
-                                <li><a href="" class="header__popup-item-link">Вместе выгодно 2.0</a></li>
-                                <li><a href="" class="header__popup-item-link">Вместе выгодно</a></li>
-                            </ul>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Онлайн ТВ</a>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Оплата услуг</a>
-                        </div>
-                    </div>
-
-                    <div class="header__popup-content js-header-popup" data-hover-value="intercom">
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Тарифы</a>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Акции</a>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Онлайн ТВ</a>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Оплата услуг</a>
-                        </div>
-                    </div>
-
-                    <div class="header__popup-content js-header-popup" data-hover-value="catalog">
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Смартфоны</a>
-                            <ul class="header__popup-item-list">
-                                <li><a href="" class="header__popup-item-link">Смартфоны Honor</a></li>
-                                <li><a href="" class="header__popup-item-link">Смартфоны Samsung</a></li>
-                                <li><a href="" class="header__popup-item-link">Смартфоны Oppo</a></li>
-                                <li><a href="" class="header__popup-item-link">Смартфоны Realme</a></li>
-                                <li><a href="" class="header__popup-item-link">Смартфон Xiaomi</a></li>
-                            </ul>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Смарт-часы и Фитнес-браслеты</a>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Наушники и колонки</a>
-                        </div>
-                        <div class="header__popup-item-wrapper">
-                            <a href="/" class="header__popup-item-caption">Аксессуары</a>
-                        </div>
-                    </div>
+                    <?$APPLICATION->IncludeComponent("bitrix:menu", "header-popup-wrapper", Array(
+                        "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+                        "CHILD_MENU_TYPE" => "",    // Тип меню для остальных уровней
+                        "DELAY" => "N", // Откладывать выполнение шаблона меню
+                        "MAX_LEVEL" => "4", // Уровень вложенности меню
+                        "MENU_CACHE_GET_VARS" => array( // Значимые переменные запроса
+                            0 => "",
+                        ),
+                        "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                        "MENU_CACHE_TYPE" => "N",   // Тип кеширования
+                        "MENU_CACHE_USE_GROUPS" => "Y", // Учитывать права доступа
+                        "ROOT_MENU_TYPE" => "top",  // Тип меню для первого уровня
+                        "USE_EXT" => "Y",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
+                    ),
+                        false
+                    );?>
 
                     <div class="header__popup-content js-header-popup location-popup-content" data-hover-value="location">
                         <div class="header__popup-item-wrapper">

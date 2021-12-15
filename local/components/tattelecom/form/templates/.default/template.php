@@ -1,5 +1,7 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+/** @var string $componentPath */
+$this->addExternalJS($componentPath . '/script.js');
 ?>
 
 <form class="js-form-modal callback__form js-potok-form" data-need-validation data-parsley-validate data-parsley-focus="none">
