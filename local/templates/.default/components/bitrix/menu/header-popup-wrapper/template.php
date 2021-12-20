@@ -29,7 +29,7 @@ foreach($arResult as $arItem):?>
 		<?if ($arItem["PERMISSION"] > "D"):?>
 
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-                <div class="header__popup-content js-header-popup" data-hover-value="<?=$arItem["PARAMS"]["CODE"]?>"></div>
+                <!--<div class="header__popup-content js-header-popup" data-hover-value="<?/*=$arItem["PARAMS"]["CODE"]*/?>"></div>-->
             <?elseif ($arItem["DEPTH_LEVEL"] == 2):?>
                 <div class="header__popup-item-wrapper"><a href="<?=$arItem["LINK"]?>" class="header__popup-item-caption"><?=$arItem["TEXT"]?></a></div>
             <?else:?>

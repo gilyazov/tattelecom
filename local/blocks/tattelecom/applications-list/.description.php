@@ -30,6 +30,11 @@ return array(
             'name' => 'Название',
             'type' => 'text',
         ),
+        '.applications-list__item-logo' => array(
+            'name' => 'Иконка',
+            'type' => 'img',
+            'dimensions' => array('maxWidth' => 100, 'maxHeight' => 100),
+        ),
         '.applications-list__item-subtitle' => array(
             'name' => 'Описание',
             'type' => 'text',

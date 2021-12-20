@@ -11,11 +11,82 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-$this->addExternalJS(BUILD_PATH . "js/common-private-clients.js");
 ?>
+<?if($arParams['IBLOCK_ID'] == 17):?>
+    <section class="rates-info" id="rates-mobile-info-host">
+        <div class="gl__page-content">
+            <h2 class="gl__title"><?$APPLICATION->ShowTitle()?></h2>
+
+            <?$APPLICATION->IncludeComponent(
+                "tattelecom:internet.connect",
+                "",
+                [],
+                false
+            );?>
+
+            <?$ElementID = $APPLICATION->IncludeComponent(
+                "bitrix:news.detail",
+                "internet-terms",
+                Array(
+                    "DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
+                    "DISPLAY_NAME" => $arParams["DISPLAY_NAME"],
+                    "DISPLAY_PICTURE" => $arParams["DISPLAY_PICTURE"],
+                    "DISPLAY_PREVIEW_TEXT" => $arParams["DISPLAY_PREVIEW_TEXT"],
+                    "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+                    "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+                    "FIELD_CODE" => $arParams["DETAIL_FIELD_CODE"],
+                    "PROPERTY_CODE" => $arParams["DETAIL_PROPERTY_CODE"],
+                    "DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["detail"],
+                    "SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
+                    "META_KEYWORDS" => $arParams["META_KEYWORDS"],
+                    "META_DESCRIPTION" => $arParams["META_DESCRIPTION"],
+                    "BROWSER_TITLE" => $arParams["BROWSER_TITLE"],
+                    "SET_CANONICAL_URL" => $arParams["DETAIL_SET_CANONICAL_URL"],
+                    "DISPLAY_PANEL" => $arParams["DISPLAY_PANEL"],
+                    "SET_LAST_MODIFIED" => $arParams["SET_LAST_MODIFIED"],
+                    "SET_TITLE" => $arParams["SET_TITLE"],
+                    "MESSAGE_404" => $arParams["MESSAGE_404"],
+                    "SET_STATUS_404" => $arParams["SET_STATUS_404"],
+                    "SHOW_404" => $arParams["SHOW_404"],
+                    "FILE_404" => $arParams["FILE_404"],
+                    "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                    "ADD_SECTIONS_CHAIN" => $arParams["ADD_SECTIONS_CHAIN"],
+                    "ACTIVE_DATE_FORMAT" => $arParams["DETAIL_ACTIVE_DATE_FORMAT"],
+                    "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+                    "CACHE_TIME" => $arParams["CACHE_TIME"],
+                    "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+                    "USE_PERMISSIONS" => $arParams["USE_PERMISSIONS"],
+                    "GROUP_PERMISSIONS" => $arParams["GROUP_PERMISSIONS"],
+                    "DISPLAY_TOP_PAGER" => $arParams["DETAIL_DISPLAY_TOP_PAGER"],
+                    "DISPLAY_BOTTOM_PAGER" => $arParams["DETAIL_DISPLAY_BOTTOM_PAGER"],
+                    "PAGER_TITLE" => $arParams["DETAIL_PAGER_TITLE"],
+                    "PAGER_SHOW_ALWAYS" => "N",
+                    "PAGER_TEMPLATE" => $arParams["DETAIL_PAGER_TEMPLATE"],
+                    "PAGER_SHOW_ALL" => $arParams["DETAIL_PAGER_SHOW_ALL"],
+                    "CHECK_DATES" => $arParams["CHECK_DATES"],
+                    "ELEMENT_ID" => $arResult["VARIABLES"]["ELEMENT_ID"],
+                    "ELEMENT_CODE" => $arResult["VARIABLES"]["ELEMENT_CODE"],
+                    "SECTION_ID" => $arResult["VARIABLES"]["SECTION_ID"],
+                    "SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
+                    "IBLOCK_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"],
+                    "USE_SHARE" => $arParams["USE_SHARE"],
+                    "SHARE_HIDE" => $arParams["SHARE_HIDE"],
+                    "SHARE_TEMPLATE" => $arParams["SHARE_TEMPLATE"],
+                    "SHARE_HANDLERS" => $arParams["SHARE_HANDLERS"],
+                    "SHARE_SHORTEN_URL_LOGIN" => $arParams["SHARE_SHORTEN_URL_LOGIN"],
+                    "SHARE_SHORTEN_URL_KEY" => $arParams["SHARE_SHORTEN_URL_KEY"],
+                    "ADD_ELEMENT_CHAIN" => (isset($arParams["ADD_ELEMENT_CHAIN"]) ? $arParams["ADD_ELEMENT_CHAIN"] : ''),
+                    'STRICT_SECTION_CHECK' => (isset($arParams['STRICT_SECTION_CHECK']) ? $arParams['STRICT_SECTION_CHECK'] : ''),
+                ),
+                $component
+            );?>
+        </div>
+    </section>
+<?endif;?>
+
 <?$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
-	"",
+    ($arParams['IBLOCK_ID'] == 17 ? "internet" : ""),
 	Array(
 		"DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
 		"DISPLAY_NAME" => $arParams["DISPLAY_NAME"],
@@ -95,7 +166,7 @@ $this->addExternalJS(BUILD_PATH . "js/common-private-clients.js");
                     </div>
                     <div class="cashback__slide-text info-links__slide-text">Подключите «Летай» и получайте кешбэк 20%!</div>
                 </div>
-                <a href="" class="cashback__slide-link">Подробнее</a>
+                <a href="/stocks/keshbek20/" class="cashback__slide-link">Подробнее</a>
             </li>
             <li class="info-links__item gl__white-container cashback__slide gl__link-arrow-container">
                 <img src="<?=BUILD_PATH?>img/rates-mobile-list-page/img-1.jpg" alt="" class="cashback__slide-background">
@@ -115,7 +186,7 @@ $this->addExternalJS(BUILD_PATH . "js/common-private-clients.js");
                     </div>
                     <div class="cashback__slide-text info-links__slide-text">Серебрянный, Золотой, Бронзовый</div>
                 </div>
-                <a href="" class="cashback__slide-link mod-black">Подобрать<svg width="40" height="40" aria-hidden="true" class="cashback__slide-link-icon">
+                <a href="/mobile/beautiful-numbers/" class="cashback__slide-link mod-black">Подобрать<svg width="40" height="40" aria-hidden="true" class="cashback__slide-link-icon">
                         <use xlink:href="#arrow-line-right"></use>
                     </svg>
                 </a>

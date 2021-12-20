@@ -42,7 +42,6 @@ return array(
     'assets' => [
         'css' => [],
         'js' => [
-            BUILD_PATH . 'js/common-private-clients.js',
             BUILD_PATH . 'js/mobile-communication-page.js'
         ]
     ]

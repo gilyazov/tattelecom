@@ -33,6 +33,8 @@ $arResult = array_merge(array(array(
 
 $arResult = array_values($arResult);
 
+$strReturn .= '<ul class="bread-crumbs__list">';
+
 $outputItems = 0;
 $itemSize = count($arResult);
 
@@ -46,19 +48,27 @@ for($index = 0; $index < $itemSize; $index++)
 	$title = htmlspecialcharsex($arResult[$index]["TITLE"]);
 	// $nextRef = ($index < $itemSize-2 && $arResult[$index+1]["LINK"] <> ""? ' itemref="bx_breadcrumb_'.($index+1).'"' : '');
 	// $child = ($index > 0? ' itemprop="child"' : '');
-	$arrow = (($index + 1) != $itemSize ? '<br> /' : '');
+	$arrow = ($index > 0? '<i class="landing-breadcrumb-arrow fa g-mx-5"></i>' : '');
 
 	if ($arResult[$index]["LINK"] <> "")// && $index != $itemSize-1
 	{
 		$outputItems++;
 		$strReturn .= '
-            <a class="landing-breadcrumb-link u-link-v5"
-                href="'.$arResult[$index]["LINK"].'" title="'.$title.'" itemprop="url">
-                <span class="landing-breadcrumb-name" itemprop="name">'.$title.'</span>
-            </a>
-            '.$arrow;
+			<li class="bread-crumbs__item"
+				itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a class="bread-crumbs__link"
+					href="'.$arResult[$index]["LINK"].'" title="'.$title.'" itemprop="url">
+					<span class="landing-breadcrumb-name" itemprop="name">'.$title.'</span>
+					<svg width="16" height="16" aria-hidden="true" class="bread-crumbs__link-icon">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+				</a>
+				<meta itemprop="position" content="'.($index + 1).'" />
+			</li>';
 	}
 }
+
+$strReturn .= '</ul>';
 
 if ($outputItems <= 1)
 {

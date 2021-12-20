@@ -31,9 +31,10 @@ return array(
             'skipContent' => true,
         ),
 
-        '.why-iteko__card-text' => array(
-            'name' => 'Текст',
-            'type' => 'text',
+        '.rates-preview__img' => array(
+            'name' => 'Фон',
+            'type' => 'img',
+            'dimensions' => array('maxWidth' => 790, 'maxHeight' => 370)
         ),
 	),
     'groups' => array(

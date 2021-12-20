@@ -13,25 +13,23 @@ return array(
         'dynamic' => false,
 	),
     'cards' => [
-
+        '.faq__item' => [
+            'name' => 'Вопрос',
+            'label' => [
+                '.button_text_span'
+            ]
+        ],
     ],
 	'nodes' => array(
-        '.rates-preview__content-subtitle' => array(
+        '.gl__title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
         ),
-        '.rates-preview__content-caption' => array(
-            'name' => 'Описание',
+        '.button_text_span' => array(
+            'name' => 'Вопрос',
             'type' => 'text',
         ),
-
-        '.why-iteko__card' => array(
-            'name' => 'Ссылка',
-            'type' => 'link',
-            'skipContent' => true,
-        ),
-
-        '.why-iteko__card-text' => array(
+        '.gl__text' => array(
             'name' => 'Текст',
             'type' => 'text',
         ),

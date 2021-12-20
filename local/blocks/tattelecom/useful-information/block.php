@@ -5,7 +5,7 @@
             <div class="gl-slider__container swiper-container js-swiper-container">
                 <ul class="gl-slider__wrapper swiper-wrapper">
                     <li class="swiper-slide gl__white-container useful-information__slide-wrapper">
-                        <a class="gl__link-arrow-container useful-information__slide">
+                        <a href="/intercom/" class="gl__link-arrow-container useful-information__slide">
                             <div class="useful-information__slide-image-wrapper">
                                 <img src="/local/js/template/tattelecom-1/img/main-page/useful-information/image-1.jpg" alt="" class="useful-information__slide-image">
                             </div>
@@ -22,7 +22,7 @@
                         </a>
                     </li>
                     <li class="swiper-slide gl__white-container useful-information__slide-wrapper">
-                        <a class="gl__link-arrow-container useful-information__slide">
+                        <a href="#" class="gl__link-arrow-container useful-information__slide">
                             <div class="useful-information__slide-image-wrapper">
                                 <img src="/local/js/template/tattelecom-1/img/main-page/useful-information/image-2.jpg" alt="" class="useful-information__slide-image">
                             </div>
@@ -39,7 +39,7 @@
                         </a>
                     </li>
                     <li class="swiper-slide gl__white-container useful-information__slide-wrapper">
-                        <a class="gl__link-arrow-container useful-information__slide">
+                        <a href="/applications/" class="gl__link-arrow-container useful-information__slide">
                             <div class="useful-information__slide-image-wrapper">
                                 <img src="/local/js/template/tattelecom-1/img/main-page/useful-information/image-3.jpg" alt="" class="useful-information__slide-image">
                             </div>

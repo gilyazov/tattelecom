@@ -1,4 +1,4 @@
-<section class="rates-preview mod-main-page" style="background-image: url(/local/js/template/tattelecom-1/img/main-page/rates-preview/rates-preview-1.jpg)" id="rates-preview-host">
+<section class="rates-preview mod-main-page" style="background-image: url('/local/js/template/tattelecom-1/img/main-page/rates-preview/rates-preview-1.jpg')" id="rates-preview-host">
     <div class="gl__page-content rates-preview__content-wrapper">
         <div class="rates-preview__content">
             <div class="rates-preview__content-title">Тариф «Летай.Оранжевый»</div>

@@ -6,7 +6,8 @@
                 <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
                     <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
                         <use xlink:href="#arrow-down"></use>
-                    </svg>Как получить автоматические настройки Интернет и MMS?
+                    </svg>
+                    <span class="button_text_span">Как получить автоматические настройки Интернет и MMS?</span>
                 </button>
                 <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
                     <div class="gl__text gl__drop-menu js-drop-menu">
@@ -22,7 +23,8 @@
                 <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
                     <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
                         <use xlink:href="#arrow-down"></use>
-                    </svg>Как вручную настроить Интернет и MMS в телефоне?
+                    </svg>
+                    <span class="button_text_span">Как вручную настроить Интернет и MMS в телефоне?</span>
                 </button>
                 <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
                     <div class="gl__text gl__drop-menu js-drop-menu">
@@ -34,7 +36,7 @@
                 </div>
             </li>
         </ul>
-        <a href="" class="faq__link-show-all">Все вопросы и ответы<svg width="20" height="20" aria-hidden="true" class="faq__link-show-all-icon">
+        <a href="/helpdesk/faq/" class="faq__link-show-all">Все вопросы и ответы<svg width="20" height="20" aria-hidden="true" class="faq__link-show-all-icon">
                 <use xlink:href="#arrow-right"></use>
             </svg>
         </a>

@@ -67,7 +67,7 @@
                         "bitrix:search.form",
                         "header-search",
                         array(
-                            "PAGE" => "#SITE_DIR#search/index.php",
+                            "PAGE" => "#SITE_DIR#search/",
                             "USE_SUGGEST" => "N",
                             "COMPONENT_TEMPLATE" => "header-search"
                         ),

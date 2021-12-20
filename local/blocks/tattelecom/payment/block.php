@@ -32,11 +32,11 @@
                     <div class="payment-services__form-inputs-wrapper"></div>
                     <div>
                         <div class="payment-services__form-btn-wrapper">
-                            <button type="submit" class="payment-services__form-btn gl__main-btn js-open-top-up-account-modal">Продолжить</button>
+                            <a href="https://lk.letai.ru/template.LOGIN/" target="_blank" class="payment-services__form-btn gl__main-btn js-open-top-up-account-modal">Продолжить</a>
                         </div>
                         <div class="payment-services__form-hint-wrapper">
                             <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете условия пользовательского соглашения.</div>
-                            <button type="button" class="payment-services__form-link">Подробнее об услуге</button>
+                            <a href="/upload/medialibrary/30b/2j4p6tkozrcjm9xtddyn12qkmbm6c4lf.pdf" target="_blank" class="payment-services__form-link">Подробнее об услуге</a>
                         </div>
                     </div>
                 </form>
@@ -48,11 +48,11 @@
                     <div class="payment-services__form-inputs-wrapper"></div>
                     <div>
                         <div class="payment-services__form-btn-wrapper">
-                            <button type="submit" class="payment-services__form-btn gl__main-btn js-open-top-up-account-modal">Продолжить</button>
+                            <a href="https://lk.letai.ru/template.LOGIN/" target="_blank" class="payment-services__form-btn gl__main-btn js-open-top-up-account-modal">Продолжить</a>
                         </div>
                         <div class="payment-services__form-hint-wrapper">
                             <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете условия пользовательского соглашения.</div>
-                            <button type="button" class="payment-services__form-link">Подробнее об услуге</button>
+                            <a href="/upload/medialibrary/c89/7vwou106bh803envf6g3pwkea3ncayz3.pdf" target="_blank" class="payment-services__form-link">Подробнее об услуге</a>
                         </div>
                     </div>
                 </form>

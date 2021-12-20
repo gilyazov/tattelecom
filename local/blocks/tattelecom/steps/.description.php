@@ -36,7 +36,9 @@ return array(
             'type' => 'text',
         ),
 	),
-    'groups' => array(
-
+    'assets' => array(
+        'js' => [
+            BUILD_PATH . 'js/together-profitable-page.js'
+        ]
     ),
 );

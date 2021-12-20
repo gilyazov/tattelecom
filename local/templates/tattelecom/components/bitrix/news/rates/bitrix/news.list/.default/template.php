@@ -11,7 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-$this->addExternalJS(BUILD_PATH . "js/common-private-clients.js");
 $this->addExternalJS(BUILD_PATH . "js/rates-mobile-list-page.js");
 ?>
 <ul class="rates-list__list">

@@ -15,7 +15,7 @@
                 "tattelecom:phone.list.list",
                 "",
                 [
-                    'TYPE' => $_REQUEST['type']
+                    'TYPE' => ($_REQUEST['type'] ?: 1)
                 ],
                 false
             );?>

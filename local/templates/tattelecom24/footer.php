@@ -1,4 +1,23 @@
+<?php
+use \Bitrix\Landing\Manager;
+use \Bitrix\Landing\Assets;
+use \Bitrix\Main\Loader;
 
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
+{
+    die();
+}
+
+if (!Loader::includeModule('landing'))
+{
+    return;
+}
+
+$assets = Assets\Manager::getInstance();
+$assets->addAsset('landing_auto_font_scale');
+
+$APPLICATION->ShowProperty('FooterJS');
+?>
 <? include_once(DEFAULT_PATH . 'include/modal.php');?>
 
 <div class="modal" id="modal-about-tariff-host">
@@ -882,5 +901,7 @@
 <script src="https://api-maps.yandex.ru/2.1/?apikey=978d9dde-738d-4b87-8d8a-1de67b511402&lang=ru_RU"
         type="text/javascript"></script>
 </div>
+
+<?$APPLICATION->ShowProperty('BeforeBodyClose');?>
 </body>
 </html>

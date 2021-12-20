@@ -87,3 +87,46 @@
         </div>
     </div>
 </div>
+
+<div class="modal" id="modal-requestLetai-host">
+    <div class="modal__container mod-small js-modal-container">
+        <div class="modal__content js-modal-content">
+            <div class="modal__head">
+                <div class="modal__title">Поздравляем! Адрес подходит для подключения пакетной услуги Летай.</div>
+                <button type="button" class="modal__btn-close js-close-requestLetai-modal">
+                    <svg width="32" height="32" aria-hidden="true" class="modal__close-icon">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="modal__text">Оставьте номер телефона и дождитесь звонка оператора для подтверждения технической возможности подключения новых абонентов</p>
+            <?$APPLICATION->IncludeComponent(
+                "tattelecom:form",
+                "",
+                [],
+                false
+            );?>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal-badRequestLetai-host">
+    <div class="modal__container mod-small js-modal-container">
+        <div class="modal__content js-modal-content">
+            <div class="modal__head">
+                <div class="modal__title">К сожалению, на данный момент, техническую возможность по указанному адресу определить невозможно!</div>
+                <button type="button" class="modal__btn-close js-close-badRequestLetai-modal">
+                    <svg width="32" height="32" aria-hidden="true" class="modal__close-icon">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="modal__text">Для уточнения технической возможности пожалуйста заполните поля ниже и наш менеджер свяжется по указанным Вами контактным данным в ближайшее время</p>
+            <?$APPLICATION->IncludeComponent(
+                "tattelecom:form",
+                "",
+                [],
+                false
+            );?>
+        </div>
+    </div>
+</div>

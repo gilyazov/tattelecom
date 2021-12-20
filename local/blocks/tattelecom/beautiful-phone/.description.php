@@ -25,7 +25,9 @@ return array(
             'type' => 'text',
         )
 	),
-    'groups' => array(
-
-    ),
+    'assets' => [
+        'js' => [
+            BUILD_PATH . 'js/beautiful-phone-page.js'
+        ]
+    ]
 );

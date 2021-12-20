@@ -36,7 +36,4 @@ return array(
             'type' => 'text',
         ),
 	),
-    'groups' => array(
-
-    ),
 );

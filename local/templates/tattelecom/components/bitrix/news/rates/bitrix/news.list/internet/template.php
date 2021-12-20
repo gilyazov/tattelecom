@@ -11,7 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-$this->addExternalJS(BUILD_PATH . "js/common-private-clients.js");
 $this->addExternalJS(BUILD_PATH . "js/rates-internet-list-page.js");
 ?>
 <ul class="rates-list__list">
@@ -68,7 +67,7 @@ $this->addExternalJS(BUILD_PATH . "js/rates-internet-list-page.js");
                                 class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal<?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?> mod-white<?endif?>"
                                 data-tariff-name="<?=$arItem["NAME"]?>" data-prise="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Подключить</button>
                         <div class="rates-list__slide-link-detailed-wrapper">
-                            <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="gl__secondary-btn js-open-about-tariff-modal<?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?> mod-white<?endif?>">Подробнее о тарифе</a>
+                            <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="gl__secondary-btn <?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?> mod-white<?endif?>">Подробнее о тарифе</a>
                         </div>
                     </div>
                 </div>

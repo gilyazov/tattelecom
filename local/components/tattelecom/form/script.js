@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     alert(response.data.error_text);
                                 }
                                 else{
-                                    window.openThanksModal();
+                                    window.openThanksModal('#modal-thanks');
                                 }
 
                                 BX.closeWait(form, wait);

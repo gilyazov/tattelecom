@@ -16,7 +16,7 @@
             </li>
         </ul>
         <div class="steps__btn-wrapper">
-            <button type="button" class="gl__main-btn steps__btn js-open-send-request-modal" data-tariff-name="Заявка на кешбек">Оставить заявку на подключение</button>
+            <button type="button" class="gl__main-btn steps__btn js-open-send-request-modal" data-tariff-name="Заявка на подключение">Оставить заявку на подключение</button>
         </div>
     </div>
 </section>

@@ -24,5 +24,5 @@ $this->addExternalJS($componentPath . '/script.js');
             <span class="checkbox__text mod-modal">Я согласен на обработку своих персональных данных</span>
         </label>
     </div>
-    <button type="button" class="gl__main-btn modal__btn-submit js-btn-submit">Отправить заявку</button>
+    <button type="submit" class="gl__main-btn modal__btn-submit js-btn-submit">Отправить заявку</button>
 </form>

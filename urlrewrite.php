@@ -24,6 +24,14 @@ $arUrlRewrite=array (
     'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
+    1 =>
+        array (
+            'CONDITION' => '#^/helpdesk/technical-works/#',
+            'RULE' => '',
+            'ID' => 'bitrix:news',
+            'PATH' => '/dynamic/helpdesk/technical-works/index.php',
+            'SORT' => 100,
+        ),
   5 => 
   array (
     'CONDITION' => '#^/#',

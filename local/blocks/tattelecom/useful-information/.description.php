@@ -13,27 +13,32 @@ return array(
         'dynamic' => false,
 	),
     'cards' => [
-
+        '.useful-information__slide-wrapper' => [
+            'name' => 'Карточки',
+            'label' => [
+                '.useful-information__slide-content-text'
+            ]
+        ]
     ],
 	'nodes' => array(
-        '.rates-preview__content-subtitle' => array(
+        '.gl__title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
         ),
-        '.rates-preview__content-caption' => array(
-            'name' => 'Описание',
+
+        '.useful-information__slide-content-text' => array(
+            'name' => 'Заголовок',
             'type' => 'text',
         ),
-
-        '.why-iteko__card' => array(
+        '.useful-information__slide-image' => array(
+            'name' => 'Фон',
+            'type' => 'img',
+            'dimensions' => array('maxWidth' => 500, 'maxHeight' => 340)
+        ),
+        '.useful-information__slide' => array(
             'name' => 'Ссылка',
             'type' => 'link',
             'skipContent' => true,
-        ),
-
-        '.why-iteko__card-text' => array(
-            'name' => 'Текст',
-            'type' => 'text',
         ),
 	),
     'groups' => array(
