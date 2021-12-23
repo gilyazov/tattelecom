@@ -26,12 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     })
                     .then(function(response) {
                         if (response.status === 'success') {
-                            console.log(response.data);
+                            let modalComponent;
+
                             if (response.data.opportunity == false){
-                                window.openModal('#modal-badRequestLetai-host');
+                                modalComponent = new window.classModal(document.querySelector('#modal-badRequestLetai-host'));
+                                modalComponent.onOpenModal();
                             }
                             else{
-                                window.openModal('#modal-requestLetai-host');
+                                modalComponent = new window.classModal(document.querySelector('#modal-requestLetai-host'));
+                                modalComponent.onOpenModal();
                             }
 
                             BX.closeWait(connectForm, wait);

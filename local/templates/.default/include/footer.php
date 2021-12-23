@@ -8,26 +8,22 @@
                         </svg>
                     </div>
                     <div class="footer__links-list gl__drop-menu-container js-drop-menu-container">
-                        <ul class="gl__drop-menu js-drop-menu">
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">О компании</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Пресс-центр</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Работа в компании</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Акционерам и инвесторам</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Структурные подразделения</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Контактная информация</a>
-                            </li>
-                        </ul>
+                        <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_menu", Array(
+                            "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+                            "CHILD_MENU_TYPE" => "",    // Тип меню для остальных уровней
+                            "DELAY" => "N", // Откладывать выполнение шаблона меню
+                            "MAX_LEVEL" => "1", // Уровень вложенности меню
+                            "MENU_CACHE_GET_VARS" => array( // Значимые переменные запроса
+                                0 => "",
+                            ),
+                            "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                            "MENU_CACHE_TYPE" => "N",   // Тип кеширования
+                            "MENU_CACHE_USE_GROUPS" => "Y", // Учитывать права доступа
+                            "ROOT_MENU_TYPE" => "tattel_bottom",  // Тип меню для первого уровня
+                            "USE_EXT" => "Y",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
+                        ),
+                            false
+                        );?>
                     </div>
                 </div>
                 <div class="footer__top-grid-item">
@@ -36,26 +32,42 @@
                         </svg>
                     </div>
                     <div class="footer__links-list gl__drop-menu-container js-drop-menu-container">
-                        <ul class="gl__drop-menu js-drop-menu">
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Мобильная связь</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Интернет</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Телевидение</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Каталог устройств</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Домофония</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Видеонаблюдение</a>
-                            </li>
-                        </ul>
+                        <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_menu", Array(
+                            "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+                            "CHILD_MENU_TYPE" => "",    // Тип меню для остальных уровней
+                            "DELAY" => "N", // Откладывать выполнение шаблона меню
+                            "MAX_LEVEL" => "1", // Уровень вложенности меню
+                            "MENU_CACHE_GET_VARS" => array( // Значимые переменные запроса
+                                0 => "",
+                            ),
+                            "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                            "MENU_CACHE_TYPE" => "N",   // Тип кеширования
+                            "MENU_CACHE_USE_GROUPS" => "Y", // Учитывать права доступа
+                            "ROOT_MENU_TYPE" => "my_bottom",  // Тип меню для первого уровня
+                            "USE_EXT" => "Y",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
+                        ),
+                            false
+                        );?>
+<!--                        <ul class="gl__drop-menu js-drop-menu">-->
+<!--                            <li class="footer__link-item">-->
+<!--                                <a href="" class="footer__link">Мобильная связь</a>-->
+<!--                            </li>-->
+<!--                            <li class="footer__link-item">-->
+<!--                                <a href="" class="footer__link">Интернет</a>-->
+<!--                            </li>-->
+<!--                            <li class="footer__link-item">-->
+<!--                                <a href="" class="footer__link">Телевидение</a>-->
+<!--                            </li>-->
+<!--                            <li class="footer__link-item">-->
+<!--                                <a href="" class="footer__link">Каталог устройств</a>-->
+<!--                            </li>-->
+<!--                            <li class="footer__link-item">-->
+<!--                                <a href="" class="footer__link">Домофония</a>-->
+<!--                            </li>-->
+<!--                            <li class="footer__link-item">-->
+<!--                                <a href="" class="footer__link">Видеонаблюдение</a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
                     </div>
                 </div>
                 <div class="footer__top-grid-item">
@@ -64,26 +76,22 @@
                         </svg>
                     </div>
                     <div class="footer__links-list gl__drop-menu-container js-drop-menu-container">
-                        <ul class="gl__drop-menu js-drop-menu">
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Решения для бизнеса</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Мобильная связь</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Интернет в офис</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Телефония</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Цифровые сервисы</a>
-                            </li>
-                            <li class="footer__link-item">
-                                <a href="" class="footer__link">Продвижение</a>
-                            </li>
-                        </ul>
+                        <?$APPLICATION->IncludeComponent("bitrix:menu", "footer_menu", Array(
+                            "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+                            "CHILD_MENU_TYPE" => "",    // Тип меню для остальных уровней
+                            "DELAY" => "N", // Откладывать выполнение шаблона меню
+                            "MAX_LEVEL" => "1", // Уровень вложенности меню
+                            "MENU_CACHE_GET_VARS" => array( // Значимые переменные запроса
+                                0 => "",
+                            ),
+                            "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                            "MENU_CACHE_TYPE" => "N",   // Тип кеширования
+                            "MENU_CACHE_USE_GROUPS" => "Y", // Учитывать права доступа
+                            "ROOT_MENU_TYPE" => "b2b_bottom",  // Тип меню для первого уровня
+                            "USE_EXT" => "Y",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
+                        ),
+                            false
+                        );?>
                     </div>
                 </div>
                 <div class="footer__top-grid-item mod-first-half-row">

@@ -7,13 +7,13 @@
                     <div class="header__top-block-content">
                         <ul class="header__top-menu-items-list gl__md-hide">
                             <li class="header__top-menu-items">
-                                <a href="" class="header__top-menu-items-link">Таттелеком</a>
+                                <a href="https://my.tattelecom.ru/about" class="header__top-menu-items-link">Таттелеком</a>
                             </li>
                             <li class="header__top-menu-items">
-                                <a href="" class="header__top-menu-items-link">Частным клиентам</a>
+                                <a href="<?=SITE_DIR?>" class="header__top-menu-items-link">Частным клиентам</a>
                             </li>
                             <li class="header__top-menu-items">
-                                <a href="" class="header__top-menu-items-link">Бизнесу</a>
+                                <a href="https://b2b.tattelecom.ru/" class="header__top-menu-items-link">Бизнесу</a>
                             </li>
                             <li class="header__top-menu-items">
                                 <button type="button" class="header__top-menu-items-link">Ещё</button>
@@ -110,8 +110,7 @@
                                     <use xlink:href="#lk"></use>
                                 </svg>
                             </button>
-
-                            <button type="button" class="header__bottom-btn header__btn-burger"></button>
+                            <button type="button" class="header__bottom-btn header__btn-burger js-open-side-bar"></button>
                         </div>
                     </div>
                 </div>

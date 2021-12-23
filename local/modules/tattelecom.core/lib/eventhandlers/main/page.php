@@ -18,14 +18,29 @@ class Page
         $uri = new Uri($uriString);
         $redirect = $uri->getPath();
 
-        if (($realPathArr[0] == "dynamic") || (self::dynamicPage($redirect))){
+        if ((self::dynamicPath($realPathArr[0])) || (self::dynamicPage($redirect))){
             define('SITE_TEMPLATE_ID','tattelecom');
+        }
+    }
+
+    protected static function dynamicPath($path){
+        $arPage = [
+            "dynamic",
+            "news"
+        ];
+
+        if (in_array($path, $arPage)){
+            return true;
+        }
+        else{
+            return false;
         }
     }
 
     protected static function dynamicPage($url){
         $arPage = [
-            "/search/"
+            "/search/",
+            "/news/"
         ];
 
         if (in_array($url, $arPage)){

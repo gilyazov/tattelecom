@@ -130,3 +130,52 @@
         </div>
     </div>
 </div>
+
+<div class="side-bar gl__bg-show" id="side-bar-host">
+    <div class="side-bar__content" id="side-bar-content">
+        <div class="side-bar__top">
+            <div class="side-bar__header">
+                <button type="button" class="side-bar__close-btn js-close-side-bar">
+                    <svg width="30" height="30" aria-hidden="true" class="side-bar__close-btn-icon">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:search.form",
+                "side-bar__search",
+                array(
+                    "PAGE" => "#SITE_DIR#search/",
+                    "USE_SUGGEST" => "N",
+                    "COMPONENT_TEMPLATE" => "side-bar__search"
+                ),
+                false
+            );?>
+            <button type="button" class="side-bar__btn gl__main-btn js-open-callback-modal">Стать абонентом</button>
+
+            <?$APPLICATION->IncludeComponent("bitrix:menu", "side-bar__drops", Array(
+                "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+                "CHILD_MENU_TYPE" => "",    // Тип меню для остальных уровней
+                "DELAY" => "N", // Откладывать выполнение шаблона меню
+                "MAX_LEVEL" => "4", // Уровень вложенности меню
+                "MENU_CACHE_GET_VARS" => array( // Значимые переменные запроса
+                    0 => "",
+                ),
+                "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                "MENU_CACHE_TYPE" => "N",   // Тип кеширования
+                "MENU_CACHE_USE_GROUPS" => "Y", // Учитывать права доступа
+                "ROOT_MENU_TYPE" => "top",  // Тип меню для первого уровня
+                "USE_EXT" => "Y",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
+            ),
+                false
+            );?>
+
+        </div>
+        <div class="side-bar__bottom">
+            <a href="/helpdesk/" class="side-bar__bottom-link">Поддержка</a>
+            <a href="/offices/" class="side-bar__bottom-link">Офисы продаж</a>
+            <a href="/payment/" class="side-bar__bottom-link">Оплата</a>
+        </div>
+    </div>
+</div>

@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     alert(response.data.error_text);
                                 }
                                 else{
+                                    let modalComponent;
+                                    let idModal = $(form).closest('.mod-show').attr('id');
+                                    modalComponent = new window.classModal(document.querySelector('#' + idModal));
+                                    modalComponent.onCloseModal();
+
                                     window.openThanksModal('#modal-thanks');
                                 }
 

@@ -3,7 +3,6 @@
 $jsConfig = array(
     'landing_core_admin' => array(// изменили ключ, так как регистрируем свое расширение
         'css' => array(
-            //SITE_TEMPLATE_PATH . '/assets/css/backend.css',
             '/bitrix/css/main/font-awesome.css'
         ),
         'rel' => array('landing_core'),
