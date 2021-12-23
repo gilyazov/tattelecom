@@ -25,7 +25,14 @@ class Form extends \CBitrixComponent implements Controllerable
 
     protected function buildUrl(): string
     {
-        return $this->configuration['host'];
+        $isAdmin = \Bitrix\Main\Engine\CurrentUser::get()->isAdmin();
+
+        if ($isAdmin){
+            return $this->configuration['dev_host'];
+        }
+        else{
+            return $this->configuration['host'];
+        }
     }
 
     public function configureActions() : array
@@ -49,9 +56,11 @@ class Form extends \CBitrixComponent implements Controllerable
             "param_comment" => $post['param_comment'],
 
             "service" => 2,
-            "param_referer" => $APPLICATION->GetCurPage(),
+            "param_referer" => $post['param_referer'],
             "param_clientstatus" => 1
         ];
+
+        //pre($data);die();
 
         $response = $this->httpClient->post($url, $data);
 

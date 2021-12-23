@@ -43,13 +43,19 @@ class TtkPay extends \CBitrixComponent implements Controllerable
         $url = $this->buildUrl();
 
         $data = [
-            "account_number" => $post['account_number'],
-            "phone_number" => $post['phone_number'],
             "amount_of_pay" => $post['amount_of_pay'],
             "user_email" => $post['user_email'],
             "error_url" => $this->configuration['payment']['error_url'],
             "success_url" => $this->configuration['payment']['success_url']
         ];
+
+        if ($post['account_number']){
+            $data['account_number'] = $post['account_number'];
+        }
+
+        if ($post['phone_number']){
+            $data['phone_number'] = $post['phone_number'];
+        }
 
         $response = $this->httpClient->post($url, \Bitrix\Main\Web\Json::encode($data));
 
@@ -61,18 +67,8 @@ class TtkPay extends \CBitrixComponent implements Controllerable
         return $this->configuration['host'] . $this->configuration['payment']['path']['url'];
     }
 
-    protected function getTypes()
-    {
-
-        $response = $this->httpClient->get($url);
-
-        return \Bitrix\Main\Web\Json::decode($response);
-    }
-
     public function executeComponent()
     {
-        //$this->arResult['TYPES'] = $this->getTypes();
-
         $this->includeComponentTemplate();
     }
 }

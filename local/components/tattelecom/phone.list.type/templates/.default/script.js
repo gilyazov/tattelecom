@@ -1,4 +1,4 @@
-function ajaxFilter(id, myForm, data) {
+function ajaxFilter(id) {
     let wait = BX.showWait('phone-list__container');  // показываем прелоадер в правом верхнем углу контейнер
 
     $.ajax({
@@ -10,13 +10,13 @@ function ajaxFilter(id, myForm, data) {
         dataType: "html",
         success: function(dataHtml){
             $('#phone-list__container').html(dataHtml);
+            window.initRequestModal("#modal-send-request-host");
             BX.closeWait('xls_container', wait); // прячем прелоадер
         }
     });
 }
 
 BX.ready(function(){
-    let myForm = document.querySelector("[name = arrFilter_form]");
     $('[name = phone-list-type]').on('change', function () {
         let id = $(this).val();
         ajaxFilter(id);

@@ -28,7 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (response.status === 'success') {
                                 let responseData = response.data;
                                 if (responseData.errorMessage){
-                                    alert(responseData.errorMessage);
+                                    let button = form.querySelector('button');
+                                    BX.insertAfter(BX.create('div', {
+                                        attrs: {
+                                            className: '_warnming'
+                                        },
+                                        text: responseData.errorMessage
+                                    }), button);
                                 }
 
                                 if (responseData.url){

@@ -105,11 +105,11 @@
 
                     <div class="header__bottom-block-right gl__bg-show">
                         <div class="header__btns-container">
-                            <button type="button" class="header__bottom-btn header__btn-lk">
+                            <a href="https://lk.letai.ru/template.LOGIN/" target="_blank" class="header__bottom-btn header__btn-lk">
                                 <svg width="30" height="30" aria-hidden="true" class="header__btn-lk-icon">
                                     <use xlink:href="#lk"></use>
                                 </svg>
-                            </button>
+                            </a>
                             <button type="button" class="header__bottom-btn header__btn-burger js-open-side-bar"></button>
                         </div>
                     </div>

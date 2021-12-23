@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?if($arParams['IBLOCK_ID'] == 17):?>
+<?if(in_array($arParams['IBLOCK_ID'], [17, 30])):?>
     <section class="rates-info" id="rates-mobile-info-host">
         <div class="gl__page-content">
             <h2 class="gl__title"><?$APPLICATION->ShowTitle()?></h2>
@@ -49,8 +49,8 @@ $this->setFrameMode(true);
                     "SET_STATUS_404" => $arParams["SET_STATUS_404"],
                     "SHOW_404" => $arParams["SHOW_404"],
                     "FILE_404" => $arParams["FILE_404"],
-                    "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-                    "ADD_SECTIONS_CHAIN" => $arParams["ADD_SECTIONS_CHAIN"],
+                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                    "ADD_SECTIONS_CHAIN" => "N",
                     "ACTIVE_DATE_FORMAT" => $arParams["DETAIL_ACTIVE_DATE_FORMAT"],
                     "CACHE_TYPE" => $arParams["CACHE_TYPE"],
                     "CACHE_TIME" => $arParams["CACHE_TIME"],
@@ -75,7 +75,7 @@ $this->setFrameMode(true);
                     "SHARE_HANDLERS" => $arParams["SHARE_HANDLERS"],
                     "SHARE_SHORTEN_URL_LOGIN" => $arParams["SHARE_SHORTEN_URL_LOGIN"],
                     "SHARE_SHORTEN_URL_KEY" => $arParams["SHARE_SHORTEN_URL_KEY"],
-                    "ADD_ELEMENT_CHAIN" => (isset($arParams["ADD_ELEMENT_CHAIN"]) ? $arParams["ADD_ELEMENT_CHAIN"] : ''),
+                    "ADD_ELEMENT_CHAIN" => "N",
                     'STRICT_SECTION_CHECK' => (isset($arParams['STRICT_SECTION_CHECK']) ? $arParams['STRICT_SECTION_CHECK'] : ''),
                 ),
                 $component
@@ -86,7 +86,7 @@ $this->setFrameMode(true);
 
 <?$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
-    ($arParams['IBLOCK_ID'] == 17 ? "internet" : ""),
+    ($arParams['IBLOCK_ID'] == 6 ? "" : "internet"),
 	Array(
 		"DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
 		"DISPLAY_NAME" => $arParams["DISPLAY_NAME"],
@@ -144,8 +144,8 @@ $this->setFrameMode(true);
 <section class="info-links" id="info-links-host">
     <div class="gl__page-content">
         <ul class="info-links__list">
-            <li class="info-links__item gl__white-container cashback__slide gl__link-arrow-container">
-                <img src="<?=BUILD_PATH?>img/rates-mobile-list-page/img-2.png" alt="" class="cashback__slide-img info-links__slide-img">
+            <!--<li class="info-links__item gl__white-container cashback__slide gl__link-arrow-container">
+                <img src="<?/*=BUILD_PATH*/?>img/rates-mobile-list-page/img-2.png" alt="" class="cashback__slide-img info-links__slide-img">
                 <div class="cashback__slide-content-wrapper">
                     <div class="cashback__slide-title info-links__slide-title mod-black">
                         <div>Смартфоны в рассрочку</div>
@@ -156,7 +156,7 @@ $this->setFrameMode(true);
                         <use xlink:href="#arrow-line-right"></use>
                     </svg>
                 </a>
-            </li>
+            </li>-->
             <li class="info-links__item gl__white-container cashback__slide gl__link-arrow-container">
                 <img src="<?=BUILD_PATH?>img/rates-mobile-list-page/img-3.jpg" alt="" class="cashback__slide-background">
                 <div class="cashback__slide-content-wrapper">
@@ -176,7 +176,7 @@ $this->setFrameMode(true);
                     </div>
                     <div class="cashback__slide-text info-links__slide-text mod-white">Рассрочка на приобретение мобильных устройств с поддержкой 4G.</div>
                 </div>
-                <a href="" class="cashback__slide-link mod-white">Заказать сим-карту</a>
+                <a href="javascript:;" class="cashback__slide-link mod-white js-open-callback-modal">Заказать сим-карту</a>
             </li>
             <li class="info-links__item gl__white-container cashback__slide gl__link-arrow-container">
                 <img src="<?=BUILD_PATH?>img/rates-mobile-list-page/img-4.png" alt="" class="cashback__slide-img info-links__slide-img">

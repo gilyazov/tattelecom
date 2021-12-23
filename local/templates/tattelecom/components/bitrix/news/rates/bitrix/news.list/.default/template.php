@@ -54,6 +54,11 @@ $this->addExternalJS(BUILD_PATH . "js/rates-mobile-list-page.js");
                         </div>
 
                         <div class="rates-list__slide-price-wrapper">
+                            <?if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
+                                <div class="rates-list__slide-old-price">
+                                    <?=$arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
+                                </div>
+                            <?endif;?>
                             <div class="rates-list__slide-price">
                                 <span class="big"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></span>
                                 <span class="small"><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>

@@ -114,7 +114,7 @@ $this->setFrameMode(true);
             <div class="rates-list__list-wrapper">
                 <?$APPLICATION->IncludeComponent(
                     "bitrix:news.list",
-                    ($arParams['IBLOCK_ID'] == 17 ? "internet" : ""),
+                    ($arParams['IBLOCK_ID'] == 6 ? "" : "internet"),
                     Array(
                         "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                         "IBLOCK_ID" => $arParams["IBLOCK_ID"],

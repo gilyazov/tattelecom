@@ -26,14 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
                         })
                         .then(function(response) {
                             if (response.status === 'success') {
-                                if (response.data.status == 'false'){
+
+                                if (response.data.status === false){
                                     alert(response.data.error_text);
                                 }
                                 else{
+                                    form.reset();
+
                                     let modalComponent;
                                     let idModal = $(form).closest('.mod-show').attr('id');
-                                    modalComponent = new window.classModal(document.querySelector('#' + idModal));
-                                    modalComponent.onCloseModal();
+                                    if (idModal){
+                                        modalComponent = new window.classModal(document.querySelector('#' + idModal));
+                                        modalComponent.onCloseModal();
+                                    }
 
                                     window.openThanksModal('#modal-thanks');
                                 }

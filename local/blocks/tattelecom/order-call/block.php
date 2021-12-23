@@ -1,4 +1,4 @@
-<section class="order-call" id="order-call-host">
+<section class="order-call mod-absolute-img" id="order-call-host">
     <div class="gl__page-content order-call-page-content">
         <div class="order-call__content">
             <div>

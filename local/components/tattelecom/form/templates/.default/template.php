@@ -5,6 +5,7 @@ $this->addExternalJS($componentPath . '/script.js');
 ?>
 
 <form class="js-form-modal callback__form js-potok-form" data-need-validation data-parsley-validate data-parsley-focus="none">
+    <input type="hidden" name="param_referer" value="<?=$APPLICATION->GetTitle()?>">
     <label class="gl-input__wrapper js-input-tel">
         <input
                 type="tel" class="gl-input__input js-phone-mask"

@@ -4,6 +4,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 $this->addExternalJS($componentPath . '/script.js');
 ?>
 <form class="js-form-modal js-potok-form" data-need-validation data-parsley-validate data-parsley-focus="none">
+    <input type="hidden" name="param_referer" value="<?=$APPLICATION->GetTitle()?>">
     <div class="send-request__form-inputs">
         <label class="gl-input__wrapper js-input-text">
             <input type="text" class="gl-input__input" placeholder="Ваше имя" name="firstname" data-parsley-required="">

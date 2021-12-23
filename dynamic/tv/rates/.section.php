@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Телевидение";
+$arDirProperties = Array(
+
+);
+?>

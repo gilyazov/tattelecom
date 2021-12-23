@@ -18,6 +18,13 @@ return array(
             'label' => [
                 '.support__link-item-title'
             ]
+        ],
+
+        '.support__messages-item' => [
+            'name' => 'Ссылка',
+            'label' => [
+                '.support__messages-icon'
+            ]
         ]
     ],
 	'nodes' => array(
@@ -42,6 +49,16 @@ return array(
             'name' => 'Пункт меню',
             'type' => 'link',
             'skipContent' => true,
+        ),
+
+        '.support__messages-link' => array(
+            'name' => 'Ссылка соц.сети',
+            'type' => 'link',
+            'skipContent' => true,
+        ),
+        '.support__messages-icon' => array(
+            'name' => 'Иконка',
+            'type' => 'img',
         ),
 	),
     'groups' => array(

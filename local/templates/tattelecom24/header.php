@@ -22,7 +22,10 @@ $language= \Bitrix\Landing\Manager::getLangISO();
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <link type="image/png" href="<?=BUILD_PATH?>img/common/tattelecom-small-logo.png" rel="icon">
+
+    <link rel="icon" href="/local/templates/.default/include/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/local/templates/.default/include/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="/local/templates/.default/include/favicon/favicon.png">
 
     <title><?$APPLICATION->ShowTitle();?></title>
     <?

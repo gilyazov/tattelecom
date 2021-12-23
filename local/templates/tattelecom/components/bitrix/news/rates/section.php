@@ -95,7 +95,7 @@ $this->setFrameMode(true);
             <div class="rates-list__list-wrapper">
                 <?$APPLICATION->IncludeComponent(
                     "bitrix:news.list",
-                    ($arParams['IBLOCK_ID'] == 17 ? "internet" : ""),
+                    ($arParams['IBLOCK_ID'] == 6 ? "" : "internet"),
                     Array(
                         "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                         "IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -113,8 +113,8 @@ $this->setFrameMode(true);
                         "SET_STATUS_404" => $arParams["SET_STATUS_404"],
                         "SHOW_404" => $arParams["SHOW_404"],
                         "FILE_404" => $arParams["FILE_404"],
-                        "INCLUDE_IBLOCK_INTO_CHAIN" => $arParams["INCLUDE_IBLOCK_INTO_CHAIN"],
-                        "ADD_SECTIONS_CHAIN" => $arParams["ADD_SECTIONS_CHAIN"],
+                        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                        "ADD_SECTIONS_CHAIN" => "Y",
                         "CACHE_TYPE" => $arParams["CACHE_TYPE"],
                         "CACHE_TIME" => $arParams["CACHE_TIME"],
                         "CACHE_FILTER" => $arParams["CACHE_FILTER"],

@@ -4,6 +4,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 $this->addExternalJS($componentPath . '/script.js');
 ?>
 <form class="services__form-wrapper js-potok-form" data-need-validation data-parsley-validate data-parsley-focus="none">
+    <input type="hidden" name="param_referer" value="<?=$APPLICATION->GetTitle()?>">
     <div class="services__form-inputs-wrapper">
         <label class="gl-input__wrapper js-input-tel">
             <span class="gl-input__title">Введите номер переноса</span>
