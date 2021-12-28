@@ -54,7 +54,10 @@ $this->setFrameMode(true);
 
                     <div class="rates-info__preview-bottom">
                         <div class="rates-info__preview-price-wrapper">
-                            <span class="number"><?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?></span>₽/мес
+                            <span class="number"><?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?></span><?=$arResult["PROPERTIES"]["TARIFFING"]["VALUE"]?>
+                            <?if($arResult["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
+                                <span class="rates-list__slide-old-price"><?=$arResult["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span><?=$arResult["PROPERTIES"]["TARIFFING"]["VALUE"]?>
+                            <?endif;?>
                         </div>
                         <button type="button" class="rates-info__preview-btn gl__main-btn js-open-send-request-modal" data-prise="<?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?>" data-tariff-name="<?=$arResult["NAME"]?>">Подключить</button>
                     </div>

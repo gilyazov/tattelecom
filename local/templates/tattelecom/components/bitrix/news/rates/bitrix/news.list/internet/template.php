@@ -60,7 +60,7 @@ $this->addExternalJS(BUILD_PATH . "js/rates-internet-list-page.js");
                     <div class="rates-list-internet__item-price-wrapper">
                         <?if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
                             <div class="rates-list__slide-old-price">
-                                <?=$arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
+                                <?=$arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span>₽/мес</span>
                             </div>
                         <?endif;?>
                         <div class="rates-list-internet__item-price">

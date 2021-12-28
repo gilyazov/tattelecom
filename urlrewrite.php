@@ -16,14 +16,6 @@ $arUrlRewrite=array (
     'PATH' => '/dynamic/internet/rates/index.php',
     'SORT' => 100,
   ),
-    5 =>
-        array (
-            'CONDITION' => '#^/tv/rates/#',
-            'RULE' => '',
-            'ID' => 'bitrix:news',
-            'PATH' => '/dynamic/tv/rates/index.php',
-            'SORT' => 100,
-        ),
   3 => 
   array (
     'CONDITION' => '#^/mobile/rates/#',
@@ -32,6 +24,22 @@ $arUrlRewrite=array (
     'PATH' => '/dynamic/mobile/rates/index.php',
     'SORT' => 100,
   ),
+  5 => 
+  array (
+    'CONDITION' => '#^/tv/rates/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/dynamic/tv/rates/index.php',
+    'SORT' => 100,
+  ),
+    6 =>
+        array (
+            'CONDITION' => '#^/tv/online/#',
+            'RULE' => '',
+            'ID' => 'bitrix:news',
+            'PATH' => '/dynamic/tv/online/index.php',
+            'SORT' => 100,
+        ),
   2 => 
   array (
     'CONDITION' => '#^/news/#',
@@ -40,7 +48,7 @@ $arUrlRewrite=array (
     'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
-  6 =>
+  7 =>
   array (
     'CONDITION' => '#^/#',
     'RULE' => '',

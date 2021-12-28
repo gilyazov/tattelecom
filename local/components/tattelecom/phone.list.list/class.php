@@ -27,11 +27,13 @@ class PhoneList extends CBitrixComponent
     protected function buildUrl(): string
     {
         $this->type = $this->arParams['TYPE'];
+        $page = $this->arParams['PAGE'];
 
         $basePath = $this->configuration['host'] . $this->configuration['beautiful_phone']['path']['list'];
         $uri = new \Bitrix\Main\Web\Uri($basePath);
         $uri->addParams([
-            "type" => $this->type
+            "type" => $this->type,
+            "page" => $page
         ]);
 
         return $uri->getUri();
@@ -40,6 +42,7 @@ class PhoneList extends CBitrixComponent
     protected function getList()
     {
         $url = $this->buildUrl();
+        //todo need кеш
         $response = $this->httpClient->get($url);
 
         return \Bitrix\Main\Web\Json::decode($response);

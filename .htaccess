@@ -1,32 +1,37 @@
 Options -Indexes 
 ErrorDocument 404 /404.php
-
 <IfModule mod_php5.c>
-  php_flag allow_call_time_pass_reference 1
-  php_flag session.use_trans_sid off
+	php_flag allow_call_time_pass_reference 1
+	php_flag session.use_trans_sid off
 
-  #php_value display_errors 1
+	#php_value display_errors 1
 
-  #php_value mbstring.internal_encoding UTF-8
+	#php_value mbstring.internal_encoding UTF-8
 </IfModule>
 
 <IfModule mod_rewrite.c>
-  Options +FollowSymLinks
-  RewriteEngine On
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
-  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
-  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+	Options +FollowSymLinks
+	RewriteEngine On
+
+    # 301 --- https://tattelecom.ru/payment/call_script_lk?plan_id=null&accountid2=102152373&prv_id=2&account=9586201943&client_email=gilyazov.aydar%40gmail.com&sum=10&button= => https://oldsite.tattelecom.ru/payment/call_script_lk?plan_id=null&accountid2=102152373&prv_id=2&account=9586201943&client_email=gilyazov.aydar%40gmail.com&sum=10&button=
+    RewriteCond %{REQUEST_URI}  ^\/payment/call_script_lk$
+    RewriteRule ^(.*)$ https://oldsite.tattelecom.ru/payment/call_script_lk%1 [R=301,L]
+    # костыль для оплаты лк ттк
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 </IfModule>
 
 <IfModule mod_dir.c>
-  DirectoryIndex index.php index.html
+	DirectoryIndex index.php index.html
 </IfModule>
 
 <IfModule mod_expires.c>
-  ExpiresActive on
-  ExpiresByType image/jpeg "access plus 3 day"
-  ExpiresByType image/gif "access plus 3 day"
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 3 day"
+	ExpiresByType image/gif "access plus 3 day"
 </IfModule>

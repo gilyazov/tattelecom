@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 <div class="rates-list__menu-container gl__filter-container--lg js-filter-container">
     <ul class="rates-list__menu-wrapper gl__filter--lg js-modal-container">
-        <button type="button" class="rates-list__menu-btn-close gl__lg-show gl__filter-modal-close modal__btn-close js-filter-close" id="close-thanks-modal">
+        <button type="button" class="rates-list__menu-btn-close gl__lg-show gl__filter-modal-close modal__btn-close js-filter-close">
             <svg width="32" height="32" aria-hidden="true" class="modal__close-icon">
                 <use xlink:href="#close"></use>
             </svg>

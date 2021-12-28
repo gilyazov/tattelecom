@@ -36,8 +36,10 @@ $this->addExternalJS(BUILD_PATH . "js/rates-mobile-list-page.js");
                         <ul class="rates-list__slide-conditions-list">
                             <?foreach ($arItem["PROPERTIES"]["BENEFITS"]["VALUE"] as $benefit):?>
                                 <li class="rates-list__slide-condition-item">
-                                    <img src="<?=BUILD_PATH?>img/main-page/rates-list/<?=$benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]?>.svg" alt=""
-                                         class="rates-list__slide-condition-item-icon">
+                                    <?if($benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]):?>
+                                        <img src="<?=BUILD_PATH?>img/main-page/rates-list/<?=$benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]?>.svg" alt=""
+                                            class="rates-list__slide-condition-item-icon">
+                                    <?endif?>
                                     <div class="rates-list__slide-condition-item-text"><?=$benefit["SUB_VALUES"]["B_VALUE"]["VALUE"]?></div>
                                 </li>
                             <?endforeach;?>

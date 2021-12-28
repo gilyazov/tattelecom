@@ -42,6 +42,21 @@ class Prolog
         }
         //    GeoIp\Manager::useCookieToStoreInfo(true);
         //    $result = GeoIp\Manager::getDataResult($ipAddress, "ru", array('cityName'));
+
+        // фильтр на исключение
+        $GLOBALS['arrFilterCity'] = Array(
+            [
+                "LOGIC" => "AND",
+                [
+                    "LOGIC" => "OR",
+                    ["PROPERTY_CITY" => $_SESSION['city']['id']],
+                    ["PROPERTY_CITY" => false]
+                ],
+                [
+                    "!PROPERTY_EXCLUDE_CITY" => $_SESSION['city']['id']
+                ]
+            ]
+        );
     }
 
     /**
