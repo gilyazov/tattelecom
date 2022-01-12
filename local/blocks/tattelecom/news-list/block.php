@@ -3,7 +3,8 @@
         <div class="gl__title-head">
             <h2 class="gl__title">Новости</h2>
             <div class="gl__xs-hide">
-                <a href="" class="gl__link-show-all">Все новости<svg width="20" height="20" aria-hidden="true" class="gl__link-show-all-icon">
+                <a href="/news/" class="gl__link-show-all">Все новости
+                    <svg width="20" height="20" aria-hidden="true" class="gl__link-show-all-icon">
                         <use xlink:href="#arrow-right"></use>
                     </svg>
                 </a>
@@ -11,63 +12,27 @@
         </div>
         <div class="gl-slider js-swiper" data-swiper-slides-preview="3">
             <div class="gl-slider__container swiper-container js-swiper-container">
-                <ul class="gl-slider__wrapper swiper-wrapper">
-                    <li class="swiper-slide gl__white-container news-list__slide gl__link-arrow-container">
-                        <div class="news-list__slide-title">22 май</div>
-                        <div class="news-list__slide-text">Провели праздник двора для жителей ЖК Салават Купере</div>
-                        <div class="news-list__link-arrow-wrapper gl__link-arrow-wrapper gl__link-arrow-block">
-                            <a href="" class="gl__link-arrow-link">
-                                <svg width="26" height="26" aria-hidden="true" class="gl__link-arrow-icon">
-                                    <use xlink:href="#arrow-line-right"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="swiper-slide gl__white-container news-list__slide gl__link-arrow-container">
-                        <div class="news-list__slide-title">22 май</div>
-                        <div class="news-list__slide-text">Провели праздник двора для жителей ЖК Салават Купере</div>
-                        <div class="news-list__link-arrow-wrapper gl__link-arrow-wrapper gl__link-arrow-block">
-                            <a href="" class="gl__link-arrow-link">
-                                <svg width="26" height="26" aria-hidden="true" class="gl__link-arrow-icon">
-                                    <use xlink:href="#arrow-line-right"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="swiper-slide gl__white-container news-list__slide gl__link-arrow-container">
-                        <div class="news-list__slide-title">22 май</div>
-                        <div class="news-list__slide-text">Провели праздник двора для жителей ЖК Салават Купере</div>
-                        <div class="news-list__link-arrow-wrapper gl__link-arrow-wrapper gl__link-arrow-block">
-                            <a href="" class="gl__link-arrow-link">
-                                <svg width="26" height="26" aria-hidden="true" class="gl__link-arrow-icon">
-                                    <use xlink:href="#arrow-line-right"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="swiper-slide gl__white-container news-list__slide gl__link-arrow-container">
-                        <div class="news-list__slide-title">22 май</div>
-                        <div class="news-list__slide-text">Провели праздник двора для жителей ЖК Салават Купере</div>
-                        <div class="news-list__link-arrow-wrapper gl__link-arrow-wrapper gl__link-arrow-block">
-                            <a href="" class="gl__link-arrow-link">
-                                <svg width="26" height="26" aria-hidden="true" class="gl__link-arrow-icon">
-                                    <use xlink:href="#arrow-line-right"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="swiper-slide gl__white-container news-list__slide gl__link-arrow-container">
-                        <div class="news-list__slide-title">22 май</div>
-                        <div class="news-list__slide-text">Провели праздник двора для жителей ЖК Салават Купере</div>
-                        <div class="news-list__link-arrow-wrapper gl__link-arrow-wrapper gl__link-arrow-block">
-                            <a href="" class="gl__link-arrow-link">
-                                <svg width="26" height="26" aria-hidden="true" class="gl__link-arrow-icon">
-                                    <use xlink:href="#arrow-line-right"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+                <?php $APPLICATION->IncludeComponent("bitrix:news.list","main-news",Array(
+                        "IBLOCK_TYPE" => "mobile",
+                        "IBLOCK_ID" => "29",
+                        "NEWS_COUNT" => "30",
+                        "SORT_BY1" => "SORT",
+                        "SORT_ORDER1" => "ASC",
+                        "SORT_BY2" => "ACTIVE_FROM",
+                        "SORT_ORDER2" => "DESC",
+                        "FILTER_NAME" => "",
+                        "FIELD_CODE" => Array("ID", "NAME", "DETAIL_PAGE_URL"),
+                        "PROPERTY_CODE" => Array("",),
+                        "CHECK_DATES" => "N",
+                        "DETAIL_URL" => "news/#ELEMENT_CODE#/",
+                        "PREVIEW_TRUNCATE_LEN" => "",
+                        "ACTIVE_DATE_FORMAT" => "d F",
+                        "SET_TITLE" => "N",
+                        "PAGER_TEMPLATE" => "",
+                        "DISPLAY_TOP_PAGER" => "N",
+                        "DISPLAY_BOTTOM_PAGER" => "N"
+                    )
+                );?>
             </div>
             <div class="gl__bg-hide">
                 <button type="button" class="gl-slider__slider-btn mod-prev js-slider-btn-prev">

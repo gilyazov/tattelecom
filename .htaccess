@@ -18,6 +18,14 @@ ErrorDocument 404 /404.php
     RewriteRule ^(.*)$ https://oldsite.tattelecom.ru/payment/call_script_lk%1 [R=301,L]
     # костыль для оплаты лк ттк
 
+    # редирект без слеша
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} ^(.*/[^/\.]+)$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [R=301,L]
+    # end
+
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-l
 	RewriteCond %{REQUEST_FILENAME} !-d
