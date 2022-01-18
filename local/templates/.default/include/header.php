@@ -15,19 +15,26 @@
                             <li class="header__top-menu-items">
                                 <a href="https://b2b.tattelecom.ru/" class="header__top-menu-items-link">Бизнесу</a>
                             </li>
-                            <li class="header__top-menu-items">
+                            <li class="header__top-menu-items mod-more">
                                 <button type="button" class="header__top-menu-items-link">Ещё</button>
                             </li>
                         </ul>
 
-                        <button type="button" class="header__top-menu-items-link gl__md-show">
-                            Частным клиентам
-                        </button>
+                        <div class="gl__md-show header__top-menu-mobile-nav">
+                            <button type="button" class="header__top-menu-items-link">Частным клиентам</button>
+                            <div class="header__top-menu-items-link header__top-menu-hover-nav">Ещё<div class="header__top-menu-hover-container">
+                                    <div class="header__top-menu-hover-content">
+                                        <a href="https://b2b.tattelecom.ru/" class="header__top-menu-items-link">Бизнесу</a>
+                                        <a href="https://my.tattelecom.ru/about" class="header__top-menu-items-link">Таттелеком</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="header__top-block-right">
                             <ul class="header__top-menu-items-list gl__bg-hide">
                                 <li class="header__top-menu-items">
-                                    <a href="/helpdesk/" class="header__top-menu-items-link">Поддержка</a>
+                                    <a href="/support/" class="header__top-menu-items-link">Поддержка</a>
                                 </li>
                                 <li class="header__top-menu-items">
                                     <a href="/offices/" class="header__top-menu-items-link">Офисы продаж</a>

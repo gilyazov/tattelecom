@@ -26,6 +26,14 @@ ErrorDocument 404 /404.php
     RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [R=301,L]
     # end
 
+    # зеркала
+    RewriteCond %{HTTP_HOST} ^www.tattelecom.ru [NC]
+    RewriteRule ^(.*)$ https://tattelecom.ru/$1 [R=301,L]
+    #перенаправляем *.letai.ru
+    RewriteCond %{HTTP_HOST} mnogo.letai.ru
+    RewriteRule (.*) https://tattelecom.ru/$1 [R=301,L]
+    # end
+
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-l
 	RewriteCond %{REQUEST_FILENAME} !-d

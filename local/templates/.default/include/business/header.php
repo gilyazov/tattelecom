@@ -1,4 +1,4 @@
-<header class="header mod-business js-business-main" id="header-host">
+<header class="header mod-business<?=($APPLICATION->GetCurPage(false) === "" ? " js-business-main" : "")?>" id="header-host">
     <div class="header__content" style="background-image: url('<?=BUILD_PATH?>img/header/buliness-background.jpg')">
         <div class="header__main-content">
             <div class="header__top-block">
@@ -6,13 +6,13 @@
                     <div class="header__top-block-content">
                         <ul class="header__top-menu-items-list gl__md-hide">
                             <li class="header__top-menu-items">
-                                <a href="" class="header__top-menu-items-link">Таттелеком</a>
+                                <a href="#" target="_blank" class="header__top-menu-items-link">Таттелеком</a>
                             </li>
                             <li class="header__top-menu-items">
-                                <a href="" class="header__top-menu-items-link">Частным клиентам</a>
+                                <a href="https://tattelecom.ru/" target="_blank" class="header__top-menu-items-link">Частным клиентам</a>
                             </li>
                             <li class="header__top-menu-items">
-                                <a href="" class="header__top-menu-items-link">Бизнесу</a>
+                                <a href="<?=SITE_DIR?>" class="header__top-menu-items-link">Бизнесу</a>
                             </li>
                             <li class="header__top-menu-items">
                                 <a href="" class="header__top-menu-items-link">Акции</a>
@@ -42,9 +42,9 @@
                                 <a href="" class="header__top-menu-items-link mod-with-icons js-show-location-popup" data-hover-value="location">
                                     <svg width="20" height="20" aria-hidden="true" class="header__top-menu-items-link-icon">
                                         <use xlink:href="#geolocation"></use>
-                                    </svg>Казань
+                                    </svg><?=$_SESSION['city']['name']?>
                                 </a>
-                                <a href="" class="header__top-menu-items-link mod-with-icons">
+                                <a href="https://web.tattelecom.ru/" target="_blank" class="header__top-menu-items-link mod-with-icons">
                                     <svg width="20" height="20" aria-hidden="true" class="header__top-menu-items-link-icon">
                                         <use xlink:href="#lk"></use>
                                     </svg>Войти
@@ -61,21 +61,23 @@
                             <img src="<?=BUILD_PATH?>img/header/logo-business.svg" alt="" class="header__logo mod-business">
                         </a>
                     </div>
-                    <div class="header__bottom-block-right mod-business gl__bg-hide js-b-menu-header header__hide-when-search js-hide-when-search">
-                        <ul class="header__bottom-menu-list">
-                            <li class="header__bottom-menu-item">
-                                <a href="" class="header__bottom-menu-link mod-business" data-hover-value="business-solutions">Комплексные решения для бизнеса</a>
-                            </li>
-                            <li class="header__bottom-menu-item">
-                                <a href="" class="header__bottom-menu-link mod-business" data-hover-value="connection">Связь</a>
-                            </li>
-                            <li class="header__bottom-menu-item">
-                                <a href="" class="header__bottom-menu-link mod-business" data-hover-value="digital-services">Цифровые сервисы</a>
-                            </li>
-                            <li class="header__bottom-menu-item">
-                                <a href="" class="header__bottom-menu-link mod-business" data-hover-value="promotion">Продвижение</a>
-                            </li>
-                        </ul>
+                    <div class="header__bottom-block-right<?=($APPLICATION->GetCurPage(false) !== '/' ? " mod-show" : "")?> mod-business gl__bg-hide js-b-menu-header header__hide-when-search js-hide-when-search">
+                        <?$APPLICATION->IncludeComponent("bitrix:menu", "header__bottom-menu-list", Array(
+                            "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+                            "CHILD_MENU_TYPE" => "",    // Тип меню для остальных уровней
+                            "DELAY" => "N", // Откладывать выполнение шаблона меню
+                            "MAX_LEVEL" => "1", // Уровень вложенности меню
+                            "MENU_CACHE_GET_VARS" => array( // Значимые переменные запроса
+                                0 => "",
+                            ),
+                            "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                            "MENU_CACHE_TYPE" => "N",   // Тип кеширования
+                            "MENU_CACHE_USE_GROUPS" => "Y", // Учитывать права доступа
+                            "ROOT_MENU_TYPE" => "top",  // Тип меню для первого уровня
+                            "USE_EXT" => "Y",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
+                        ),
+                            false
+                        );?>
                     </div>
                     <form class="header__input-search-form js-show-when-search mod-business">
                         <label class="header__input-search-wrapper">
@@ -105,8 +107,24 @@
             </div>
         </div>
         <div class="header__popup-container mod-business js-header-popup-container">
-            <div class="header__popup-wrapper mod-business js-header-popup-wrapper" style="background-image: url('img/header/buliness-background.jpg')">
+            <div class="header__popup-wrapper mod-business js-header-popup-wrapper" style="background-image: url('<?=BUILD_PATH?>img/header/buliness-background.jpg')">
                 <div class="gl__page-content">
+                    <?$APPLICATION->IncludeComponent("bitrix:menu", "header-business-popup-wrapper", Array(
+                        "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+                        "CHILD_MENU_TYPE" => "",    // Тип меню для остальных уровней
+                        "DELAY" => "N", // Откладывать выполнение шаблона меню
+                        "MAX_LEVEL" => "4", // Уровень вложенности меню
+                        "MENU_CACHE_GET_VARS" => array( // Значимые переменные запроса
+                            0 => "",
+                        ),
+                        "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                        "MENU_CACHE_TYPE" => "N",   // Тип кеширования
+                        "MENU_CACHE_USE_GROUPS" => "Y", // Учитывать права доступа
+                        "ROOT_MENU_TYPE" => "top",  // Тип меню для первого уровня
+                        "USE_EXT" => "Y",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
+                    ),
+                        false
+                    );?>
                     <div class="header__b-popup-content js-header-popup js-b-popup-margin" data-alignment="0" data-hover-value="business-solutions">
                         <ul>
                             <li>
@@ -280,114 +298,144 @@
                             </li>
                         </ul>
                     </div>
+
                     <div class="header__b-popup-content js-header-popup js-b-popup-margin location-popup-content mod-b-popup-content" data-hover-value="location">
                         <div class="header__popup-item-wrapper">
                             <span class="location-popup-content__heading">Республика Татарстан</span>
-                            <ul class="header__popup-item-list">
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Казань</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Альметьевск</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Агрыз</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Бугульма</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Елабуга</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Набережные Челны</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Нижнекамск</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Чистополь</a>
-                                </li>
-                            </ul>
-                            <ul class="header__popup-item-list mod-not-main">
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Азнакаево</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Актюбинский</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Боровое Матюшино</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Бавлы</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Высокая Гора</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Джалиль</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Заинск</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Зеленодольск</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Камские поляны</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Куркачи</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Лениногорск</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Менделеевск</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Нурлат</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Осиново</a>
-                                </li>
-                                <li>
-                                    <a href="" class="header__popup-item-link gl__no-default-hover">Усады</a>
-                                </li>
-                            </ul>
+
+                            <?
+                            global $arrFilter;
+                            $arrFilter = Array(
+                                "PROPERTY_MAIN_VALUE" => "Y"
+                            );
+                            ?>
+                            <?$APPLICATION->IncludeComponent("bitrix:news.list", "header__popup-item-list", Array(
+                                "COMPONENT_TEMPLATE" => ".default",
+                                "IBLOCK_TYPE" => "mobile", // Тип информационного блока (используется только для проверки)
+                                "IBLOCK_ID" => "25", // Код информационного блока
+                                "NEWS_COUNT" => "20",   // Количество новостей на странице
+                                "SORT_BY1" => "NAME",   // Поле для первой сортировки новостей
+                                "SORT_ORDER1" => "ASC", // Направление для первой сортировки новостей
+                                "FILTER_NAME" => "arrFilter",    // Фильтр
+                                "PROPERTY_CODE" => array(   // Свойства
+                                    0 => "",
+                                    1 => "",
+                                ),
+                                "CHECK_DATES" => "Y",   // Показывать только активные на данный момент элементы
+                                "DETAIL_URL" => "", // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+                                "AJAX_MODE" => "N", // Включить режим AJAX
+                                "AJAX_OPTION_JUMP" => "N",  // Включить прокрутку к началу компонента
+                                "AJAX_OPTION_STYLE" => "Y", // Включить подгрузку стилей
+                                "AJAX_OPTION_HISTORY" => "N",   // Включить эмуляцию навигации браузера
+                                "AJAX_OPTION_ADDITIONAL" => "", // Дополнительный идентификатор
+                                "CACHE_TYPE" => "A",    // Тип кеширования
+                                "CACHE_TIME" => "36000000", // Время кеширования (сек.)
+                                "CACHE_FILTER" => "N",  // Кешировать при установленном фильтре
+                                "CACHE_GROUPS" => "Y",  // Учитывать права доступа
+                                "PREVIEW_TRUNCATE_LEN" => "",   // Максимальная длина анонса для вывода (только для типа текст)
+                                "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
+                                "SET_TITLE" => "N", // Устанавливать заголовок страницы
+                                "SET_BROWSER_TITLE" => "N", // Устанавливать заголовок окна браузера
+                                "SET_META_KEYWORDS" => "N", // Устанавливать ключевые слова страницы
+                                "SET_META_DESCRIPTION" => "N",  // Устанавливать описание страницы
+                                "SET_LAST_MODIFIED" => "N", // Устанавливать в заголовках ответа время модификации страницы
+                                "INCLUDE_IBLOCK_INTO_CHAIN" => "N", // Включать инфоблок в цепочку навигации
+                                "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
+                                "HIDE_LINK_WHEN_NO_DETAIL" => "N",  // Скрывать ссылку, если нет детального описания
+                                "PARENT_SECTION" => "", // ID раздела
+                                "PARENT_SECTION_CODE" => "",    // Код раздела
+                                "INCLUDE_SUBSECTIONS" => "Y",   // Показывать элементы подразделов раздела
+                                "STRICT_SECTION_CHECK" => "N",  // Строгая проверка раздела для показа списка
+                                "DISPLAY_DATE" => "Y",  // Выводить дату элемента
+                                "DISPLAY_NAME" => "Y",  // Выводить название элемента
+                                "DISPLAY_PICTURE" => "Y",   // Выводить изображение для анонса
+                                "DISPLAY_PREVIEW_TEXT" => "Y",  // Выводить текст анонса
+                                "PAGER_TEMPLATE" => ".default", // Шаблон постраничной навигации
+                                "DISPLAY_TOP_PAGER" => "N", // Выводить над списком
+                                "DISPLAY_BOTTOM_PAGER" => "N",  // Выводить под списком
+                                "PAGER_TITLE" => "Новости", // Название категорий
+                                "PAGER_SHOW_ALWAYS" => "N", // Выводить всегда
+                                "PAGER_DESC_NUMBERING" => "N",  // Использовать обратную навигацию
+                                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",   // Время кеширования страниц для обратной навигации
+                                "PAGER_SHOW_ALL" => "N",    // Показывать ссылку "Все"
+                                "PAGER_BASE_LINK_ENABLE" => "N",    // Включить обработку ссылок
+                                "SET_STATUS_404" => "N",    // Устанавливать статус 404
+                                "SHOW_404" => "N",  // Показ специальной страницы
+                                "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
+                            ),
+                                false
+                            );?>
+
+                            <?
+                            global $arrFilter;
+                            $arrFilter = Array(
+                                "PROPERTY_MAJOR_VALUE" => "Y"
+                            );
+                            ?>
+                            <?$APPLICATION->IncludeComponent("bitrix:news.list", "header__popup-item-list", Array(
+                                "COMPONENT_TEMPLATE" => ".default",
+                                "IBLOCK_TYPE" => "mobile", // Тип информационного блока (используется только для проверки)
+                                "IBLOCK_ID" => "25", // Код информационного блока
+                                "NEWS_COUNT" => "20",   // Количество новостей на странице
+                                "SORT_BY1" => "NAME",   // Поле для первой сортировки новостей
+                                "SORT_ORDER1" => "ASC", // Направление для первой сортировки новостей
+                                "FILTER_NAME" => "arrFilter",    // Фильтр
+                                "PROPERTY_CODE" => array(   // Свойства
+                                    0 => "",
+                                    1 => "",
+                                ),
+                                "CHECK_DATES" => "Y",   // Показывать только активные на данный момент элементы
+                                "DETAIL_URL" => "", // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+                                "AJAX_MODE" => "N", // Включить режим AJAX
+                                "AJAX_OPTION_JUMP" => "N",  // Включить прокрутку к началу компонента
+                                "AJAX_OPTION_STYLE" => "Y", // Включить подгрузку стилей
+                                "AJAX_OPTION_HISTORY" => "N",   // Включить эмуляцию навигации браузера
+                                "AJAX_OPTION_ADDITIONAL" => "", // Дополнительный идентификатор
+                                "CACHE_TYPE" => "A",    // Тип кеширования
+                                "CACHE_TIME" => "36000000", // Время кеширования (сек.)
+                                "CACHE_FILTER" => "N",  // Кешировать при установленном фильтре
+                                "CACHE_GROUPS" => "Y",  // Учитывать права доступа
+                                "PREVIEW_TRUNCATE_LEN" => "",   // Максимальная длина анонса для вывода (только для типа текст)
+                                "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
+                                "SET_TITLE" => "N", // Устанавливать заголовок страницы
+                                "SET_BROWSER_TITLE" => "N", // Устанавливать заголовок окна браузера
+                                "SET_META_KEYWORDS" => "N", // Устанавливать ключевые слова страницы
+                                "SET_META_DESCRIPTION" => "N",  // Устанавливать описание страницы
+                                "SET_LAST_MODIFIED" => "N", // Устанавливать в заголовках ответа время модификации страницы
+                                "INCLUDE_IBLOCK_INTO_CHAIN" => "N", // Включать инфоблок в цепочку навигации
+                                "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
+                                "HIDE_LINK_WHEN_NO_DETAIL" => "N",  // Скрывать ссылку, если нет детального описания
+                                "PARENT_SECTION" => "", // ID раздела
+                                "PARENT_SECTION_CODE" => "",    // Код раздела
+                                "INCLUDE_SUBSECTIONS" => "Y",   // Показывать элементы подразделов раздела
+                                "STRICT_SECTION_CHECK" => "N",  // Строгая проверка раздела для показа списка
+                                "DISPLAY_DATE" => "Y",  // Выводить дату элемента
+                                "DISPLAY_NAME" => "Y",  // Выводить название элемента
+                                "DISPLAY_PICTURE" => "Y",   // Выводить изображение для анонса
+                                "DISPLAY_PREVIEW_TEXT" => "Y",  // Выводить текст анонса
+                                "PAGER_TEMPLATE" => ".default", // Шаблон постраничной навигации
+                                "DISPLAY_TOP_PAGER" => "N", // Выводить над списком
+                                "DISPLAY_BOTTOM_PAGER" => "N",  // Выводить под списком
+                                "PAGER_TITLE" => "Новости", // Название категорий
+                                "PAGER_SHOW_ALWAYS" => "N", // Выводить всегда
+                                "PAGER_DESC_NUMBERING" => "N",  // Использовать обратную навигацию
+                                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",   // Время кеширования страниц для обратной навигации
+                                "PAGER_SHOW_ALL" => "N",    // Показывать ссылку "Все"
+                                "PAGER_BASE_LINK_ENABLE" => "N",    // Включить обработку ссылок
+                                "SET_STATUS_404" => "N",    // Устанавливать статус 404
+                                "SHOW_404" => "N",  // Показ специальной страницы
+                                "MAJOR" => "Y"
+                            ),
+                                false
+                            );?>
                         </div>
-                        <div class="header__popup-item-wrapper">
-                            <button class="location-popup-content__close-btn">
-                                <svg width="30" height="30" aria-hidden="true" class="header__search-btn-close-icon">
-                                    <use xlink:href="#close"></use>
-                                </svg>
-                            </button>
-                            <form action="/" class="location-popup-content__form" data-need-validation data-parsley-validate>
-                                <span class="location-popup-content__legend">Другой населённый пункт</span>
-                                <div class="select">
-                                    <div class="select__container mod-small-choices-list mod-simple-design mod-b-select">
-                                        <label class="select__wrapper">
-                                            <select class="gl__select js-custom-select" name="region" data-parsley-required="" data-parsley-trigger="change">
-                                                <option placeholder value="">Район</option>
-                                                <option value="Район">Район</option>
-                                            </select>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="select">
-                                    <div class="select__container mod-small-choices-list mod-simple-design mod-b-select">
-                                        <label class="select__wrapper">
-                                            <select class="gl__select js-custom-select" name="city" data-parsley-required="" data-parsley-trigger="change">
-                                                <option placeholder value="">Населённый пункт</option>
-                                                <option value="Район">Населённый пункт</option>
-                                            </select>
-                                        </label>
-                                    </div>
-                                </div>
-                                <button class="location-popup-content__button header__b-main-page-menu-btn">Выбрать город</button>
-                            </form>
-                        </div>
+                        <?$APPLICATION->IncludeComponent(
+                            "tattelecom:city.select",
+                            "business",
+                            [],
+                            false
+                        );?>
+
                     </div>
                 </div>
             </div>

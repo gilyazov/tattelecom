@@ -7,21 +7,26 @@ foreach($arResult as $arItem):?>
 
 	<?if ($previousLevel && $arItem["DEPTH_LEVEL"] < $previousLevel):?>
         <?if ($arItem['DEPTH_LEVEL'] == 1):?>
-            <?=str_repeat("</div>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
+            <?=str_repeat("</ul></div>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
         <?else:?>
             <?//=($previousLevel . ' ' . $arItem['DEPTH_LEVEL'])?>
-		    <?=str_repeat("</ul></div>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
+		    <?=str_repeat("</li></button></span>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
         <?endif;?>
 	<?endif?>
 
 	<?if ($arItem["IS_PARENT"]):?>
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<div class="header__popup-content js-header-popup" data-hover-value="item-<?=$arItem['PARAMS']['ID']?>">
+            <div class="header__b-menu-item">
+                <div class="header__b-menu-item-caption"><?=$arItem["TEXT"]?></div>
+                <ul class="header__b-menu-item-list">
 		<?else:?>
-            <div class="header__popup-item-wrapper">
-                <a href="<?=$arItem["LINK"]?>" class="header__popup-item-caption"><?=$arItem["TEXT"]?></a>
-				<ul class="header__popup-item-list">
+            <li>
+                <button type="button" class="header__b-menu-item-control mod-btn js-b-header-drop">
+                    <img src="<?=BUILD_PATH?>img/header/business-menu/tel.svg" alt="" class="header__b-menu-item-control-icon"> <?=$arItem["TEXT"]?><svg width="16" height="16" aria-hidden="true" class="header__b-menu-item-control-icon-arrow">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                    <span class="header__b-menu-item-drop-list">
 		<?endif?>
 
 	<?else:?>
@@ -31,9 +36,13 @@ foreach($arResult as $arItem):?>
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
                 <!--<div class="header__popup-content js-header-popup" data-hover-value="<?/*=$arItem["PARAMS"]["CODE"]*/?>"></div>-->
             <?elseif ($arItem["DEPTH_LEVEL"] == 2):?>
-                <div class="header__popup-item-wrapper"><a href="<?=$arItem["LINK"]?>" class="header__popup-item-caption"><?=$arItem["TEXT"]?></a></div>
+                <li>
+                    <a href="<?=$arItem["LINK"]?>" class="header__b-menu-item-control">
+                        <img src="<?=CFIle::GetPath($arItem["PARAMS"]["ICO"])?>" alt="" class="header__b-menu-item-control-icon"> <?=$arItem["TEXT"]?>
+                    </a>
+                </li>
             <?else:?>
-				<li class="header__popup-item-link"><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
+				<a href="<?=$arItem["LINK"]?>" class="header__b-menu-item-drop-link"><?=$arItem["TEXT"]?></a>
 			<?endif?>
 
 		<?else:?>
@@ -53,6 +62,6 @@ foreach($arResult as $arItem):?>
 <?endforeach?>
 
 <?if ($previousLevel > 1)://close last item tags?>
-	<?=str_repeat("</ul></li>", ($previousLevel-1) );?>
+	<?=str_repeat("</ul></div>", ($previousLevel-1) );?>
 <?endif?>
 <?endif?>
