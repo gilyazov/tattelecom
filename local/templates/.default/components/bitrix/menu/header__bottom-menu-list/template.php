@@ -9,10 +9,10 @@
     ?>
 
         <li class="header__bottom-menu-item">
-            <a href="<?=$arItem["LINK"]?>"
+            <span
                class="header__bottom-menu-link<?if(!$arItem["PARAMS"]['IS_PARENT']):?> mod-popup-empty<?endif;?><?if(SITE_ID == "s2"):?> mod-business<?endif;?><?if($arItem["SELECTED"]):?> mod-is-current<?endif;?>"
                 <?if($arItem["PARAMS"]['IS_PARENT']):?>data-hover-value="item-<?=$arItem['PARAMS']['ID']?>"<?endif;?>
-            ><?=$arItem["TEXT"]?></a>
+            ><?=$arItem["TEXT"]?></span>
         </li>
     <?php endforeach?>
 

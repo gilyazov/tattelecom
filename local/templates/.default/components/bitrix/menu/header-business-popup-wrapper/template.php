@@ -18,12 +18,20 @@ foreach($arResult as $key => $arItem):?>
 	<?if ($arItem["IS_PARENT"]):?>
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<div class="header__b-popup-content js-header-popup js-b-popup-margin" data-alignment="<?=$arItem['PARAMS']['ALIGNMENT']?>" data-hover-value="item-<?=$arItem['PARAMS']['ID']?>">
+			<div
+            class="header__b-popup-content js-header-popup js-b-popup-margin"
+            <?if($arItem['PARAMS']['ALIGNMENT']):?>data-alignment="<?=$arItem['PARAMS']['ALIGNMENT']?>"<?endif;?>
+            data-hover-value="item-<?=$arItem['PARAMS']['ID']?>">
             <?if ($arItem["PARAMS"]["DEPTH_SUBSECTIONS"] == 2):?><ul><?endif;?>
         <?else:?>
             <div class="header__b-popup-content-item">
                 <div class="header__b-popup-caption-list">
-                    <img src="<?=CFIle::GetPath($arItem["PARAMS"]["ICO"])?>" alt="" class="header__b-menu-item-control-icon"> <?=$arItem["TEXT"]?>
+                    <img src="<?=CFIle::GetPath($arItem["PARAMS"]["ICO"])?>" alt="" class="header__b-menu-item-control-icon">
+                    <?if($arItem["PARAMS"]["IBLOCK_SECTION_ID"] == 203):?>
+                        <a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+                    <?else:?>
+                        <?=$arItem["TEXT"]?>
+                    <?endif;?>
                 </div>
 				<ul class="header__b-popup-list">
 		<?endif?>

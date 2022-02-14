@@ -1,7 +1,7 @@
 <?php
 foreach($arResult as &$arItem){
     // отступ вложенных пунктов
-    if ($arItem['PARAMS']['DEPTH_LEVEL'] == 1){
+    if ($arItem['PARAMS']['DEPTH_LEVEL'] == 1 && $arItem['PARAMS']['ID'] != 204){
         $arItem['PARAMS']['ALIGNMENT'] = ($arItem['PARAMS']['CODE'] == "promotion" ? 3 : 0);
     }
 
