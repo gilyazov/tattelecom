@@ -11,6 +11,7 @@ function ajaxFilter(id) {
         success: function(dataHtml){
             $('#phone-list__container').html(dataHtml);
             window.initRequestModal("#modal-send-request-host");
+            window.initSendRequestModal();
             BX.closeWait('xls_container', wait); // прячем прелоадер
         }
     });

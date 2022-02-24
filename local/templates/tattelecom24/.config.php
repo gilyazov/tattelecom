@@ -14,6 +14,8 @@ foreach ($jsConfig as $code => $ext)
     \CJSCore::registerExt($code, $ext);
 }
 
+$namespace = (SITE_ID == "s1" ? "tattelecom" : "business");
+
 return [
     'js_core_public' => [
         'landing_core'
@@ -21,8 +23,8 @@ return [
     'js_core_edit' => [
         'landing_core_admin'
     ],
-    'disable_namespace' => ['bitrix'],
-    'enable_namespace' => [],
+    'disable_namespace' => [],
+    'enable_namespace' => ['business', 'tattelecom'],
     'public_wrapper_block' => false,
     'google_font' => false
 ];

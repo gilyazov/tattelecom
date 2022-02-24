@@ -19,6 +19,8 @@ $language= \Bitrix\Landing\Manager::getLangISO();
 ?><!DOCTYPE html>
 <html xml:lang="<?= $language;?>" lang="<?= $language;?>" class="<?$APPLICATION->ShowProperty('HtmlClass');?>">
 <head>
+    <?$APPLICATION->ShowProperty('AfterHeadOpen');?>
+    <meta name="google-site-verification" content="q_4yEnnXsP770LmNk9KkEI_pMEvmcm0XHA2R_qeg_xo" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
@@ -43,7 +45,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
         })(window,document,'script','dataLayer','GTM-KLBQ3ZM');</script>
     <!-- End Google Tag Manager -->
 </head>
-<body class="no-touch">
+<body class="no-touch<?$APPLICATION->ShowProperty('BodyClass');?>">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLBQ3ZM"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

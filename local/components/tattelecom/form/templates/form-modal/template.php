@@ -5,6 +5,7 @@ $this->addExternalJS($componentPath . '/script.js');
 ?>
 <form class="js-form-modal js-potok-form" data-need-validation data-parsley-validate data-parsley-focus="none">
     <input type="hidden" name="param_referer" value="<?=$APPLICATION->GetTitle()?>">
+    <input type="hidden" name="param_comment" value="">
     <div class="send-request__form-inputs">
         <label class="gl-input__wrapper js-input-text">
             <input type="text" class="gl-input__input" placeholder="Ваше имя" name="firstname" data-parsley-required="">
@@ -22,7 +23,7 @@ $this->addExternalJS($componentPath . '/script.js');
                     <use xlink:href="#checkbox-checked"></use>
                 </svg>
             </span>
-            <span class="checkbox__text mod-modal">Я согласен на обработку своих персональных данных</span>
+            <span class="checkbox__text mod-modal">Я согласен на <a href="/app/personaldata/" target="_blank">обработку своих персональных данных</a></span>
         </label>
     </div>
     <button type="submit" class="gl__main-btn modal__btn-submit js-btn-submit">Отправить заявку</button>

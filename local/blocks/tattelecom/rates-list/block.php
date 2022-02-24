@@ -9,7 +9,9 @@
                 </a>
             </div>
         </div>
-
+        <?
+        global $arrFilterCity;
+        ?>
         <?$APPLICATION->IncludeComponent("bitrix:news.list", "gl-slider-rates", Array(
             "COMPONENT_TEMPLATE" => ".default",
             "IBLOCK_TYPE" => "mobile", // Тип информационного блока (используется только для проверки)
@@ -19,7 +21,7 @@
             "SORT_ORDER1" => "ASC", // Направление для первой сортировки новостей
             "SORT_BY2" => "ACTIVE_FROM",    // Поле для второй сортировки новостей
             "SORT_ORDER2" => "DESC",    // Направление для второй сортировки новостей
-            "FILTER_NAME" => "",    // Фильтр
+            "FILTER_NAME" => "arrFilterCity",    // Фильтр
             "FIELD_CODE" => array(  // Поля
                 0 => "",
                 1 => "",

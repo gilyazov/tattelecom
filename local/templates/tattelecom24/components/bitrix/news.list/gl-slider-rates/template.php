@@ -37,8 +37,10 @@ $this->setFrameMode(true);
                                 <ul class="rates-list__slide-conditions-list">
                                     <?foreach ($arItem["PROPERTIES"]["BENEFITS"]["VALUE"] as $benefit):?>
                                         <li class="rates-list__slide-condition-item">
-                                            <img src="<?=BUILD_PATH?>img/main-page/rates-list/<?=$benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]?>.svg" alt=""
-                                                 class="rates-list__slide-condition-item-icon">
+                                            <?if($benefit["SUB_VALUES"]["B_ICO"]["VALUE"]):?>
+                                                <img src="<?=BUILD_PATH?>img/main-page/rates-list/<?=$benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]?>.svg" alt=""
+                                                    class="rates-list__slide-condition-item-icon">
+                                            <?endif;?>
                                             <div class="rates-list__slide-condition-item-text"><?=$benefit["SUB_VALUES"]["B_VALUE"]["VALUE"]?></div>
                                         </li>
                                     <?endforeach;?>
@@ -55,6 +57,11 @@ $this->setFrameMode(true);
                                 </div>
 
                                 <div class="rates-list__slide-price-wrapper">
+                                    <?if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
+                                        <div class="rates-list__slide-old-price">
+                                            <?=$arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
+                                        </div>
+                                    <?endif;?>
                                     <div class="rates-list__slide-price">
                                         <span class="big"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></span>
                                         <span class="small"><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>

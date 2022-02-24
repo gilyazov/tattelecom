@@ -35,8 +35,7 @@ return array(
         ),
         '.rates-preview__btn' => array(
             'name' => 'Подробнее',
-            'type' => 'link',
-            "skipContent" => true,
+            'type' => 'link'
         ),
         '.rates-preview' => array(
             'name' => 'Фон',
@@ -61,4 +60,15 @@ return array(
             BUILD_PATH . 'js/main-page.js'
         ]
     ),
+    'style' => [
+        'block' => [
+            'type' => [],
+        ],
+        'nodes' => [
+            '.rates-preview__btn' => [
+                'name' => 'Скрыть кнопку',
+                'type' => ['display-bx', 'modal-show']
+            ],
+        ],
+    ]
 );

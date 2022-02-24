@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let wait = BX.showWait(form);
 
                 if (
-                    form
+                    $(form)
                         .parsley()
                         .isValid()
                 ) {

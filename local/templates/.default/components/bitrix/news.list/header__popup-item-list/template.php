@@ -19,7 +19,7 @@ $this->setFrameMode(true);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
         <li id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-            <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="header__popup-item-link"><?=$arItem['NAME']?></a>
+            <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="header__popup-item-link<?if(SITE_ID != 's1'):?> gl__no-default-hover<?endif?>"><?=$arItem['NAME']?></a>
         </li>
     <?endforeach;?>
 </ul>

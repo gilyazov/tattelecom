@@ -100,8 +100,10 @@
 	}
 }
 
-.is-admin .d-none{
-	display: block !important;
+.is-admin .gl__visually-hidden{
+	position: relative;
+	width: auto;
+	height: auto;
 	opacity: 0.2;
 }
 .d-none{

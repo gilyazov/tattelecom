@@ -7,10 +7,11 @@ foreach($arResult as $arItem):?>
 
 	<?if ($previousLevel && $arItem["DEPTH_LEVEL"] < $previousLevel):?>
         <?if ($arItem['DEPTH_LEVEL'] == 1):?>
-            <?=str_repeat("</ul></div>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
+            </ul></div>
+            <?//=str_repeat("</ul></div>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
         <?else:?>
             <?//=($previousLevel . ' ' . $arItem['DEPTH_LEVEL'])?>
-		    <?=str_repeat("</li></button></span>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
+		    <?=str_repeat("</span></button></li>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
         <?endif;?>
 	<?endif?>
 
@@ -23,7 +24,13 @@ foreach($arResult as $arItem):?>
 		<?else:?>
             <li>
                 <button type="button" class="header__b-menu-item-control mod-btn js-b-header-drop">
-                    <img src="<?=BUILD_PATH?>img/header/business-menu/tel.svg" alt="" class="header__b-menu-item-control-icon"> <?=$arItem["TEXT"]?><svg width="16" height="16" aria-hidden="true" class="header__b-menu-item-control-icon-arrow">
+                    <img src="<?=CFIle::GetPath($arItem["PARAMS"]["ICO"])?>" alt="" class="header__b-menu-item-control-icon">
+                    <?if($arItem["PARAMS"]["IBLOCK_SECTION_ID"] == 203):?>
+                        <a class="gl__no-default-hover" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+                    <?else:?>
+                        <?=$arItem["TEXT"]?>
+                    <?endif;?>
+                    <svg width="16" height="16" aria-hidden="true" class="header__b-menu-item-control-icon-arrow">
                         <use xlink:href="#arrow-right"></use>
                     </svg>
                     <span class="header__b-menu-item-drop-list">

@@ -635,21 +635,23 @@
             <div class="gl__page-content">
                 <h2 class="gl__title">Роуминг без забот</h2>
                 <div class="roaming-without-worries__subtitle">Узнайте, как оптимизировать свои расходы в поездках по миру</div>
-
-                <?$APPLICATION->IncludeComponent(
-                    "bitrix:catalog.filter",
-                    "roaming-without-worries",
-                    Array(
-                        "IBLOCK_TYPE" => "mobile",
-                        "IBLOCK_ID" => 28,
-                        "FILTER_NAME" => "arrFilter",
-                        "FIELD_CODE" => "",
-                        "PROPERTY_CODE" => [
-                            "COUNTRY", "TYPE"
-                        ],
-                    ),
-                    false
-                );?>
+                <div class="roaming-without-worries__content-wrapper">
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:catalog.filter",
+                        "roaming-without-worries",
+                        Array(
+                            "IBLOCK_TYPE" => "mobile",
+                            "IBLOCK_ID" => 28,
+                            "FILTER_NAME" => "arrFilter",
+                            "FIELD_CODE" => "",
+                            "PROPERTY_CODE" => [
+                                "COUNTRY", "TYPE"
+                            ],
+                        ),
+                        false
+                    );?>
+                    <div class="roaming-without-worries__content-image" style="background-image: url('/local/js/template/tattelecom-1/img/roaming-page/man-2.svg')"></div>
+                </div>
             </div>
         </section>
         <?
@@ -740,64 +742,7 @@
                 </ul>
             </div>
         </section>
-        <section class="connection-options" id="options-host">
-            <div class="gl__page-content">
-                <h2 class="gl__title">Опции для подключения</h2>
-                <ul class="connection-options__list">
-                    <li class="connection-options__item gl__white-container">
-                        <img src="/local/js/template/tattelecom-1/img/roaming-page/background-slide-1.svg" alt="" class="connection-options__item-background">
-                        <div>
-                            <div class="connection-options__item-caption">«Весь Мир»</div>
-                            <div class="connection-options__item-value">
-                                <span class="number">10</span>₽/мес
-                            </div>
-                        </div>
-                        <div class="connection-options__item-btn-wrapper">
-                            <button type="button" class="connection-options__item-btn">
-												<span class="connection-options__item-btn-content">Подробнее<svg width="38" height="38" aria-hidden="true" class="connection-options__item-btn-icon">
-														<use xlink:href="#arrow-line-right"></use>
-													</svg>
-												</span>
-                            </button>
-                        </div>
-                    </li>
-                    <li class="connection-options__item gl__white-container">
-                        <img src="/local/js/template/tattelecom-1/img/roaming-page/background-slide-2.svg" alt="" class="connection-options__item-background">
-                        <div>
-                            <div class="connection-options__item-caption">«Лёгкий роуминг»</div>
-                            <div class="connection-options__item-value">
-                                <span class="number">80</span>₽/день
-                            </div>
-                        </div>
-                        <div class="connection-options__item-btn-wrapper">
-                            <button type="button" class="connection-options__item-btn">
-												<span class="connection-options__item-btn-content">Подробнее<svg width="38" height="38" aria-hidden="true" class="connection-options__item-btn-icon">
-														<use xlink:href="#arrow-line-right"></use>
-													</svg>
-												</span>
-                            </button>
-                        </div>
-                    </li>
-                    <li class="connection-options__item gl__white-container">
-                        <img src="/local/js/template/tattelecom-1/img/roaming-page/background-slide-3.svg" alt="" class="connection-options__item-background">
-                        <div>
-                            <div class="connection-options__item-caption">«Интернет в роуминге»</div>
-                            <div class="connection-options__item-value">
-                                <span class="number">20</span>₽/мес
-                            </div>
-                        </div>
-                        <div class="connection-options__item-btn-wrapper">
-                            <button type="button" class="connection-options__item-btn">
-												<span class="connection-options__item-btn-content">Подробнее<svg width="38" height="38" aria-hidden="true" class="connection-options__item-btn-icon">
-														<use xlink:href="#arrow-line-right"></use>
-													</svg>
-												</span>
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
+
         <section class="ussd-faq" id="ussd-requests-host">
             <div class="gl__page-content">
                 <div class="ussd-faq__content">

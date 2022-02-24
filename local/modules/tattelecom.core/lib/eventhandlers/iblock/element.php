@@ -17,11 +17,11 @@ class Element
 
     public function OnAfterIBlockElementAddHandler(&$arFields)
     {
-        /*if (in_array($arFields['IBLOCK_ID'], [9, 10, 11])) {
+        if ($arFields['IBLOCK_ID'] == 45) {
             global $APPLICATION;
             $APPLICATION->RestartBuffer();
 
-            $arSelect = Array("ID", "IBLOCK_ID", "NAME", "IBLOCK_NAME");//IBLOCK_ID и ID обязательно должны быть указаны, см. описание arSelectFields выше
+            /*$arSelect = Array("ID", "IBLOCK_ID", "NAME", "IBLOCK_NAME");//IBLOCK_ID и ID обязательно должны быть указаны, см. описание arSelectFields выше
             $arFilter = Array("IBLOCK_ID"=>$arFields["IBLOCK_ID"], "ID"=>$arFields["ID"], "ACTIVE"=>"Y");
             $res = \CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
             if($ob = $res->GetNextElement()){
@@ -49,10 +49,10 @@ class Element
                 "LID" => SITE_ID,
                 "DUPLICATE" => "N",
                 "C_FIELDS" => $sendFields
-            ));
+            ));*/
 
             echo \Bitrix\Main\Web\Json::encode(['ID' => $arFields['ID']]);
             die();
-        }*/
+        }
     }
 }

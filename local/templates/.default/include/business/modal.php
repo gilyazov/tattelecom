@@ -86,37 +86,30 @@
                 <p class="modal-thanks__social-text">Мы в социальных сетях:</p>
                 <ul class="b-socials">
                     <li class="b-socials__item">
-                        <a class="b-socials__link" title="Написать в VK" href="#">
+                        <a class="b-socials__link" title="Написать в VK" href="https://vk.com/letairu" target="_blank">
                             <svg width="60" height="60" aria-hidden="true" class="b-socials__link-icon">
                                 <use xlink:href="#b-VK"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="b-socials__item">
-                        <a class="b-socials__link" title="Написать в VK" href="#">
+                        <a class="b-socials__link" title="Написать в Instagram" href="https://www.instagram.com/letai2.0/" target="_blank">
                             <svg width="60" height="60" aria-hidden="true" class="b-socials__link-icon">
                                 <use xlink:href="#b-Instagram"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="b-socials__item">
-                        <a class="b-socials__link" title="Написать в VK" href="#">
+                        <a class="b-socials__link" title="Написать в wt" href="https://api.whatsapp.com/send?phone=79027182268" target="_blank">
                             <svg width="60" height="60" aria-hidden="true" class="b-socials__link-icon">
-                                <use xlink:href="#b-Facebook"></use>
+                                <use xlink:href="#b-wt"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="b-socials__item">
-                        <a class="b-socials__link" title="Написать в VK" href="#">
+                        <a class="b-socials__link" title="Написать в tg" href="https://t.me/tattelecomru_bot" target="_blank">
                             <svg width="60" height="60" aria-hidden="true" class="b-socials__link-icon">
-                                <use xlink:href="#b-OK"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="b-socials__item">
-                        <a class="b-socials__link" title="Написать в VK" href="#">
-                            <svg width="60" height="60" aria-hidden="true" class="b-socials__link-icon">
-                                <use xlink:href="#b-Youtube"></use>
+                                <use xlink:href="#b-tg"></use>
                             </svg>
                         </a>
                     </li>

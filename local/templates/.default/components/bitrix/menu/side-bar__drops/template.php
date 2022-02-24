@@ -41,7 +41,9 @@
                         <div class="gl__drop-menu-container js-drop-menu-container"></div>
                     </li>
                 <?elseif ($arItem["DEPTH_LEVEL"] == 2):?>
-                    <div class="header__popup-item-wrapper"><a href="<?=$arItem["LINK"]?>" class="header__popup-item-caption"><?=$arItem["TEXT"]?></a></div>
+                    <li class="side-bar__drop-content-item">
+                        <a href="<?=$arItem["LINK"]?>" class="side-bar__drop-caption"><?=$arItem["TEXT"]?></a>
+                    </li>
                 <?else:?>
                     <li class="side-bar__drop-links-item"><a href="<?=$arItem["LINK"]?>" class="side-bar__drop-link"><?=$arItem["TEXT"]?></a></li>
                 <?endif?>

@@ -10,7 +10,7 @@ $this->addExternalJS($componentPath . '/script.js');
         <label class="gl-input__wrapper js-input-number">
             <span class="gl-input__title">Введите номер, чтобы выбрать сумму</span>
             <input type="number" class="gl-input__input mod-no-arrow" placeholder="Номер лицевого счета" name="account_number" data-parsley-required=""
-                   data-parsley-minlength="9" data-parsley-maxlength="9">
+                   data-parsley-minlength="4" data-parsley-maxlength="9">
         </label>
         <label class="gl-input__wrapper js-input-number">
             <span class="gl-input__title">От 10 до 30 000 Р</span>

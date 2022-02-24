@@ -7,12 +7,18 @@
         if($arParams["MAX_LEVEL"] == 1 && $arItem["DEPTH_LEVEL"] > 1)
             continue;
     ?>
-
         <li class="header__bottom-menu-item">
-            <span
-               class="header__bottom-menu-link<?if(!$arItem["PARAMS"]['IS_PARENT']):?> mod-popup-empty<?endif;?><?if(SITE_ID == "s2"):?> mod-business<?endif;?><?if($arItem["SELECTED"]):?> mod-is-current<?endif;?>"
-                <?if($arItem["PARAMS"]['IS_PARENT']):?>data-hover-value="item-<?=$arItem['PARAMS']['ID']?>"<?endif;?>
-            ><?=$arItem["TEXT"]?></span>
+            <?if(SITE_ID == "s1"):?>
+                <a href="<?=$arItem["LINK"]?>"
+                        class="header__bottom-menu-link<?if(!$arItem["PARAMS"]['IS_PARENT']):?> mod-popup-empty<?endif;?><?if(SITE_ID == "s2"):?> mod-business<?endif;?><?if($arItem["SELECTED"]):?> mod-is-current<?endif;?>"
+                        <?if($arItem["PARAMS"]['IS_PARENT']):?>data-hover-value="item-<?=$arItem['PARAMS']['ID']?>"<?endif;?>
+                ><?=$arItem["TEXT"]?></a>
+            <?else:?>
+                <span
+                   class="header__bottom-menu-link<?if(!$arItem["PARAMS"]['IS_PARENT']):?> mod-popup-empty<?endif;?><?if(SITE_ID == "s2"):?> mod-business<?endif;?><?if($arItem["SELECTED"]):?> mod-is-current<?endif;?>"
+                    <?if($arItem["PARAMS"]['IS_PARENT']):?>data-hover-value="item-<?=$arItem['PARAMS']['ID']?>"<?endif;?>
+                ><?=$arItem["TEXT"]?></span>
+            <?endif;?>
         </li>
     <?php endforeach?>
 

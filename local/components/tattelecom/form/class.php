@@ -50,6 +50,8 @@ class Form extends \CBitrixComponent implements Controllerable
         $url = $this->buildUrl();
         $phone = $this->parsePhone($post['phone']);
 
+        $post['param_comment'] .= "<br> Город:" . $_SESSION['city']['name'];
+
         $data = [
             "phone" => $phone,
             "firstname" => $post['firstname'],

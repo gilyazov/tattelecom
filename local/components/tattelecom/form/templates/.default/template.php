@@ -19,8 +19,8 @@ $this->addExternalJS($componentPath . '/script.js');
                     <use xlink:href="#checkbox-checked"></use>
                 </svg>
             </span>
-            <span class="checkbox__text mod-modal">Я согласен на обработку своих персональных данных</span>
+            <span class="checkbox__text mod-modal">Я согласен на <a href="/app/personaldata/" target="_blank">обработку своих персональных данных</a></span>
         </label>
     </div>
-    <button type="submit" class="gl__main-btn modal__btn-submit js-btn-submit">Жду звонка</button>
+    <button type="submit" class="gl__main-btn modal__btn-submit js-btn-submit<?=(SITE_ID == "s2" ? " mod-business" : "")?>">Жду звонка</button>
 </form>

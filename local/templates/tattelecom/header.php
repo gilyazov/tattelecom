@@ -15,6 +15,19 @@ $language= \Bitrix\Landing\Manager::getLangISO();
 ?><!DOCTYPE html>
 <html xml:lang="<?= $language;?>" lang="<?= $language;?>" class="<?$APPLICATION->ShowProperty('HtmlClass');?>">
 <head>
+    <script data-skip-moving="true">
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.agent='plbitrix';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '362895258597454');
+        fbq('track', 'PageView');
+    </script>
+    <meta name="google-site-verification" content="q_4yEnnXsP770LmNk9KkEI_pMEvmcm0XHA2R_qeg_xo" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
@@ -49,16 +62,18 @@ $language= \Bitrix\Landing\Manager::getLangISO();
 <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
     <? include_once (DEFAULT_PATH .'include/sprite.xml'); ?></div>
 
-<div class="gl__layout-wrapper">
+<div class="gl__layout-wrapper<?=(SITE_ID == 's2' ? ' mod-business' : '')?>">
     <div class="gl__layout-header">
-        <? include_once(DEFAULT_PATH . 'include/header.php');?>
+        <? include_once(DEFAULT_PATH . 'include/'.(SITE_ID == 's2' ? 'business/' : '').'header.php');?>
     </div>
 
     <main class="gl__layout-content">
-        <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "", Array(
-            "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-            "SITE_ID" => SIDE_ID,	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-            "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
-        ),
-            false
-        );?>
+        <?if(SITE_ID == 's1'):?>
+            <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "", Array(
+                "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+                "SITE_ID" => SIDE_ID,	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+                "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+            ),
+                false
+            );?>
+        <?endif;?>

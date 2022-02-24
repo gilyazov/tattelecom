@@ -10,7 +10,7 @@ class Main
         global $USER, $APPLICATION;
 
         if ($USER->IsAdmin() && $_SERVER["SCRIPT_NAME"] == '/bitrix/admin/landing_view.php') {
-            $class = 'is-admin';
+            $class = ' is-admin';
             $APPLICATION->SetPageProperty("BodyClass", $class);
         }
     }

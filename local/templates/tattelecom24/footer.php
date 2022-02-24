@@ -18,7 +18,7 @@ $assets->addAsset('landing_auto_font_scale');
 
 $APPLICATION->ShowProperty('FooterJS');
 ?>
-<? include_once(DEFAULT_PATH . 'include/modal.php');?>
+<? include_once(DEFAULT_PATH . 'include/'.(SITE_ID == 's2' ? 'business/' : '').'modal.php');?>
 
 <div class="modal" id="modal-about-tariff-host">
     <div class="modal__container mod-middle js-modal-container">

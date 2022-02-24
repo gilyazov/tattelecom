@@ -6,8 +6,8 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 return array(
     'block' => array(
         'name' => "Форма запроса на подключение",
-        'section' => array('Бизнесу'),
-        'version' => '1.0.1',
+        'section' => ['Tattelecom', 'forms'],
+        'dynamic' => false
     ),
     'cards' => [
         '.b-socials__item' => [

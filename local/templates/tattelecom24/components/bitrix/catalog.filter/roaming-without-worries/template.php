@@ -12,8 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="roaming-without-worries__content-wrapper">
-    <form
+<form
         class="roaming-without-worries__form"
         data-need-validation data-parsley-validate data-parsley-focus="none"
         name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get">
@@ -42,6 +41,3 @@ $this->setFrameMode(true);
             <button type="submit" class="roaming-without-worries__btn gl__main-btn">Узнать стоимость</button>
         </div>
     </form>
-
-    <div class="roaming-without-worries__content-image" style="background-image: url('<?=BUILD_PATH?>img/roaming-page/man-2.svg')"></div>
-</div>

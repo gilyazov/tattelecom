@@ -1,0 +1,455 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+$this->setFrameMode(true);
+?>
+<?if($arParams["USE_RSS"]=="Y"):?>
+	<?
+	if(method_exists($APPLICATION, 'addheadstring'))
+		$APPLICATION->AddHeadString('<link rel="alternate" type="application/rss+xml" title="'.$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"].'" href="'.$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"].'" />');
+	?>
+	<a href="<?=$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"]?>" title="rss" target="_self"><img alt="RSS" src="<?=$templateFolder?>/images/gif-light/feed-icon-16x16.gif" border="0" align="right" /></a>
+<?endif?>
+<?if($arParams["USE_SEARCH"]=="Y"):?>
+    <?=GetMessage("SEARCH_LABEL")?><?$APPLICATION->IncludeComponent(
+	"bitrix:search.form",
+	"flat",
+	Array(
+		"PAGE" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["search"]
+	),
+	$component
+);?>
+<?endif?>
+<?if($arParams["USE_FILTER"]=="Y"):?>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:catalog.filter",
+        "",
+        Array(
+            "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+            "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+            "FILTER_NAME" => $arParams["FILTER_NAME"],
+            "FIELD_CODE" => $arParams["FILTER_FIELD_CODE"],
+            "PROPERTY_CODE" => $arParams["FILTER_PROPERTY_CODE"],
+            "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+            "CACHE_TIME" => $arParams["CACHE_TIME"],
+            "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+            "PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
+        ),
+        $component
+    );
+    ?>
+<?endif?>
+
+<section class="b-page-banner mobile-version-available">
+    <div class="gl__page-content">
+        <h2 class="gl__title"><?$APPLICATION->ShowTitle()?></h2>
+        <div class="b-page-banner__content">
+            <picture>
+                <source srcset="<?=BUILD_PATH?>img/common/b-page-banners/b-rates-mobile-list--mobile.jpg" media="(max-width: 568px)">
+                <img class="b-page-banner__image" src="<?=BUILD_PATH?>img/common/b-page-banners/b-rates-mobile-list.jpg" alt="Корпоративная связь">
+            </picture>
+            <div class="b-page-banner__text">
+                <div>
+                    <h3 class="b-page-banner__title">
+                        <span class="b-page-banner__mobile-title">Тарифы
+                            <br>мобильной
+                            <br>связи
+                        </span>
+                        <span class="b-page-banner__accent-title">Корпоративная</span>
+                        <span class="b-page-banner__desktop-title">мобильная связь</span>
+                    </h3>
+                </div>
+                <div class="b-page-banner__cost-block">
+                    <span class="b-page-banner__cost-label">от</span>
+                    <div class="b-page-banner__cost-bottom">
+                        <span class="b-page-banner__cost">150</span>
+                        <span class="b-page-banner__cost-label">₽/мес.</span>
+                    </div>
+                </div>
+                <span class="b-page-banner__label">Переходи на «Летай» за 0 руб</span>
+            </div>
+            <span class="b-page-banner__label">Переходи на «Летай» за 0 руб</span>
+        </div>
+    </div>
+</section>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"",
+	Array(
+		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
+		"NEWS_COUNT" => $arParams["NEWS_COUNT"],
+		"SORT_BY1" => $arParams["SORT_BY1"],
+		"SORT_ORDER1" => $arParams["SORT_ORDER1"],
+		"SORT_BY2" => $arParams["SORT_BY2"],
+		"SORT_ORDER2" => $arParams["SORT_ORDER2"],
+		"FIELD_CODE" => $arParams["LIST_FIELD_CODE"],
+		"PROPERTY_CODE" => $arParams["LIST_PROPERTY_CODE"],
+		"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["detail"],
+		"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
+		"IBLOCK_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"],
+		"DISPLAY_PANEL" => $arParams["DISPLAY_PANEL"],
+		"SET_TITLE" => $arParams["SET_TITLE"],
+		"SET_LAST_MODIFIED" => $arParams["SET_LAST_MODIFIED"],
+		"MESSAGE_404" => $arParams["MESSAGE_404"],
+		"SET_STATUS_404" => $arParams["SET_STATUS_404"],
+		"SHOW_404" => $arParams["SHOW_404"],
+		"FILE_404" => $arParams["FILE_404"],
+		"INCLUDE_IBLOCK_INTO_CHAIN" => $arParams["INCLUDE_IBLOCK_INTO_CHAIN"],
+		"CACHE_TYPE" => $arParams["CACHE_TYPE"],
+		"CACHE_TIME" => $arParams["CACHE_TIME"],
+		"CACHE_FILTER" => $arParams["CACHE_FILTER"],
+		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+		"DISPLAY_TOP_PAGER" => $arParams["DISPLAY_TOP_PAGER"],
+		"DISPLAY_BOTTOM_PAGER" => $arParams["DISPLAY_BOTTOM_PAGER"],
+		"PAGER_TITLE" => $arParams["PAGER_TITLE"],
+		"PAGER_TEMPLATE" => $arParams["PAGER_TEMPLATE"],
+		"PAGER_SHOW_ALWAYS" => $arParams["PAGER_SHOW_ALWAYS"],
+		"PAGER_DESC_NUMBERING" => $arParams["PAGER_DESC_NUMBERING"],
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => $arParams["PAGER_DESC_NUMBERING_CACHE_TIME"],
+		"PAGER_SHOW_ALL" => $arParams["PAGER_SHOW_ALL"],
+		"PAGER_BASE_LINK_ENABLE" => $arParams["PAGER_BASE_LINK_ENABLE"],
+		"PAGER_BASE_LINK" => $arParams["PAGER_BASE_LINK"],
+		"PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
+		"DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => $arParams["DISPLAY_PICTURE"],
+		"DISPLAY_PREVIEW_TEXT" => $arParams["DISPLAY_PREVIEW_TEXT"],
+		"PREVIEW_TRUNCATE_LEN" => $arParams["PREVIEW_TRUNCATE_LEN"],
+		"ACTIVE_DATE_FORMAT" => $arParams["LIST_ACTIVE_DATE_FORMAT"],
+		"USE_PERMISSIONS" => $arParams["USE_PERMISSIONS"],
+		"GROUP_PERMISSIONS" => $arParams["GROUP_PERMISSIONS"],
+		"FILTER_NAME" => $arParams["FILTER_NAME"],
+		"HIDE_LINK_WHEN_NO_DETAIL" => $arParams["HIDE_LINK_WHEN_NO_DETAIL"],
+		"CHECK_DATES" => $arParams["CHECK_DATES"],
+	),
+	$component
+);?>
+<section class="b-request-for-connection gl__section">
+    <div class="gl__page-content">
+        <div class="b-request-for-connection__content">
+            <h3 class="b-request-for-connection__form-title">Оставить заявку на подключение</h3>
+            <span class="b-request-for-connection__form-label">Наши специалисты помогут подобрать решения, отталкиваясь от ваших бизнес-потребностей</span>
+            <form data-need-validation data-parsley-validate data-parsley-focus="none" class="b-request-for-connection__form mod-4-in-row">
+                <label class="gl-input__wrapper js-input-text">
+                    <input type="text" class="gl-input__input" placeholder="Ваше имя" name="application-consultation-name" data-parsley-required="">
+                </label>
+                <label class="gl-input__wrapper js-input-tel">
+                    <input type="tel" class="gl-input__input js-phone-mask" placeholder="+7 (___) ___-__-__" name="application-consultation-tel" data-parsley-required="">
+                </label>
+                <label class="gl-input__wrapper js-input-email">
+                    <input type="email" class="gl-input__input" placeholder="E-mail" name="application-consultation-email" data-parsley-required="">
+                </label>
+                <button type="submit" class="gl__main-btn">Продолжить</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="b-additional-services gl__section">
+    <div class="gl__page-content">
+        <div class="b-additional-services__content">
+            <h2 class="gl__title">Дополнительные услуги</h2>
+            <ul class="b-additional-services__list">
+                <li class="b-additional-services__item">
+                    <div class="b-additional-services__header">
+                        <button class="gl__drop-menu-btn js-drop-menu-btn b-additional-services__btn">
+                            <svg class="gl__drop-menu-icon b-additional-services__btn-icon" width="24" height="24" aria-hidden="true">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                            <span class="b-additional-services__btn-label">Управление вызовами и контактами</span>
+                        </button>
+                        <div class="b-additional-services__btn-info-wrapper">
+                            <div class="btn-info__container">
+                                <button type="button" class="btn-info__btn">
+                                    <svg width="24" height="24" aria-hidden="true" class="btn-info__icon">
+                                        <use xlink:href="#info-ellipse"></use>
+                                    </svg>
+                                </button>
+                                <div class="btn-info__content">Управление вызовами и контактами</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gl__drop-menu-container js-drop-menu-container b-additional-services__wrapper">
+                        <ul class="gl__drop-menu js-drop-menu b-additional-services__content-list">
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет определителя номера</span>
+                                <span class="b-additional-services__content-item-cost">В&nbsp;соответствии с тарифным планом</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет международных вызовов</span>
+                                <span class="b-additional-services__content-item-cost">0 ₽</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет связи</span>
+                                <span class="b-additional-services__content-item-cost">В&nbsp;соответствии с тарифным планом</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет роуминга</span>
+                                <span class="b-additional-services__content-item-cost">0 ₽</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет доступа к GPRS</span>
+                                <span class="b-additional-services__content-item-cost">0 ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="b-additional-services__item">
+                    <div class="b-additional-services__header">
+                        <button class="gl__drop-menu-btn js-drop-menu-btn b-additional-services__btn">
+                            <svg class="gl__drop-menu-icon b-additional-services__btn-icon" width="24" height="24" aria-hidden="true">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                            <span class="b-additional-services__btn-label">Услуги абонентского сервиса</span>
+                        </button>
+                        <div class="b-additional-services__btn-info-wrapper">
+                            <div class="btn-info__container">
+                                <button type="button" class="btn-info__btn">
+                                    <svg width="24" height="24" aria-hidden="true" class="btn-info__icon">
+                                        <use xlink:href="#info-ellipse"></use>
+                                    </svg>
+                                </button>
+                                <div class="btn-info__content">Услуги абонентского сервиса</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gl__drop-menu-container js-drop-menu-container b-additional-services__wrapper">
+                        <ul class="gl__drop-menu js-drop-menu b-additional-services__content-list">
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет определителя номера</span>
+                                <span class="b-additional-services__content-item-cost">В&nbsp;соответствии с тарифным планом</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет международных вызовов</span>
+                                <span class="b-additional-services__content-item-cost">0 ₽</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет связи</span>
+                                <span class="b-additional-services__content-item-cost">В&nbsp;соответствии с тарифным планом</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет роуминга</span>
+                                <span class="b-additional-services__content-item-cost">0 ₽</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет доступа к GPRS</span>
+                                <span class="b-additional-services__content-item-cost">0 ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="b-additional-services__item">
+                    <div class="b-additional-services__header">
+                        <button class="gl__drop-menu-btn js-drop-menu-btn b-additional-services__btn">
+                            <svg class="gl__drop-menu-icon b-additional-services__btn-icon" width="24" height="24" aria-hidden="true">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                            <span class="b-additional-services__btn-label">Дополнительные платные услуги</span>
+                        </button>
+                        <div class="b-additional-services__btn-info-wrapper">
+                            <div class="btn-info__container">
+                                <button type="button" class="btn-info__btn">
+                                    <svg width="24" height="24" aria-hidden="true" class="btn-info__icon">
+                                        <use xlink:href="#info-ellipse"></use>
+                                    </svg>
+                                </button>
+                                <div class="btn-info__content">Дополнительные платные услуги</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gl__drop-menu-container js-drop-menu-container b-additional-services__wrapper">
+                        <ul class="gl__drop-menu js-drop-menu b-additional-services__content-list">
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет определителя номера</span>
+                                <span class="b-additional-services__content-item-cost">В&nbsp;соответствии с тарифным планом</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет международных вызовов</span>
+                                <span class="b-additional-services__content-item-cost">0 ₽</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет связи</span>
+                                <span class="b-additional-services__content-item-cost">В&nbsp;соответствии с тарифным планом</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет роуминга</span>
+                                <span class="b-additional-services__content-item-cost">0 ₽</span>
+                            </li>
+                            <li class="b-additional-services__content-item mod-cost">
+                                <span class="b-additional-services__content-item-name">Запрет доступа к GPRS</span>
+                                <span class="b-additional-services__content-item-cost">0 ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="b-useful-articles gl__section">
+    <div class="gl__page-content">
+        <h2 class="gl__title">Полезные статьи для бизнеса</h2>
+        <div class="b-useful-articles__content">
+            <div class="gl-slider js-swiper" data-swiper-slides-preview="3">
+                <div class="gl__bg-hide">
+                    <button type="button" class="gl-slider__slider-btn mod-prev gl__no-default-hover js-slider-btn-prev gl-slider__b-slider-btn">
+                        <svg class="gl-slider__slider-btn-icon" width="26" height="26" aria-hidden="true">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="gl-slider__slider-btn mod-next gl__no-default-hover js-slider-btn-next gl-slider__b-slider-btn">
+                        <svg class="gl-slider__slider-btn-icon" width="26" height="26" aria-hidden="true">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="gl-slider__b-container gl-slider__container swiper-container js-swiper-container">
+                    <ul class="gl-slider__wrapper swiper-wrapper" id="js-align-heights">
+                        <li class="swiper-slide">
+                            <a href="" class="b-useful-article gl__no-default-hover rates-list__slide">
+                                <img class="b-useful-article__image" src="<?=BUILD_PATH?>img/common/b-useful-articles/useful-article-1.jpg" alt="Название статьи">
+                                <div class="b-useful-article__overlay"></div>
+                                <h3 class="b-useful-article__title">Название статьи</h3>
+                                <p class="b-useful-article__description">Краткое описание в 2-3 строчки о сути статьи, Краткое описание в 2-3 строчки о сути статьи.</p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="" class="b-useful-article gl__no-default-hover rates-list__slide">
+                                <img class="b-useful-article__image" src="<?=BUILD_PATH?>img/common/b-useful-articles/useful-article-2.jpg" alt="Название статьи">
+                                <div class="b-useful-article__overlay"></div>
+                                <h3 class="b-useful-article__title">Название статьи</h3>
+                                <p class="b-useful-article__description">Краткое описание в 2-3 строчки b о сути статьи, Краткое описание в 2-3 строчки о сути статьи.</p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="" class="b-useful-article gl__no-default-hover rates-list__slide">
+                                <img class="b-useful-article__image" src="<?=BUILD_PATH?>img/common/b-useful-articles/useful-article-3.jpg" alt="Название статьи">
+                                <div class="b-useful-article__overlay"></div>
+                                <h3 class="b-useful-article__title">Название статьи</h3>
+                                <p class="b-useful-article__description">Краткое описание в 2-3 строчки о сути статьи, Краткое описание в 2-3 строчки о сути статьи.</p>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="" class="b-useful-article gl__no-default-hover rates-list__slide">
+                                <img class="b-useful-article__image" src="<?=BUILD_PATH?>img/common/b-useful-articles/useful-article-4.jpg" alt="Название статьи">
+                                <div class="b-useful-article__overlay"></div>
+                                <h3 class="b-useful-article__title">Название статьи</h3>
+                                <p class="b-useful-article__description">Краткое описание в 2-3 строчки о сути статьи, Краткое описание в 2-3 строчки о сути статьи.</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq" id="faq-host">
+    <div class="gl__page-content">
+        <h2 class="gl__title">Вопросы и ответы</h2>
+        <ul class="faq__list-wrapper"></ul>
+        <a href="/support/faq/" class="faq__link-show-all">Все вопросы и ответы<svg width="20" height="20" aria-hidden="true" class="faq__link-show-all-icon">
+                <use xlink:href="#arrow-right"></use>
+            </svg>
+        </a>
+    </div>
+</section>
+<section class="b-support gl__section">
+    <div class="gl__page-content">
+        <div class="b-support__content">
+            <div class="b-support__block b-support__form-block">
+                <h3 class="b-support__form-title">Хотите узнать больше?</h3>
+                <span class="b-support__form-label">Наши специалисты помогут подобрать решения, отталкиваясь от ваших бизнес-потребностей</span>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:iblock.element.add.form",
+                    "b-support__form",
+                    Array(
+                        "CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
+                        "CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
+                        "CUSTOM_TITLE_DETAIL_PICTURE" => "",
+                        "CUSTOM_TITLE_DETAIL_TEXT" => "",
+                        "CUSTOM_TITLE_IBLOCK_SECTION" => "",
+                        "CUSTOM_TITLE_NAME" => "Ваше имя",
+                        "CUSTOM_TITLE_PREVIEW_PICTURE" => "",
+                        "CUSTOM_TITLE_PREVIEW_TEXT" => "",
+                        "CUSTOM_TITLE_TAGS" => "",
+                        "DEFAULT_INPUT_SIZE" => "30",
+                        "DETAIL_TEXT_USE_HTML_EDITOR" => "N",
+                        "ELEMENT_ASSOC" => "CREATED_BY",
+                        "GROUPS" => array("2"),
+                        "IBLOCK_ID" => "45",
+                        "IBLOCK_TYPE" => "buisness",
+                        "LEVEL_LAST" => "Y",
+                        "LIST_URL" => "",
+                        "MAX_FILE_SIZE" => "0",
+                        "MAX_LEVELS" => "100000",
+                        "MAX_USER_ENTRIES" => "100000",
+                        "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
+                        "PROPERTY_CODES" => array("NAME", "174"),
+                        "PROPERTY_CODES_REQUIRED" => ["NAME", "174"],
+                        "RESIZE_IMAGES" => "N",
+                        "SEF_MODE" => "N",
+                        "STATUS" => "ANY",
+                        "STATUS_NEW" => "N",
+                        "USER_MESSAGE_ADD" => "",
+                        "USER_MESSAGE_EDIT" => "",
+                        "USE_CAPTCHA" => "N"
+                    )
+                );?>
+            </div>
+            <div class="b-support__block b-support__contacts-block">
+                <div>
+                    <h3 class="b-support__contacts-title">Служба поддержки</h3>
+                    <span class="b-support__contacts-label">Для оперативной связи со службой поддержки обращайтесь одним из удобных способов</span>
+                    <a class="b-support__contacts-tel" title="Позвонить" href="tel:+78432222222">(843) 238-00-00</a>
+                    <ul class="b-socials">
+                        <li class="b-socials__item">
+                            <a class="b-socials__link" title="Написать в Whatsapp" href="#">
+												<span class="b-socials__link-content whatsapp">
+													<svg width="22" height="22" aria-hidden="true" class="b-socials__link-icon">
+														<use xlink:href="#soc-whatsapp"></use>
+													</svg>
+												</span>
+                            </a>
+                        </li>
+                        <li class="b-socials__item">
+                            <a class="b-socials__link" title="Написать в Telegram" href="#">
+												<span class="b-socials__link-content telegram">
+													<svg width="22" height="20" aria-hidden="true" class="b-socials__link-icon">
+														<use xlink:href="#soc-telegram"></use>
+													</svg>
+												</span>
+                            </a>
+                        </li>
+                        <li class="b-socials__item">
+                            <a class="b-socials__link" title="Написать в VK" href="#">
+												<span class="b-socials__link-content vk">
+													<svg width="26" height="16" aria-hidden="true" class="b-socials__link-icon">
+														<use xlink:href="#soc-vk"></use>
+													</svg>
+												</span>
+                            </a>
+                        </li>
+                        <li class="b-socials__item">
+                            <a class="b-socials__link" title="Написать в Facebook" href="#">
+												<span class="b-socials__link-content facebook">
+													<svg width="10" height="22" aria-hidden="true" class="b-socials__link-icon">
+														<use xlink:href="#soc-facebook"></use>
+													</svg>
+												</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

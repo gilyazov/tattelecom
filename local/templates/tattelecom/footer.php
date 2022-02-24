@@ -3,7 +3,7 @@
     <? include_once(DEFAULT_PATH . 'include/footer.php');?>
 </div>
 
-<? include_once(DEFAULT_PATH . 'include/modal.php');?>
+<? include_once(DEFAULT_PATH . 'include/'.(SITE_ID == 's2' ? 'business/' : '').'modal.php');?>
 
 
 <div class="modal" id="modal-about-tariff-host">

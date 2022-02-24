@@ -48,7 +48,7 @@
                     <a class="b-support__contacts-tel" title="Позвонить" href="tel:+78432222222">(843) 238-00-00</a>
                     <ul class="b-socials">
                         <li class="b-socials__item">
-                            <a class="b-socials__link" title="Написать в Whatsapp" href="#">
+                            <a class="b-socials__link" title="Написать в Whatsapp" href="https://api.whatsapp.com/send?phone=79027182268" target="_blank">
                                 <span class="b-socials__link-content whatsapp">
                                     <svg width="22" height="22" aria-hidden="true" class="b-socials__link-icon">
                                         <use xlink:href="#soc-whatsapp"></use>
@@ -57,7 +57,7 @@
                             </a>
                         </li>
                         <li class="b-socials__item">
-                            <a class="b-socials__link" title="Написать в Telegram" href="#">
+                            <a class="b-socials__link" title="Написать в Telegram" href="https://t.me/tattelecomru_bot" target="_blank">
                                 <span class="b-socials__link-content telegram">
                                     <svg width="22" height="20" aria-hidden="true" class="b-socials__link-icon">
                                         <use xlink:href="#soc-telegram"></use>
@@ -75,10 +75,10 @@
                             </a>
                         </li>
                         <li class="b-socials__item">
-                            <a class="b-socials__link" title="Написать в Facebook" href="#">
-                                <span class="b-socials__link-content facebook">
-                                    <svg width="10" height="22" aria-hidden="true" class="b-socials__link-icon">
-                                        <use xlink:href="#soc-facebook"></use>
+                            <a class="b-socials__link" title="Написать в Инстаграмм" href="https://www.instagram.com/letai2.0/" target="_blank">
+                                <span class="b-socials__link-content inst">
+                                    <svg width="22" height="22" aria-hidden="true" class="b-socials__link-icon">
+                                        <use xlink:href="#inst-social"></use>
                                     </svg>
                                 </span>
                             </a>
