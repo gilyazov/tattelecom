@@ -1,10 +1,28 @@
+window.Parsley.addValidator('house', {
+    validateString: function(value) {
+        let house;
+        house = $('[name = uuid]').data('house');
+
+        if (house){
+            return true;
+        }
+
+        return false;
+    },
+    messages: {
+        en: 'Need a house',
+        ru: "Необходимо выбрать дом"
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     $("#address").suggestions({
         token: "a289c2b7ddef08f438c0c3d326f474d32a3e4a7c",
         type: "ADDRESS",
         onSelect: function(suggestion) {
-            //console.log(suggestion);
-            $('[name = uuid]').val(suggestion.data.fias_id);
+            $('[name = uuid]')
+                .attr('data-house', suggestion.data.house)
+                .val(suggestion.data.fias_id);
         }
     });
 
@@ -33,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 modalComponent.onOpenModal();
                             }
                             else{
-                                modalComponent = new window.classModal(document.querySelector('#modal-requestLetai-host'));
+                                modalComponent = new window.classModal(document.querySelector('#modal-callback-host'));
                                 modalComponent.onOpenModal();
                             }
 
