@@ -1,5 +1,8 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+if (!$arResult['ITEMS']){
+    return;
+}
 ?>
 <?if($_REQUEST['type']) {
     $GLOBALS['APPLICATION']->RestartBuffer();

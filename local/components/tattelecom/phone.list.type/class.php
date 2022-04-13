@@ -33,7 +33,14 @@ class PhoneType extends CBitrixComponent
         $url = $this->buildUrl();
         $response = $this->httpClient->get($url);
 
-        return \Bitrix\Main\Web\Json::decode($response);
+        try {
+            $jsonResponse = \Bitrix\Main\Web\Json::decode($response);
+        }
+        catch (Exception $e){
+            echo $e->getMessage();
+        }
+
+        return $jsonResponse;
     }
 
     public function executeComponent()
