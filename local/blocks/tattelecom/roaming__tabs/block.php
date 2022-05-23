@@ -20,8 +20,8 @@
                             <div class="select__container" id="roaming">
                                 <label class="select__wrapper">
                                     <select class="gl__select js-custom-select" data-parsley-class-handler="#roaming" name="roaming">
-                                        <option value="Роуминг по Россиии">Роуминг по Россиии</option>
-                                        <option value="Роуминг по всему миру">Роуминг по всему миру</option>
+                                        <option value="russia">Роуминг по Россиии</option>
+                                        <option value="world">Роуминг по всему миру</option>
                                     </select>
                                 </label>
                             </div>
