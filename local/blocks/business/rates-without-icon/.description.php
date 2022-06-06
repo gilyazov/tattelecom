@@ -5,7 +5,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
 return array(
     'block' => array(
-        'name' => "Тарифы (без иконок)",
+        'name' => "Тарифы (с иконками)",
         'section' => array('Бизнесу'),
         'version' => '1.0.1',
     ),
@@ -22,7 +22,8 @@ return array(
             'extra' => array(
                 'editable' => array(
                     'IBLOCK_ID' => array(),
-                    'PARENT_SECTION' => array()
+                    'PARENT_SECTION' => array(),
+                    'INCLUDE_SUBSECTIONS' => array()
                 )
             )
         )

@@ -1,0 +1,17 @@
+.js-swiper-custom .gl-slider__slider-btn{
+    border-radius: 25px;
+}
+.js-swiper-custom .gl-slider__slider-btn.mod-prev{
+    z-index: 999;
+    right: 13.5rem;
+    top: 85%;
+
+    left: auto;
+}
+.js-swiper-custom .gl-slider__slider-btn.mod-next {
+    left: auto;
+
+    z-index: 999;
+    right: 8rem;
+    top: 85%;
+}

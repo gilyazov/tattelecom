@@ -46,6 +46,11 @@ return array(
             'name' => 'Картинка',
             'type' => 'img',
         ),
+
+        '.gl__bg-hide' => array(
+            'name' => 'Тест',
+            'type' => 'text',
+        ),
 	),
     'attrs' => [
         '.js-swiper-custom' => [

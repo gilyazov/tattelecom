@@ -25,16 +25,31 @@ $language= \Bitrix\Landing\Manager::getLangISO();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="icon" href="/local/templates/.default/include/favicon/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="/local/templates/.default/include/favicon/favicon.ico" type="image/x-icon"/>
-    <link rel="apple-touch-icon" href="/local/templates/.default/include/favicon/favicon.png">
+    <? if(SITE_ID == "s2"):?>
+<!--        <link rel="icon" href="/local/templates/buisness/Vector.ico" type="image/x-icon"/>-->
+<!--        <link rel="shortcut icon" href="/local/templates/buisness/Vector.ico" type="image/x-icon"/>-->
+<!--        <link rel="apple-touch-icon" href="/local/templates/buisness/Vector.png">-->
+        <link rel="apple-touch-icon" sizes="152x152" href="/local/templates/buisness/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/local/templates/buisness/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/local/templates/buisness/favicon-16x16.png">
+        <link rel="manifest" href="/local/templates/buisness/site.webmanifest">
+        <link rel="mask-icon" href="/local/templates/buisness/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/local/templates/buisness/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="/local/templates/buisness/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+    <?else:?>
+        <link rel="icon" href="/local/templates/.default/include/favicon/favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="/local/templates/.default/include/favicon/favicon.ico" type="image/x-icon"/>
+        <link rel="apple-touch-icon" href="/local/templates/.default/include/favicon/favicon.png">
+    <?endif;?>
 
     <title><?$APPLICATION->ShowTitle();?></title>
     <?
     $APPLICATION->ShowHead();
     $APPLICATION->ShowProperty('MetaOG');
     $APPLICATION->ShowProperty('BeforeHeadClose');
-    \Bitrix\Main\UI\Extension::load('template.tattelecom-1');
+    \Bitrix\Main\UI\Extension::load('template.tattelecom');
     ?>
 
     <!-- Google Tag Manager -->
@@ -52,7 +67,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
 <!-- End Google Tag Manager (noscript) -->
 
 <?if(!$_GET["template"]):?>
-    <?//$APPLICATION->ShowPanel();?>
+    <?$APPLICATION->ShowPanel();?>
 <?endif?>
 <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
     <? include_once (DEFAULT_PATH .'include/sprite.xml'); ?></div>
