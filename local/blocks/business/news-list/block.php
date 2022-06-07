@@ -18,7 +18,7 @@
                     "PROPERTY_TYPE_VALUE" => "О компании"
                 );
                 ?>
-                <?php $APPLICATION->IncludeComponent("bitrix:news.list","",Array(
+                <?php $APPLICATION->IncludeComponent("bitrix:news.list","main-news",Array(
                         "IBLOCK_TYPE" => "mobile",
                         "IBLOCK_ID" => "29",
                         "NEWS_COUNT" => "30",
