@@ -1,5 +1,13 @@
 <?php
 $arUrlRewrite=array (
+  7 => 
+  array (
+    'CONDITION' => '#^/payment-methods/([a-zA-Z0-9\\-_]+)/#',
+    'RULE' => 'ELEMENT_CODE=$1',
+    'ID' => 'bitrix:news.detail',
+    'PATH' => '/dynamic/payment-methods/detail-payment.php',
+    'SORT' => 100,
+  ),
   1 => 
   array (
     'CONDITION' => '#^/helpdesk/technical-works/#',
@@ -24,6 +32,22 @@ $arUrlRewrite=array (
     'PATH' => '/dynamic/mobile/rates/index.php',
     'SORT' => 100,
   ),
+    8 =>
+        array (
+            'CONDITION' => '#^/phone/#',
+            'RULE' => '',
+            'ID' => 'bitrix:news',
+            'PATH' => '/dynamic/phone/index.php',
+            'SORT' => 100,
+        ),
+  6 => 
+  array (
+    'CONDITION' => '#^/tv/online/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/dynamic/tv/online/index.php',
+    'SORT' => 100,
+  ),
   5 => 
   array (
     'CONDITION' => '#^/tv/rates/#',
@@ -32,14 +56,6 @@ $arUrlRewrite=array (
     'PATH' => '/dynamic/tv/rates/index.php',
     'SORT' => 100,
   ),
-    6 =>
-        array (
-            'CONDITION' => '#^/tv/online/#',
-            'RULE' => '',
-            'ID' => 'bitrix:news',
-            'PATH' => '/dynamic/tv/online/index.php',
-            'SORT' => 100,
-        ),
   2 => 
   array (
     'CONDITION' => '#^/news/#',
@@ -48,7 +64,7 @@ $arUrlRewrite=array (
     'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
-  7 =>
+  10 =>
   array (
     'CONDITION' => '#^/#',
     'RULE' => '',
