@@ -2,7 +2,7 @@
 $years = [];
 $arSelect = Array("ID", "IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM", "PROPERTY_TYPE");
 $arFilter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
-$res = CIBlockElement::GetList(Array("DATE_ACTIVE_FROM"=>'DESC'), $arFilter, false, Array("nPageSize"=>50), $arSelect);
+$res = CIBlockElement::GetList(Array("DATE_ACTIVE_FROM"=>'DESC'), $arFilter, false, false, $arSelect);
 while($ob = $res->GetNextElement()) {
     $arFields = $ob->GetFields();
     $arProperties = $ob->GetProperties();
