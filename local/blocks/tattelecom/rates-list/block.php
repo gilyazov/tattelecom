@@ -11,8 +11,17 @@
         </div>
         <?
         global $arrFilterCity;
+        $arrFilterCity[0][1] = [
+            "!ID" => \CIBlockElement::SubQuery(
+                "ID",
+                array(
+                    "IBLOCK_ID" => 6,
+                    "PROPERTY_EXCLUDE_CITY" => $_SESSION['city']['id'],
+                )
+            )
+        ];
         ?>
-        <?$APPLICATION->IncludeComponent("bitrix:news.list", "gl-slider-rates", Array(
+        <?$APPLICATION->IncludeComponent("tattelecom:rates.list", "gl-slider-rates", Array(
             "COMPONENT_TEMPLATE" => ".default",
             "IBLOCK_TYPE" => "mobile", // Тип информационного блока (используется только для проверки)
             "IBLOCK_ID" => "6", // Код информационного блока

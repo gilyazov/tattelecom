@@ -9,7 +9,9 @@ class Prolog
 {
     public function OnBeforePrologAddHandler()
     {
+        self::utmSaver();
         self::cityChange();
+
         if (!$_SESSION['city']) {
             \Bitrix\Main\Loader::includeModule('iblock');
             $default = 'Казань';
@@ -49,11 +51,22 @@ class Prolog
                 "LOGIC" => "AND",
                 [
                     "LOGIC" => "OR",
-                    ["PROPERTY_CITY" => $_SESSION['city']['id']],
-                    ["PROPERTY_CITY" => false]
+                    [
+                        "PROPERTY_CITY" => $_SESSION['city']['id']
+                    ],
+                    [
+                        "PROPERTY_CITY" => false
+                    ]
                 ],
                 [
-                    "!PROPERTY_EXCLUDE_CITY" => $_SESSION['city']['id']
+                    /*"!ID" => \CIBlockElement::SubQuery(
+                        "ID",
+                        array(
+                            "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+                            "PROPERTY_EXCLUDE_CITY" => $_SESSION['city']['id'],
+                        )
+                    )*/
+                    //"!PROPERTY_EXCLUDE_CITY" => $_SESSION['city']['id'],
                 ]
             ]
         );
@@ -79,5 +92,17 @@ class Prolog
                 ];
             }
         }
+    }
+
+    /**
+     * сохраняем utm-метки в cookie
+     * @return void
+     */
+    protected static function utmSaver(){
+        if (isset($_GET["utm_source"])) setcookie("utm_source", $_GET["utm_source"], time() + 3600 * 24 * 30, "/");
+        if (isset($_GET["utm_medium"])) setcookie("utm_medium", $_GET["utm_medium"], time() + 3600 * 24 * 30, "/");
+        if (isset($_GET["utm_campaign"])) setcookie("utm_campaign", $_GET["utm_campaign"], time() + 3600 * 24 * 30, "/");
+        if (isset($_GET["utm_content"])) setcookie("utm_content", $_GET["utm_content"], time() + 3600 * 24 * 30, "/");
+        if (isset($_GET["utm_term"])) setcookie("utm_term", $_GET["utm_term"], time() + 3600 * 24 * 30, "/");
     }
 }

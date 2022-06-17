@@ -25,15 +25,14 @@ return array(
             'type' => 'text',
         ),
 
-        '.why-iteko__card' => array(
-            'name' => 'Ссылка',
-            'type' => 'link',
-            'skipContent' => true,
-        ),
-
-        '.why-iteko__card-text' => array(
-            'name' => 'Текст',
-            'type' => 'text',
+        'tattelecom:rates.list' => array(
+            'type' => 'component',
+            'extra' => array(
+                'editable' => array(
+                    'PARENT_SECTION' => array(),
+                    'RATES' => array(),
+                )
+            )
         ),
 	),
     'groups' => array(

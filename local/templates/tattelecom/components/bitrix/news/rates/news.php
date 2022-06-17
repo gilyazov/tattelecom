@@ -112,7 +112,20 @@ $this->setFrameMode(true);
             </div>
 
             <div class="rates-list__list-wrapper">
-                <?global $arrFilterCity;?>
+                <?
+                global $arrFilterCity;
+                if (in_array($arParams['IBLOCK_ID'], [17, 6])){
+                    $arrFilterCity[0][1] = [
+                        "!ID" => \CIBlockElement::SubQuery(
+                            "ID",
+                            array(
+                                "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+                                "PROPERTY_EXCLUDE_CITY" => $_SESSION['city']['id'],
+                            )
+                        )
+                    ];
+                }
+                ?>
                 <?$APPLICATION->IncludeComponent(
                     "bitrix:news.list",
                     ($arParams['IBLOCK_ID'] == 6 ? "" : "internet"),

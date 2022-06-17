@@ -67,6 +67,7 @@ $this->addExternalJS(BUILD_PATH . "js/rates-internet-list-page.js");
                             <span class="number"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></span>₽/мес
                         </div>
                     </div>
+
                     <div class="rates-list__slide-btns-wrapper">
                         <button type="button"
                                 class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal<?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?> mod-white<?endif?>"
