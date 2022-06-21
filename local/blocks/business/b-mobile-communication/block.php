@@ -17,9 +17,9 @@
                         </div>
                         <div class="service-card-with-photo__footer">
                             <div class="service-card-with-photo__cost-block">
-                                <span class="service-card-with-photo__cost-label">от</span>
+                                <span class="service-card-with-photo__cost-label b1">от</span>
                                 <span class="service-card-with-photo__cost-value">333</span>
-                                <span class="service-card-with-photo__cost-label">₽/мес</span>
+                                <span class="service-card-with-photo__cost-label b2">₽/мес</span>
                             </div>
                             <div class="service-card-with-photo__btns">
                                 <a href="#" class="service-card-with-photo__btn mod-simple service-card-with-photo__details gl__no-default-hover">Подробнее</a>
@@ -39,9 +39,9 @@
                         </div>
                         <div class="service-card-with-photo__footer">
                             <div class="service-card-with-photo__cost-block">
-                                <span class="service-card-with-photo__cost-label">от</span>
+                                <span class="service-card-with-photo__cost-label b1">от</span>
                                 <span class="service-card-with-photo__cost-value">333</span>
-                                <span class="service-card-with-photo__cost-label">₽/мес</span>
+                                <span class="service-card-with-photo__cost-label b2">₽/мес</span>
                             </div>
                             <div class="service-card-with-photo__btns">
                                 <a href="#" class="service-card-with-photo__btn mod-simple service-card-with-photo__details gl__no-default-hover">Подробнее</a>
@@ -60,9 +60,9 @@
                         </div>
                         <div class="service-card-with-photo__footer">
                             <div class="service-card-with-photo__cost-block">
-                                <span class="service-card-with-photo__cost-label">от</span>
+                                <span class="service-card-with-photo__cost-label b1">от</span>
                                 <span class="service-card-with-photo__cost-value">0</span>
-                                <span class="service-card-with-photo__cost-label">₽/мес</span>
+                                <span class="service-card-with-photo__cost-label b2">₽/мес</span>
                             </div>
                             <div class="service-card-with-photo__btns">
                                 <a href="#" class="service-card-with-photo__btn mod-simple service-card-with-photo__details gl__no-default-hover">Подробнее</a>
@@ -80,9 +80,9 @@
                         </div>
                         <div class="service-card-with-photo__footer">
                             <div class="service-card-with-photo__cost-block">
-                                <span class="service-card-with-photo__cost-label">от</span>
+                                <span class="service-card-with-photo__cost-label b1">от</span>
                                 <span class="service-card-with-photo__cost-value">0</span>
-                                <span class="service-card-with-photo__cost-label">₽/мес</span>
+                                <span class="service-card-with-photo__cost-label b2">₽/мес</span>
                             </div>
                             <div class="service-card-with-photo__btns">
                                 <a href="#" class="service-card-with-photo__btn mod-simple service-card-with-photo__details gl__no-default-hover">Подробнее</a>

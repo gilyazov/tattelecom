@@ -24,7 +24,7 @@ $this->setFrameMode(true);
 
         <form class="rates-info__content mod-b-info-content" data-need-validation data-parsley-validate data-parsley-focus="none">
             <div class="rates-info__preview">
-                <div class="rates-info__title">Включено в абонентскую плату:</div>
+                <div class="rates-info__title"><?=$arResult["PROPERTIES"]["CONDITIONS_TITLE"]["VALUE"]?></div>
                 <ul class="rates-info__preview-list">
                     <?foreach ($arResult["CONDITIONS"] as $arConditions):?>
                         <li class="rates-info__preview-item">
@@ -76,7 +76,9 @@ $this->setFrameMode(true);
 
                 <div class="rates-info__preview-bottom">
                     <div class="rates-info__preview-price-wrapper">
-                        <span class="number"><?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?></span><?=$arResult["PROPERTIES"]["TARIFFING"]["VALUE"]?>
+                        <?if($arResult["PROPERTIES"]["PRICE"]["VALUE"]):?>
+                            <span class="number"><?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?></span><?=$arResult["PROPERTIES"]["TARIFFING"]["VALUE"]?>
+                        <?endif;?>
                         <?if($arResult["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
                             <span class="rates-list__slide-old-price"><?=$arResult["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span><?=$arResult["PROPERTIES"]["TARIFFING"]["VALUE"]?></span></span>
                         <?endif;?>

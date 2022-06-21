@@ -35,7 +35,7 @@ $this->addExternalJS(BUILD_PATH . "js/b-rates-mobile-list.js");
                                         <li class="b-tariffs-item__service">
                                             <?if($benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]):?>
                                                 <svg width="15" height="15" aria-hidden="true" class="b-tariffs-item__service-icon">
-                                                    <use xlink:href="#tariffs-<?=$benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]?>"></use>
+                                                    <use xlink:href="#<?=$benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]?>"></use>
                                                 </svg>
                                             <?endif?>
                                             <span class="b-tariffs-item__service-name"><?=$benefit["SUB_VALUES"]["B_VALUE"]["VALUE"]?></span>
@@ -69,13 +69,15 @@ $this->addExternalJS(BUILD_PATH . "js/b-rates-mobile-list.js");
                             <?if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
                                 <span class="b-tariffs-item__cost-old-price"><?=$arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]?> <?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
                             <?endif;?>
-                            <div class="">
-                                <span class="b-tariffs-item__cost"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></span>
-                                <span class="b-tariffs-item__cost-label"><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
-                            </div>
+                            <?if($arItem["PROPERTIES"]["PRICE"]["VALUE"]):?>
+                                <div class="">
+                                    <span class="b-tariffs-item__cost"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></span>
+                                    <span class="b-tariffs-item__cost-label"><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
+                                </div>
+                            <?endif;?>
                         </div>
                         <!-- todo: здесь кнопка и див вместо ссылок-->
-                        <button class="gl__main-btn mod-business b-tariffs-item__btn js-open-send-request-modal-b js-open-callback-modal" type="button" data-tariff-name="Корпорация-150" data-prise="150">Подключить</button>
+                        <button class="gl__main-btn mod-business b-tariffs-item__btn js-open-callback-modal" type="button" data-tariff-name="Корпорация-150" data-prise="150">Подключить</button>
                         <div class="gl__secondary-btn">Подробнее о тарифе</div>
                     </div>
                 </a>

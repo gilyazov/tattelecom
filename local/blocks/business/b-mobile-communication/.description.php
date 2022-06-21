@@ -35,9 +35,9 @@ return array(
                             </div>
                             <div class="service-card-with-photo__footer">
                                 <div class="service-card-with-photo__cost-block">
-                                    <span class="service-card-with-photo__cost-label">от</span>
+                                    <span class="service-card-with-photo__cost-label b1">от</span>
                                     <span class="service-card-with-photo__cost-value">333</span>
-                                    <span class="service-card-with-photo__cost-label">₽/мес</span>
+                                    <span class="service-card-with-photo__cost-label b2">₽/мес</span>
                                 </div>
                                 <div class="service-card-with-photo__btns">
                                     <a href="#" class="service-card-with-photo__btn mod-simple service-card-with-photo__details gl__no-default-hover">Подробнее</a>
@@ -65,9 +65,9 @@ return array(
                             </div>
                             <div class="service-card-with-photo__footer">
                                 <div class="service-card-with-photo__cost-block">
-                                    <span class="service-card-with-photo__cost-label">от</span>
+                                    <span class="service-card-with-photo__cost-label b1">от</span>
                                     <span class="service-card-with-photo__cost-value">0</span>
-                                    <span class="service-card-with-photo__cost-label">₽/мес</span>
+                                    <span class="service-card-with-photo__cost-label b2">₽/мес</span>
                                 </div>
                                 <div class="service-card-with-photo__btns">
                                     <a href="#" class="service-card-with-photo__btn mod-simple service-card-with-photo__details gl__no-default-hover">Подробнее</a>
@@ -94,9 +94,9 @@ return array(
                             </div>
                             <div class="service-card-with-photo__footer">
                                 <div class="service-card-with-photo__cost-block">
-                                    <span class="service-card-with-photo__cost-label">от</span>
+                                    <span class="service-card-with-photo__cost-label b1">от</span>
                                     <span class="service-card-with-photo__cost-value">0</span>
-                                    <span class="service-card-with-photo__cost-label">₽/мес</span>
+                                    <span class="service-card-with-photo__cost-label b2">₽/мес</span>
                                 </div>
                                 <div class="service-card-with-photo__btns">
                                     <a href="#" class="service-card-with-photo__btn mod-simple service-card-with-photo__details gl__no-default-hover">Подробнее</a>
@@ -124,9 +124,9 @@ return array(
 										</div>
 										<div class="service-card-with-photo__footer">
 											<div class="service-card-with-photo__cost-block">
-												<span class="service-card-with-photo__cost-label">от</span>
+												<span class="service-card-with-photo__cost-label b1">от</span>
 												<span class="service-card-with-photo__cost-value">333</span>
-												<span class="service-card-with-photo__cost-label">₽/мес</span>
+												<span class="service-card-with-photo__cost-label b2">₽/мес</span>
 											</div>
 											<div class="service-card-with-photo__btns">
 												<a href="#" class="service-card-with-photo__btn mod-simple service-card-with-photo__details gl__no-default-hover">Подробнее</a>
@@ -155,9 +155,9 @@ return array(
 										</div>
 										<div class="service-card-with-photo__footer">
 											<div class="service-card-with-photo__cost-block">
-												<span class="service-card-with-photo__cost-label">от</span>
+												<span class="service-card-with-photo__cost-label b1">от</span>
 												<span class="service-card-with-photo__cost-value">333</span>
-												<span class="service-card-with-photo__cost-label">₽/мес</span>
+												<span class="service-card-with-photo__cost-label b2">₽/мес</span>
 											</div>
 											<div class="service-card-with-photo__btns">
 												<a href="#" class="service-card-with-photo__btn mod-simple service-card-with-photo__details gl__no-default-hover">Подробнее</a>
@@ -185,9 +185,9 @@ return array(
 										</div>
 										<div class="service-card-with-photo__footer">
 											<div class="service-card-with-photo__cost-block">
-												<span class="service-card-with-photo__cost-label">от</span>
+												<span class="service-card-with-photo__cost-label b1">от</span>
 												<span class="service-card-with-photo__cost-value">444</span>
-												<span class="service-card-with-photo__cost-label">₽/мес</span>
+												<span class="service-card-with-photo__cost-label b2">₽/мес</span>
 											</div>
 											<div class="service-card-with-photo__btns">
 												<a href="#" class="service-card-with-photo__btn mod-simple service-card-with-photo__details gl__no-default-hover">Подробнее</a>
@@ -221,18 +221,38 @@ return array(
             'name' => 'Описание',
             'type' => 'text'
         ],
+        /*'.b1' => [
+            'name' => 'от',
+            'type' => 'text'
+        ],*/
         '.service-card-with-photo__cost-value' => [
             'name' => 'Цена',
             'type' => 'text'
         ],
+        /*'.b2' => [
+            'name' => '₽/мес',
+            'type' => 'text'
+        ],*/
         '.service-card-with-photo__details' => [
             'name' => 'Ссылка',
+            'type' => 'link'
+        ],
+        '.service-card-with-photo__connect-btn' => [
+            'name' => 'Кнопка',
             'type' => 'link'
         ],
         '.service-card-with-photo__image' => array(
             'name' => 'Фон',
             'type' => 'img',
             'dimensions' => array('maxWidth' => 1560, 'maxHeight' => 500),
+        ),
+        '.b1' => array(
+            'name' => 'Подпись 1',
+            'type' => 'text'
+        ),
+        '.b2' => array(
+            'name' => 'Подпись 2',
+            'type' => 'text'
         ),
     ),
     'style' => array(
