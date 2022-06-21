@@ -39,24 +39,28 @@ document.addEventListener('DOMContentLoaded', () => {
                         mode: 'class',
                         data: {post: BX.ajax.prepareForm(connectForm).data}, // ключи объекта data соответствуют параметрам метода
                     })
-                    .then(function (response) {
-                        if (response.status === 'success') {
-                            let modalComponent;
+                    .then(
+                        function (response) {
+                            if (response.status === 'success') {
+                                let modalComponent;
 
-                            if (response.data.error) {
-                                modalComponent = new window.classModal(document.querySelector('#modal-check-camera-no'));
-                                modalComponent.onOpenModal();
-                            } else {
                                 const modalCount = document.querySelector('.js-camera-count');
                                 modalCount.textContent = response.data.count;
 
                                 modalComponent = new window.classModal(document.querySelector('#modal-check-camera-ok'));
                                 modalComponent.onOpenModal();
+
+                                BX.closeWait(connectForm, wait);
                             }
+                        },
+                        function (response) {
+                            let modalComponent;
+                            modalComponent = new window.classModal(document.querySelector('#modal-check-camera-no'));
+                            modalComponent.onOpenModal();
 
                             BX.closeWait(connectForm, wait);
                         }
-                    });
+                    );
             }
         });
     }

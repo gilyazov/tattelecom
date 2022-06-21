@@ -28,6 +28,9 @@ class CheckCamera extends \CBitrixComponent implements Controllerable
         ];
     }
 
+    /**
+     * @throws Exception
+     */
     public function checkingAddressAction($post)
     {
         $this->configuration = Configuration::getValue("potok");
@@ -39,8 +42,17 @@ class CheckCamera extends \CBitrixComponent implements Controllerable
         ];
 
         $response = $this->httpClient->post($this->buildUrl(), Json::encode($data));
+        $responseArr = Json::decode($response);
 
-        return Json::decode($response);
+        if ($responseArr['error']){
+            throw new \Exception($responseArr['error']);
+        }
+
+        if ($responseArr['count'] == 0){
+            throw new \Exception("В доме 0 камер.");
+        }
+
+        return $responseArr;
     }
 
     protected function setAuthorization()
