@@ -53,7 +53,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
                     </svg>
                 </button>
             </div>
-            <p class="modal__text">Для установки камер вы можете предложить своему ТСЖ/УК обратиться в Таттелеком.</p>
+            <p class="modal__text">Если у вас остались вопросы - оставьте заявку и мы вам перезвоним.</p>
             <?$APPLICATION->IncludeComponent(
                 "tattelecom:form",
                 "",
