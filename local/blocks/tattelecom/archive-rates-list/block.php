@@ -1,42 +1,23 @@
-<section class="rates-list gpon-rates-list" id="rates-list-host">
+<section class="third-parties">
     <div class="gl__page-content">
-        <div class="gl__title-head">
-            <h2 class="gl__title">Тарифы</h2>
-            <div class="gl__xs-hide">
-                <a href="/rates/" class="gl__link-show-all">Все тарифы<svg width="20" height="20" aria-hidden="true" class="gl__link-show-all-icon">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <?
-        global $arrFilterCity;
-        $arrFilterCity[0][1] = [
-            "!ID" => \CIBlockElement::SubQuery(
-                "ID",
-                array(
-                    "IBLOCK_ID" => 17,
-                    "PROPERTY_EXCLUDE_CITY" => $_SESSION['city']['id'],
-                )
-            )
-        ];
-        ?>
-        <?$APPLICATION->IncludeComponent("bitrix:news.list", "gl-slider-rates-gpon", Array(
+        <h2 class="gl__title">Список архивных тарифов</h2>
+
+        <?$APPLICATION->IncludeComponent("bitrix:news.list", "archive-rates-table", Array(
             "COMPONENT_TEMPLATE" => "gl-slider-rates-gpon",
             "IBLOCK_TYPE" => "mobile", // Тип информационного блока (используется только для проверки)
-            "IBLOCK_ID" => "17", // Код информационного блока
-            "NEWS_COUNT" => "20",   // Количество новостей на странице
+            "IBLOCK_ID" => "55", // Код информационного блока
+            "NEWS_COUNT" => "999",   // Количество новостей на странице
             "SORT_BY1" => "SORT",   // Поле для первой сортировки новостей
             "SORT_ORDER1" => "ASC", // Направление для первой сортировки новостей
             "SORT_BY2" => "ACTIVE_FROM",    // Поле для второй сортировки новостей
             "SORT_ORDER2" => "DESC",    // Направление для второй сортировки новостей
-            "FILTER_NAME" => "arrFilterCity",    // Фильтр
+            "FILTER_NAME" => "",    // Фильтр
             "FIELD_CODE" => array(  // Поля
                 0 => "",
                 1 => "",
             ),
             "PROPERTY_CODE" => array(   // Свойства
-                0 => "SUBTITLE",
+                0 => "DESCRIPTION",
                 1 => "",
             ),
             "CHECK_DATES" => "Y",   // Показывать только активные на данный момент элементы

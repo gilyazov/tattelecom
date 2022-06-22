@@ -28,6 +28,17 @@ return array(
             'name' => 'Текст',
             'type' => 'text',
         ),
+
+        '.gl__md-hide' => array(
+            'name' => 'Картинка',
+            'type' => 'img',
+            'dimensions' => array('maxWidth' => 500, 'maxHeight' => 500)
+        ),
+        '.gl__md-show' => array(
+            'name' => 'Картинка',
+            'type' => 'img',
+            'dimensions' => array('maxWidth' => 500, 'maxHeight' => 500)
+        ),
 	),
     'groups' => array(
 

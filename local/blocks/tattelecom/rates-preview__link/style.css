@@ -1,5 +1,9 @@
 .js-swiper-custom .gl-slider__slider-btn{
     border-radius: 25px;
+    opacity: .7;
+}
+.js-swiper-custom .gl-slider__slider-btn:hover{
+    opacity: 1;
 }
 .js-swiper-custom .gl-slider__slider-btn.mod-prev{
     z-index: 999;

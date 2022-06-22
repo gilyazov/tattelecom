@@ -21,16 +21,14 @@ return array(
         ]
     ],
 	'nodes' => array(
-
         '.intercom-functions__item-text' => array(
             'name' => 'Функция',
             'type' => 'text',
         ),
-
-        '.why-iteko__card' => array(
-            'name' => 'Ссылка',
-            'type' => 'link',
-            'skipContent' => true,
+        '.intercom-functions__image' => array(
+            'name' => 'Фон',
+            'type' => 'img',
+            'dimensions' => array('maxWidth' => 1920, 'maxHeight' => 1080)
         ),
 	)
 );

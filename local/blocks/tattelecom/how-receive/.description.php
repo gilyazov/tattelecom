@@ -13,27 +13,30 @@ return array(
         'dynamic' => false,
 	),
     'cards' => [
-
+        '.how-receive__step-item' => [
+            'name' => 'Шаги',
+            'label' => [
+                '.how-receive__step-item-num mod-orange'
+            ]
+        ]
     ],
 	'nodes' => array(
         '.gl__title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
         ),
-        '.rates-preview__content-caption' => array(
+
+        '.how-receive__step-item-num mod-orange' => array(
+            'name' => 'Шаг',
+            'type' => 'text',
+        ),
+        '.how-receive__step-item-value' => array(
             'name' => 'Описание',
             'type' => 'text',
         ),
-
-        '.why-iteko__card' => array(
-            'name' => 'Ссылка',
-            'type' => 'link',
-            'skipContent' => true,
-        ),
-
-        '.why-iteko__card-text' => array(
-            'name' => 'Текст',
-            'type' => 'text',
+        '.how-receive__hint' => array(
+            'name' => 'Подсказка',
+            'type' => 'text'
         ),
 	),
     'groups' => array(

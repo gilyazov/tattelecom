@@ -20,21 +20,24 @@ return array(
             'name' => 'Заголовок',
             'type' => 'text',
         ),
-        '.rates-preview__content-caption' => array(
+        '.what-is__text' => array(
             'name' => 'Описание',
             'type' => 'text',
         ),
 
-        '.why-iteko__card' => array(
+        '.what-is__num' => array(
+            'name' => 'Цифра',
+            'type' => 'text',
+        ),
+        '.what-is__caption' => array(
+            'name' => 'Описание',
+            'type' => 'text',
+        ),
+        /*'.why-iteko__card' => array(
             'name' => 'Ссылка',
             'type' => 'link',
             'skipContent' => true,
-        ),
-
-        '.why-iteko__card-text' => array(
-            'name' => 'Текст',
-            'type' => 'text',
-        ),
+        ),*/
 	),
     'groups' => array(
 

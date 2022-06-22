@@ -16,25 +16,19 @@ return array(
 
     ],
 	'nodes' => array(
-        '.gl__title' => array(
+        '.gl__title' => [
             'name' => 'Заголовок',
             'type' => 'text',
-        ),
-        '.rates-preview__content-caption' => array(
+        ],
+        '.how-works__text' => [
             'name' => 'Описание',
             'type' => 'text',
-        ),
-
-        '.why-iteko__card' => array(
+        ],
+        '.how-works__scheme-image' => [
             'name' => 'Ссылка',
-            'type' => 'link',
-            'skipContent' => true,
-        ),
-
-        '.why-iteko__card-text' => array(
-            'name' => 'Текст',
-            'type' => 'text',
-        ),
+            'type' => 'img',
+            'dimensions' => array('maxWidth' => 1920, 'maxHeight' => 1080)
+        ],
 	),
     'groups' => array(
 
