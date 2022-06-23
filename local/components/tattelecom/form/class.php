@@ -21,18 +21,22 @@ class Form extends \CBitrixComponent implements Controllerable
 
         $this->configuration = Configuration::getValue("potok");
         $this->httpClient = new HttpClient();
+        $this->httpClient
+            ->setHeader('Authorization', 'Bearer ' . $this->configuration['token'])
+            ->setHeader('Content-Type', 'application/json', true);
     }
 
     protected function buildUrl(): string
     {
         $isAdmin = \Bitrix\Main\Engine\CurrentUser::get()->isAdmin();
-
         if ($isAdmin){
-            return $this->configuration['dev_host'];
+            $host = $this->configuration['dev_host'];
         }
         else{
-            return $this->configuration['host'];
+            $host = $this->configuration['host'];
         }
+
+        return $host . $this->configuration['methods']['lead'];
     }
 
     public function configureActions() : array
@@ -49,24 +53,34 @@ class Form extends \CBitrixComponent implements Controllerable
         global $APPLICATION;
         $url = $this->buildUrl();
         $phone = $this->parsePhone($post['phone']);
-
-        $post['param_comment'] .= "<br> Город:" . $_SESSION['city']['name'];
+        $utm = $this->getUtmQuery();
 
         $data = [
             "phone" => $phone,
-            "firstname" => $post['firstname'],
-            "param_comment" => $post['param_comment'],
-
             "service" => 2,
-            "param_referer" => $post['param_referer'],
-            "param_clientstatus" => 1
+            "name" => ($post['firstname'] ? $post['firstname'] : "Нет Имени"),
+            "referer" => $post['param_referer'],
+            "address" => $_SESSION['city']['name'],
+            "comment" => $post['param_comment'],
+            "utm" => $utm,
         ];
 
-        //pre($data);die();
-
-        $response = $this->httpClient->post($url, $data);
+        $response = $this->httpClient->post($url, \Bitrix\Main\Web\Json::encode($data));
 
         return \Bitrix\Main\Web\Json::decode($response);
+    }
+
+    protected function getUtmQuery()
+    {
+        $utm = [
+            "utm_source" => $_COOKIE["utm_source"],
+            "utm_medium" => $_COOKIE["utm_medium"],
+            "utm_campaign" => $_COOKIE["utm_campaign"],
+            "utm_content" => $_COOKIE["utm_content"],
+            "utm_term" => $_COOKIE["utm_term"],
+        ];
+
+        return http_build_query($utm);
     }
 
     /**

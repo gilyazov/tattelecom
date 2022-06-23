@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 }
                                 else{
                                     form.reset();
-
+                                    
                                     let modalComponent;
                                     let idModal = $(form).closest('.mod-show').attr('id');
                                     if (idModal){
