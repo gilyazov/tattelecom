@@ -11,4 +11,5 @@ $eventManager->addEventHandler('landing', 'onHookExec', ['\Tattelecom\Core\Event
 $eventManager->addEventHandler('landing', 'onGetThemeColors', ['\Tattelecom\Core\EventHandlers\Landing\Theme', 'onGetThemeColors']);
 $eventManager->addEventHandler('main', 'OnBeforeProlog', ['\Tattelecom\Core\EventHandlers\Landing\Main', 'OnBeforePrologAddHandler']);
 
+$eventManager->addEventHandler('iblock', 'OnBeforeIBlockElementAdd', ['\Tattelecom\Core\EventHandlers\Iblock\Element', 'OnBeforeIBlockElementAddHandler']);
 $eventManager->addEventHandler('iblock', 'OnAfterIBlockElementAdd', ['\Tattelecom\Core\EventHandlers\Iblock\Element', 'OnAfterIBlockElementAddHandler']);

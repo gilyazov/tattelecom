@@ -36,7 +36,15 @@ return array(
             'type' => 'text',
         ),
 	),
-    'groups' => array(
-
+    'style' => array(
+        'block' => array(
+            'bg',
+        ),
+        'nodes' => array(
+            '.application-consultation__content' => array(
+                'name' => "Фоновый цвет",
+                'type' => array('background-color'),
+            ),
+        ),
     ),
 );

@@ -8,34 +8,52 @@ class Element
 {
     public function OnBeforeIBlockElementAddHandler(&$arFields)
     {
-        /*if (in_array($arFields['IBLOCK_ID'], [9, 10, 11])) {
-            global $APPLICATION;
-            $arFields['PROPERTY_VALUES']['TITLE'] = $APPLICATION->GetTitle();
-            $arFields['PROPERTY_VALUES']['LINK'] = $APPLICATION->GetCurPage();
-        }*/
+        if ($arFields["IBLOCK_ID"] == 57) {
+            $arFilter = array("IBLOCK_ID" => $arFields["IBLOCK_ID"], "PROPERTY_PHONE" => $arFields["PROPERTY_VALUES"]["238"], "ACTIVE" => "Y");
+            $res = \CIBlockElement::GetList([], $arFilter, false, false, ["ID"]);
+            if ($ob = $res->GetNextElement()) {
+                global $APPLICATION;
+                $APPLICATION->throwException("Есть активная заявка по вашему номеру.");
+                return false;
+            }
+
+            $arFilter = array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "PROPERTY_TIME" => $arFields["PROPERTY_VALUES"]["239"], "ACTIVE" => "Y");
+            $res = \CIBlockElement::GetList(array(), $arFilter, ["PROPERTY_TIME"]);
+            if ($ob = $res->GetNextElement()) {
+                $arFieldsBx = $ob->GetFields();
+
+                if ($arFieldsBx["CNT"] >= 18){
+                    global $APPLICATION;
+                    $APPLICATION->throwException("На этот временной слот не осталось мест.");
+                    return false;
+                }
+            }
+        }
     }
 
     public function OnAfterIBlockElementAddHandler(&$arFields)
     {
-        if ($arFields['IBLOCK_ID'] == 45) {
+        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57])) {
             global $APPLICATION;
             $APPLICATION->RestartBuffer();
+        }
 
-            /*$arSelect = Array("ID", "IBLOCK_ID", "NAME", "IBLOCK_NAME");//IBLOCK_ID и ID обязательно должны быть указаны, см. описание arSelectFields выше
-            $arFilter = Array("IBLOCK_ID"=>$arFields["IBLOCK_ID"], "ID"=>$arFields["ID"], "ACTIVE"=>"Y");
-            $res = \CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
-            if($ob = $res->GetNextElement()){
-                $arFields = $ob->GetFields();
+        if ($arFields["ID"] && $arFields['IBLOCK_ID'] == 45) {
+            $arSelect = array("ID", "IBLOCK_ID", "NAME", "IBLOCK_NAME");//IBLOCK_ID и ID обязательно должны быть указаны, см. описание arSelectFields выше
+            $arFilter = array("IBLOCK_ID" => $arFields["IBLOCK_ID"], "ID" => $arFields["ID"], "ACTIVE" => "Y");
+            $res = \CIBlockElement::GetList(array(), $arFilter, false, false, $arSelect);
+            if ($ob = $res->GetNextElement()) {
+                $arFieldsBx = $ob->GetFields();
                 $arProps = $ob->GetProperties();
 
-                $sendFields['THEME'] = $arFields['IBLOCK_NAME'];
+                $sendFields['THEME'] = $arFieldsBx['IBLOCK_NAME'];
+                $sendFields['NAME'] = $arFieldsBx['NAME'];
 
-                foreach ($arProps as $prop){
-                    if ($prop['PROPERTY_TYPE'] == 'F'){
-                        $sendFields['FIELDS'] .= "<tr><td>$prop[NAME]</td><td><a href='".\CFile::GetPath($prop["VALUE"])."'>Скачать</a></td></tr>";
-                    }
-                    else{
-                        if ($prop['VALUE']){
+                foreach ($arProps as $prop) {
+                    if ($prop['PROPERTY_TYPE'] == 'F') {
+                        $sendFields['FIELDS'] .= "<tr><td>$prop[NAME]</td><td><a href='" . \CFile::GetPath($prop["VALUE"]) . "'>Скачать</a></td></tr>";
+                    } else {
+                        if ($prop['VALUE']) {
                             $sendFields['FIELDS'] .= "<tr><td>$prop[NAME]</td><td>$prop[VALUE]</td></tr>";
                         }
                     }
@@ -45,12 +63,14 @@ class Element
             \Bitrix\Main\Mail\Event::send(array(
                 "EVENT_NAME" => "FEEDBACK_FORM",
                 "LANGUAGE_ID" => LANGUAGE_ID,
-                "MESSAGE_ID" => 7,
+                "MESSAGE_ID" => 32,
                 "LID" => SITE_ID,
                 "DUPLICATE" => "N",
                 "C_FIELDS" => $sendFields
-            ));*/
+            ));
+        }
 
+        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57])) {
             echo \Bitrix\Main\Web\Json::encode(['ID' => $arFields['ID']]);
             die();
         }
