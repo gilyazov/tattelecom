@@ -24,7 +24,16 @@ return array(
             'name' => 'Подзаголовок',
             'type' => 'text',
         ),
-
+        'tattelecom:iblock.event.add.form' => array(
+            'type' => 'component',
+            'extra' => array(
+                'editable' => array(
+                    'EVENT' => array(),
+                    'PROPERTY_CODES' => array(),
+                    'PROPERTY_CODES_REQUIRED' => array(),
+                )
+            )
+        )
 	),
     'groups' => array(
 

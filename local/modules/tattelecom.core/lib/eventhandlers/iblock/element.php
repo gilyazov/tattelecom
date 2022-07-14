@@ -8,8 +8,14 @@ class Element
 {
     public function OnBeforeIBlockElementAddHandler(&$arFields)
     {
-        if ($arFields["IBLOCK_ID"] == 57) {
-            $arFilter = array("IBLOCK_ID" => $arFields["IBLOCK_ID"], "PROPERTY_PHONE" => $arFields["PROPERTY_VALUES"]["238"], "ACTIVE" => "Y");
+        // регистрация на мероприятия
+        if ($arFields["IBLOCK_ID"] == 57 && $event = $arFields["PROPERTY_VALUES"]["240"]) {
+            $arFilter = array(
+                "IBLOCK_ID" => $arFields["IBLOCK_ID"],
+                "PROPERTY_PHONE" => $arFields["PROPERTY_VALUES"]["238"],
+                "PROPERTY_EVENT" => $event,
+                "ACTIVE" => "Y"
+            );
             $res = \CIBlockElement::GetList([], $arFilter, false, false, ["ID"]);
             if ($ob = $res->GetNextElement()) {
                 global $APPLICATION;
@@ -17,15 +23,17 @@ class Element
                 return false;
             }
 
-            $arFilter = array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "PROPERTY_TIME" => $arFields["PROPERTY_VALUES"]["239"], "ACTIVE" => "Y");
-            $res = \CIBlockElement::GetList(array(), $arFilter, ["PROPERTY_TIME"]);
-            if ($ob = $res->GetNextElement()) {
-                $arFieldsBx = $ob->GetFields();
+            if ($arFields["PROPERTY_VALUES"]["239"]){
+                $arFilter = array("IBLOCK_ID" => $arFields["IBLOCK_ID"], "PROPERTY_TIME" => $arFields["PROPERTY_VALUES"]["239"], "ACTIVE" => "Y");
+                $res = \CIBlockElement::GetList(array(), $arFilter, ["PROPERTY_TIME"]);
+                if ($ob = $res->GetNextElement()) {
+                    $arFieldsBx = $ob->GetFields();
 
-                if ($arFieldsBx["CNT"] >= 18){
-                    global $APPLICATION;
-                    $APPLICATION->throwException("На этот временной слот не осталось мест.");
-                    return false;
+                    if ($arFieldsBx["CNT"] >= 18){
+                        global $APPLICATION;
+                        $APPLICATION->throwException("На этот временной слот не осталось мест.");
+                        return false;
+                    }
                 }
             }
         }

@@ -3,10 +3,10 @@
     <div class="gl__page-content">
         <div class="application__content">
             <h2 class="gl__title application__title">Регистрация на SUP прогулку</h2>
-            <div class="application__subtitle mod-no-answer">Оправь заявку и забронируй время на прогулку</div>
+            <div class="application__subtitle mod-no-answer">Отправь заявку и забронируй время на прогулку</div>
 
             <?$APPLICATION->IncludeComponent(
-                "bitrix:iblock.element.add.form",
+                "tattelecom:iblock.event.add.form",
                 "application__form",
                 Array(
                     "CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
@@ -30,8 +30,8 @@
                     "MAX_LEVELS" => "100000",
                     "MAX_USER_ENTRIES" => "100000",
                     "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-                    "PROPERTY_CODES" => ["NAME", "238", "239"],
-                    "PROPERTY_CODES_REQUIRED" => ["NAME", "238", "239"],
+                    "PROPERTY_CODES" => ["NAME", "238"],
+                    "PROPERTY_CODES_REQUIRED" => ["NAME", "238"],
                     "RESIZE_IMAGES" => "N",
                     "SEF_MODE" => "N",
                     "STATUS" => "ANY",
@@ -39,6 +39,8 @@
                     "USER_MESSAGE_ADD" => "",
                     "USER_MESSAGE_EDIT" => "",
                     "USE_CAPTCHA" => "N",
+                    "EVENT" => "12013",
+                    "SUCCESS_MSG" => "Вы успешно зарегистрировались в розыгрыше. Ждём Вас на подведении итогов в 18:40 у главной сцены"
                 )
             );?>
         </div>
