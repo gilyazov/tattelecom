@@ -10,7 +10,7 @@ return array(
         'dynamic' => false
     ),
     'cards' => [
-        '.b-socials__item' => [
+        /*'.b-socials__item' => [
             'name' => 'Соц-сети',
             'label' => [
                 '.b-socials__item'
@@ -98,10 +98,10 @@ return array(
                     ]
                 ],
             ],
-        ],
+        ],*/
     ],
     'nodes' => array(
-        '.b-support__form-title' => array(
+        /*'.b-support__form-title' => array(
             'name' => "Заголовок",
             'type' => 'text',
         ),
@@ -125,8 +125,15 @@ return array(
             'name' => "Ссылка на соц. сеть",
             'type' => 'link',
             'skipContent' => true,
-        ),
-
+        ),*/
+        'bitrix:iblock.element.add.form' => array(
+            'type' => 'component',
+            'extra' => array(
+                'editable' => array(
+                    'IBLOCK_ID' => [],
+                )
+            )
+        )
     ),
 //    'attrs' => array(
 //        '.b-socials__link' => array(

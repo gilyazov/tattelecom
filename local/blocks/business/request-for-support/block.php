@@ -29,8 +29,8 @@
                         "MAX_LEVELS" => "100000",
                         "MAX_USER_ENTRIES" => "100000",
                         "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-                        "PROPERTY_CODES" => array("NAME", "174"),
-                        "PROPERTY_CODES_REQUIRED" => ["NAME", "174"],
+                        "PROPERTY_CODES" => array("NAME", "174", "220"),
+                        "PROPERTY_CODES_REQUIRED" => ["NAME", "174", "220"],
                         "RESIZE_IMAGES" => "N",
                         "SEF_MODE" => "N",
                         "STATUS" => "ANY",
@@ -46,44 +46,44 @@
                     <h3 class="b-support__contacts-title">Служба поддержки</h3>
                     <span class="b-support__contacts-label">Для оперативной связи со службой поддержки обращайтесь одним из удобных способов</span>
                     <a class="b-support__contacts-tel" title="Позвонить" href="tel:+78432222222">(843) 238-00-00</a>
-                    <ul class="b-socials">
-                        <li class="b-socials__item">
-                            <a class="b-socials__link" title="Написать в Whatsapp" href="https://api.whatsapp.com/send?phone=79027182268" target="_blank">
-                                <span class="b-socials__link-content whatsapp">
-                                    <svg width="22" height="22" aria-hidden="true" class="b-socials__link-icon">
-                                        <use xlink:href="#soc-whatsapp"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="b-socials__item">
-                            <a class="b-socials__link" title="Написать в Telegram" href="https://t.me/tattelecomru_bot" target="_blank">
-                                <span class="b-socials__link-content telegram">
-                                    <svg width="22" height="20" aria-hidden="true" class="b-socials__link-icon">
-                                        <use xlink:href="#soc-telegram"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="b-socials__item">
-                            <a class="b-socials__link" title="Написать в VK" href="#">
-                                <span class="b-socials__link-content vk">
-                                    <svg width="26" height="16" aria-hidden="true" class="b-socials__link-icon">
-                                        <use xlink:href="#soc-vk"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="b-socials__item">
-                            <a class="b-socials__link" title="Написать в Инстаграмм" href="https://www.instagram.com/letai2.0/" target="_blank">
-                                <span class="b-socials__link-content inst">
-                                    <svg width="22" height="22" aria-hidden="true" class="b-socials__link-icon">
-                                        <use xlink:href="#inst-social"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
+                    <?$APPLICATION->IncludeComponent("bitrix:news.list", "b-socials",
+                        Array(
+                            "IBLOCK_TYPE" => "about",
+                            "IBLOCK_ID" => "51",
+                            "NEWS_COUNT" => "999",
+                            "SORT_BY1" => "SORT",
+                            "SORT_ORDER1" => "ASC",
+                            "SORT_BY2" => "ACTIVE_FROM",
+                            "SORT_ORDER2" => "DESC",
+                            "FILTER_NAME" => "",
+                            "FIELD_CODE" => [],
+                            "PROPERTY_CODE" => ["LINK", "CLASS", "ICON"],
+                            "CHECK_DATES" => "Y",
+                            "DETAIL_URL" => "",
+                            "PREVIEW_TRUNCATE_LEN" => "",
+                            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                            "SET_TITLE" => "N",
+                            "SET_BROWSER_TITLE" => "N",
+                            "SET_META_KEYWORDS" => "N",
+                            "SET_META_DESCRIPTION" => "N",
+                            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                            "ADD_SECTIONS_CHAIN" => "N",
+                            "PARENT_SECTION" => "",
+                            "INCLUDE_SUBSECTIONS" => "N",
+                            "CACHE_TYPE" => "A",
+                            "CACHE_TIME" => "3600",
+                            "CACHE_FILTER" => "Y",
+                            "CACHE_GROUPS" => "Y",
+                            "DISPLAY_TOP_PAGER" => "N",
+                            "DISPLAY_BOTTOM_PAGER" => "N",
+                            "PAGER_TITLE" => "",
+                            "PAGER_SHOW_ALWAYS" => "N",
+                            "PAGER_TEMPLATE" => "",
+                            "SET_STATUS_404" => "N",
+                            "SHOW_404" => "N",
+                            "MESSAGE_404" => ""
+                        )
+                    );?>
                 </div>
             </div>
         </div>

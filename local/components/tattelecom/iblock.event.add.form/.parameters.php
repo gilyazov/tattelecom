@@ -190,6 +190,11 @@ $arComponentParameters = array(
             "TYPE" => "LIST",
             "VALUES" => $arEvents
         ),
+        "SUCCESS_MSG" => array(
+            "PARENT" => "PARAMS",
+            "TYPE" => "TEXT",
+            "NAME" => "Текст успешного заполнения формы"
+        ),
 	),
 );
 

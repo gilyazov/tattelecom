@@ -12,15 +12,15 @@ return array(
 
     ],
     'nodes' => array(
-        '.gl__title' => array(
+        'gl__title' => array(
             'name' => "Заголовок страницы",
             'type' => 'text',
         ),
-        '.b-request-for-connection__form-title' => array(
+        'b-request-for-connection__form-title' => array(
             'name' => "Заголовок формы",
             'type' => 'text',
         ),
-        '.b-request-for-connection__form-label' => array(
+        'b-request-for-connection__form-label' => array(
             'name' => "Текст под заголовком формы",
             'type' => 'text',
         ),

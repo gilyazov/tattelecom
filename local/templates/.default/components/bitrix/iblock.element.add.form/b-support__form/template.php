@@ -209,16 +209,20 @@ if ($arResult["MESSAGE"] <> ''):?>
                                         $value = "";
                                     }
                                     $code = $arResult["PROPERTY_LIST_FULL"][$propertyID]["CODE"];
-                                    $additionalClass = "js-input-text";
-                                    $type = "text";
+
                                     if ($code == "PHONE"){
                                         $additionalClass = "js-input-tel";
                                         $mask = " js-phone-mask";
                                         $type = "tel";
                                     }
-                                    if ($code == "EMAIL"){
+                                    elseif ($code == "EMAIL"){
                                         $additionalClass = "js-input-email";
                                         $type = "email";
+                                    }
+                                    else{
+                                        $additionalClass = "js-input-text";
+                                        $type = "text";
+                                        $mask = "";
                                     }
                                 ?>
                                 <label class="gl-input__wrapper <?=$additionalClass?>">

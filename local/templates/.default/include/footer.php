@@ -40,22 +40,48 @@
                 <div class="footer__contact-phone-wrapper">
                     <a href="tel:+7<?php echo preg_replace("/\D/","",\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_CONTACT_CENTER"));?>" class="footer__contact-phone"><?php echo \Bitrix\Main\Config\Option::get( "askaron.settings", "UF_CONTACT_CENTER");?></a>
                 </div>
-                <div class="footer__contact-social-wrapper">
-                    <a target="_blank" href="<?=\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_VK")?>" class="footer__contact-social-link">
-                        <svg width="40" height="40" aria-hidden="true" class="footer__contact-social-icon">
-                            <use xlink:href="#vk-footer"></use>
-                        </svg>
-                    </a>
-                    <a target="_blank" href="<?=\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_INSTA")?>" class="footer__contact-social-link">
-                        <svg width="40" height="40" aria-hidden="true" class="footer__contact-social-icon">
-                            <use xlink:href="#inst-footer"></use>
-                        </svg>
-                    </a>
-                </div>
+                <?$APPLICATION->IncludeComponent("bitrix:news.list", "footer-socials",
+                    Array(
+                        "IBLOCK_TYPE" => "about",
+                        "IBLOCK_ID" => "51",
+                        "NEWS_COUNT" => "999",
+                        "SORT_BY1" => "SORT",
+                        "SORT_ORDER1" => "ASC",
+                        "SORT_BY2" => "ACTIVE_FROM",
+                        "SORT_ORDER2" => "DESC",
+                        "FILTER_NAME" => "",
+                        "FIELD_CODE" => [],
+                        "PROPERTY_CODE" => ["LINK", "ICON_FOOTER"],
+                        "CHECK_DATES" => "Y",
+                        "DETAIL_URL" => "",
+                        "PREVIEW_TRUNCATE_LEN" => "",
+                        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                        "SET_TITLE" => "N",
+                        "SET_BROWSER_TITLE" => "N",
+                        "SET_META_KEYWORDS" => "N",
+                        "SET_META_DESCRIPTION" => "N",
+                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                        "ADD_SECTIONS_CHAIN" => "N",
+                        "PARENT_SECTION" => "",
+                        "INCLUDE_SUBSECTIONS" => "N",
+                        "CACHE_TYPE" => "A",
+                        "CACHE_TIME" => "3600",
+                        "CACHE_FILTER" => "Y",
+                        "CACHE_GROUPS" => "Y",
+                        "DISPLAY_TOP_PAGER" => "N",
+                        "DISPLAY_BOTTOM_PAGER" => "N",
+                        "PAGER_TITLE" => "",
+                        "PAGER_SHOW_ALWAYS" => "N",
+                        "PAGER_TEMPLATE" => "",
+                        "SET_STATUS_404" => "N",
+                        "SHOW_404" => "N",
+                        "MESSAGE_404" => ""
+                    )
+                );?>
             </div>
             <div class="footer__bottom-block-agreement-wrapper">
                 <div class="footer__agreement-text">Продолжая использовать наш сайт, вы даете согласие на обработку файлов Cookies и других пользовательских данных, в соответствии с <a href="https://tattelecom.ru/policy.php" target="_blank" class="footer__agreement-link">Политикой конфиденциальности</a>.</div>
-                <div class="footer__copyright">© <?=date('Y');?> ПАО «Таттелеком». Сайт является СМИ. <a target="_blank" href="<?=CFile::GetPath(\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_SMI_LICENSE"));?>">Эл №ФС77-66502 от 14.07.2016</a></div>
+                <div class="footer__copyright">© <?=date('Y');?> <?=\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_FOOTER_TEXT")?> <a target="_blank" href="<?=CFile::GetPath(\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_SMI_LICENSE"));?>">Эл №ФС77-66502 от 14.07.2016</a></div>
             </div>
         </div>
     </div>

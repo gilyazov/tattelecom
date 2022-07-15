@@ -16,7 +16,10 @@ return array(
 
     ),
     'nodes' => array(
-
+        '.b-support__contacts-block' => [
+            'name' => 'Контакты',
+            'type' => 'text'
+        ],
     ),
     'style' => array(
 
