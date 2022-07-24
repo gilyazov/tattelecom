@@ -1,0 +1,20 @@
+.tatt-head__main.head--detail{
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.head--detail .tatt-head__main-text{
+    max-width: none;
+}
+.head--detail .tatt-head__main-text span{
+    display: block;
+    padding-bottom: 25px;
+}
+.head--detail .tatt-head__main-text p{
+    font-size: inherit;
+    line-height: inherit;
+}
+.back-link{
+    display: flex;
+    align-items: center;
+    color: var(--grey-text);
+}
