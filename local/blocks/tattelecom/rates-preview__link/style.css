@@ -5,17 +5,15 @@
 .js-swiper-custom .gl-slider__slider-btn:hover{
     opacity: 1;
 }
-.js-swiper-custom .gl-slider__slider-btn.mod-prev{
+.js-swiper-custom .gl-slider__slider-btn{
     z-index: 999;
-    right: 13.5rem;
+    left: auto;
     top: 85%;
-
+}
+.js-swiper-custom .gl-slider__slider-btn.mod-prev{
+    right: 13.5rem;
     left: auto;
 }
 .js-swiper-custom .gl-slider__slider-btn.mod-next {
-    left: auto;
-
-    z-index: 999;
     right: 8rem;
-    top: 85%;
 }

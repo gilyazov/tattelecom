@@ -1,0 +1,56 @@
+/*todo вынести в общие стили*/
+.js-swiper-custom .gl-slider__slider-btn{
+    border-radius: 25px;
+    opacity: .7;
+}
+.js-swiper-custom .gl-slider__slider-btn:hover{
+    opacity: 1;
+}
+.js-swiper-custom .gl-slider__slider-btn{
+    z-index: 999;
+    left: auto;
+    top: 85%;
+}
+.js-swiper-custom .gl-slider__slider-btn.mod-prev{
+    right: 13.5rem;
+    left: auto;
+}
+.js-swiper-custom .gl-slider__slider-btn.mod-next {
+    right: 8rem;
+}
+.css-slider-v2 .rates-preview__content.g-color-black{
+    color: black;
+}
+/*end todo*/
+
+@media screen and (max-width: 767px){
+    .css-slider-v2 .rates-preview.mod-main-page{
+        background-color: transparent;
+        color: black;
+    }
+
+    .css-slider-v2 .gl__page-content{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .css-slider-v2 .rates-preview__content{
+        padding-left: var(--page-content-padding);
+        padding-right: var(--page-content-padding);
+        color: black;
+    }
+
+    .css-slider-v2 .rates-preview.mod-main-page .rates-preview__img-wrapper{
+        position: relative;
+    }
+
+    .css-slider-v2 .gl-slider__slider-btn {
+        bottom: 1rem;
+        top: auto;
+    }
+    .css-slider-v2 .gl-slider__slider-btn.mod-prev {
+        right: 8.5rem;
+    }
+    .css-slider-v2 .gl-slider__slider-btn.mod-next {
+        right: 3rem;
+    }
+}
