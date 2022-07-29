@@ -6,12 +6,12 @@
     left: 0;
     z-index: 999;
 }
-.tatt-head__item-img {
+.tatt-head__item-img, .tatt-head__main-img {
     transition: -webkit-transform .4s;
     transition: transform .4s;
     transition: transform .4s,-webkit-transform .4s;
 }
-.tatt-head__item:hover .tatt-head__item-img{
+.tatt-head__item:hover .tatt-head__item-img, .tatt-head__main:hover .tatt-head__main-img{
     -webkit-transform: scale(1.03);
     transform: scale(1.03);
 }
