@@ -39,4 +39,15 @@ return array(
     'groups' => array(
 
     ),
+    'style' => [
+        'block' => [
+            'type' => [],
+        ],
+        'nodes' => [
+            '.b-page-banner__m2m-btn' => [
+                'name' => 'Модалка?',
+                'type' => ['modal-show']
+            ],
+        ],
+    ]
 );

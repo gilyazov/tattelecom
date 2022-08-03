@@ -44,7 +44,16 @@ return [
             'items' => [
                 ['name' => '<span class="landing-ui-button-desktop"></span>', 'value' => 'mod-white']
             ],
-        ]
+        ],
+        'color-bx' => [
+            'name' => 'Цвет текста',
+            'type' => 'color',
+            'subtype' => 'color',
+            'items' => [
+                ['name' => 'g-color-black', 'value' => 'g-color-black'],
+                ['name' => 'g-color-white', 'value' => 'g-color-white'],
+            ],
+        ],
 	],
 	'group' => [
 		// dont forget add new usage 'background' style in \Bitrix\Landing\Node\StyleImg::STYLES_WITH_IMAGE
