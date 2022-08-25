@@ -1,0 +1,42 @@
+.option-container .b-colocation-rates__btn{
+    background-color: #f3f3f4;
+    color: var(--main-text-color);
+    font-weight: 400;
+
+
+    padding: 40px 40px 40px 72px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-position: 100% 0,100% 100%;
+}
+.option-container .b-colocation-rates__btn.mod-open {
+    background-color: #f3f3f4;
+    color: black;
+}
+.option-container .b-colocation-rates__btn.mod-open .b-colocation-rates__btn-icon {
+    fill: #000!important;
+}
+
+.rates-info__preview-row.rates-info__preview-row-option{
+    background-size: auto;
+    grid-template-columns: 4fr 1fr;
+
+    background-repeat:repeat-x;
+    background-position:2px 16px;
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='7' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23B8B9C0'/%3E%3C/svg%3E")
+}
+.rates-info__preview-row-option .rates-info__preview-rows-caption span{
+    font-weight: 500;
+    background-color: white;
+}
+.rates-info__preview-rows-caption-tooltip{
+    background-color: white;
+}
+.rates-info__preview-row-option .rates-info__preview-rows-caption-value{
+    background-color: white;
+}
+.option-container .gl__drop-menu-container{
+    border: 2px solid #f3f3f4;
+    position: relative;
+}
