@@ -21,7 +21,7 @@
             )
         ];
         ?>
-        <?$APPLICATION->IncludeComponent("bitrix:news.list", "gl-slider-rates-gpon", Array(
+        <?$APPLICATION->IncludeComponent("tattelecom:internet.rates.list", "gl-slider-rates-gpon", Array(
             "COMPONENT_TEMPLATE" => "gl-slider-rates-gpon",
             "IBLOCK_TYPE" => "mobile", // Тип информационного блока (используется только для проверки)
             "IBLOCK_ID" => "17", // Код информационного блока

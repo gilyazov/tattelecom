@@ -719,7 +719,7 @@
         <section class="instructions gl__section" id="instructions-host">
             <div class="gl__page-content">
                 <h2 class="gl__title">Инструкция по подключению</h2>
-                <div class="instructions__subtitle">Чтобы начать пользоваться национальным роумингом:</div>
+                <div class="instructions__subtitle">Чтобы начать пользоваться международным роумингом:</div>
                 <ul class="instructions__step-list">
                     <li class="instructions__step-item gl__white-container">
                         <div>

@@ -16,11 +16,12 @@ return array(
 
     ],
 	'nodes' => array(
-        'bitrix:news.list' => array(
+        'tattelecom:internet.rates.list' => array(
             'type' => 'component',
             'extra' => array(
                 'editable' => array(
                     'PARENT_SECTION' => array(),
+                    'RATES' => array(),
                 )
             )
         ),

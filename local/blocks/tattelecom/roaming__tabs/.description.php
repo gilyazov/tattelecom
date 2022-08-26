@@ -28,6 +28,12 @@ return array(
         '.international-calls__faq-list .faq__item-content-wrapper .gl__text' => [
             'name' => 'Ответ',
             'type' => 'text'
+        ],
+
+        '[data-menu="world"] .instructions__subtitle' => [
+            'name' => 'Подпись для инструкции',
+            'type' => 'text',
+            'textOnly' => true
         ]
     ],
     'assets' => [
