@@ -1,0 +1,23 @@
+.domofon-top-block .rates-preview__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.domofon-top-block .rates-preview__content-caption-wrapper{
+    margin-bottom: 1.2rem
+}
+.domofon-top-block .rates-preview__content-caption {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.domofon-top-block .gl__title{
+    font-weight: 700;
+    font-size: 4.4rem;
+}
