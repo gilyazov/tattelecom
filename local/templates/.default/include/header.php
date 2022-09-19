@@ -7,7 +7,7 @@
                     <div class="header__top-block-content">
                         <ul class="header__top-menu-items-list gl__md-hide">
                             <li class="header__top-menu-items">
-                                <a href="https://my.tattelecom.ru/about" class="header__top-menu-items-link">Таттелеком</a>
+                                <a href="https://my.tattelecom.ru/" class="header__top-menu-items-link">Таттелеком</a>
                             </li>
                             <li class="header__top-menu-items">
                                 <a href="<?=SITE_DIR?>" class="header__top-menu-items-link">Частным клиентам</a>
@@ -25,7 +25,7 @@
                             <div class="header__top-menu-items-link header__top-menu-hover-nav">Ещё<div class="header__top-menu-hover-container">
                                     <div class="header__top-menu-hover-content">
                                         <a href="https://b2b.tattelecom.ru/" class="header__top-menu-items-link">Бизнесу</a>
-                                        <a href="https://my.tattelecom.ru/about" class="header__top-menu-items-link">Таттелеком</a>
+                                        <a href="https://my.tattelecom.ru/" class="header__top-menu-items-link">Таттелеком</a>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@
                 <div class="gl__page-content header__bottom-block-content">
                     <div class="header__logo-wrapper">
                         <a href="<?=SITE_DIR?>" class="header__logo-link">
-                            <img src="<?=BUILD_PATH?>img/header/logo-fly.svg" alt="" class="header__logo mod-fly">
+                            <img src="<?=BUILD_PATH?>img/header/logo-new.svg" alt="" class="header__logo mod-fly">
                         </a>
                     </div>
                     <?$APPLICATION->IncludeComponent(
