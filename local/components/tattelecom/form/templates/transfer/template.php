@@ -1,8 +1,12 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var string $componentPath */
+/** @var string $templateFolder */
 $this->addExternalJS($componentPath . '/script.js');
 ?>
+<h3 class="services__item-info-title">
+    <img src="<?=$templateFolder?>/img/logo.png" alt="" class="services__item-info-title-icon"> Переходите на «Летай» со своим номером
+</h3>
 <form class="services__form-wrapper js-potok-form" data-need-validation data-parsley-validate data-parsley-focus="none">
     <input type="hidden" name="param_referer" value="<?=$APPLICATION->GetTitle()?>">
     <div class="services__form-inputs-wrapper">

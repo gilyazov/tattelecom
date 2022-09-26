@@ -60,9 +60,6 @@
                 </div>
             </li>
             <li class="services__item-wrapper gl__white-container mod-painted">
-                <h3 class="services__item-info-title">
-                    <img src="/local/js/template/tattelecom-1/img/common/sign-logo-fly.svg" alt="" class="services__item-info-title-icon"> Переходите на «Летай» со своим номером
-                </h3>
                 <?$APPLICATION->IncludeComponent(
                     "tattelecom:form",
                     "transfer",
