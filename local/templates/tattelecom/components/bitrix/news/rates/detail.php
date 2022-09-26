@@ -261,7 +261,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
                     <div class="cashback__slide-title info-links__slide-title mod-white">
                         <div>Доставка SIM-карты бесплатно на дом</div>
                     </div>
-                    <div class="cashback__slide-text info-links__slide-text mod-white">Рассрочка на приобретение мобильных устройств с поддержкой 4G.</div>
+                    <div class="cashback__slide-text info-links__slide-text">Рассрочка на приобретение мобильных устройств с поддержкой 4G.</div>
                 </div>
                 <a href="javascript:;" class="cashback__slide-link mod-white js-open-callback-modal">Заказать сим-карту</a>
             </li>
