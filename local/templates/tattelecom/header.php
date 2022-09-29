@@ -56,7 +56,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
     $APPLICATION->ShowProperty('BeforeHeadClose');
     \Bitrix\Main\UI\Extension::load('template.tattelecom');
     ?>
-
+    <meta name="apple-itunes-app" content="app-id=1574494891">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

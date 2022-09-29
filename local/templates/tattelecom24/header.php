@@ -26,9 +26,6 @@ $language= \Bitrix\Landing\Manager::getLangISO();
     <meta name="format-detection" content="telephone=no">
     <link rel="manifest" href="/manifest.json">
     <? if(SITE_ID == "s2"):?>
-<!--        <link rel="icon" href="/local/templates/buisness/Vector.ico" type="image/x-icon"/>-->
-<!--        <link rel="shortcut icon" href="/local/templates/buisness/Vector.ico" type="image/x-icon"/>-->
-<!--        <link rel="apple-touch-icon" href="/local/templates/buisness/Vector.png">-->
         <link rel="apple-touch-icon" sizes="152x152" href="/local/templates/buisness/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/local/templates/buisness/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/local/templates/buisness/favicon-16x16.png">
@@ -49,7 +46,10 @@ $language= \Bitrix\Landing\Manager::getLangISO();
     $APPLICATION->ShowProperty('MetaOG');
     $APPLICATION->ShowProperty('BeforeHeadClose');
     \Bitrix\Main\UI\Extension::load('template.tattelecom');
+    //\Bitrix\Main\UI\Extension::load('template.banner');
     ?>
+
+    <meta name="apple-itunes-app" content="app-id=1574494891">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

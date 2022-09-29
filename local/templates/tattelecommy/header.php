@@ -29,8 +29,8 @@ $language= \Bitrix\Landing\Manager::getLangISO();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="icon" href="/local/templates/.default/include/favicon/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="/local/templates/.default/include/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/local/templates/.default/include/favicon/favicon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/local/templates/.default/include/favicon/favicon.png" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="/local/templates/.default/include/favicon/favicon.png">
     <title><?$APPLICATION->ShowTitle();?></title>
     <?
@@ -39,7 +39,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
     $APPLICATION->ShowProperty('BeforeHeadClose');
     \Bitrix\Main\UI\Extension::load('template.tattelecom');
     ?>
-
+    <meta name="apple-itunes-app" content="app-id=1574494891">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
