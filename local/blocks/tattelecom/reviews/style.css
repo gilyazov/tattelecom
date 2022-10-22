@@ -1,0 +1,35 @@
+.news-list blockquote {
+    position: relative;
+    display: block;
+    padding: 1.5rem 2rem 2rem 3rem;
+    /*background-color: #fbfbfb;*/
+    width: 100%;
+/*    -webkit-box-shadow: inset 4px 0 0 #fa4907;
+    box-shadow: inset 4px 0 0 #fa4907;*/
+    margin-top: 3rem;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+blockquote img {
+    height: 10rem;
+    margin-right: 4rem;
+}
+blockquote p {
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    max-width: 40.6rem;
+}
+blockquote span {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--main-color);
+    letter-spacing: .015em;
+}
