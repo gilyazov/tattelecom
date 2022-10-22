@@ -24,7 +24,7 @@ return [
         'landing_core_admin'
     ],
     'disable_namespace' => [],
-    'enable_namespace' => ['business', 'tattelecom'],
+    'enable_namespace' => ['business', 'tattelecom', 'my'],
     'public_wrapper_block' => false,
     'google_font' => false
 ];
