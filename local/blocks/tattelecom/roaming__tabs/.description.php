@@ -17,6 +17,13 @@ return array(
             'label' => [
                 '.faq__item-title'
             ]
+        ],
+
+        '#faq-world-host .faq__item' => [
+            'name' => 'FAQ Мир',
+            'label' => [
+                '#faq-world-host .faq-title'
+            ]
         ]
     ],
 	'nodes' => [
@@ -26,6 +33,15 @@ return array(
             'textOnly' => true
         ],
         '.international-calls__faq-list .faq__item-content-wrapper .gl__text' => [
+            'name' => 'Ответ',
+            'type' => 'text'
+        ],
+
+        '#faq-world-host .faq-title' => [
+            'name' => 'Вопрос',
+            'type' => 'text'
+        ],
+        '#faq-world-host .faq__item .gl__text' => [
             'name' => 'Ответ',
             'type' => 'text'
         ],

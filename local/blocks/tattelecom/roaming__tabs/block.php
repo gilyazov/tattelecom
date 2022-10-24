@@ -520,7 +520,7 @@
             </div>
         </section>
 
-        <section class="faq" id="faq-host">
+        <section class="faq" id="faq-russia-host">
             <div class="gl__page-content">
                 <h2 class="gl__title">Вопросы и ответы</h2>
                 <ul class="faq__list-wrapper">
@@ -925,7 +925,7 @@
                 </div>
             </div>
         </section>
-        <section class="faq" id="faq-host">
+        <section class="faq" id="faq-world-host">
             <div class="gl__page-content">
                 <h2 class="gl__title">Вопросы и ответы</h2>
                 <ul class="faq__list-wrapper">
@@ -933,7 +933,7 @@
                         <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
                             <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
                                 <use xlink:href="#arrow-down"></use>
-                            </svg>Как звонить в международном роуминге?
+                            </svg><span class="faq-title">Как звонить в международном роуминге?</span>
                         </button>
                         <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
                             <div class="gl__text gl__drop-menu js-drop-menu">
@@ -948,7 +948,7 @@
                         <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
                             <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
                                 <use xlink:href="#arrow-down"></use>
-                            </svg>Как позвонить в справочную службу при нахождении в международном роуминге?
+                            </svg><span class="faq-title">Как позвонить в справочную службу при нахождении в международном роуминге?</span>
                         </button>
                         <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
                             <div class="gl__text gl__drop-menu js-drop-menu">
@@ -962,7 +962,7 @@
                         <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
                             <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
                                 <use xlink:href="#arrow-down"></use>
-                            </svg>Как получить автоматические настройки Интернет и MMS?
+                            </svg><span class="faq-title">Как получить автоматические настройки Интернет и MMS?</span>
                         </button>
                         <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
                             <div class="gl__text gl__drop-menu js-drop-menu">
@@ -976,7 +976,7 @@
                         <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
                             <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
                                 <use xlink:href="#arrow-down"></use>
-                            </svg>Как пользоваться услугами роуминга?
+                            </svg><span class="faq-title">Как пользоваться услугами роуминга?</span>
                         </button>
                         <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
                             <div class="gl__text gl__drop-menu js-drop-menu">
@@ -990,7 +990,7 @@
                         <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
                             <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
                                 <use xlink:href="#arrow-down"></use>
-                            </svg>Как пополнить счет в поездке?
+                            </svg><span class="faq-title">Как пополнить счет в поездке?</span>
                         </button>
                         <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
                             <div class="gl__text gl__drop-menu js-drop-menu">
@@ -1004,7 +1004,7 @@
                         <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
                             <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
                                 <use xlink:href="#arrow-down"></use>
-                            </svg>Как проверить баланс за границей?
+                            </svg><span class="faq-title">Как проверить баланс за границей?</span>
                         </button>
                         <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
                             <div class="gl__text gl__drop-menu js-drop-menu">
@@ -1018,7 +1018,7 @@
                         <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
                             <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
                                 <use xlink:href="#arrow-down"></use>
-                            </svg>Как самостоятельно настроить sms-центр?
+                            </svg><span class="faq-title">Как самостоятельно настроить sms-центр?</span>
                         </button>
                         <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
                             <div class="gl__text gl__drop-menu js-drop-menu">
