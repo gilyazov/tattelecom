@@ -29,6 +29,7 @@ return array(
             'extra' => array(
                 'editable' => array(
                     'EVENT' => array(),
+                    'IBLOCK_ID' => array(),
                     'PROPERTY_CODES' => array(),
                     'PROPERTY_CODES_REQUIRED' => array(),
                 )

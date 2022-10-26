@@ -41,12 +41,16 @@ class Element
 
     public function OnAfterIBlockElementAddHandler(&$arFields)
     {
-        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57])) {
+        $iblockMailTemplate = [
+            45 => 32,
+            62 => 33
+        ];
+        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62])) {
             global $APPLICATION;
             $APPLICATION->RestartBuffer();
         }
 
-        if ($arFields["ID"] && $arFields['IBLOCK_ID'] == 45) {
+        if ($arFields["ID"] && $iblockMailTemplate[$arFields['IBLOCK_ID']]) {
             $arSelect = array("ID", "IBLOCK_ID", "NAME", "IBLOCK_NAME");//IBLOCK_ID и ID обязательно должны быть указаны, см. описание arSelectFields выше
             $arFilter = array("IBLOCK_ID" => $arFields["IBLOCK_ID"], "ID" => $arFields["ID"], "ACTIVE" => "Y");
             $res = \CIBlockElement::GetList(array(), $arFilter, false, false, $arSelect);
@@ -71,14 +75,14 @@ class Element
             \Bitrix\Main\Mail\Event::send(array(
                 "EVENT_NAME" => "FEEDBACK_FORM",
                 "LANGUAGE_ID" => LANGUAGE_ID,
-                "MESSAGE_ID" => 32,
+                "MESSAGE_ID" => $iblockMailTemplate[$arFields['IBLOCK_ID']],
                 "LID" => SITE_ID,
                 "DUPLICATE" => "N",
                 "C_FIELDS" => $sendFields
             ));
         }
 
-        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57])) {
+        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62])) {
             echo \Bitrix\Main\Web\Json::encode(['ID' => $arFields['ID']]);
             die();
         }

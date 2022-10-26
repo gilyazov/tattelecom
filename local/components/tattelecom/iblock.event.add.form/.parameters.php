@@ -50,7 +50,7 @@ $arProperty_LNSF = array(
 );
 $arVirtualProperties = $arProperty_LNSF;
 
-$rsProp = CIBlockProperty::GetList(Array("sort"=>"asc", "name"=>"asc"), Array("ACTIVE"=>"Y", "IBLOCK_ID"=>57));
+$rsProp = CIBlockProperty::GetList(Array("sort"=>"asc", "name"=>"asc"), Array("ACTIVE"=>"Y", "IBLOCK_ID"=>62));
 while ($arr=$rsProp->Fetch())
 {
 	$arProperty[$arr["ID"]] = "[".$arr["CODE"]."] ".$arr["NAME"];
@@ -59,6 +59,10 @@ while ($arr=$rsProp->Fetch())
 		$arProperty_LNSF[$arr["ID"]] = "[".$arr["CODE"]."] ".$arr["NAME"];
 	}
 }
+//echo "<pre>";
+//print_r($arCurrentValues);
+//echo "</pre>";
+//die();
 
 $arGroups = array();
 $rsGroups = CGroup::GetList("c_sort", "asc", Array("ACTIVE" => "Y"));
