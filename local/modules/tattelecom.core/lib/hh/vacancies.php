@@ -103,18 +103,20 @@ class Vacancies
         return $checkSum;
     }
 
-    public function run()
+    public static function run()
     {
-        $arVacancies = $this->vacancieKey();
-        $arSiteVacancies = $this->getSiteVacancies();
-        $arSiteSections = $this->getSiteSections();
+        $self = new self();
+
+        $arVacancies = $self->vacancieKey();
+        $arSiteVacancies = $self->getSiteVacancies();
+        $arSiteSections = $self->getSiteSections();
 
         // удаление неактивных вакансий
         foreach($arSiteVacancies as $id => $vac)
         {
             if(!array_key_exists($id, $arVacancies))
             {
-                if(!CIBlockElement::Delete($vac['ID']))
+                if(!\CIBlockElement::Delete($vac['ID']))
                 {
                     \AddMessage2Log('Ошибка удаления спектакля');
                 }
@@ -139,8 +141,9 @@ class Vacancies
             }
 
             $el = new \CIBlockElement;
-            $sum = $this->checkSum($vacancy);
+            $sum = $self->checkSum($vacancy);
             $PROP['SALARY_FROM']	= $vacancy['salary']['from'];
+            $PROP['CITY']	= $vacancy['area']['name'];
             $arLoadProductArray = Array(
                 "IBLOCK_ID"      	=> 61,
                 "NAME"           	=> $vacancy['name'],
@@ -168,5 +171,6 @@ class Vacancies
             }
         }
 
+        return '\\'.__METHOD__.'();';
     }
 }

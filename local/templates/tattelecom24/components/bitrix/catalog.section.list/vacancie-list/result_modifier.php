@@ -1,7 +1,8 @@
-<?
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+/** @var array $arParams */
+/** @var array $arResult */
 
-$arSelect = Array("ID", "NAME", "IBLOCK_SECTION_ID", "PROPERTY_SALARY_FROM", "EXTERNAL_ID");
+$arSelect = Array("ID", "NAME", "IBLOCK_SECTION_ID", "PROPERTY_SALARY_FROM", "PROPERTY_CITY", "EXTERNAL_ID");
 $arFilter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE"=>"Y");
 $res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
 while($ob = $res->GetNextElement())
@@ -10,5 +11,10 @@ while($ob = $res->GetNextElement())
     $arSec[$arFields["IBLOCK_SECTION_ID"]][] = $arFields;
 }
 foreach ($arResult['SECTIONS'] as $key => $arSection){
-    $arResult['SECTIONS'][$key]["ELEMENTS"] = $arSec[$arSection["ID"]];
+    if ($arSection["ELEMENT_CNT"] == 0){
+        unset($arResult['SECTIONS'][$key]);
+    }
+    else{
+        $arResult['SECTIONS'][$key]["ELEMENTS"] = $arSec[$arSection["ID"]];
+    }
 }

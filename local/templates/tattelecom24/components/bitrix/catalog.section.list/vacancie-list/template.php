@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 ?>
 <div class="tatt-row-grid js-menu-tabs-container">
-    <div class="tatt-row-grid__block">
+    <div class="tatt-row-grid__block child-nearby__what-block">
         <div class="tatt-achievements__filter-container gl__filter-container--lg js-filter-container">
             <button type="button" class="gl__lg-show gl__filter-modal-close modal__btn-close js-filter-close" id="close-thanks-modal">
                 <svg width="32" height="32" aria-hidden="true" class="modal__close-icon">
@@ -52,7 +52,11 @@ $this->setFrameMode(true);
                 <ul class="child-nearby__price-list">
                     <?foreach ($arSection["ELEMENTS"] as $arVacancy):?>
                         <li class="child-nearby__price-item">
-                            <a class="child-nearby__price-item-caption" href="https://kazan.hh.ru/vacancy/<?=$arVacancy["EXTERNAL_ID"]?>" target="_blank"><?=$arVacancy["NAME"]?></a>
+                            <a class="child-nearby__price-item-caption" href="https://kazan.hh.ru/vacancy/<?=$arVacancy["EXTERNAL_ID"]?>" target="_blank">
+                                <?=$arVacancy["NAME"]?>
+                                <div class="child-nearby__what-text"><?=$arVacancy["PROPERTY_CITY_VALUE"]?></div>
+                            </a>
+
                             <?if($arVacancy["PROPERTY_SALARY_FROM_VALUE"]):?>
                                 <div class="child-nearby__price-item-value">
                                     <span class="number"><?=$arVacancy["PROPERTY_SALARY_FROM_VALUE"]?></span>
