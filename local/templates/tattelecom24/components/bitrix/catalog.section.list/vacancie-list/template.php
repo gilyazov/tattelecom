@@ -59,7 +59,7 @@ $this->setFrameMode(true);
 
                             <?if($arVacancy["PROPERTY_SALARY_FROM_VALUE"]):?>
                                 <div class="child-nearby__price-item-value">
-                                    <span class="number"><?=$arVacancy["PROPERTY_SALARY_FROM_VALUE"]?></span>
+                                    <span class="number"><?=number_format($arVacancy["PROPERTY_SALARY_FROM_VALUE"], 0, ".", " ")?></span>
                                     <span class="s24_text_number">₽/мес</span>
                                 </div>
                             <?endif;?>
