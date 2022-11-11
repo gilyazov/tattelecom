@@ -21,3 +21,21 @@
     font-weight: 700;
     font-size: 4.4rem;
 }
+
+.domofon-adventure-list.instructions__step-list{
+    grid-template-columns: repeat(4,1fr);
+}
+.domofon-adventure-list .useful-information__slide-image{
+    height: 28rem;
+}
+
+.domofon-steps .instructions__step-list{
+    grid-template-columns: repeat(2,1fr);
+}
+.domofon-steps .instructions__step-text{
+    color: black;
+}
+.domofon-steps .gl__title {
+    font-weight: 700;
+    font-size: 4.4rem;
+}

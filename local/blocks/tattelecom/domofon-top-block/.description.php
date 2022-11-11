@@ -40,12 +40,14 @@ return array(
             'dimensions' => array('maxWidth' => 1920, 'maxHeight' => 1080)
         ),
         '.gl__md-show' => array(
-            'name' => 'Картинка',
+            'name' => 'Картинка для мобильных устройств',
             'type' => 'img',
             'dimensions' => array('maxWidth' => 1920, 'maxHeight' => 1080)
         ),
 	),
-    'groups' => array(
-
-    ),
+    'assets' => [
+        'js' => [
+            BUILD_PATH . 'js/main-page.js'
+        ]
+    ]
 );
