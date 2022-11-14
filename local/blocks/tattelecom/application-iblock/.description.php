@@ -32,6 +32,7 @@ return array(
                     'IBLOCK_ID' => array(),
                     'PROPERTY_CODES' => array(),
                     'PROPERTY_CODES_REQUIRED' => array(),
+                    'SUCCESS_MSG' => array(),
                 )
             )
         )
