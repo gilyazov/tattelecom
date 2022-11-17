@@ -1,3 +1,28 @@
 .b-page-banner.b-m2m-business-control .b-page-banner__m2m-price-container .b-page-banner__m2m-btn-container{
     margin-left: 0;
 }
+
+@media screen and (max-width: 767px){
+    .b-page-banner.b-m2m-business-control .gl__page-content .b-page-banner__right-image{
+        height: auto;
+        width: 100%;
+    }
+    .b-page-banner.b-m2m-business-control .gl__page-content .b-page-banner__content{
+        padding: 0;
+    }
+}
+
+
+.mod-reverse .b-page-banner__left-content{
+    order: -1;
+}
+.mod-reverse .b-page-banner__right-image{
+    margin-left: 10rem;
+    margin-right: 0;
+}
+.g-pt-0{
+    padding-top: 0 !important;
+}
+.g-pb-0{
+    padding-bottom: 0 !important;
+}

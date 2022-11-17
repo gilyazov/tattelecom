@@ -41,12 +41,27 @@ return array(
     ),
     'style' => [
         'block' => [
-            'type' => [],
+            'type' => [
+                "padding-top",
+                "padding-bottom"
+            ],
         ],
         'nodes' => [
+            '.b-page-banner__content' => [
+                'name' => 'Сменить порядок блоков',
+                'type' => ['order-change']
+            ],
             '.b-page-banner__m2m-btn' => [
                 'name' => 'Модалка?',
                 'type' => ['modal-show']
+            ],
+            '.b-page-banner__m2m-price-container' => [
+                'name' => 'Скрыть',
+                'type' => ['display-bx']
+            ],
+            '.b-page-banner__right-image' => [
+                'name' => 'Скрыть',
+                'type' => ['display-bx']
             ],
         ],
     ]

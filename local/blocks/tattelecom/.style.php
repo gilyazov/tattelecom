@@ -21,6 +21,14 @@ return [
                 ['name' => '<span class="landing-ui-button-desktop"></span>', 'value' => 'gl__visually-hidden']
             ],
         ],
+        'order-change' => [
+            'name' => "Сменить прядок блоков",
+            'property' => 'display',
+            'type' => 'display',
+            'items' => [
+                ['name' => '<span class="landing-ui-button-desktop"></span>', 'value' => 'mod-reverse']
+            ],
+        ],
         'modal-show' => [
             'name' => "Модальное окно?",
             'property' => 'display',
