@@ -1,0 +1,18 @@
+.rates-list__opportunities-title{
+    font-size: var(--fs-t3);
+}
+.application-consultation .application-consultation__content{
+    overflow: visible;
+}
+/*
+.numbered-list__item.numbered-list__container{
+    display: none;
+}*/
+.numbered-list__item.numbered-list__container {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.numbered-list__item.numbered-list__container.show {
+    opacity: 1;
+}
