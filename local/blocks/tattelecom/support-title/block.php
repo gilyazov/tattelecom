@@ -26,7 +26,7 @@
                 "SET_META_DESCRIPTION" => "N",
                 "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                 "ADD_SECTIONS_CHAIN" => "N",
-                "PARENT_SECTION" => "",
+                "PARENT_SECTION" => "823",
                 "INCLUDE_SUBSECTIONS" => "N",
                 "CACHE_TYPE" => "A",
                 "CACHE_TIME" => "3600",

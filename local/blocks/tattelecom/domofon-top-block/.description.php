@@ -34,7 +34,7 @@ return array(
             'type' => 'text',
         ),
 
-        '.gl__md-hide' => array(
+        '.gl__sm-hide' => array(
             'name' => 'Картинка',
             'type' => 'img',
             'dimensions' => array('maxWidth' => 1920, 'maxHeight' => 1080)
