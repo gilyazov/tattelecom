@@ -16,6 +16,10 @@ return array(
 
     ],
 	'nodes' => array(
+        '.application__background' => array(
+            'name' => 'Линии',
+            'type' => 'img'
+        ),
         '.application__title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
@@ -35,9 +39,29 @@ return array(
                     'SUCCESS_MSG' => array(),
                 )
             )
+        ),
+        'bitrix:news.list' => array(
+            'type' => 'component',
+            'extra' => array(
+                'editable' => array(
+                    'PARENT_SECTION' => array()
+                )
+            )
         )
 	),
-    'groups' => array(
-
-    ),
+    'style' => [
+        'block' => [
+            'type' => [],
+        ],
+        'nodes' => [
+            '.tatt-about-company-support' => [
+                'name' => 'Скрыть блок',
+                'type' => ['display-bx']
+            ],
+            '.b-support__contacts-tel' => [
+                'name' => 'Скрыть телефон',
+                'type' => ['display-bx']
+            ],
+        ],
+    ]
 );

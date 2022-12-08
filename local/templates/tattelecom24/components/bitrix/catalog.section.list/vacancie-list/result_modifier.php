@@ -18,3 +18,5 @@ foreach ($arResult['SECTIONS'] as $key => $arSection){
         $arResult['SECTIONS'][$key]["ELEMENTS"] = $arSec[$arSection["ID"]];
     }
 }
+
+$arResult['SECTIONS'] = array_values($arResult['SECTIONS']);
