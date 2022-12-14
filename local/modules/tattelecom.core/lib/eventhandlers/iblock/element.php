@@ -43,9 +43,10 @@ class Element
     {
         $iblockMailTemplate = [
             45 => 32,
-            62 => 33
+            62 => 33,
+            63 => 35
         ];
-        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62])) {
+        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63])) {
             global $APPLICATION;
             $APPLICATION->RestartBuffer();
         }
@@ -82,7 +83,7 @@ class Element
             ));
         }
 
-        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62])) {
+        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63])) {
             echo \Bitrix\Main\Web\Json::encode(['ID' => $arFields['ID']]);
             die();
         }

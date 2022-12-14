@@ -32,14 +32,14 @@ $arUrlRewrite=array (
     'PATH' => '/dynamic/mobile/rates/index.php',
     'SORT' => 100,
   ),
-    8 =>
-        array (
-            'CONDITION' => '#^/phone/#',
-            'RULE' => '',
-            'ID' => 'bitrix:news',
-            'PATH' => '/dynamic/phone/index.php',
-            'SORT' => 100,
-        ),
+  11 => 
+  array (
+    'CONDITION' => '#^/internship/#',
+    'RULE' => NULL,
+    'ID' => 'bitrix:landing.pub',
+    'PATH' => '/internship/index.php',
+    'SORT' => 100,
+  ),
   6 => 
   array (
     'CONDITION' => '#^/tv/online/#',
@@ -56,6 +56,14 @@ $arUrlRewrite=array (
     'PATH' => '/dynamic/tv/rates/index.php',
     'SORT' => 100,
   ),
+  8 => 
+  array (
+    'CONDITION' => '#^/phone/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/dynamic/phone/index.php',
+    'SORT' => 100,
+  ),
   2 => 
   array (
     'CONDITION' => '#^/news/#',
@@ -64,7 +72,7 @@ $arUrlRewrite=array (
     'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
-  10 =>
+  10 => 
   array (
     'CONDITION' => '#^/#',
     'RULE' => '',
