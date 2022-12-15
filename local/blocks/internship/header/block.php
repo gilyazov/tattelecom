@@ -10,17 +10,18 @@
                     <ul class="page-header__nav-list">
                         <li class="page-header__nav-list-item">
                             <a href="#advantages" class="page-header__nav-link">
-                                Преимущества
-                            </a>
-                        </li>
-                        <li class="page-header__nav-list-item">
-                            <a href="#about" class="page-header__nav-link">
                                 О стажировке
                             </a>
                         </li>
                         <li class="page-header__nav-list-item">
+                            <a href="#about" class="page-header__nav-link">
+                                Направления
+                            </a>
+                        </li>
+
+                        <li class="page-header__nav-list-item">
                             <a href="#contact" class="page-header__nav-link">
-                                Отправить заявку
+                                Подать заявку
                             </a>
                         </li>
                     </ul>

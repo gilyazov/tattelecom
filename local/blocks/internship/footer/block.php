@@ -47,23 +47,18 @@
             <nav class="page-footer__nav">
                 <ul class="page-footer__nav-list">
                     <li class="page-footer__nav-list-item">
-                        <a href="#intro" class="page-footer__nav-link">
-                            Стажировка в Летай
-                        </a>
-                    </li>
-                    <li class="page-footer__nav-list-item">
                         <a href="#advantages" class="page-footer__nav-link">
-                            Преимущества
-                        </a>
-                    </li>
-                    <li class="page-footer__nav-list-item">
-                        <a href="#about" class="page-footer__nav-link">
                             О стажировке
                         </a>
                     </li>
                     <li class="page-footer__nav-list-item">
+                        <a href="#about" class="page-footer__nav-link">
+                            Направления
+                        </a>
+                    </li>
+                    <li class="page-footer__nav-list-item">
                         <a href="#contact" class="page-footer__nav-link">
-                            Отправить заявку
+                            Подать заявку
                         </a>
                     </li>
                 </ul>
@@ -79,8 +74,8 @@
                             <h4 class="page-footer__info-card-title">
                                 Напиши нам на почту
                             </h4>
-                            <a href="mailto:letai_hr@letai.ru" class="page-footer__info-card-link">
-                                letai_hr@letai.ru
+                            <a href="mailto:marketing@letai.ru" class="page-footer__info-card-link">
+                                marketing@tattelecom.ru
                             </a>
                         </div>
                     </li>

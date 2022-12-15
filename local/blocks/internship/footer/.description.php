@@ -13,10 +13,23 @@ return array(
 		'dynamic' => false,
 	),
 	'cards' => array(
-
+        '.page-footer__info-list-item' => [
+            'name' => 'Контакты',
+            'label' => [
+                '.page-footer__info-card-title'
+            ]
+        ]
 	),
 	'nodes' => array(
-
+        '.page-footer__info-card-title' => [
+            'name' => 'Заголовок',
+            'type' => 'text',
+            'textOnly' => true
+        ],
+        '.page-footer__info-card-link' => [
+            'name' => 'Ссылка',
+            'type' => 'link'
+        ]
 	),
     'style' => array(
 
