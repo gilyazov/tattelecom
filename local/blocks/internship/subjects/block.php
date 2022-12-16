@@ -23,13 +23,13 @@
                         <div class="subjects__accordion-content-inner">
                             <div class="subjects__accordion-conditions">
                                 <h3 class="subjects__accordion-conditions-title">
-                                    Ты научишься
+                                    Ты научишься:
                                 </h3>
                                 <div class="subjects__accordion-conditions-text">
-                                    Создавать графику для большого бренда<br>
-                                    Оформлять идеи в креативные концепции<br>
-                                    Готовить макеты к печати и веб-разработке<br>
-                                    Презентовать и защищать свои работы
+                                    • Создавать графику для большого бренда<br>
+                                    • Оформлять идеи в креативные концепции<br>
+                                    • Готовить макеты к печати и веб-разработке<br>
+                                    • Презентовать и защищать свои работы
                                 </div>
                             </div>
                             <div class="subjects__accordion-text-content">
@@ -81,13 +81,13 @@
                         <div class="subjects__accordion-content-inner">
                             <div class="subjects__accordion-conditions">
                                 <h3 class="subjects__accordion-conditions-title">
-                                    Ты научишься
+                                    Ты научишься:
                                 </h3>
                                 <div class="subjects__accordion-conditions-text">
-                                    Проводить маркетинговые исследования<br>
-                                    Формировать стратегию продвижения на основе анализа<br>
-                                    Разрабатывать креативные концепции для рекламы<br>
-                                    Понимать целевую аудиторию и стимулировать продажи
+                                    • Проводить маркетинговые исследования<br>
+                                    • Формировать стратегию продвижения на основе анализа<br>
+                                    • Разрабатывать креативные концепции для рекламы<br>
+                                    • Понимать целевую аудиторию и стимулировать продажи
                                 </div>
                             </div>
                             <div class="subjects__accordion-text-content">
