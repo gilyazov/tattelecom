@@ -27,7 +27,8 @@
                         false
                     );?>
                 </div>
-                <div class="services__form-hint">Нажимая кнопку «Продолжить», вы принимаете условия пользовательского соглашения.</div>
+                <div class="services__form-hint">Нажимая кнопку «Продолжить», вы принимаете <b>условия пользовательского соглашения</b> и
+                    <a href="/policy.php"><b>политику конфиденциальности</b></a>.</div>
             </li>
             <li class="services__item-wrapper gl__white-container">
                 <h3 class="services__item-info-title">Личный кабинет</h3>

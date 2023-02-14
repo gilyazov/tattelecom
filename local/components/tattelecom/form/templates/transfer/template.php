@@ -26,7 +26,8 @@ $this->addExternalJS($componentPath . '/script.js');
                     <use xlink:href="#checkbox-checked"></use>
                 </svg>
             </span>
-            <span class="checkbox__text mod-main">Я соглашаюсь на получение консультации по переносу номера</span>
+            <span class="checkbox__text mod-main">Я согласен на <a href="/app/personaldata/">обработку своих персональных данных</a> и получение консультации по переносу номера </span>
         </label>
     </div>
+    <span class="checkbox__text mod-main">Нажимая кнопку «Начать перенос», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.</span>
 </form>

@@ -380,8 +380,12 @@ if ($arResult["MESSAGE"] <> ''):?>
                         <td><input type="text" name="captcha_word" maxlength="50" value=""></td>
                     </tr>
                 <?endif?>
+            <div class="contact-us__form-field">
+                Нажимая кнопку «Отправить заявку», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.
+            </div>
         </div>
     <?endif?>
+
     <div class="contact-us__form-bottom-row">
         <div class="contact-us__form-checkbox-wrapper" id="policy-container">
             <label class="contact-us__form-checkbox">
@@ -394,7 +398,7 @@ if ($arResult["MESSAGE"] <> ''):?>
                     </svg>
                 </span>
                 <span class="contact-us__form-checkbox-text">
-                    Согласие на <a href="https://tattelecom.ru/app/personaldata/" target="_blank">обработку персональных данных</a>
+                    Я согласен на <a href="/app/personaldata/" target="_blank">обработку своих персональных данных</a>.
                 </span>
             </label>
         </div>

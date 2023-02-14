@@ -23,4 +23,5 @@ $this->addExternalJS($componentPath . '/script.js');
         </label>
     </div>
     <button type="submit" class="gl__main-btn modal__btn-submit js-btn-submit<?=(SITE_ID == "s2" ? " mod-business" : "")?>">Жду звонка</button>
+    <span class="checkbox__text mod-modal">Нажимая кнопку «Жду звонка», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.</span>
 </form>

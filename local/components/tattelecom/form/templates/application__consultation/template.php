@@ -12,4 +12,16 @@ $this->addExternalJS($componentPath . '/script.js');
         <input type="tel" class="gl-input__input js-phone-mask" placeholder="+7 (___) ___-__-__" name="phone" data-parsley-required="">
     </label>
     <button type="submit" class="gl__main-btn mod-white-grey">Оставить заявку</button>
+    <span class="checkbox__text mod-main">Нажимая кнопку «Оставить заявку», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.</span>
+    <div class="callback__content-checkbox-wrapper">
+        <label class="checkbox__wrapper">
+            <input type="checkbox" class="checkbox" name="modal-callback-agree" data-parsley-required="" data-parsley-multiple="modal-callback-agree">
+            <span class="checkbox__content mod-modal">
+                <svg width="16" height="16" aria-hidden="true" class="checkbox__content-icon">
+                    <use xlink:href="#checkbox-checked"></use>
+                </svg>
+            </span>
+            <span class="checkbox__text mod-main">Я согласен на <a href="https://tattelecom.ru/app/personaldata/" target="_blank">обработку своих персональных данных</a></span>
+        </label>
+    </div>
 </form>

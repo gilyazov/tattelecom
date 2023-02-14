@@ -381,12 +381,12 @@ if ($arResult["MESSAGE"] <> ''):?>
     <input type="hidden" name="iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
     <button type="submit" class="gl__main-btn mod-business">Получить консультацию</button>
     <?if ($arParams["LIST_URL"] <> ''):?>
-                    <input type="submit" name="iblock_apply" value="<?=GetMessage("IBLOCK_FORM_APPLY")?>" />
-                    <input
-                        type="button"
-                        name="iblock_cancel"
-                        value="<? echo GetMessage('IBLOCK_FORM_CANCEL'); ?>"
-                        onclick="location.href='<? echo CUtil::JSEscape($arParams["LIST_URL"])?>';"
-                    >
-                <?endif?>
+        <input type="submit" name="iblock_apply" value="<?=GetMessage("IBLOCK_FORM_APPLY")?>" />
+        <input
+            type="button"
+            name="iblock_cancel"
+            value="<? echo GetMessage('IBLOCK_FORM_CANCEL'); ?>"
+            onclick="location.href='<? echo CUtil::JSEscape($arParams["LIST_URL"])?>';"
+        >
+    <?endif?>
 </form>

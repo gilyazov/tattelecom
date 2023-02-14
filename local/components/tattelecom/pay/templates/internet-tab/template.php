@@ -20,8 +20,20 @@ $this->addExternalJS($componentPath . '/script.js');
             <span class="gl-input__title">Электронная почта</span>
             <input type="email" class="gl-input__input" placeholder="Электронная почта" name="user_email" data-parsley-required="">
         </label>
-        <div class="services__btn-submit-wrapper">
-            <button type="submit" class="gl__main-btn services__btn-submit">Продолжить</button>
-        </div>
+
+    </div>
+    <div class="callback__content-checkbox-wrapper">
+        <label class="checkbox__wrapper">
+            <input type="checkbox" class="checkbox" name="modal-callback-agree" data-parsley-required="" data-parsley-multiple="modal-callback-agree">
+            <span class="checkbox__content mod-modal">
+                <svg width="16" height="16" aria-hidden="true" class="checkbox__content-icon">
+                    <use xlink:href="#checkbox-checked"></use>
+                </svg>
+            </span>
+            <span class="checkbox__text mod-modal">Я согласен на <a href="https://tattelecom.ru/app/personaldata/" target="_blank">обработку своих персональных данных</a></span>
+        </label>
+    </div>
+    <div class="services__btn-submit-wrapper">
+        <button type="submit" class="gl__main-btn services__btn-submit">Продолжить</button>
     </div>
 </form>
