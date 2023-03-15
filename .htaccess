@@ -38,6 +38,16 @@ ErrorDocument 404 /404.php
     #RewriteRule (.*) https://tattelecom.ru/$1 [R=301,L]
     # end
 
+    # index.php
+    RewriteCond %{REQUEST_URI} ^(.*)/index\.php$
+    RewriteCond %{REQUEST_METHOD} =GET
+    RewriteRule ^(.*)$ %1/ [R=301,L]
+
+    # множественные ///
+    RewriteCond %{THE_REQUEST} //
+    RewriteCond %{QUERY_STRING} !http(s|)://
+    RewriteRule .* /$0 [R=301,L]
+
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-l
 	RewriteCond %{REQUEST_FILENAME} !-d
