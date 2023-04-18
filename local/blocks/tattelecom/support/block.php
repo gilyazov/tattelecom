@@ -62,20 +62,17 @@
                 </a>
             </li>
         </ul>
-        
-        <div class="support-input">
-            <div class="support-input__container">
-                <label class="support-input__wrapper">
-                    <input type="text" class="support-input__input" placeholder="Что будем искать?">
-                    <svg width="24" height="24" aria-hidden="true" class="support-input__icon">
-                        <use xlink:href="#search"></use>
-                    </svg>
-                </label>
-                <div class="support-input__hint">
-                    Например: <span class="mark">Платеж мобильной связи</span>
-                </div>
-            </div>
-        </div>
+
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:search.form",
+            "support-input",
+            array(
+                "PAGE" => "#SITE_DIR#search/",
+                "USE_SUGGEST" => "N",
+                "COMPONENT_TEMPLATE" => "support-input"
+            ),
+            false
+        );?>
 
         <?$APPLICATION->IncludeComponent(
             "bitrix:catalog.section.list",
