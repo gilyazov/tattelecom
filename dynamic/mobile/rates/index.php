@@ -1,6 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Тарифы мобильной связи");
+$APPLICATION->SetTitle("Тарифы сотовой связи");
+$APPLICATION->SetPageProperty("title", "Выгодные тарифы мобильной связи от Летай (ПАО Таттелеком)");
+$APPLICATION->SetPageProperty("description", "Лучшие тарифы мобильного оператора Летай (ПАО Таттелеком) для смартфонов, ноутбуков, планшетов и модемов. Подробное описание тарифных планов и условия подключения для старых и новых клиентов. Подробная информация на нашем сайте.");
+
 $APPLICATION->SetDirProperty("dynamic", "Y");
 ?>
 <?$APPLICATION->IncludeComponent(
@@ -62,7 +65,7 @@ $APPLICATION->SetDirProperty("dynamic", "Y");
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_FIELD_CODE" => array(
-			0 => "",
+			0 => "PREVIEW_PICTURE",
 			1 => "",
 		),
 		"DETAIL_PROPERTY_CODE" => array(

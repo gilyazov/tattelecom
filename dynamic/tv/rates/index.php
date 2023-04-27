@@ -1,6 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Тарифы телевидения");
+$APPLICATION->SetTitle("Беспроводное телевидение");
+$APPLICATION->SetPageProperty("title", "Подключить домашнее беспроводное телевидение от Летай | Стоимость и описание услуги");
+$APPLICATION->SetPageProperty("description", "Летай (ПАО Таттелеком) предлагает услуги по подключению цифрового телевидения в дома и квартиры. Узнать возможность подключения к вашему адресу, можно на официальном сайте.");
 ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news", 

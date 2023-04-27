@@ -94,7 +94,7 @@ $this->setFrameMode(true);
 <?else:?>
     <section class="rates-info" id="rates-mobile-info-host">
         <div class="gl__page-content">
-            <h2 class="gl__title"><?=$arResult["NAME"]?></h2>
+            <h1 class="gl__title"><?=$arResult["NAME"]?></h1>
 
             <form class="rates-info__content" data-need-validation data-parsley-validate data-parsley-focus="none">
                 <div class="rates-info__preview">

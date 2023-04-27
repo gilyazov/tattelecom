@@ -63,6 +63,7 @@ class Store
             $PROP['PRICE']	= $this->getPrice($arItem['price']);
             $PROP['TYPE']	= $arTypes[$arItem['type']];
             $PROP['BRAND']	= $arBrand[$arItem['brand']];
+            $PROP['AVAILABLE']	= $this->officeProp($arItem['office']);
             $PROP = array_merge($PROP, $this->otherProps($arItem['attributes']));
 
             $arLoadProductArray = array(
@@ -159,6 +160,25 @@ class Store
         foreach ($arAttributes as $arProp)
         {
             $prop[$arMap[$arProp['id']]] = $arProp['value'];
+        }
+
+        return $prop;
+    }
+
+    private function officeProp($arOffices): array
+    {
+
+        $prop = [];
+        foreach ($arOffices as $office)
+        {
+            if (!$office['amount']) continue;
+
+            $prop[] = [
+                "SUBPROP_VALUES" => [
+                    "A_OFFICE" => $office['title'],
+                    "A_COUNT" => $office['amount'],
+                ]
+            ];
         }
 
         return $prop;

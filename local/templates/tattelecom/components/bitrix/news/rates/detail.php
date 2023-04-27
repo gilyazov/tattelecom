@@ -16,7 +16,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
 <?if(in_array($arParams['IBLOCK_ID'], [17, 30])):?>
     <section class="rates-info" id="rates-mobile-info-host">
         <div class="gl__page-content">
-            <h2 class="gl__title"><?$APPLICATION->ShowTitle()?></h2>
+            <h1 class="gl__title"><?$APPLICATION->ShowTitle(false)?></h1>
 
             <?$APPLICATION->IncludeComponent(
                 "tattelecom:internet.connect",
@@ -142,6 +142,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
 	$component
 );?>
 
+<?if($arParams["IBLOCK_ID"] == 6):?>
 <section class="rates-list" id="rates-list-host">
     <div class="gl__page-content">
         <div class="gl__title-head">
@@ -153,7 +154,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
             "!ID" => \CIBlockElement::SubQuery(
                 "ID",
                 array(
-                    "IBLOCK_ID" => 6,
+                    "IBLOCK_ID" => $arParams["IBLOCK_ID"],
                     "PROPERTY_EXCLUDE_CITY" => $_SESSION['city']['id'],
                 )
             )
@@ -165,8 +166,8 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
         ?>
         <?$APPLICATION->IncludeComponent("tattelecom:rates.list", "gl-slider-rates", Array(
             "COMPONENT_TEMPLATE" => ".default",
-            "IBLOCK_TYPE" => "mobile", // Тип информационного блока (используется только для проверки)
-            "IBLOCK_ID" => "6", // Код информационного блока
+            "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"], // Тип информационного блока (используется только для проверки)
+            "IBLOCK_ID" => $arParams["IBLOCK_ID"], // Код информационного блока
             "NEWS_COUNT" => "20",   // Количество новостей на странице
             "SORT_BY1" => "SORT",   // Поле для первой сортировки новостей
             "SORT_ORDER1" => "ASC", // Направление для первой сортировки новостей
@@ -227,6 +228,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
         );?>
     </div>
 </section>
+<?endif;?>
 
 <section class="info-links" id="info-links-host">
     <div class="gl__page-content">

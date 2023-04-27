@@ -1,6 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Тарифы интернета");
+$APPLICATION->SetTitle("Интернет");
+$APPLICATION->SetPageProperty("title", "Интернет от Летай: описание, тарифы, условия подключения");
+$APPLICATION->SetPageProperty("description", "Подключить интернет от компании Летай (ПАО Таттелеком). Узнайте, как оставить заявку на подключение высокоскоростного беспроводного интернета в вашем городе. Подробная информация доступна на официальном сайте.");
 ?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news", 

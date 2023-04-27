@@ -1,0 +1,4 @@
+.product-features__list-caption:not(:first-child){
+    padding-top: 2.6rem;
+    border-top: 1px solid var(--border-color);
+}

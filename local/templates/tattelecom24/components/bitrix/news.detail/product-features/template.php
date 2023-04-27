@@ -48,10 +48,25 @@ if($image = $arResult["PREVIEW_PICTURE"]["ID"]){
                 <div class="product-features__list-caption">Общие характеристики</div>
                 <ul class="product-features__list">
                     <?foreach ($arResult["PROPERTIES"] as $arProperty):?>
-                        <?if(!$arProperty["VALUE"]) continue;?>
+                        <?if(!$arProperty["VALUE"] || is_array($arProperty["VALUE"])) continue;?>
+
                         <li class="product-features__item">
                             <div class="product-features__item-caption"><?=$arProperty["NAME"]?></div>
                             <div class="product-features__item-value"><?=$arProperty["VALUE"]?></div>
+                        </li>
+                    <?endforeach;?>
+                </ul>
+
+
+                <div class="product-features__list-caption">Доступно в следующих офисах:</div>
+                <ul class="product-features__list">
+                    <?foreach ($arResult["PROPERTIES"]["AVAILABLE"]["VALUE"] as $arOffice):?>
+                        <?$count = $arOffice["SUB_VALUES"]["A_COUNT"]["VALUE"];?>
+                        <?if(!$count) continue;?>
+
+                        <li class="product-features__item">
+                            <div class="product-features__item-caption"><?=$arOffice["SUB_VALUES"]["A_OFFICE"]["VALUE"]?></div>
+                            <div class="product-features__item-value"><?=$count?></div>
                         </li>
                     <?endforeach;?>
                 </ul>
