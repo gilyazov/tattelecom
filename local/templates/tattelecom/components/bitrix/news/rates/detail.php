@@ -87,7 +87,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
 
 <?$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
-    ($arParams['IBLOCK_ID'] == 6 ? "" : "internet"),
+    (in_array($arParams['IBLOCK_ID'], [6, 65]) ? "" : "internet"),
 	Array(
 		"DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
 		"DISPLAY_NAME" => $arParams["DISPLAY_NAME"],
@@ -142,7 +142,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
 	$component
 );?>
 
-<?if($arParams["IBLOCK_ID"] == 6):?>
+<?if($arParams['IBLOCK_ID'] == 6):?>
 <section class="rates-list" id="rates-list-host">
     <div class="gl__page-content">
         <div class="gl__title-head">

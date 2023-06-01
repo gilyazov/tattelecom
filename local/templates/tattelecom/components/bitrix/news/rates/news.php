@@ -128,7 +128,7 @@ $this->setFrameMode(true);
                 ?>
                 <?$APPLICATION->IncludeComponent(
                     "bitrix:news.list",
-                    ($arParams['IBLOCK_ID'] == 6 ? "" : "internet"),
+                    (in_array($arParams['IBLOCK_ID'], [6, 65]) ? "" : "internet"),
                     Array(
                         "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                         "IBLOCK_ID" => $arParams["IBLOCK_ID"],

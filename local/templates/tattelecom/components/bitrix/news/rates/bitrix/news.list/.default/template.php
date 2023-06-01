@@ -47,13 +47,15 @@ $this->addExternalJS(BUILD_PATH . "js/rates-mobile-list-page.js");
                     </div>
 
                     <div class="rates-list__slide-down">
-                        <div class="rates-list__opportunities-wrapper">
-                            <div class="rates-list__opportunities-title">Возможности</div>
+                        <?if($arItem["PROPERTIES"]["FEATURES"]["VALUE"]):?>
+                            <div class="rates-list__opportunities-wrapper">
+                                <div class="rates-list__opportunities-title">Возможности</div>
 
-                            <?foreach ($arItem["PROPERTIES"]["FEATURES"]["VALUE"] as $benefit):?>
-                                <div class="rates-list__opportunities-text"><?=$benefit?></div>
-                            <?endforeach;?>
-                        </div>
+                                <?foreach ($arItem["PROPERTIES"]["FEATURES"]["VALUE"] as $benefit):?>
+                                    <div class="rates-list__opportunities-text"><?=$benefit?></div>
+                                <?endforeach;?>
+                            </div>
+                        <?endif;?>
 
                         <div class="rates-list__slide-price-wrapper">
                             <?if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
