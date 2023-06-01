@@ -10,7 +10,7 @@
                             <div class="rates-preview__content-caption-wrapper">
                                 <div class="rates-preview__content-caption">Мощный интернет + ТВ 160 каналов</div>
                             </div>
-                            <a href="/rates-internet-item.html" class="gl__main-btn rates-preview__btn">Подробнее</a>
+                            <a href="#" class="gl__main-btn rates-preview__btn">Подробнее</a>
                         </div>
                         <div class="rates-preview__img-wrapper">
                             <img src="/front/img/main-page/rates-preview/rates-preview-2.jpg" alt="" class="rates-preview__img">
@@ -27,7 +27,7 @@
                             <div class="rates-preview__content-caption-wrapper">
                                 <div class="rates-preview__content-caption">Мощный интернет + ТВ 160 каналов</div>
                             </div>
-                            <a href="/rates-internet-item.html" class="gl__main-btn rates-preview__btn">Подробнее</a>
+                            <a href="#" class="gl__main-btn rates-preview__btn">Подробнее</a>
                         </div>
                         <div class="rates-preview__img-wrapper">
                             <img src="/front/img/main-page/rates-preview/rates-preview-2.jpg" alt="" class="rates-preview__img">
@@ -44,7 +44,7 @@
                             <div class="rates-preview__content-caption-wrapper">
                                 <div class="rates-preview__content-caption">Мощный интернет + ТВ 160 каналов</div>
                             </div>
-                            <a href="/rates-internet-item.html" class="gl__main-btn rates-preview__btn">Подробнее</a>
+                            <a href="#" class="gl__main-btn rates-preview__btn">Подробнее</a>
                         </div>
                         <div class="rates-preview__img-wrapper">
                             <img src="/front/img/main-page/rates-preview/rates-preview-2.jpg" alt="" class="rates-preview__img">

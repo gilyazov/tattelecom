@@ -1,7 +1,7 @@
 <section class="rates-list" id="rates-list-host">
     <div class="gl__page-content">
         <div class="gl__title-head">
-            <h2 class="gl__title">Тарифы мобильной связи</h2>
+            <h1 class="gl__title">Тарифы мобильной связи</h1>
             <div class="gl__xs-hide">
                 <a href="/mobile/rates/" class="gl__link-show-all">Все тарифы<svg width="20" height="20" aria-hidden="true" class="gl__link-show-all-icon">
                         <use xlink:href="#arrow-right"></use>

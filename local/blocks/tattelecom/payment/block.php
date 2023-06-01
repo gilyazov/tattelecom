@@ -1,6 +1,6 @@
 <section class="payment-services" id="payment-services-host">
     <div class="gl__page-content">
-        <h2 class="gl__title">Оплата услуг</h2>
+        <h1 class="gl__title">Оплата услуг</h1>
         <div class="payment-services__content">
             <div class="payment-services__item gl__white-container">
                 <div class="payment-services__item-title">С банковской карты, Apple Pay или Google Pay</div>
@@ -15,7 +15,7 @@
             </div>
             <div class="payment-services__item gl__white-container">
                 <div class="payment-services__item-title">По Номеру лицевого счета</div>
-                <div class="payment-services__item-subtitle">Сумма платежа будет доступна уже сейчас, а пополнить баланс можно будет позже</div>
+                <div class="payment-services__item-subtitle">Введите номер лицевого счёта и корректную сумму платежа для совершения оплаты.</div>
 
                 <?$APPLICATION->IncludeComponent(
                     "tattelecom:pay",
@@ -52,7 +52,7 @@
                         </div>
                         <div class="payment-services__form-hint-wrapper">
                             <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете условия пользовательского соглашения.</div>
-                            <a href="/upload/medialibrary/c89/7vwou106bh803envf6g3pwkea3ncayz3.pdf" target="_blank" class="payment-services__form-link">Подробнее об услуге</a>
+                            <a href="/upload/medialibrary/f3b/2otfk88ff02axva1uenjx6nldzfwj60o/d01357e2_7d38_4b42_8674_851eecebb62b.pdf" target="_blank" class="payment-services__form-link">Подробнее об услуге</a>
                         </div>
                     </div>
                 </form>

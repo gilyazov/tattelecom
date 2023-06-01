@@ -49,6 +49,11 @@ return array(
             'type' => 'link',
             'skipContent' => true,
         ),
+        '.link-huawei' => array(
+            'name' => 'Ссылка App Gallery',
+            'type' => 'link',
+            'skipContent' => true,
+        ),
 	),
     'groups' => array(
 

@@ -1,6 +1,6 @@
 <section class="sales-offices-map" id="sales-offices-map-host">
     <div class="gl__page-content">
-        <h2 class="gl__title">Офисы продаж</h2>
+        <h1 class="gl__title">Офисы продаж</h1>
     </div>
     <div class="sales-offices-map__container">
         <div class="sales-offices-map__points-list">
@@ -24,6 +24,15 @@
                         </label>
                     </form>
                     <div class="sales-offices-map__not-found js-not-found">По вашему запросу ничего не найдено</div>
+                    <?php
+                        global $arOffices2Filter;
+                        $arOffices2Filter = ["PROPERTY_SECTION_VALUE" => "Частным клиентам"];
+
+//                        $GLOBALS['arOfficesFilter'] = array(
+//                            '=PROPERTY_TYPE_VALUE' => CIBlockPropertyEnum::GetList(Array(),
+//                                Array("IBLOCK_ID"=>24, "XML_ID"=>"1"))->GetNext()["VALUE"]
+//                        );
+                    ?>
                     <?php $APPLICATION->IncludeComponent("bitrix:news.list","offices-list",Array(
                             "IBLOCK_TYPE" => "mobile",
                             "IBLOCK_ID" => "24",
@@ -32,9 +41,9 @@
                             "SORT_ORDER1" => "ASC",
                             "SORT_BY2" => "ACTIVE_FROM",
                             "SORT_ORDER2" => "DESC",
-                            "FILTER_NAME" => "",
+                            "FILTER_NAME" => "arOffices2Filter",
                             "FIELD_CODE" => Array("ID", "NAME"),
-                            "PROPERTY_CODE" => Array("SETTLEMENT", "ADDRESS", "COORDINATES", "WEEKDAY", "SATURDAY", "SUNDAY", "IS_PARTNER"),
+                            "PROPERTY_CODE" => Array("SETTLEMENT", "ADDRESS", "COORDINATES", "WEEKDAY", "SATURDAY", "SUNDAY", "IS_PARTNER", "TIME", "DAY", "DAY_TIME", "SECTION"),
                             "CHECK_DATES" => "N",
                             "DETAIL_URL" => "/#SECTION_CODE#/#ELEMENT_CODE#/",
                             "PREVIEW_TRUNCATE_LEN" => "",

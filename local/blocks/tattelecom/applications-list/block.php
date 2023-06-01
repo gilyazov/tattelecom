@@ -1,7 +1,7 @@
 <section class="applications-list" id="applications-list">
     <div class="gl__page-content">
         <div class="applications-list__block">
-            <h2 class="gl__title">Приложения Таттелеком и мобильной связи «Летай»</h2>
+            <h1 class="gl__title">Приложения Таттелеком и мобильной связи «Летай»</h1>
             <ul class="applications-list__grid-wrapper">
                 <li class="applications-list__item">
                     <div>
@@ -15,6 +15,9 @@
                         </a>
                         <a href="#" class="applications-list__item-link link-apple">
                             <img src="/local/js/template/tattelecom-1/img/common/app-store.svg" alt="" class="applications-list__item-link-icon">
+                        </a>
+                        <a href="#" class="applications-list__item-link link-huawei">
+                            <img src="/local/js/template/tattelecom/img/common/huaweiappgallery.svg" alt="" class="applications-list__item-link-icon">
                         </a>
                     </div>
                 </li>
@@ -31,6 +34,9 @@
                         <a href="#" class="applications-list__item-link link-apple">
                             <img src="/local/js/template/tattelecom-1/img/common/app-store.svg" alt="" class="applications-list__item-link-icon">
                         </a>
+                        <a href="#" class="applications-list__item-link link-huawei">
+                            <img src="/local/js/template/tattelecom/img/common/huaweiappgallery.svg" alt="" class="applications-list__item-link-icon">
+                        </a>
                     </div>
                 </li>
                 <li class="applications-list__item">
@@ -45,6 +51,9 @@
                         </a>
                         <a href="#" class="applications-list__item-link link-apple">
                             <img src="/local/js/template/tattelecom-1/img/common/app-store.svg" alt="" class="applications-list__item-link-icon">
+                        </a>
+                        <a href="#" class="applications-list__item-link link-huawei">
+                            <img src="/local/js/template/tattelecom/img/common/huaweiappgallery.svg" alt="" class="applications-list__item-link-icon">
                         </a>
                     </div>
                 </li>
@@ -61,6 +70,9 @@
                         <a href="#" class="applications-list__item-link link-apple">
                             <img src="/local/js/template/tattelecom-1/img/common/app-store.svg" alt="" class="applications-list__item-link-icon">
                         </a>
+                        <a href="#" class="applications-list__item-link link-huawei">
+                            <img src="/local/js/template/tattelecom/img/common/huaweiappgallery.svg" alt="" class="applications-list__item-link-icon">
+                        </a>
                     </div>
                 </li>
                 <li class="applications-list__item">
@@ -75,6 +87,9 @@
                         </a>
                         <a href="#" class="applications-list__item-link link-apple">
                             <img src="/local/js/template/tattelecom-1/img/common/app-store.svg" alt="" class="applications-list__item-link-icon">
+                        </a>
+                        <a href="#" class="applications-list__item-link link-huawei">
+                            <img src="/local/js/template/tattelecom/img/common/huaweiappgallery.svg" alt="" class="applications-list__item-link-icon">
                         </a>
                     </div>
                 </li>
@@ -91,6 +106,9 @@
                         <a href="#" class="applications-list__item-link link-apple">
                             <img src="/local/js/template/tattelecom-1/img/common/app-store.svg" alt="" class="applications-list__item-link-icon">
                         </a>
+                        <a href="#" class="applications-list__item-link link-huawei">
+                            <img src="/local/js/template/tattelecom/img/common/huaweiappgallery.svg" alt="" class="applications-list__item-link-icon">
+                        </a>
                     </div>
                 </li>
                 <li class="applications-list__item">
@@ -105,6 +123,9 @@
                         </a>
                         <a href="#" class="applications-list__item-link link-apple">
                             <img src="/local/js/template/tattelecom-1/img/common/app-store.svg" alt="" class="applications-list__item-link-icon">
+                        </a>
+                        <a href="#" class="applications-list__item-link link-huawei">
+                            <img src="/local/js/template/tattelecom/img/common/huaweiappgallery.svg" alt="" class="applications-list__item-link-icon">
                         </a>
                     </div>
                 </li>

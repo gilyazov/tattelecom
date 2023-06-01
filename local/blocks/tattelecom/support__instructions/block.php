@@ -1,6 +1,6 @@
 <section class="instructions gl__section">
     <div class="gl__page-content">
-        <h2 class="gl__title">Инструкции</h2>
+        <h1 class="gl__title">Инструкции</h1>
         <div class="instructions__content">
             <?$APPLICATION->IncludeComponent("bitrix:news.list", "documents-list", Array(
                 "COMPONENT_TEMPLATE" => ".default",

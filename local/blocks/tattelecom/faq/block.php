@@ -36,7 +36,7 @@
                 </div>
             </li>
         </ul>
-        <a href="/helpdesk/faq/" class="faq__link-show-all">Все вопросы и ответы<svg width="20" height="20" aria-hidden="true" class="faq__link-show-all-icon">
+        <a href="/support/faq/" class="faq__link-show-all">Все вопросы и ответы<svg width="20" height="20" aria-hidden="true" class="faq__link-show-all-icon">
                 <use xlink:href="#arrow-right"></use>
             </svg>
         </a>

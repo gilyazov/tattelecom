@@ -18,7 +18,7 @@ $APPLICATION->IncludeFile($templateFolder . '/menu.php', ["IBLOCK_ID" => $arPara
 <section class="rates-list">
     <div class="gl__page-content">
         <div class="rates-list__content">
-            <h2 class="rates-list__title gl__title"><?$APPLICATION->ShowTitle()?></h2>
+            <h1 class="rates-list__title gl__title"><?$APPLICATION->ShowTitle(false)?></h1>
 
             <?$APPLICATION->IncludeComponent(
                 "bitrix:menu",

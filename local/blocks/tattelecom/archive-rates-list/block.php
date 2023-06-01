@@ -1,6 +1,6 @@
 <section class="third-parties">
     <div class="gl__page-content">
-        <h2 class="gl__title">Список архивных тарифов</h2>
+        <h1 class="gl__title">Архив тарифов</h1>
 
         <?$APPLICATION->IncludeComponent("bitrix:news.list", "archive-rates-table", Array(
             "COMPONENT_TEMPLATE" => "gl-slider-rates-gpon",

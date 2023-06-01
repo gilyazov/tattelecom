@@ -33,6 +33,12 @@ return array(
             'name' => 'Текст',
             'type' => 'text',
         ),
+
+        '.faq__link-show-all' => array(
+            'name' => 'Ссылка',
+            'type' => 'link',
+            'skipContent' => true
+        ),
 	),
     'groups' => array(
 

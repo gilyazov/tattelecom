@@ -6,7 +6,7 @@
     </section>
     <section class="top-block" id="top-block-host">
         <div class="gl__page-content">
-            <h2 class="gl__title mod-white top-block__title">Роуминг</h2>
+            <h1 class="gl__title mod-white top-block__title">Роуминг</h1>
         </div>
     </section>
     <img src="/local/js/template/tattelecom-1/img/roaming-page/background.svg" alt="" class="roaming__background gl__sm-hide">

@@ -1,6 +1,6 @@
 <section class="support support-title" id="support-host">
     <div class="gl__page-content">
-        <h2 class="gl__title">Служба поддержки</h2>
+        <h1 class="gl__title">Служба поддержки</h1>
         <div class="support__subtitle">Для оперативной связи со службой поддержки рекомендуем обращаться одним из удобных способов:</div>
         <a href="tel:+78432222222" class="support__tel">(843)222-22-22</a>
 

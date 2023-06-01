@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 <section class="rates-info" id="rates-mobile-info-host">
     <div class="gl__page-content">
-        <h2 class="gl__title"><?$APPLICATION->ShowTitle()?></h2>
+        <h1 class="gl__title"><?$APPLICATION->ShowTitle(false)?></h1>
 
         <?$ElementID = $APPLICATION->IncludeComponent(
             "bitrix:news.detail",

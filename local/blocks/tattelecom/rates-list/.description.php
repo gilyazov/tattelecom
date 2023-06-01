@@ -16,7 +16,7 @@ return array(
 
     ],
 	'nodes' => array(
-        '.rates-preview__content-subtitle' => array(
+        '.gl__title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
         ),
@@ -30,6 +30,7 @@ return array(
             'extra' => array(
                 'editable' => array(
                     'PARENT_SECTION' => array(),
+                    'IBLOCK_ID' => array(),
                     'RATES' => array(),
                 )
             )
