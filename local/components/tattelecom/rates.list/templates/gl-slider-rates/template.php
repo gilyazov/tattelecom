@@ -73,6 +73,7 @@ $this->setFrameMode(true);
                                 <div class="rates-list__slide-btns-wrapper">
                                     <button type="button"
                                             data-tariff-name="<?=$arItem["NAME"]?>"
+                                            data-comment="Тариф: <?=$arItem["NAME"]?>"
                                             data-prise="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>"
                                             class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal">
                                         Подключить

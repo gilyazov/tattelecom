@@ -16,7 +16,7 @@ $this->addExternalJS($componentPath . '/script.js');
         </label>
         <label class="gl-input__wrapper js-input-number">
             <span class="gl-input__title">От 10 до 30 000 Р</span>
-            <input type="number" class="gl-input__input" placeholder="Сумма" name="amount_of_pay" min="10" max="30000" data-parsley-required="">
+            <input type="number" class="gl-input__input" placeholder="Сумма" name="amount_of_pay" min="10" max="30000" step="0.1" data-parsley-required="">
         </label>
         <label class="gl-input__wrapper js-input-email">
             <span class="gl-input__title">Электронная почта</span>
@@ -29,7 +29,7 @@ $this->addExternalJS($componentPath . '/script.js');
         </div>
         <div class="payment-services__form-hint-wrapper">
             <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете условия пользовательского соглашения.</div>
-            <button type="button" class="payment-services__form-link">Подробнее об услуге</button>
+            <!--<button type="button" class="payment-services__form-link">Подробнее об услуге</button>-->
         </div>
     </div>
 </form>
