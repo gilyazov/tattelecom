@@ -1,6 +1,7 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var string $componentPath */
+/** @var string $templateFolder */
 $this->addExternalJS(BUILD_PATH . 'js/payment-services-page.js');
 $this->addExternalJS($componentPath . '/script.js');
 ?>
@@ -32,6 +33,8 @@ $this->addExternalJS($componentPath . '/script.js');
                 <img src="<?=BUILD_PATH?>img/common/pay/mastercard.svg" alt="" class="payment-services__form-hint-icon">
                 <img src="<?=BUILD_PATH?>img/common/pay/mir.svg" alt="" class="payment-services__form-hint-icon">
                 <img src="<?=BUILD_PATH?>img/common/pay/visa.svg" alt="" class="payment-services__form-hint-icon">
+                <img src="<?=$templateFolder?>/img/yapay.svg" alt="" class="payment-services__form-hint-icon">
+                <img src="<?=$templateFolder?>/img/spay.png" height="23" alt="" class="payment-services__form-hint-icon">
             </div>
         </div>
     </div>
