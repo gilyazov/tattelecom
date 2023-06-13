@@ -30,7 +30,7 @@
     font-weight: 500;
     background-color: white;
 }
-.rates-info__preview-rows-caption-tooltip{
+.rates-info__preview-row-option .rates-info__preview-rows-caption-tooltip{
     background-color: white;
 }
 .rates-info__preview-row-option .rates-info__preview-rows-caption-value{
