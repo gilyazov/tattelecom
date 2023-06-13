@@ -43,9 +43,34 @@ class PhoneType extends CBitrixComponent
         return $jsonResponse;
     }
 
+    /**
+     * Оставим только те типы где реально есть тарифы.
+     * @return array
+     */
+    protected function getFullTypes(): array
+    {
+        $arTypes = $this->getTypes();
+        foreach ($arTypes as $key => $arType)
+        {
+            $basePath = $this->configuration['host'] . $this->configuration['beautiful_phone']['path']['list'];
+            $uri = new \Bitrix\Main\Web\Uri($basePath);
+            $uri->addParams([
+                "type" => $arType['id'],
+                "page" => 2
+            ]);
+
+            $response = $this->httpClient->get($uri->getUri());
+
+            if (json_decode($response, true)) {
+                $arFullTypes[] = $arType;
+            };
+        }
+        return $arFullTypes;
+    }
+
     public function executeComponent()
     {
-        $this->arResult['TYPES'] = $this->getTypes();
+        $this->arResult['TYPES'] = $this->getFullTypes();
 
         $this->includeComponentTemplate();
     }
