@@ -36,11 +36,11 @@ if($_GET['year'] == "" && $_GET["month"] == "" && $_GET["type"] == "") {
         $year = $_GET['year'];
         $yearFrom = $_GET['year'];
     } else {
-        $year = date('Y') - 1;
+        $year = date('Y');
         $yearFrom = 1970;
         
         if(!empty($_GET['month'])) {
-            $yearFrom = date('Y') - 1;
+            $yearFrom = date('Y');
         }
     }
 
