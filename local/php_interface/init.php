@@ -1,5 +1,5 @@
 <?
-include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/wsrubi.smtp/classes/general/wsrubismtp.php");
+//include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/wsrubi.smtp/classes/general/wsrubismtp.php");
 
 define ("BUILD_PATH", '/local/js/template/tattelecom/');
 define ("BUILD_PATH_2", '/front/'); //todo избавиться от этого

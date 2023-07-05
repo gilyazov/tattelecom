@@ -5,7 +5,7 @@ namespace Tattelecom\Core\EventHandlers\Landing;
 
 class Hook
 {
-    public function onHookExecHandler(\Bitrix\Main\Event $event)
+    public static function onHookExecHandler(\Bitrix\Main\Event $event)
     {
         $result = new \Bitrix\Main\Entity\EventResult;
 

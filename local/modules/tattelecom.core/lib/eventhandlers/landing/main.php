@@ -5,7 +5,7 @@ namespace Tattelecom\Core\EventHandlers\Landing;
 
 class Main
 {
-    public function OnBeforePrologAddHandler()
+    public static function OnBeforePrologAddHandler()
     {
         global $USER, $APPLICATION;
 

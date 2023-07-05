@@ -68,6 +68,7 @@
                 </div>
 
                 <div class="send-request__product-wrapper">
+                    <img src="" alt="" class="send-request__product-img">
                     <div>
                         <div class="send-request__product-caption">тип</div>
                         <div class="send-request__product-value">модель</div>
@@ -173,7 +174,7 @@
 
         </div>
         <div class="side-bar__bottom">
-            <a href="/helpdesk/" class="side-bar__bottom-link">Поддержка</a>
+            <a href="/support/" class="side-bar__bottom-link">Поддержка</a>
             <a href="/offices/" class="side-bar__bottom-link">Офисы продаж</a>
             <a href="/payment/" class="side-bar__bottom-link">Оплата</a>
         </div>

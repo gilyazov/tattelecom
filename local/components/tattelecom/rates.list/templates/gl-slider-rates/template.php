@@ -36,8 +36,13 @@ $this->setFrameMode(true);
 
                                 <ul class="rates-list__slide-conditions-list">
                                     <?foreach ($arItem["PROPERTIES"]["BENEFITS"]["VALUE"] as $benefit):?>
+                                        <?
+                                        if(!is_array($benefit["SUB_VALUES"])){
+                                            continue;
+                                        }
+                                        ?>
                                         <li class="rates-list__slide-condition-item">
-                                            <?if($benefit["SUB_VALUES"]["B_ICO"]["VALUE"]):?>
+                                            <?if(is_array($benefit["SUB_VALUES"]["B_ICO"])):?>
                                                 <img src="<?=BUILD_PATH?>img/main-page/rates-list/<?=$benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]?>.svg" alt=""
                                                     class="rates-list__slide-condition-item-icon">
                                             <?endif;?>

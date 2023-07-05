@@ -6,7 +6,7 @@ use Bitrix\Main\Application,
     Bitrix\Main\Web\Uri;
 class Page
 {
-    public function OnPageStartHandler()
+    public static function OnPageStartHandler()
     {
         $server = \Bitrix\Main\Context::getCurrent()->getServer();
         $realPath = GetDirPath($server->get('REAL_FILE_PATH'));

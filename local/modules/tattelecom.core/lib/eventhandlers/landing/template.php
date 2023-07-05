@@ -5,7 +5,7 @@ namespace Tattelecom\Core\EventHandlers\Landing;
 
 class Template
 {
-    public function onDemosGetRepositoryHandler(\Bitrix\Main\Event $event)
+    public static function onDemosGetRepositoryHandler(\Bitrix\Main\Event $event)
     {
         $result = new \Bitrix\Main\Entity\EventResult;
         $data = $event->getParameter('data');
