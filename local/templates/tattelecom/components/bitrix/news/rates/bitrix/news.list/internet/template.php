@@ -47,9 +47,11 @@ $this->addExternalJS(BUILD_PATH . "js/rates-internet-list-page.js");
                         <div class="rates-list-internet__item-block">
                             <div class="rates-list-internet__item-wifi-wrapper">
                                 <div class="rates-list-internet__item-wifi"><?=$arOptions["SUB_VALUES"]["OPTIONS_V"]["VALUE"]?><div class="rates-list-internet__item-wifi-dropdown">
-                                        <div class="rates-list-internet__item-wifi-dropdown-inner">
-                                            <?=$arOptions["SUB_VALUES"]["OPTIONS_H"]["~VALUE"]["TEXT"]?>
-                                        </div>
+                                        <?if (is_array($arOptions["SUB_VALUES"]["OPTIONS_H"]["VALUE"])):?>
+                                            <div class="rates-list-internet__item-wifi-dropdown-inner">
+                                                <?=$arOptions["SUB_VALUES"]["OPTIONS_H"]["~VALUE"]["TEXT"]?>
+                                            </div>
+                                        <?endif;?>
                                     </div>
                                 </div>
                             </div>

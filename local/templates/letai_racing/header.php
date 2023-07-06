@@ -23,6 +23,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
 	<meta name="MobileOptimized" content="width">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<title><?$APPLICATION->ShowTitle();?></title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=52c4e409-b738-4d51-8247-c96bd1ece642&lang=ru_RU" type="text/javascript">
 	<?
 	$APPLICATION->ShowHead();
 	$APPLICATION->ShowProperty('MetaOG');
@@ -63,8 +64,8 @@ $APPLICATION->ShowPanel();
                         </a>
                     </li>
                     <li>
-                        <a href="#why">
-                            Почему ии
+                        <a href="https://docs.google.com/document/d/1yJ5hXllcJqLbtUS8Hy3ZLYWD6tC2-FXb0se56mZp0p4/edit?usp=sharing" target="_blank">
+                            Регламент
                         </a>
                     </li>
                     <li>
@@ -106,11 +107,14 @@ $APPLICATION->ShowPanel();
                     Соревнования мини-беспилотных автомобилей
                 </div>
                 <div class="intro__date">
-                    20-21 сентября Казань<br>Подача заявок на участие до 21 июля 2023
+                    20-21 сентября Казань
                 </div>
                 <a href="#application" class="intro__link">
                     Подать заявку
                 </a>
+                <div class="intro__terms">
+                    Прием заявок до 21 июля
+                </div>
             </div>
             <div class="intro__image-wrapper">
                 <img src="/local/js/letai-racing/dist/images/intro-image.webp" alt="" class="intro__image">
@@ -294,20 +298,20 @@ $APPLICATION->ShowPanel();
             </h2>
             <div class="prizes__items">
                 <div class="prizes__item">
-                    <div class="prizes__item-place">
-                        1
+                    <div class="prizes__item-terms">
+                        Обгон
                     </div>
                     400.000₽
                 </div>
                 <div class="prizes__item">
-                    <div class="prizes__item-place">
-                        2
+                    <div class="prizes__item-terms">
+                        Скоростное прохождение
                     </div>
                     300.000₽
                 </div>
                 <div class="prizes__item">
-                    <div class="prizes__item-place">
-                        3
+                    <div class="prizes__item-terms">
+                        объезд препятствий
                     </div>
                     300.000₽
                 </div>
@@ -366,8 +370,12 @@ $APPLICATION->ShowPanel();
                 Локация
             </h2>
             <div class="location__row">
-                <div class="location__map">
-                    <img src="/local/js/letai-racing/dist/images/location-map.jpg" alt="" class="location__map-image">
+                <div class="location__map js-map" data-center="55.611388, 49.298543" data-coords="55.611388, 49.298543"
+                     data-zoom="12">
+                    <div class="location__map-element js-map-element">
+
+                    </div>
+
                 </div>
                 <div class="location__text-content">
                     <img src="/local/js/letai-racing/dist/images/digital-week-white.svg" alt="" class="location__digital-week">

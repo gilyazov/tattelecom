@@ -34,7 +34,9 @@ $this->setFrameMode(true);
                             <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["NAME"]?>" class="b-fractional-slider__card-background">
                         <?endif;?>
                         <div class="b-fractional-slider__card-title"><?=$arItem["NAME"]?></div>
-                        <div class="b-fractional-slider__card-subtitle"><?=$arItem["PROPERTIES"]["SUB_TITLE"]["~VALUE"]["TEXT"]?></div>
+                        <?if (is_array($arItem["PROPERTIES"]["SUB_TITLE"]["VALUE"])):?>
+                            <div class="b-fractional-slider__card-subtitle"><?=$arItem["PROPERTIES"]["SUB_TITLE"]["~VALUE"]["TEXT"]?></div>
+                        <?endif;?>
                     </a>
                     <?$arLinked = $arResult["LINKED"][$linked];?>
                     <a href="<?=$arLinked["CODE"]?>" class="b-fractional-slider__slide-card gl__no-default-hover <?=$mode?>">
@@ -60,7 +62,9 @@ $this->setFrameMode(true);
                        class="b-fractional-slider__slide-card gl__no-default-hover <?=$type?>">
                         <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["NAME"]?>" class="b-fractional-slider__card-background">
                         <div class="b-fractional-slider__card-title"><?=$arItem["~NAME"]?></div>
-                        <div class="b-fractional-slider__card-subtitle"><?=$arItem["PROPERTIES"]["SUB_TITLE"]["~VALUE"]["TEXT"]?></div>
+                        <?if (is_array($arItem["PROPERTIES"]["SUB_TITLE"]["VALUE"])):?>
+                            <div class="b-fractional-slider__card-subtitle"><?=$arItem["PROPERTIES"]["SUB_TITLE"]["~VALUE"]["TEXT"]?></div>
+                        <?endif;?>
                     </a>
                 <?endif;?>
             </li>

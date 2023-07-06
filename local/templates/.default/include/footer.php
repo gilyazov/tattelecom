@@ -16,6 +16,11 @@
         ),
             false
         );?>
+
+        </div>
+
+
+
         <div class="footer__bottom-block">
             <div class="footer__bottom-block-info">
                 <?php $APPLICATION->IncludeComponent("bitrix:menu", "footer_menu_horizontal", Array(
@@ -83,6 +88,11 @@
                 <div class="footer__agreement-text">Продолжая использовать наш сайт, вы даете согласие на обработку файлов Cookies и других пользовательских данных, в соответствии с <a href="https://tattelecom.ru/policy.php" target="_blank" class="footer__agreement-link">Политикой конфиденциальности</a>.</div>
                 <div class="footer__copyright">© <?=date('Y');?> <?=\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_FOOTER_TEXT")?> <a target="_blank" href="<?=CFile::GetPath(\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_SMI_LICENSE"));?>">Эл №ФС77-66502 от 14.07.2016</a></div>
             </div>
-        </div>
+            <div class="footer__autor">
+            <a target="_blank" href="https://markweber.ru/">Разработано в сотрудничестве с Mark Weber</a>
+            </div>
+
+
     </div>
+
 </footer>

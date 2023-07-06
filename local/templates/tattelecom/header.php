@@ -85,7 +85,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
         <?if(SITE_ID == 's1'):?>
             <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "", Array(
                 "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-                "SITE_ID" => SIDE_ID,	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+                "SITE_ID" => SITE_ID,
                 "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
             ),
                 false

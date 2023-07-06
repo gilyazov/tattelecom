@@ -1,4 +1,5 @@
 <?php
+$arLinked = [];
 foreach ($arResult["ITEMS"] as $arItem){
     if ($linked = $arItem["PROPERTIES"]["LINKED"]["VALUE"]){
         $arLinked[] = $linked;
