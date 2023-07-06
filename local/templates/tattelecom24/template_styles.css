@@ -112,3 +112,7 @@
 .is-admin input{
 	width: auto;
 }
+
+.bitrix-footer{
+	display: none;
+}
