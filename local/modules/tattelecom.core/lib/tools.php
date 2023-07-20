@@ -1,6 +1,6 @@
 <?php
 
-namespace Iteko\Core;
+namespace Tattelecom\Core;
 
 /**
  * Class Tools
@@ -26,6 +26,10 @@ class Tools
 
     public static function resizeImage($id, $width, $height, $adaptiveH=false)
     {
+        if (!$id){
+            return "";
+        }
+
         $imageFile = \CFile::GetFileArray($id);
         $arFileTmp = \CFile::ResizeImageGet($imageFile,  array("width" => $width, "height" => ($adaptiveH ? $width * $imageFile["HEIGHT"] / $imageFile["WIDTH"] : $height)),  BX_RESIZE_IMAGE_EXACT, true);
         $photo_img = $arFileTmp["src"];

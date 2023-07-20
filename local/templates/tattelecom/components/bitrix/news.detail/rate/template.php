@@ -69,8 +69,9 @@ $this->setFrameMode(true);
                 <?if($arOption = $arResult["PROPERTIES"]["FINAL_OPTION"]["VALUE"]):?>
                     <div class="b-tariff-detail__rates-info-include">
                         <div class="rates-info__title"><?=$arOption["SUB_VALUES"]["FINAL_OPTION_T"]["VALUE"]?></div>
-
-                        <?=$arOption["SUB_VALUES"]["FINAL_OPTION_V"]["~VALUE"]["TEXT"]?>
+                        <?if (is_array($arOption["SUB_VALUES"]["FINAL_OPTION_V"]["VALUE"])):?>
+                            <?=$arOption["SUB_VALUES"]["FINAL_OPTION_V"]["~VALUE"]["TEXT"]?>
+                        <?endif;?>
                     </div>
                 <?endif;?>
 

@@ -37,9 +37,11 @@ $this->setFrameMode(true);
                     </div>
                 </div>
             </div>
-            <div class="rates-preview__img-wrapper">
-                <img src="<?=\Tattelecom\Core\Tools::resizeImage($arResult["PREVIEW_PICTURE"]["ID"], 750, 500, true)?>" alt="<?=$arResult["NAME"]?>" class="rates-preview__img">
-            </div>
+            <?if($arResult["PREVIEW_PICTURE"]["ID"]):?>
+                <div class="rates-preview__img-wrapper">
+                    <img src="<?=\Tattelecom\Core\Tools::resizeImage($arResult["PREVIEW_PICTURE"]["ID"], 750, 500, true)?>" alt="<?=$arResult["NAME"]?>" class="rates-preview__img">
+                </div>
+            <?endif;?>
         </div>
     </section>
 
@@ -50,7 +52,7 @@ $this->setFrameMode(true);
                 <?foreach ($arResult["CONDITIONS"] as $arConditions):?>
                     <li class="b-colocation-rates__rate">
                         <button type="button"
-                                style="background-image: url(<?=\Tattelecom\Core\Tools::resizeImage($arConditions["PREVIEW_PICTURE"], 400, 180, true)?>);"
+                                <?if($arConditions["PREVIEW_PICTURE"]):?>style="background-image: url(<?=\Tattelecom\Core\Tools::resizeImage($arConditions["PREVIEW_PICTURE"], 400, 180, true)?>);"<?endif;?>
                                 class="b-colocation-rates__btn gl__drop-menu-btn js-drop-menu-btn data-drop-menu-open">
                             <?=$arConditions["NAME"]?>
                             <svg width="24" height="24" aria-hidden="true" class="b-colocation-rates__btn-icon gl__drop-menu-icon">

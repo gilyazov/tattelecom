@@ -247,15 +247,14 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
                 </a>
             </li>-->
             <li class="info-links__item gl__white-container cashback__slide gl__link-arrow-container">
-                <img src="<?=BUILD_PATH?>img/rates-mobile-list-page/img-3.jpg" alt="" class="cashback__slide-background">
+                <img src="/upload/medialibrary/f5a/ev46te3ti6p187lalqz4e14eqjzz4x9p/photo_2023_07_18-17.02.58.jpeg" alt="" class="cashback__slide-background">
                 <div class="cashback__slide-content-wrapper">
-                    <div class="cashback__slide-title info-links__slide-title">
-                        <div>Вместе выгодно</div>
-                        <div>2.0</div>
+                    <div class="cashback__slide-title info-links__slide-title mod-white">
+                        <div>КЭШБЭЧНО</div>
                     </div>
-                    <div class="cashback__slide-text info-links__slide-text">Подключите «Летай» и получайте кешбэк 20%!</div>
+                    <div class="cashback__slide-text info-links__slide-text mod-white">Возвращаем 20% на счет мобильной связи</div>
                 </div>
-                <a href="/stocks/keshbek20/" class="cashback__slide-link">Подробнее</a>
+                <a href="/stocks/keshbek2023/" class="cashback__slide-link mod-white">Подробнее</a>
             </li>
             <li class="info-links__item gl__white-container cashback__slide gl__link-arrow-container">
                 <img src="<?=BUILD_PATH?>img/rates-mobile-list-page/img-5.jpg" alt="" class="cashback__slide-background">
@@ -263,7 +262,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
                     <div class="cashback__slide-title info-links__slide-title mod-white">
                         <div>Доставка SIM-карты бесплатно на дом</div>
                     </div>
-                    <div class="cashback__slide-text info-links__slide-text">Рассрочка на приобретение мобильных устройств с поддержкой 4G.</div>
+                    <div class="cashback__slide-text info-links__slide-text mod-white">Рассрочка на приобретение мобильных устройств с поддержкой 4G.</div>
                 </div>
                 <a href="javascript:;" class="cashback__slide-link mod-white js-open-callback-modal">Заказать сим-карту</a>
             </li>
