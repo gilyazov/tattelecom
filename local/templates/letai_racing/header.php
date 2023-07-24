@@ -109,11 +109,11 @@ $APPLICATION->ShowPanel();
                 <div class="intro__date">
                     20-21 сентября Казань
                 </div>
-                <a href="#application" class="intro__link">
+                <?/*<a href="#application" class="intro__link">
                     Подать заявку
-                </a>
+                </a>*/?>
                 <div class="intro__terms">
-                    Прием заявок до 21 июля
+                    Прием заявок завершен!
                 </div>
             </div>
             <div class="intro__image-wrapper">
@@ -321,7 +321,7 @@ $APPLICATION->ShowPanel();
             </div>
         </div>
     </section>
-    <section class="application" id="application">
+    <?/*<section class="application" id="application">
         <div class="application__content">
             <h2 class="application__heading">
                 Оставьте заявку
@@ -363,7 +363,7 @@ $APPLICATION->ShowPanel();
                 )
             );?>
         </div>
-    </section>
+    </section>*/?>
     <section class="location" id="location">
         <div class="location__content">
             <h2 class="location__heading">

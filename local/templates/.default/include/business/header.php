@@ -1,4 +1,4 @@
-<header class="header mod-business<?=($APPLICATION->GetCurPage(false) === "/" ? " js-business-main" : "")?>" id="header-host">
+<header class="header mod-business<?php /*=($APPLICATION->GetCurPage(false) === "/" ? " js-business-main" : "")*/?>" id="header-host">
     <div class="header__content" style="background-image: url('<?=BUILD_PATH?>img/header/buliness-background.jpg')">
         <div class="header__main-content">
             <div class="header__top-block">
@@ -6,10 +6,10 @@
                     <div class="header__top-block-content">
                         <ul class="header__top-menu-items-list gl__md-hide">
                             <li class="header__top-menu-items">
-                                <a href="https://my.tattelecom.ru/" target="_blank" class="header__top-menu-items-link">Таттелеком</a>
+                                <a href="https://my.tattelecom.ru/" class="header__top-menu-items-link">Таттелеком</a>
                             </li>
                             <li class="header__top-menu-items">
-                                <a href="https://tattelecom.ru/" target="_blank" class="header__top-menu-items-link">Частным клиентам</a>
+                                <a href="https://tattelecom.ru/" class="header__top-menu-items-link">Частным клиентам</a>
                             </li>
                             <li class="header__top-menu-items">
                                 <a href="<?=SITE_DIR?>" class="header__top-menu-items-link">Бизнесу</a>
@@ -61,7 +61,7 @@
                             <img src="<?=BUILD_PATH?>img/header/logo-business.svg" alt="" class="header__logo mod-business">
                         </a>
                     </div>
-                    <div class="header__bottom-block-right<?=($APPLICATION->GetCurPage(false) !== '/' ? " mod-show" : "")?> mod-business gl__bg-hide js-b-menu-header header__hide-when-search js-hide-when-search">
+                    <div class="header__bottom-block-right mod-show mod-business gl__bg-hide js-b-menu-header header__hide-when-search js-hide-when-search">
                         <?$APPLICATION->IncludeComponent("bitrix:menu", "header__bottom-menu-list", Array(
                             "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
                             "CHILD_MENU_TYPE" => "",    // Тип меню для остальных уровней

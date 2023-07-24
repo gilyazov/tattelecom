@@ -27,7 +27,7 @@ foreach($arResult as $key => $arItem):?>
             <div class="header__b-popup-content-item">
                 <div class="header__b-popup-caption-list">
                     <img src="<?=CFIle::GetPath($arItem["PARAMS"]["ICO"])?>" alt="" class="header__b-menu-item-control-icon">
-                    <?if($arItem["PARAMS"]["IBLOCK_SECTION_ID"] == 203):?>
+                    <?if($arItem['PARAMS']['ID'] == 211):?>
                         <a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
                     <?else:?>
                         <?=$arItem["TEXT"]?>
@@ -77,7 +77,7 @@ foreach($arResult as $key => $arItem):?>
 <?endforeach?>
 
 <?if ($previousLevel > 1)://close last item tags?>
-    </ul>
-	<?=str_repeat("</ul></li>", ($previousLevel-1) );?>
+    </ul></div>
+	<?//=str_repeat("</ul></li>test", ($previousLevel-1) );?>
 <?endif?>
 <?endif?>
