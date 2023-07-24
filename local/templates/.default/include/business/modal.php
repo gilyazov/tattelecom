@@ -232,7 +232,7 @@
             );?>
             <button type="button" class="side-bar__btn gl__main-btn js-open-callback-modal">Стать абонентом</button>
 
-            <?/*$APPLICATION->IncludeComponent("bitrix:menu", "side-bar__drops", Array(
+            <?$APPLICATION->IncludeComponent("bitrix:menu", "side-bar__drops", Array(
                 "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
                 "CHILD_MENU_TYPE" => "",    // Тип меню для остальных уровней
                 "DELAY" => "N", // Откладывать выполнение шаблона меню
@@ -247,7 +247,7 @@
                 "USE_EXT" => "Y",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
             ),
                 false
-            );*/?>
+            );?>
 
         </div>
         <div class="side-bar__bottom">
