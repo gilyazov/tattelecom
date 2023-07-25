@@ -25,8 +25,8 @@
                                 <div class="header__top-menu-hover-container">
                                     <div class="header__top-menu-hover-content">
                                         <a href="https://b2b.tattelecom.ru/" class="header__top-menu-items-link">Бизнесу</a>
-                                        <a href="/" class="header__top-menu-items-link">Таттелеком</a>
-                                        <a href="https://tattelecom.ru/" class="header__top-menu-items-link">Частным клиента</a>
+                                        <!--<a href="/" class="header__top-menu-items-link">Таттелеком</a>-->
+                                        <a href="https://letai.ru/" class="header__top-menu-items-link">Частным клиентам</a>
                                     </div>
                                 </div>
                             </button>

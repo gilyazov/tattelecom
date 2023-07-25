@@ -19,12 +19,11 @@
                             </li>
                         </ul>
                         <div class="gl__md-show header__top-menu-mobile-nav">
-                            <button type="button" class="header__top-menu-items-link">Частным клиентам</button>
+                            <button type="button" class="header__top-menu-items-link">Бизнесу</button>
                             <div class="header__top-menu-items-link header__top-menu-hover-nav mod-b-top-menu-hover">Ещё<div class="header__top-menu-hover-container">
                                     <div class="header__top-menu-hover-content">
-                                        <a href="" class="header__top-menu-items-link">Бизнесу</a>
                                         <a href="https://my.tattelecom.ru/" target="_blank" class="header__top-menu-items-link">Таттелеком</a>
-                                        <a href="" class="header__top-menu-items-link">Частным клиента</a>
+                                        <a href="https://letai.ru/" target="_blank" class="header__top-menu-items-link">Частным клиентам</a>
                                     </div>
                                 </div>
                             </div>
