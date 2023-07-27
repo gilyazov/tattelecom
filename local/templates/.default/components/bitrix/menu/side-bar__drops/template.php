@@ -8,7 +8,8 @@
 
         <?if ($previousLevel && $arItem["DEPTH_LEVEL"] < $previousLevel):?>
             <?if ($arItem['DEPTH_LEVEL'] == 1):?>
-                <?=str_repeat("</ul></div></li>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
+                </ul></div></li>
+                <?//=str_repeat("</ul></div></li>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
             <?else:?>
                 <?//=($previousLevel . ' ' . $arItem['DEPTH_LEVEL'])?>
                 <?=str_repeat("</ul></li>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
@@ -37,8 +38,8 @@
 
                 <?if ($arItem["DEPTH_LEVEL"] == 1):?>
                     <li class="side-bar__drop-item">
-                        <a href="<?=$arItem["LINK"]?>" class="side-bar__drop-btn gl__drop-menu-btn js-drop-menu-btn"><?=$arItem["TEXT"]?></a>
-                        <div class="gl__drop-menu-container js-drop-menu-container"></div>
+                        <a href="<?=$arItem["LINK"]?>" class="side-bar__drop-btn gl__drop-menu-btn"><?=$arItem["TEXT"]?></a>
+                        <div class="gl__drop-menu-container"></div>
                     </li>
                 <?elseif ($arItem["DEPTH_LEVEL"] == 2):?>
                     <li class="side-bar__drop-content-item">
