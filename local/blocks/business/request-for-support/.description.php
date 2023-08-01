@@ -126,6 +126,17 @@ return array(
             'type' => 'link',
             'skipContent' => true,
         ),*/
+        '.b-support__contacts-title' => array(
+            'name' => "Заголовок",
+            'type' => 'text',
+            'textOnly' => true
+        ),
+        '.b-support__contacts-label' => array(
+            'name' => "Описание",
+            'type' => 'text',
+            'textOnly' => true
+        ),
+
         'bitrix:iblock.element.add.form' => array(
             'type' => 'component',
             'extra' => array(
