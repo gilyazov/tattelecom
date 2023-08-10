@@ -28,7 +28,7 @@ foreach($arResult as $key => $arItem):?>
                 <div class="header__b-popup-caption-list">
                     <img src="<?=CFIle::GetPath($arItem["PARAMS"]["ICO"])?>" alt="" class="header__b-menu-item-control-icon">
                     <?if($arItem['PARAMS']['ID'] == 211):?>
-                        <a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+                        <a href="<?=$arItem["LINK"]?>" class="gl__no-default-hover"><?=$arItem["TEXT"]?></a>
                     <?else:?>
                         <?=$arItem["TEXT"]?>
                     <?endif;?>

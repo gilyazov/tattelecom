@@ -254,7 +254,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
                     </div>
                     <div class="cashback__slide-text info-links__slide-text mod-white">Возвращаем 20% на счет мобильной связи</div>
                 </div>
-                <a href="/stocks/keshbek2023/" class="cashback__slide-link mod-white">Подробнее</a>
+                <a href="/stocks/keshbek2023/" class="cashback__slide-link mod-white gl__no-default-hover">Подробнее</a>
             </li>
             <li class="info-links__item gl__white-container cashback__slide gl__link-arrow-container">
                 <img src="<?=BUILD_PATH?>img/rates-mobile-list-page/img-5.jpg" alt="" class="cashback__slide-background">
@@ -264,7 +264,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
                     </div>
                     <div class="cashback__slide-text info-links__slide-text mod-white">Рассрочка на приобретение мобильных устройств с поддержкой 4G.</div>
                 </div>
-                <a href="javascript:;" class="cashback__slide-link mod-white js-open-callback-modal">Заказать сим-карту</a>
+                <a href="javascript:;" class="cashback__slide-link mod-white js-open-callback-modal gl__no-default-hover">Заказать сим-карту</a>
             </li>
             <li class="info-links__item gl__white-container cashback__slide gl__link-arrow-container">
                 <img src="<?=BUILD_PATH?>img/rates-mobile-list-page/img-4.png" alt="" class="cashback__slide-img info-links__slide-img">
