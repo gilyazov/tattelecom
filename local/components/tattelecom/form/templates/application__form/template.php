@@ -35,5 +35,5 @@ $this->addExternalJS($componentPath . '/script.js');
         <input type="hidden" name="param_referer" value="<?=$APPLICATION->GetTitle()?>">
     </div>
 
-    <span class="checkbox__text">Нажимая кнопку «Отправить», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.</span>
+    <span class="checkbox__text">Нажимая кнопку «Отправить», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.<br> Защита от спама reCAPTCHA <a href="https://policies.google.com/privacy?hl=ru" target="_blank">Конфиденциальность</a> и <a href="https://policies.google.com/terms?hl=ru" target="_blank">Условия использования</a>.</span>
 </form>

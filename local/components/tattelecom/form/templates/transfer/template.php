@@ -29,5 +29,5 @@ $this->addExternalJS($componentPath . '/script.js');
             <span class="checkbox__text mod-main">Я согласен на <a href="/app/personaldata/">обработку своих персональных данных</a> и получение консультации по переносу номера </span>
         </label>
     </div>
-    <span class="checkbox__text mod-main">Нажимая кнопку «Начать перенос», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.</span>
+    <span class="checkbox__text mod-main">Нажимая кнопку «Начать перенос», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.<br> Защита от спама reCAPTCHA <a href="https://policies.google.com/privacy?hl=ru" target="_blank">Конфиденциальность</a> и <a href="https://policies.google.com/terms?hl=ru" target="_blank">Условия использования</a>.</span>
 </form>

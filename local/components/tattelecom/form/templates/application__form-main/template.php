@@ -16,7 +16,8 @@ $this->addExternalJS($componentPath . '/script.js');
     <div class="application__btn-wrapper">
         <button type="submit" class="gl__main-btn application__btn">Жду звонка</button>
     </div>
-    <span class="checkbox__text mod-modal">Нажимая кнопку «Жду звонка», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.</span>
+    <span class="checkbox__text mod-modal">Нажимая кнопку «Жду звонка», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.<br>
+        Защита от спама reCAPTCHA <a href="https://policies.google.com/privacy?hl=ru" target="_blank">Конфиденциальность</a> и <a href="https://policies.google.com/terms?hl=ru" target="_blank">Условия использования</a>.</span>
     <div class="callback__content-checkbox-wrapper">
         <label class="checkbox__wrapper">
             <input type="checkbox" class="checkbox" name="modal-callback-agree" data-parsley-required="" data-parsley-multiple="modal-callback-agree">

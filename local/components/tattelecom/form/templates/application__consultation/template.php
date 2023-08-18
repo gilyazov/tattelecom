@@ -12,7 +12,7 @@ $this->addExternalJS($componentPath . '/script.js');
         <input type="tel" class="gl-input__input js-phone-mask" placeholder="+7 (___) ___-__-__" name="phone" data-parsley-required="">
     </label>
     <button type="submit" class="gl__main-btn mod-white-grey">Оставить заявку</button>
-    <span class="checkbox__text mod-main">Нажимая кнопку «Оставить заявку», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.</span>
+    <span class="checkbox__text mod-main">Нажимая кнопку «Оставить заявку», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.<br> Защита от спама reCAPTCHA <a href="https://policies.google.com/privacy?hl=ru" target="_blank">Конфиденциальность</a> и <a href="https://policies.google.com/terms?hl=ru" target="_blank">Условия использования</a>.</span>
     <div class="callback__content-checkbox-wrapper">
         <label class="checkbox__wrapper">
             <input type="checkbox" class="checkbox" name="modal-callback-agree" data-parsley-required="" data-parsley-multiple="modal-callback-agree">
