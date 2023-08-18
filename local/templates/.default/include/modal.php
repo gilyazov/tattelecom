@@ -15,6 +15,19 @@
                 [],
                 false
             );?>
+
+            <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallbackRecap&render=<?=GoogleReCaptcha::PUBLIC_KEY?>" async defer></script>
+            <script>
+                var onloadCallbackRecap = function() {
+                    grecaptcha.ready(function () {
+                        grecaptcha.execute('<?=GoogleReCaptcha::PUBLIC_KEY?>', { action: 'contact_callback' }).then(function (token) {
+                            var recaptchaResponse = document.getElementById('recaptchaResponse');
+                            recaptchaResponse.dataset.value = token;
+                        });
+                    });
+                };
+            </script>
+            <div id="recaptchaResponse" data-value=""></div>
         </div>
     </div>
 </div>

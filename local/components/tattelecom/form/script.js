@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         data[obj.name] = obj.value;
                     });
 
+                    data['recaptcha_response'] = document.getElementById('recaptchaResponse').dataset.value;
+
                     BX.ajax.runComponentAction('tattelecom:form',
                         'sendLead', {
                             mode: 'class',
@@ -45,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                 BX.closeWait(form, wait);
                             }
+                        }, function (response){
+                            alert(response.errors[0].message);
+                            console.log(response);
                         });
                 }
             });

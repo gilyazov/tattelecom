@@ -14,7 +14,6 @@ class Form extends \CBitrixComponent implements Controllerable
 {
     private $configuration;
     private $httpClient;
-
     public function __construct($component = null)
     {
         parent::__construct($component);
@@ -54,6 +53,11 @@ class Form extends \CBitrixComponent implements Controllerable
         $url = $this->buildUrl();
         $phone = $this->parsePhone($post['phone']);
         $utm = $this->getUtmQuery();
+        $recaptchaResponse = GoogleReCaptcha::checkClientResponse($post['recaptcha_response']);
+
+        if ($recaptchaResponse['score'] < 0.5){
+            throw new Exception('Не пройдена проверка на робота. Ваш результат: ' . $recaptchaResponse['score']);
+        }
 
         $data = [
             "phone" => $phone,

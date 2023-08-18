@@ -13,3 +13,8 @@ $eventManager->addEventHandler('main', 'OnBeforeProlog', ['\Tattelecom\Core\Even
 
 $eventManager->addEventHandler('iblock', 'OnBeforeIBlockElementAdd', ['\Tattelecom\Core\EventHandlers\Iblock\Element', 'OnBeforeIBlockElementAddHandler']);
 $eventManager->addEventHandler('iblock', 'OnAfterIBlockElementAdd', ['\Tattelecom\Core\EventHandlers\Iblock\Element', 'OnAfterIBlockElementAddHandler']);
+
+$arClasses = array(
+    "GoogleReCaptcha" => "classes/GoogleReCaptcha.php"
+);
+CModule::AddAutoloadClasses("tattelecom.core", $arClasses);
