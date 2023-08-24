@@ -4,9 +4,7 @@
         <div class="b-mobile-communication__content">
             <ul class="intro-cards-container">
                 <li class="intro-cards-container__item service-card-with-photo red" data-card-preset="red">
-                    <svg aria-hidden="true" class="service-card-with-photo__icon">
-                        <use xlink:href="#service-card-with-photo-background"></use>
-                    </svg>
+                    <img class="service-card-with-photo__image" src="/local/js/template/tattelecom/img/b-mobile-communication/blue-bg.jpg" alt="Фото услуги">
                     <div class="service-card-with-photo__content">
                         <div class="service-card-with-photo__description">
                             <h3 class="service-card-with-photo__title">Мобильная связь</h3>
@@ -29,9 +27,7 @@
                     </div>
                 </li>
                 <li class="intro-cards-container__item service-card-with-photo red" data-card-preset="red">
-                    <svg aria-hidden="true" class="service-card-with-photo__icon">
-                        <use xlink:href="#service-card-with-photo-background"></use>
-                    </svg>
+                    <img class="service-card-with-photo__image" src="/local/js/template/tattelecom/img/b-mobile-communication/blue-bg.jpg" alt="Фото услуги">
                     <div class="service-card-with-photo__content">
                         <div class="service-card-with-photo__description">
                             <h3 class="service-card-with-photo__title">Мобильный интернет</h3>
@@ -51,8 +47,7 @@
                     </div>
                 </li>
                 <li class="intro-cards-container__item service-card-with-photo" data-card-preset="gradient-1">
-                    <img class="service-card-with-photo__image" src="/local/js/template/tattelecom-1/img/b-mobile-communication/service-1.jpg" alt="Фото услуги">
-                    <div class="service-card-with-photo__image-overlay gradient-1"></div>
+                    <img class="service-card-with-photo__image" src="/local/js/template/tattelecom/img/b-mobile-communication/blue-bg.jpg" alt="Фото услуги">
                     <div class="service-card-with-photo__content">
                         <div class="service-card-with-photo__description">
                             <h3 class="service-card-with-photo__title">Роуминг</h3>
@@ -71,8 +66,7 @@
                     </div>
                 </li>
                 <li class="intro-cards-container__item service-card-with-photo" data-card-preset="gradient-2">
-                    <img class="service-card-with-photo__image" src="/local/js/template/tattelecom-1/img/b-mobile-communication/service-2.jpg" alt="Фото услуги">
-                    <div class="service-card-with-photo__image-overlay gradient-2"></div>
+                    <img class="service-card-with-photo__image" src="/local/js/template/tattelecom/img/b-mobile-communication/blue-bg.jpg" alt="Фото услуги">
                     <div class="service-card-with-photo__content">
                         <div class="service-card-with-photo__description">
                             <h3 class="service-card-with-photo__title">Красивый номер</h3>

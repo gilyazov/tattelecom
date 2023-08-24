@@ -53,6 +53,7 @@ foreach($arResult as $arItem):?>
 <?endforeach?>
 
 <?if ($previousLevel > 1)://close last item tags?>
-	<?=str_repeat("</ul></li>", ($previousLevel-1) );?>
+    <?//=str_repeat("</ul></li>", ($previousLevel-1) );?>
+    <?=str_repeat("</div>", ($previousLevel-1) );?>
 <?endif?>
 <?endif?>
