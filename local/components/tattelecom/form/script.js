@@ -44,13 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                     window.openThanksModal('#modal-thanks');
                                 }
-
-                                BX.closeWait(form, wait);
                             }
                         }, function (response){
                             alert(response.errors[0].message);
                             console.log(response);
                         });
+
+                    BX.closeWait(form, wait);
                 }
             });
         }

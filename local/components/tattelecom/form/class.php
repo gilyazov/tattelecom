@@ -49,7 +49,12 @@ class Form extends \CBitrixComponent implements Controllerable
 
     public function sendLeadAction($post)
     {
-        global $APPLICATION;
+        // валидация номера телефона
+        $parsedPhone = Parser::getInstance()->parse($post['phone']);
+        if (!$parsedPhone->isValid()){
+            throw new Exception('Некорректный номер телефона: ' . $post['phone']);
+        }
+
         $url = $this->buildUrl();
         $phone = $this->parsePhone($post['phone']);
         $utm = $this->getUtmQuery();

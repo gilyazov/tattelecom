@@ -6,7 +6,7 @@ namespace Tattelecom\Core\EventHandlers\Iblock;
 
 class Element
 {
-    public function OnBeforeIBlockElementAddHandler(&$arFields)
+    public static function OnBeforeIBlockElementAddHandler(&$arFields)
     {
         // регистрация на мероприятия
         if ($arFields["IBLOCK_ID"] == 57 && $event = $arFields["PROPERTY_VALUES"]["240"]) {
@@ -39,7 +39,7 @@ class Element
         }
     }
 
-    public function OnAfterIBlockElementAddHandler(&$arFields)
+    public static function OnAfterIBlockElementAddHandler(&$arFields)
     {
         $iblockMailTemplate = [
             45 => 32,
