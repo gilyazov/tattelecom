@@ -377,7 +377,7 @@ global $arrFilterCity;
                 <div class="services__item-info-container">
                     <div class="services__item-info-content">
                         <h3 class="services__item-info-title">Выбирайте красивые номера</h3>
-                        <div class="services__item-info-text">Бронзовый,Серебрянный, Золотой, Бриллиантовый</div>
+                        <!--<div class="services__item-info-text">Бронзовый,Серебрянный, Золотой, Бриллиантовый</div>-->
                         <button type="button" class="services__item-info-btn">
                             <span class="services__item-info-btn-text">Подобрать</span>
                             <svg width="40" height="40" aria-hidden="true" class="services__item-info-btn-icon">

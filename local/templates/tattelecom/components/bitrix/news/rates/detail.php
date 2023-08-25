@@ -272,7 +272,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
                     <div class="cashback__slide-title info-links__slide-title">
                         <div>Выбирайте красивые номера</div>
                     </div>
-                    <div class="cashback__slide-text info-links__slide-text">Серебряный, Золотой, Бронзовый</div>
+                    <!--<div class="cashback__slide-text info-links__slide-text">Серебряный, Золотой, Бронзовый</div>-->
                 </div>
                 <a href="/mobile/beautiful-numbers/" class="cashback__slide-link mod-black">Подобрать<svg width="40" height="40" aria-hidden="true" class="cashback__slide-link-icon">
                         <use xlink:href="#arrow-line-right"></use>

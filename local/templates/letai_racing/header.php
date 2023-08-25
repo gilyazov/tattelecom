@@ -109,9 +109,9 @@ $APPLICATION->ShowPanel();
                 <div class="intro__date">
                     20-21 сентября Казань
                 </div>
-                <?/*<a href="#application" class="intro__link">
-                    Подать заявку
-                </a>*/?>
+                <a href="#participant" class="intro__link">
+                    Список участников
+                </a>
                 <div class="intro__terms">
                     Прием заявок завершен!
                 </div>
@@ -321,6 +321,36 @@ $APPLICATION->ShowPanel();
             </div>
         </div>
     </section>
+    <section class="application" id="participant">
+        <div class="application__content">
+            <h2 class="application__heading">
+                Участники соревнований
+            </h2>
+
+            <div class="participant_nav">
+                <ul>
+                    <li>ИВМиИТ КФУ</li>
+                    <li>ICL Services</li>
+                    <li>Университет Иннополис | МОНОЛИТ ДОТС</li>
+                    <li>ИТ парк</li>
+                    <li>НЧИ КФУ</li>
+                    <li>Университет Иннополис | Летальный car</li>
+                    <li>Innostage</li>
+                    <li>DECK</li>
+                    <li></li>
+                    <li>ДПК (Камаз)</li>
+                    <li>ФГБОУ ВО "КНИТУ-КАИ"</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <style>
+        .participant_nav>ul {
+            display: grid;
+            grid-gap: 1.2rem;
+            grid-template-columns: 1fr 1fr 2fr;
+        }
+    </style>
     <?/*<section class="application" id="application">
         <div class="application__content">
             <h2 class="application__heading">
