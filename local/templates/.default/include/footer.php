@@ -42,8 +42,10 @@
             </div>
             <div class="footer__bottom-block-contacts">
                 <div class="footer__contacts-title">Контакт-центр:</div>
-                <div class="footer__contact-phone-wrapper">
-                    <a href="tel:+7<?php echo preg_replace("/\D/","",\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_CONTACT_CENTER"));?>" class="footer__contact-phone"><?php echo \Bitrix\Main\Config\Option::get( "askaron.settings", "UF_CONTACT_CENTER");?></a>
+                <div class="footer__contact-phone-wrapper" itemscope itemtype="http://schema.org/Organization">
+                    <a href="tel:+7<?php echo preg_replace("/\D/","",\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_CONTACT_CENTER"));?>" class="footer__contact-phone">
+                        <span itemprop="telephone"><?php echo \Bitrix\Main\Config\Option::get( "askaron.settings", "UF_CONTACT_CENTER");?></span>
+                    </a>
                 </div>
                 <?$APPLICATION->IncludeComponent("bitrix:news.list", "footer-socials",
                     Array(

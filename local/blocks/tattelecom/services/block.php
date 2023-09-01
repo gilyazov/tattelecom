@@ -35,7 +35,7 @@
                 <div class="services__item-info-container">
                     <div class="services__item-info-content">
                         <div class="services__item-info-text">Максимум возможностей для управления счётом и услугами</div>
-                        <a href="https://lk.letai.ru/template.LOGIN/" target="_blank" class="services__item-info-btn">
+                        <a href="https://newlk.letai.ru/" target="_blank" class="services__item-info-btn">
                             <span class="services__item-info-btn-text">Войти</span>
                             <svg width="40" height="40" aria-hidden="true" class="services__item-info-btn-icon">
                                 <use xlink:href="#arrow-line-right"></use>

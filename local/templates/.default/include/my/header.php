@@ -39,7 +39,7 @@
                                         <use xlink:href="#geolocation-tatt"></use>
                                     </svg>Казань
                                 </a>
-                                <a href="https://lk.letai.ru/template.LOGIN/" class="header__top-menu-items-link mod-with-icons mod-tatt-right-block-link gl__bg-hide">
+                                <a href="https://newlk.letai.ru/" class="header__top-menu-items-link mod-with-icons mod-tatt-right-block-link gl__bg-hide">
                                     <svg width="20" height="20" aria-hidden="true" class="header__top-menu-items-link-icon mod-tatt-person-lk">
                                         <use xlink:href="#person-tatt"></use>
                                     </svg>

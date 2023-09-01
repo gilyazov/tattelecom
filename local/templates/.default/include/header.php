@@ -50,7 +50,7 @@
                                         <use xlink:href="#geolocation"></use>
                                     </svg><?=$_SESSION['city']['name']?>
                                 </a>
-                                <a href="https://lk.letai.ru/template.LOGIN/" target="_blank" class="header__top-menu-items-link mod-with-icons">
+                                <a href="https://newlk.letai.ru/" target="_blank" class="header__top-menu-items-link mod-with-icons">
                                     <svg width="20" height="20" aria-hidden="true" class="header__top-menu-items-link-icon">
                                         <use xlink:href="#lk"></use>
                                     </svg>
@@ -112,7 +112,7 @@
 
                     <div class="header__bottom-block-right gl__bg-show">
                         <div class="header__btns-container">
-                            <a href="https://lk.letai.ru/template.LOGIN/" target="_blank" class="header__bottom-btn header__btn-lk">
+                            <a href="https://newlk.letai.ru/" target="_blank" class="header__bottom-btn header__btn-lk">
                                 <svg width="30" height="30" aria-hidden="true" class="header__btn-lk-icon">
                                     <use xlink:href="#lk"></use>
                                 </svg>

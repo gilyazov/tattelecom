@@ -36,7 +36,15 @@ return array(
             'type' => 'text',
         ),
 	),
-    'groups' => array(
-
-    ),
+    'style' => [
+        'block' => [
+            'type' => [],
+        ],
+        'nodes' => [
+            '.services__item-wrapper' => [
+                'name' => 'Скрыть кнопку',
+                'type' => ['display-bx']
+            ],
+        ],
+    ]
 );
