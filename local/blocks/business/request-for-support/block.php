@@ -37,7 +37,7 @@
                         "STATUS_NEW" => "N",
                         "USER_MESSAGE_ADD" => "",
                         "USER_MESSAGE_EDIT" => "",
-                        "USE_CAPTCHA" => "N"
+                        "USE_CAPTCHA" => "Y"
                     )
                 );?>
             </div>

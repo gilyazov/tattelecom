@@ -29,15 +29,15 @@
                     "MAX_LEVELS" => "100000",
                     "MAX_USER_ENTRIES" => "100000",
                     "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-                    "PROPERTY_CODES" => ["NAME", "174", "175"],
-                    "PROPERTY_CODES_REQUIRED" => ["NAME", "174"],
+                    "PROPERTY_CODES" => ["NAME", "174", "175", "220"],
+                    "PROPERTY_CODES_REQUIRED" => ["NAME", "174", "220"],
                     "RESIZE_IMAGES" => "N",
                     "SEF_MODE" => "N",
                     "STATUS" => "ANY",
                     "STATUS_NEW" => "N",
                     "USER_MESSAGE_ADD" => "",
                     "USER_MESSAGE_EDIT" => "",
-                    "USE_CAPTCHA" => "N",
+                    "USE_CAPTCHA" => "Y",
                     "FORM_CLASS" => "b-request-for-connection__form mod-4-in-row"
                 )
             );?>

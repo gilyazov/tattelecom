@@ -24,6 +24,15 @@ return array(
             'name' => "Текст под заголовком формы",
             'type' => 'text',
         ),
+        'bitrix:iblock.element.add.form' => array(
+            'type' => 'component',
+            'extra' => array(
+                'editable' => array(
+                    'IBLOCK_ID' => [],
+                    'USE_CAPTCHA' => [],
+                )
+            )
+        )
     ),
 //    'attrs' => array(
 //        '.b-fractional-slider__slide-card' => array(

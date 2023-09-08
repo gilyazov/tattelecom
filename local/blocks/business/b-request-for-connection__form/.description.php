@@ -19,7 +19,16 @@ return array(
         '.b-request-for-connection__form-title' => [
             'name' => 'Заголовок',
             'type' => 'text'
-        ]
+        ],
+        'bitrix:iblock.element.add.form' => array(
+            'type' => 'component',
+            'extra' => array(
+                'editable' => array(
+                    'IBLOCK_ID' => [],
+                    'USE_CAPTCHA' => [],
+                )
+            )
+        )
     ),
     'style' => array(
 

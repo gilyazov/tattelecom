@@ -1,7 +1,7 @@
 <section class="b-request-for-connection gl__section">
     <div class="gl__page-content">
         <div class="b-request-for-connection__content">
-            <h3 class="b-request-for-connection__form-title">Оставить заявку на подключение</h3>
+			<h3 class="b-request-for-connection__form-title">Оставить заявку на подключение</h3>
             <span class="b-request-for-connection__form-label">Наши специалисты помогут подобрать решения, отталкиваясь от ваших бизнес-потребностей</span>
 
             <?$APPLICATION->IncludeComponent(
@@ -37,7 +37,7 @@
                     "STATUS_NEW" => "N",
                     "USER_MESSAGE_ADD" => "",
                     "USER_MESSAGE_EDIT" => "",
-                    "USE_CAPTCHA" => "N",
+                    "USE_CAPTCHA" => "Y",
                     "FORM_CLASS" => "b-request-for-connection__form mod-4-in-row"
                 )
             );?>

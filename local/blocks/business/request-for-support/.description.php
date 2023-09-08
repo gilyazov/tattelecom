@@ -142,6 +142,7 @@ return array(
             'extra' => array(
                 'editable' => array(
                     'IBLOCK_ID' => [],
+                    'USE_CAPTCHA' => [],
                 )
             )
         )
