@@ -357,22 +357,12 @@ if ($arResult["MESSAGE"] <> ''):?>
                         endswitch;?>
             <?endforeach;?>
 
-        <?if($arParams["USE_CAPTCHA"] == "Y" && $arParams["ID"] <= 0):?>
-                <tr>
-                    <td><?=GetMessage("IBLOCK_FORM_CAPTCHA_TITLE")?></td>
-                    <td>
-                        <input type="hidden" name="captcha_sid" value="<?=$arResult["CAPTCHA_CODE"]?>" />
-                        <img src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["CAPTCHA_CODE"]?>" width="180" height="40" alt="CAPTCHA" />
-                    </td>
-                </tr>
-                <tr>
-                    <td><?=GetMessage("IBLOCK_FORM_CAPTCHA_PROMPT")?><span class="starrequired">*</span>:</td>
-                    <td><input type="text" name="captcha_word" maxlength="50" value=""></td>
-                </tr>
-            <?endif?>
     <?endif?>
     <div class="callback__form-input-wrap-b">
-        <p class="modal__required-text">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+        <p class="modal__required-text">
+            Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+            <br> Защита от спама reCAPTCHA <a href="https://policies.google.com/privacy?hl=ru" target="_blank">Конфиденциальность</a> и <a href="https://policies.google.com/terms?hl=ru" target="_blank">Условия использования</a>.
+        </p>
     </div>
 
     <input type="hidden" name="iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
