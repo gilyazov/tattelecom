@@ -1,4 +1,4 @@
-<section class="teams">
+<section class="teams" id="winners">
     <div class="teams__content">
         <h2 class="teams__heading">
             Победители соревнований

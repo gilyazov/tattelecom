@@ -13,12 +13,12 @@
             <div class="intro__date">
                 20-21 сентября Казань
             </div>
-            <a href="#participant" class="intro__link">
-                Список участников
+            <a href="#winners" class="intro__link">
+                Итоги соревнований
             </a>
-            <div class="intro__terms">
+            <!--<div class="intro__terms">
                 Прием заявок завершен!
-            </div>
+            </div>-->
         </div>
         <div class="intro__image-wrapper">
             <img src="/local/js/letai-racing/dist/images/intro-image.webp" alt="" class="intro__image">

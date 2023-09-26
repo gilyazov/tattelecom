@@ -30,6 +30,10 @@ return array(
             'type' => 'text',
         ),
 
+        '.cashback__slide-title div' => array(
+            'name' => 'Заголовок',
+            'type' => 'text',
+        ),
         '.cashback__slide-text' => array(
             'name' => 'Описание',
             'type' => 'text',
@@ -37,6 +41,10 @@ return array(
         '.cashback__slide-link' => array(
             'name' => 'Ссылка',
             'type' => 'link',
+        ),
+        '.cashback__slide-background' => array(
+            'name' => 'Фон',
+            'type' => 'img'
         ),
 	),
     'assets' => [
