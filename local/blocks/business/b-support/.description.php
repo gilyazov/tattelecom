@@ -16,10 +16,15 @@ return array(
 
     ),
     'nodes' => array(
-        '.b-support__contacts-block' => [
-            'name' => 'Контакты',
-            'type' => 'text'
-        ],
+        'bitrix:iblock.element.add.form' => array(
+            'type' => 'component',
+            'extra' => array(
+                'editable' => array(
+                    'IBLOCK_ID' => [],
+                    'USE_CAPTCHA' => [],
+                )
+            )
+        )
     ),
     'style' => array(
 
