@@ -1,4 +1,4 @@
-<section class="services">
+<section class="services" id="services">
     <div class="site-container">
         <h2 class="services__title title">Подключайте функции, которые вам необходимы</h2>
         <p class="services__desc">Для новых клиентов доступен тестовый период. 7 дней все функции Виртуальной АТС бесплатны, оплата только за исходящие звонки</p>
