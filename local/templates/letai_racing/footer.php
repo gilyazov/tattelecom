@@ -20,7 +20,8 @@ $assets->addAsset('landing_auto_font_scale');
 
 $APPLICATION->ShowProperty('FooterJS');
 ?>
-</main>
+
+
 <footer class="page-footer">
     <div class="page-footer__inner">
         <div class="page-footer__top-row">
