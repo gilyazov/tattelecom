@@ -171,7 +171,7 @@
             <div class="services-calculation__total">
                 <div class="services-calculation__title">ИТОГО<span class="services-calculation__total-number">0 ₽</span>
                 </div>
-                <a class="services-calculation__button button" href="/">Отправить заявку</a>
+                <a class="services-calculation__button button" href="#application">Отправить заявку</a>
             </div>
         </div>
     </div>

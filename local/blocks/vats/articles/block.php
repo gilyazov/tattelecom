@@ -2,54 +2,31 @@
     <div class="site-container">
         <div class="articles__inner">
             <h2 class="articles__title title">Полезные статьи</h2>
-            <div class="articles__swiper-wrapper">
-                <div class="articles__swiper">
-                    <ul class="swiper-wrapper">
-                        <li class="articles__swiper-item swiper-slide">
-                            <img class="articles__swiper-item-img" src="/local/js/vatc/assets/images/articles/img-2.jpg" alt="">
-                            <h3 class="articles__swiper-item-title">Видеоаналитика</h3>
-                            <p class="articles__swiper-item-desc">Искусственный интеллект для контроля и защиты бизнеса</p>
-                            <a class="articles__swiper-item-btn" href="#">Читать</a>
-                        </li>
-                        <li class="articles__swiper-item swiper-slide">
-                            <img class="articles__swiper-item-img" src="/local/js/vatc/assets/images/articles/img-2.jpg" alt="">
-                            <h3 class="articles__swiper-item-title">Видеоаналитика</h3>
-                            <p class="articles__swiper-item-desc">Искусственный интеллект для контроля и защиты бизнеса Искусственный интеллект для контроля и защиты бизнеса Искусственный интеллект для контроля и защиты бизнеса Искусственный интеллект для контроля и защиты бизнеса</p>
-                            <a class="articles__swiper-item-btn" href="#">Читать</a>
-                        </li>
-                        <li class="articles__swiper-item swiper-slide">
-                            <img class="articles__swiper-item-img" src="/local/js/vatc/assets/images/articles/img-2.jpg" alt="">
-                            <h3 class="articles__swiper-item-title">Видеоаналитика</h3>
-                            <p class="articles__swiper-item-desc">Искусственный интеллект для контроля и защиты бизнеса</p>
-                            <a class="articles__swiper-item-btn" href="#">Читать</a>
-                        </li>
-                        <li class="articles__swiper-item swiper-slide">
-                            <img class="articles__swiper-item-img" src="/local/js/vatc/assets/images/articles/img-2.jpg" alt="">
-                            <h3 class="articles__swiper-item-title">Видеоаналитика</h3>
-                            <p class="articles__swiper-item-desc">Искусственный интеллект для контроля и защиты бизнеса</p>
-                            <a class="articles__swiper-item-btn" href="#">Читать</a>
-                        </li>
-                        <li class="articles__swiper-item swiper-slide">
-                            <img class="articles__swiper-item-img" src="/local/js/vatc/assets/images/articles/img-2.jpg" alt="">
-                            <h3 class="articles__swiper-item-title">Видеоаналитика</h3>
-                            <p class="articles__swiper-item-desc">Искусственный интеллект для контроля и защиты бизнеса</p>
-                            <a class="articles__swiper-item-btn" href="#">Читать</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="articles__swiper-navigation">
-                    <div class="articles__swiper-navigation-prev">
-                        <svg class="icon icon-arrow-right" width="12px" height="12px">
-                            <use xlink:href="/local/js/vatc/assets/images/sprites/sprite-mono.svg#arrow-right"></use>
-                        </svg>
-                    </div>
-                    <div class="articles__swiper-navigation-next">
-                        <svg class="icon icon-arrow-right" width="12px" height="12px">
-                            <use xlink:href="/local/js/vatc/assets/images/sprites/sprite-mono.svg#arrow-right"></use>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+
+            <?php $APPLICATION->IncludeComponent(
+                "bitrix:news.list",
+                "articles__swiper-wrapper",
+                Array(
+                    "IBLOCK_TYPE" => "buisness",
+                    "IBLOCK_ID" => "10",
+                    "NEWS_COUNT" => "",
+                    "SORT_BY1" => "SORT",
+                    "SORT_ORDER1" => "ASC",
+                    "SORT_BY2" => "ACTIVE_FROM",
+                    "SORT_ORDER2" => "DESC",
+                    "FILTER_NAME" => "",
+                    "FIELD_CODE" => Array("ID", "NAME", "PREVIEW_TEXT", "PREVIEW_PICTURE"),
+                    "PROPERTY_CODE" => Array(),
+                    "CHECK_DATES" => "N",
+                    "DETAIL_URL" => "/articles/#ELEMENT_CODE#/",
+                    "PREVIEW_TRUNCATE_LEN" => "",
+                    "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                    "SET_TITLE" => "N",
+                    "PAGER_TEMPLATE" => "",
+                    "DISPLAY_TOP_PAGER" => "N",
+                    "DISPLAY_BOTTOM_PAGER" => "N"
+                )
+            );?>
         </div>
     </div>
 </section>

@@ -1,21 +1,44 @@
-<section class="application">
+<section class="application" id="application">
     <div class="site-container">
         <div class="application__inner">
             <h2 class="application__title title">Оставьте заявку</h2>
-            <form class="application__form form" action="" data-need-validation>
-                <div class="input js-validation-wrapper">
-                    <input class="input__control" type="text" placeholder="Как к Вам обращаться?" required>
-                </div>
-                <div class="input js-validation-wrapper">
-                    <input class="input__control js-phone-mask" type="text" placeholder="+7(___)___-__-__" required>
-                </div>
-                <div class="cheackbox">
-                    <input class="visually-hidden" type="checkbox" id="checkbox-1" required>
-                    <label class="checkbox__container" for="checkbox-1"><span class="checkbox__control">Отправляя заявку, я соглашаюсь на обработку персональных данных</span>
-                    </label>
-                </div>
-                <button class="form__button button" type="submit">Отправить заявку</button>
-            </form>
+
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:iblock.element.add.form",
+                "application__form",
+                Array(
+                    "CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
+                    "CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
+                    "CUSTOM_TITLE_DETAIL_PICTURE" => "",
+                    "CUSTOM_TITLE_DETAIL_TEXT" => "",
+                    "CUSTOM_TITLE_IBLOCK_SECTION" => "",
+                    "CUSTOM_TITLE_NAME" => "Как к Вам обращаться?",
+                    "CUSTOM_TITLE_PREVIEW_PICTURE" => "",
+                    "CUSTOM_TITLE_PREVIEW_TEXT" => "",
+                    "CUSTOM_TITLE_TAGS" => "",
+                    "DEFAULT_INPUT_SIZE" => "30",
+                    "DETAIL_TEXT_USE_HTML_EDITOR" => "N",
+                    "ELEMENT_ASSOC" => "CREATED_BY",
+                    "GROUPS" => array("2"),
+                    "IBLOCK_ID" => "67",
+                    "IBLOCK_TYPE" => "forms",
+                    "LEVEL_LAST" => "Y",
+                    "LIST_URL" => "",
+                    "MAX_FILE_SIZE" => "0",
+                    "MAX_LEVELS" => "100000",
+                    "MAX_USER_ENTRIES" => "100000",
+                    "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
+                    "PROPERTY_CODES" => ["NAME", "299"],
+                    "PROPERTY_CODES_REQUIRED" => ["NAME", "299"],
+                    "RESIZE_IMAGES" => "N",
+                    "SEF_MODE" => "N",
+                    "STATUS" => "ANY",
+                    "STATUS_NEW" => "N",
+                    "USER_MESSAGE_ADD" => "",
+                    "USER_MESSAGE_EDIT" => "",
+                    "USE_CAPTCHA" => "N"
+                )
+            );?>
         </div>
     </div>
 </section>

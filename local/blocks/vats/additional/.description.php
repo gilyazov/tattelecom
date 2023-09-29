@@ -12,8 +12,39 @@ return array(
         'section' => ['Tattelecom', 'content'],
 	),
     'cards' => [
-
+        '.additional__list-item' => [
+            'name' => 'Услуга',
+            'label' => [
+                '.additional__list-item-title'
+            ]
+        ]
     ],
-	'nodes' => array(),
+	'nodes' => [
+        '.additional__title' => array(
+            'name' => 'Заголовок',
+            'type' => 'text',
+            'textOnly' => true
+        ),
+
+        '.additional__list-item-title' => array(
+            'name' => 'Заголовок',
+            'type' => 'text',
+            'textOnly' => true
+        ),
+        '.additional__list-item-desc' => array(
+            'name' => 'Описание',
+            'type' => 'text',
+            'textOnly' => true
+        ),
+        '.additional__list-item-price' => array(
+            'name' => 'Цена',
+            'type' => 'text'
+        ),
+        '.additional__list-item-date' => array(
+            'name' => 'Период',
+            'type' => 'text',
+            'textOnly' => true
+        )
+    ],
     'groups' => array()
 );

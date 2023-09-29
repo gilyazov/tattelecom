@@ -12,8 +12,24 @@ return array(
         'section' => ['Tattelecom', 'content'],
 	),
     'cards' => [
-
+        '.swiper-slide' => [
+            'name' => 'Слайд',
+            'label' => [
+                '.worked-better__swaper-item-text'
+            ]
+        ]
     ],
-	'nodes' => array(),
+	'nodes' => [
+        '.worked-better__swaper-item-text' => array(
+            'name' => 'Заголовок',
+            'type' => 'text',
+            'textOnly' => true
+        ),
+        '.worked-better__swaper-item-img' => array(
+            'name' => 'Слайд',
+            'type' => 'img',
+            'dimensions' => array('maxWidth' => 800, 'maxHeight' => 500)
+        ),
+    ],
     'groups' => array()
 );

@@ -42,7 +42,7 @@ class Element
     public static function OnAfterIBlockElementAddHandler(&$arFields)
     {
         $iblockMailTemplate = [
-//            45 => 32,
+            45 => 32,
             62 => 33,
             63 => 35,
             66 => 36

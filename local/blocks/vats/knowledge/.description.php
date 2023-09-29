@@ -19,6 +19,11 @@ return array(
             'type' => 'text',
             'name' => 'Заголовок',
             'textOnly' => true
+        ],
+
+        '.knowledge__link' => [
+            'type' => 'link',
+            'name' => 'Кнопка'
         ]
     ),
     'groups' => array()
