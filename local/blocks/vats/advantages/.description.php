@@ -12,8 +12,14 @@ return array(
         'section' => ['Tattelecom', 'content'],
 	),
     'cards' => [
-        '.advantages__list-column' => [
-            'name' => 'Преимущество',
+        '.landing-node-first' => [
+            'name' => 'Преимущество слева',
+            'label' => [
+                '.advantages__list-item-title'
+            ]
+        ],
+        '.landing-node-second' => [
+            'name' => 'Преимущество справа',
             'label' => [
                 '.advantages__list-item-title'
             ]

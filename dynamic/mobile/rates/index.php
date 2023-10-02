@@ -86,7 +86,7 @@ $APPLICATION->SetDirProperty("dynamic", "Y");
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_BASE_LINK_ENABLE" => "N",
-		"SET_STATUS_404" => "N",
+		"SET_STATUS_404" => "Y",
 		"SHOW_404" => "N",
 		"MESSAGE_404" => "",
 		"SEF_URL_TEMPLATES" => array(

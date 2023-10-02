@@ -3,7 +3,7 @@
         <h2 class="advantages__title title">Преимущества Виртуальной АТС</h2>
         <ul class="advantages__list js-accordions">
             <li class="advantages__list-column">
-                <div class="advantages__list-item js-accordion">
+                <div class="landing-node-first advantages__list-item js-accordion">
                     <div class="advantages__list-item-contain js-accordion-btn">
                         <img class="advantages__list-item-icon" src="/local/js/vatc/assets/images/advantages/icon-1.svg" alt="">
                         <div class="advantages__list-item-title">Централизованная система управления вызовами</div>
@@ -15,7 +15,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="advantages__list-item js-accordion">
+                <div class="landing-node-first advantages__list-item js-accordion">
                     <div class="advantages__list-item-contain js-accordion-btn">
                         <img class="advantages__list-item-icon" src="/local/js/vatc/assets/images/advantages/icon-3.svg" alt="">
                         <div class="advantages__list-item-title">Встроенная система отчетности</div>
@@ -29,7 +29,7 @@
                 </div>
             </li>
             <li class="advantages__list-column">
-                <div class="advantages__list-item js-accordion">
+                <div class="landing-node-second advantages__list-item js-accordion">
                     <div class="advantages__list-item-contain js-accordion-btn">
                         <img class="advantages__list-item-icon" src="/local/js/vatc/assets/images/advantages/icon-2.svg" alt="">
                         <div class="advantages__list-item-title">Удобная система голосового меню</div>
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="advantages__list-item js-accordion">
+                <div class="landing-node-second advantages__list-item js-accordion">
                     <div class="advantages__list-item-contain js-accordion-btn">
                         <img class="advantages__list-item-icon" src="/local/js/vatc/assets/images/advantages/icon-4.svg" alt="">
                         <div class="advantages__list-item-title">Интеграция с CRM</div>

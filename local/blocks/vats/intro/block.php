@@ -17,8 +17,8 @@
             <h1 class="intro__title">Виртуальная АТС<br>для повышения продаж и управления звонками</h1>
             <p class="intro__desc">Современное решение для организации телефонной связи в бизнесе</p>
             <div class="intro__btns">
-                <a class="intro__btn button" href="#application">Отправить заявку</a>
-                <a class="intro__btn button button--white" href="#services">Подключить самому</a>
+                <a class="intro__btn button landing-node-order" href="#application">Отправить заявку</a>
+                <a class="intro__btn button button--white landing-node-self" href="#services">Подключить самому</a>
             </div>
         </div>
     </div>
