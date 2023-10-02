@@ -14,6 +14,17 @@ return array(
     'cards' => [
 
     ],
-	'nodes' => array(),
+	'nodes' => array(
+        '.description__title' => array(
+            'name' => 'Заголовок',
+            'type' => 'text',
+            'textOnly' => true
+        ),
+        '.description__desc' => array(
+            'name' => 'Описание',
+            'type' => 'text',
+            'textOnly' => true
+        ),
+    ),
     'groups' => array()
 );

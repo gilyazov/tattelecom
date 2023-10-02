@@ -12,8 +12,25 @@ return array(
         'section' => ['Tattelecom', 'content'],
 	),
     'cards' => [
-
+        '.brands__list-item' => [
+            'name' => 'Бренд',
+            'label' => [
+                '.brands__list-item-img'
+            ]
+        ]
     ],
-	'nodes' => array(),
+	'nodes' => array(
+        '.brands__title' => array(
+            'name' => 'Заголовок',
+            'type' => 'text',
+            'textOnly' => true
+        ),
+
+        '.brands__list-item-img' => array(
+            'name' => 'Лого',
+            'type' => 'img',
+            'dimensions' => array('maxWidth' => 350, 'maxHeight' => 100)
+        ),
+    ),
     'groups' => array()
 );
