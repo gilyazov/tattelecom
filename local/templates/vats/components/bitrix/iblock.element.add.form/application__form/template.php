@@ -209,6 +209,7 @@ if ($arResult["MESSAGE"] <> ''):?>
                                     $code = $arResult["PROPERTY_LIST_FULL"][$propertyID]["CODE"];
 
                                     $type = "text";
+                                    $mask = "";
                                     if ($code == "PHONE"){
                                         $mask = " js-phone-mask";
                                         $type = "tel";

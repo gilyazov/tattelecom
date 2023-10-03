@@ -45,9 +45,10 @@ class Element
             45 => 32,
             62 => 33,
             63 => 35,
-            66 => 36
+            66 => 36,
+            67 => 32,
         ];
-        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63, 66])) {
+        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63, 66, 67])) {
             global $APPLICATION;
             $APPLICATION->RestartBuffer();
         }
@@ -84,7 +85,7 @@ class Element
             ));
         }
 
-        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63, 66])) {
+        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63, 66, 67])) {
             echo \Bitrix\Main\Web\Json::encode(['ID' => $arFields['ID']]);
             die();
         }
