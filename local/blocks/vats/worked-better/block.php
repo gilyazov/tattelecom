@@ -1,6 +1,8 @@
 <section class="worked-better">
     <div class="site-container">
-        <h2 class="worked-better__title">Мы сделали так, чтобы<br>Вы <span>работали лучше</span></h2>
+        <h2 class="worked-better__title">
+            Простое управление через<br>мобильное приложение или личный кабинет
+        </h2>
         <div class="worked-better__swiper-wrapper">
             <div class="worked-better__swiper">
                 <div class="swiper-wrapper">

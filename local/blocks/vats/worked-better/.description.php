@@ -28,7 +28,7 @@ return array(
         '.worked-better__swaper-item-img' => array(
             'name' => 'Слайд',
             'type' => 'img',
-            'dimensions' => array('maxWidth' => 800, 'maxHeight' => 500)
+//            'dimensions' => array('maxWidth' => 800, 'maxHeight' => 500)
         ),
     ],
     'groups' => array()

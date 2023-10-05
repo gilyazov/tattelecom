@@ -1,4 +1,4 @@
-<section class="questions">
+<section class="questions" id="questions">
     <div class="site-container">
         <h2 class="questions__title title">Часто задаваемые вопросы</h2>
         <ul class="questions__list js-accordions">
