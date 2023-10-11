@@ -8,7 +8,7 @@ use \Bitrix\Main\Localization\Loc;
 
 return array(
 	'block' => array(
-		'name' => 'Шапка',
+		'name' => 'Шапка My',
         'section' => ['Tattelecom', 'template'],
 		'dynamic' => false,
 	),
