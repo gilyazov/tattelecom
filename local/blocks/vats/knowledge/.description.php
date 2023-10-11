@@ -18,7 +18,7 @@ return array(
         '.knowledge__title' => [
             'type' => 'text',
             'name' => 'Заголовок',
-            'textOnly' => true
+            'textOnly' => false
         ],
 
         '.knowledge__link' => [

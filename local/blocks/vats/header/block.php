@@ -2,7 +2,7 @@
     <div class="site-container">
         <div class="header__inner">
             <a class="header__logo" href="<?=SITE_DIR?>">
-                <img class="header__logo-img" src="/local/js/vatc/assets/images/logo.svg" alt="Logo">
+                <img class="header__logo-img" src="/local/js/vatc/build/assets/images/logo.svg" alt="Logo">
             </a>
             <nav class="nav header__nav">
                 <ul class="nav__list">
@@ -10,7 +10,7 @@
                         <a class="nav__list-link" href="#description">Что это</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#solutions">Задачи</a>
+                        <a class="nav__list-link" href="#services">Расчет тарифа</a>
                     </li>
                     <li class="nav__list-item">
                         <a class="nav__list-link" href="#advantages">Преимущества</a>
@@ -34,7 +34,7 @@
                         <a class="nav__list-link" href="#description">Что это</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#solutions">Задачи</a>
+                        <a class="nav__list-link" href="#services">Расчет тарифа</a>
                     </li>
                     <li class="nav__list-item">
                         <a class="nav__list-link" href="#advantages">Преимущества</a>

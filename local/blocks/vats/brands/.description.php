@@ -23,7 +23,7 @@ return array(
         '.brands__title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
 
         '.brands__list-item-img' => array(

@@ -28,12 +28,12 @@ return array(
         '.solutions__list-item-title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
         '.solutions__list-item-desc' => array(
             'name' => 'Описание',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
         '.solutions__list-item-icon' => array(
             'name' => 'Иконка',

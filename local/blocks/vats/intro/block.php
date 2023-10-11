@@ -2,13 +2,10 @@
     <div class="intro__swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img class="intro__swiper-img" src="/local/js/vatc/assets/images/intro/bg-img-1.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img class="intro__swiper-img" src="/local/js/vatc/assets/images/intro/bg-img-2.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img class="intro__swiper-img" src="/local/js/vatc/assets/images/intro/bg-img-3.jpg" alt="">
+                <picture>
+                    <source srcset="/local/js/vatc/build/assets/images/intro/bg-mobile-1.png" media="(max-width: 768px)">
+                    <img class="intro__swiper-img" src="/local/js/vatc/build/assets/images/intro/bg-img-1.jpg" alt="">
+                </picture>
             </div>
         </div>
     </div>

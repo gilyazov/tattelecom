@@ -23,18 +23,18 @@ return array(
         '.questions__title' => [
             'type' => 'text',
             'name' => 'Заголовок',
-            'textOnly' => true
+            'textOnly' => false
         ],
 
         '.questions__list-item-title' => [
             'type' => 'text',
             'name' => 'Вопрос',
-            'textOnly' => true
+            'textOnly' => false
         ],
         '.questions__list-item-content p' => [
             'type' => 'text',
             'name' => 'Ответ',
-            'textOnly' => true
+            'textOnly' => false
         ]
     ),
     'groups' => array()

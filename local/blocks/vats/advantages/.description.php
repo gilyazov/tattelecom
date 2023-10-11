@@ -29,18 +29,18 @@ return array(
         '.advantages__title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
 
         '.advantages__list-item-title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
         '.advantages__list-item-content p' => array(
             'name' => 'Описание',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
         '.advantages__list-item-icon' => array(
             'name' => 'Иконка',

@@ -23,18 +23,18 @@ return array(
         '.additional__title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
 
         '.additional__list-item-title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
         '.additional__list-item-desc' => array(
             'name' => 'Описание',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
         '.additional__list-item-price' => array(
             'name' => 'Цена',
@@ -43,7 +43,7 @@ return array(
         '.additional__list-item-date' => array(
             'name' => 'Период',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         )
     ],
     'groups' => array()

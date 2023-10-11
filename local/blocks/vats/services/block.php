@@ -16,7 +16,7 @@
             <div class="services-box__name">Расширенный функционал</div>
             <ul class="services-box__list">
                 <li class="services-box__item">
-                    <div class="services-box__item-title">Запись звонков</div>
+                    <div class="services-box__item-title">Записи звонков на 3 месяца</div>
                     <div class="services-box__item-tooltip">
                         <button class="services-box__item-tooltip-close-btn" type="button"><span></span><span></span>
                         </button>
@@ -31,10 +31,33 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="services-box__item-price">от 990 ₽</div>
+                    <div class="services-box__item-price">990 ₽</div>
                     <div class="switcher">
                         <input class="visually-hidden js-service-switcher" type="checkbox" id="s-1" name="swicher" value="990">
                         <label class="switcher__container" for="s-1"><span class="switcher__control"></span>
+                        </label>
+                    </div>
+                </li>
+                <li class="services-box__item">
+                    <div class="services-box__item-title">Записи звонков на 1 год</div>
+                    <div class="services-box__item-tooltip">
+                        <button class="services-box__item-tooltip-close-btn" type="button"><span></span><span></span>
+                        </button>
+                        <div class="services-box__item-tooltip-content">
+                            <h4>Запись звонков от 990 ₽</h4>
+                            <p>Повышение качества обслуживания и защита бизнеса от юридических рисков.</p>
+                            <ul>
+                                <li>Срок хранения записей — до 1 года.</li>
+                                <li>Срок хранения записей — до 1 года.</li>
+                                <li>Неограниченный объем хранилища.</li>
+                                <li>Выгрузка записей на ftp-сервер.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="services-box__item-price">1500 ₽</div>
+                    <div class="switcher">
+                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-1_1" name="swicher" value="1500">
+                        <label class="switcher__container" for="s-1_1"><span class="switcher__control"></span>
                         </label>
                     </div>
                 </li>
@@ -169,7 +192,7 @@
                 </div>
             </div>
             <div class="services-calculation__total">
-                <div class="services-calculation__title">ИТОГО<span class="services-calculation__total-number">0 ₽</span>
+                <div class="services-calculation__title">ИТОГО<span class="services-calculation__total-number">990 ₽</span>
                 </div>
                 <a class="services-calculation__button button" href="#application">Отправить заявку</a>
             </div>

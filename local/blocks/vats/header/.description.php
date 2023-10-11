@@ -12,8 +12,18 @@ return array(
         'section' => ['Tattelecom', 'template'],
 	),
     'cards' => [
-
+        /*'.nav__list-item' => [
+            'name' => 'Пункт меню',
+            'label' => [
+                '.nav__list-link'
+            ]
+        ]*/
     ],
-	'nodes' => array(),
+	'nodes' => array(
+        /*'.nav__list-link' => array(
+            'name' => 'Ссылка',
+            'type' => 'link'
+        ),*/
+    ),
     'groups' => array()
 );

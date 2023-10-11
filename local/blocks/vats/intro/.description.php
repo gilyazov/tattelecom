@@ -27,7 +27,7 @@ return array(
         '.intro__desc' => array(
             'name' => 'Описание',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
         '.landing-node-order' => array(
             'name' => 'Заявка',

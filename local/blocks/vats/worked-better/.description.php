@@ -23,7 +23,7 @@ return array(
         '.worked-better__swaper-item-text' => array(
             'name' => 'Заголовок',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
         '.worked-better__swaper-item-img' => array(
             'name' => 'Слайд',

@@ -18,12 +18,12 @@ return array(
         '.description__title' => array(
             'name' => 'Заголовок',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
         '.description__desc' => array(
             'name' => 'Описание',
             'type' => 'text',
-            'textOnly' => true
+            'textOnly' => false
         ),
     ),
     'groups' => array()
