@@ -12,7 +12,7 @@ class PhoneType extends CBitrixComponent
     private $configuration;
     private $httpClient;
 
-    protected function __construct($component = null)
+    public function __construct($component = null)
     {
         parent::__construct($component);
 

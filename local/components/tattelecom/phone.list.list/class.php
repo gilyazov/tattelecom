@@ -13,7 +13,7 @@ class PhoneList extends CBitrixComponent
     private $httpClient;
     private $type;
 
-    protected function __construct($component = null)
+    public function __construct($component = null)
     {
         parent::__construct($component);
 

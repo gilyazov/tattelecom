@@ -3,8 +3,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 ?>
 
 <form class="rates-internet-application__form js-internet-connect-form" data-need-validation data-parsley-validate data-parsley-focus="none">
-    <div class="gl__title">Заявка на подключение</div>
-    <div class="rates-internet-application__form-subtitle">Проверьте возможность подключения по вашему адресу:</div>
+    <div class="gl__title">Проверьте возможность подключения по вашему адресу</div>
+    <div class="rates-internet-application__form-subtitle">Пожалуйста, введите точный адрес вашего дома:</div>
     <div class="rates-internet-application__form-controls">
         <input type="hidden" name="uuid" value="">
         <label class="gl-input__wrapper js-input-text">
