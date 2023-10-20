@@ -21,6 +21,14 @@ return [
                 ['name' => '<span class="landing-ui-button-desktop"></span>', 'value' => 'gl__visually-hidden']
             ],
         ],
+        'swiper-no-swiping' => [
+            'name' => "Запрет на свайп",
+            'property' => 'display',
+            'type' => 'display',
+            'items' => [
+                ['name' => '<span class="landing-ui-button-desktop"></span>', 'value' => 'swiper-no-swiping']
+            ],
+        ],
         'order-change' => [
             'name' => "Сменить прядок блоков",
             'property' => 'display',

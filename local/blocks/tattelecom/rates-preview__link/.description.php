@@ -74,6 +74,10 @@ return array(
                 'name' => 'Скрыть кнопку',
                 'type' => ['display-bx', 'modal-show']
             ],
+            '.swiper-slide' => [
+                'name' => 'Запрет свайпа',
+                'type' => ['swiper-no-swiping']
+            ],
         ],
     ]
 );
