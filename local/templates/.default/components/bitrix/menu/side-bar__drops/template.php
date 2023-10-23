@@ -8,7 +8,11 @@
 
         <?if ($previousLevel && $arItem["DEPTH_LEVEL"] < $previousLevel):?>
             <?if ($arItem['DEPTH_LEVEL'] == 1):?>
-                </ul></div></li>
+                <?if($previousLevel == 3):?>
+                    </ul></li> </ul></div></li>
+                <?else:?>
+                    </ul></div></li>
+                <?endif;?>
                 <?//=str_repeat("</ul></div></li>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
             <?else:?>
                 <?//=($previousLevel . ' ' . $arItem['DEPTH_LEVEL'])?>
@@ -66,7 +70,8 @@
     <?endforeach?>
 
     <?if ($previousLevel > 1)://close last item tags?>
-        <?=str_repeat("</ul></li>", ($previousLevel-1) );?>
+        <!--222--></ul></li> </ul></div></li>
+        <?//=str_repeat("</ul></li>", ($previousLevel-1) );?>
     <?endif?>
     </ul>
 <?endif?>
