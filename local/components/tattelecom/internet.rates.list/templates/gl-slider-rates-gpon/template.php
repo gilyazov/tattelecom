@@ -126,7 +126,7 @@ $this->setFrameMode(true);
 <!--                                --><?//var_dump($ITEM["PROPERTIES"]["BENEFITS"]);?>
                                 <?foreach ($ITEM["PROPERTIES"]["BENEFITS"]["VALUE"] as $benefit):?>
                                     <li class="rates-list-internet__item-proposal">
-                                        <img src="<?=BUILD_PATH?>img/promo-gpon-page/<?=$benefit["SUB_VALUES"]["BENEFITS_I"]["VALUE_XML_ID"]?>.svg" alt="" class="rates-list-internet__item-proposal-img">
+                                        <img src="<?=BUILD_PATH?>img/rates-internet-list-page/<?=$benefit["SUB_VALUES"]["BENEFITS_I"]["VALUE_XML_ID"]?>.svg" alt="" class="rates-list-internet__item-proposal-img">
                                         <div>
                                             <div class="gpon-rates-list__caption"><?=$benefit["SUB_VALUES"]["BENEFITS_V"]["VALUE"]?></div>
 <!--                                            <div class="gpon-rates-list__caption-value">телеканалов</div>-->
@@ -138,9 +138,9 @@ $this->setFrameMode(true);
                         </div>
                         <div class="rates-list-internet__item-down">
                             <div class="rates-list-internet__item-price-wrapper">
-                                <?if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
+                                <?if($ITEM["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
                                     <div class="rates-list__slide-old-price">
-                                        <?=$arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span>₽/мес</span>
+                                        <?=$ITEM["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span>₽/мес</span>
                                     </div>
                                 <?endif;?>
                                 <div class="rates-list-internet__item-price">
