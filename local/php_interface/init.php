@@ -1,4 +1,4 @@
-<?
+<?php
 //include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/wsrubi.smtp/classes/general/wsrubismtp.php");
 
 define ("BUILD_PATH", '/local/js/template/tattelecom/');
