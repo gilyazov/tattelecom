@@ -93,9 +93,9 @@
                             <p>Сводка ключевых показателей: входящие, исходящие и непринятые звонки с детализацией по сотрудникам.</p>
                         </div>
                     </div>
-                    <div class="services-box__item-price">800 ₽</div>
+                    <div class="services-box__item-price">500 ₽</div>
                     <div class="switcher">
-                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-3" name="swicher" value="800">
+                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-3" name="swicher" value="500">
                         <label class="switcher__container" for="s-3"><span class="switcher__control"></span>
                         </label>
                     </div>

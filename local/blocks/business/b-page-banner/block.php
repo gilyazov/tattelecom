@@ -3,7 +3,7 @@
         <h2 class="gl__title">Красивый номер</h2>
         <div class="b-page-banner__content">
             <picture>
-<!--                <source srcset="/local/js/template/tattelecom-1/img/common/b-page-banners/b-beautiful-phone--mobile.jpg" media="(max-width: 768px)">-->
+                <source srcset="/local/js/template/tattelecom-1/img/common/b-page-banners/b-beautiful-phone--mobile.jpg" media="(max-width: 768px)">
                 <img class="b-page-banner__image" src="/local/js/template/tattelecom-1/img/common/b-page-banners/b-beautiful-phone.jpg" alt="Красивый номер">
             </picture>
             <div class="b-page-banner__text">

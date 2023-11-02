@@ -25,6 +25,11 @@ return array(
             'name' => 'Заголовок мобильной версии',
             'type' => 'text'
         ],
+        '.b-page-banner__mobile-label' => [
+            'name' => 'Описание мобильной версии',
+            'type' => 'text'
+        ],
+
         '.b-page-banner__accent-title' => [
             'name' => 'Заголовок в десктопе',
             'type' => 'text'
@@ -38,7 +43,11 @@ return array(
             'type' => 'img'
         ],
     ),
-    'style' => array(
-
+    'attrs' => array(
+        'source' => array(
+            'name' => "Картинка в мобиле",
+            'type' => 'text',
+            'attribute' => 'srcset',
+        ),
     ),
 );
