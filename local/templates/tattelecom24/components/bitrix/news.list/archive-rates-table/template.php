@@ -33,7 +33,7 @@ $this->setFrameMode(true);
                 ?>
                 <li class="numbered-list__item numbered-list__container" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
                     <span><?=$arItem["NAME"]?></span>
-                    <a href="<?=$arFile["SRC"]?>"><?=$fileExtension?>, <?=CFile::FormatSize($arFile['FILE_SIZE'])?></a>
+                    <a href="<?=$arFile["SRC"]?>" target="_blank"><?=$fileExtension?>, <?=CFile::FormatSize($arFile['FILE_SIZE'])?></a>
                 </li>
             <?endforeach;?>
         </ul>
