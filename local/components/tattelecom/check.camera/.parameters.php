@@ -5,7 +5,11 @@ $arComponentParameters = array(
 	"GROUPS" => array(
 	),
 	"PARAMETERS" => array(
-
+        "TITLE" => array(
+            "PARENT" => "PARAMS",
+            "TYPE" => "TEXT",
+            "NAME" => "Заголовок"
+        ),
 	),
 );
 ?>

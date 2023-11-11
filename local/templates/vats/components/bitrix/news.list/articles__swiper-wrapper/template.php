@@ -32,12 +32,12 @@ $this->setFrameMode(true);
     <div class="articles__swiper-navigation">
         <div class="articles__swiper-navigation-prev">
             <svg class="icon icon-arrow-right" width="12px" height="12px">
-                <use xlink:href="/local/js/vatc/assets/images/sprites/sprite-mono.svg#arrow-right"></use>
+                <use xlink:href="/local/js/vatc/build/assets/images/sprites/sprite-mono.svg#arrow-right"></use>
             </svg>
         </div>
         <div class="articles__swiper-navigation-next">
             <svg class="icon icon-arrow-right" width="12px" height="12px">
-                <use xlink:href="/local/js/vatc/assets/images/sprites/sprite-mono.svg#arrow-right"></use>
+                <use xlink:href="/local/js/vatc/build/assets/images/sprites/sprite-mono.svg#arrow-right"></use>
             </svg>
         </div>
     </div>

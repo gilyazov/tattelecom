@@ -2,7 +2,9 @@
     <?$APPLICATION->IncludeComponent(
         "tattelecom:check.camera",
         "",
-        [],
+        [
+            "TITLE" => "Проверить установленные камеры в моем дворе"
+        ],
         false
     );?>
 </div>

@@ -16,7 +16,14 @@ return array(
 
     ),
     'nodes' => array(
-
+        "tattelecom:check.camera" => array(
+            'type' => 'component',
+            'extra' => array(
+                'editable' => array(
+                    'TITLE' => array()
+                )
+            )
+        )
     ),
     'style' => array(
 

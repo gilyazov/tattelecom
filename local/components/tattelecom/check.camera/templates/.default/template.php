@@ -1,9 +1,10 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+/** @var array $arParams */
 ?>
 
 <form class="rates-internet-application__form js-internet-connect-form" data-need-validation data-parsley-validate data-parsley-focus="none">
-    <div class="gl__title">Проверить установленные камеры в моем дворе</div>
+    <div class="gl__title"><?=$arParams["TITLE"]?></div>
     <!--<div class="rates-internet-application__form-subtitle">Проверьте возможность подключения по вашему адресу:</div>-->
     <div class="rates-internet-application__form-controls">
         <input type="hidden" name="uuid" value="">
