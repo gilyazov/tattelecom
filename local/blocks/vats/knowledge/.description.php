@@ -24,6 +24,10 @@ return array(
         '.knowledge__link' => [
             'type' => 'link',
             'name' => 'Кнопка'
+        ],
+        '.knowledge__button' => [
+            'type' => 'link',
+            'name' => 'Скачать презентацию'
         ]
     ),
     'groups' => array()

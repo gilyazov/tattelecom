@@ -16,7 +16,7 @@
                         <a class="nav__list-link" href="#advantages">Преимущества</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#questions">База знаний</a>
+                        <a class="nav__list-link" href="https://help.vats.letai.ru/" target="_blank" rel="nofollow">База знаний</a>
                     </li>
                 </ul>
             </nav>
@@ -40,7 +40,7 @@
                         <a class="nav__list-link" href="#advantages">Преимущества</a>
                     </li>
                     <li class="nav__list-item">
-                        <a class="nav__list-link" href="#tariffs">Тарифы</a>
+                        <a class="nav__list-link" href="https://help.vats.letai.ru/" target="_blank" rel="nofollow">База знаний</a>
                     </li>
                 </ul>
             </nav>
