@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     }
 
                                     window.openThanksModal('#modal-thanks');
+                                    onloadCallbackRecap(); // обновим токен капчи
                                 }
                             }
                         }, function (response){
