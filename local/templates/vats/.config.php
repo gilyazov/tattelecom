@@ -16,11 +16,11 @@ foreach ($jsConfig as $code => $ext)
 
 return [
     'js_core_public' => [
-        'vatc.assets',
+        'vatc.build',
         'landing_core'
     ],
     'js_core_edit' => [
-        'vatc.assets',
+        'vatc.build',
         'landing_core_admin'
     ],
     'disable_namespace' => [],

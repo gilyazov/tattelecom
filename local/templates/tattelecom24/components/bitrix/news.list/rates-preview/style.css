@@ -1,0 +1,6 @@
+@media screen and (max-width: 767px){
+    .rates-preview__content .gl__main-btn.mod-white-grey{
+        background: var(--main-color);
+        color: #fff;
+    }
+}

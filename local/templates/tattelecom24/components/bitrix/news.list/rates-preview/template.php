@@ -27,7 +27,7 @@ $this->setFrameMode(true);
                         <div class="rates-preview__content-caption-wrapper">
                             <div class="rates-preview__content-caption"><?=$arItem["PROPERTIES"]["DESCRIPTION"]["VALUE"]?></div>
                         </div>
-                        <a href="<?=$arItem["PROPERTIES"]["LINK"]["VALUE"]?>" class="gl__main-btn rates-preview__btn">Подробнее</a>
+                        <a href="<?=$arItem["PROPERTIES"]["LINK"]["VALUE"]?>" class="gl__main-btn rates-preview__btn mod-red-btn <?=$arItem["PROPERTIES"]["BTN_COLOR"]["VALUE_XML_ID"]?>">Подробнее</a>
                     </div>
                     <div class="rates-preview__img-wrapper">
                         <img src="<?=\Tattelecom\Core\Tools::resizeImage($arItem["DETAIL_PICTURE"]["ID"], 1920, 470, true)?>" alt="" class="rates-preview__img">
