@@ -14,6 +14,11 @@ return array(
     'cards' => [
 
     ],
-	'nodes' => array(),
+	'nodes' => array(
+        '.apps__img' => array(
+            'name' => 'QR',
+            'type' => 'img'
+        ),
+    ),
     'groups' => array()
 );

@@ -17,3 +17,9 @@
 .js-swiper-custom .gl-slider__slider-btn.mod-next {
     right: 8rem;
 }
+@media screen and (max-width: 767px){
+    .rates-preview__content .gl__main-btn.mod-white-grey{
+        background: var(--main-color);
+        color: #fff;
+    }
+}

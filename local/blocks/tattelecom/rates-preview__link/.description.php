@@ -72,7 +72,7 @@ return array(
         'nodes' => [
             '.rates-preview__btn' => [
                 'name' => 'Скрыть кнопку',
-                'type' => ['display-bx', 'modal-show']
+                'type' => ['display-bx', 'modal-show', 'color-btn']
             ],
             '.swiper-slide' => [
                 'name' => 'Запрет свайпа',

@@ -70,6 +70,14 @@ return [
                 ['name' => 'g-color-white', 'value' => 'g-color-white'],
             ],
         ],
+        'color-btn' => [
+            'name' => 'Цвет кнопки',
+            'type' => 'list',
+            'items' => [
+                ['name' => 'Оранжевый', 'value' => 'mod-white-orange'],
+                ['name' => 'Белый', 'value' => 'mod-white-grey'],
+            ],
+        ],
 	],
 	'group' => [
 		// dont forget add new usage 'background' style in \Bitrix\Landing\Node\StyleImg::STYLES_WITH_IMAGE

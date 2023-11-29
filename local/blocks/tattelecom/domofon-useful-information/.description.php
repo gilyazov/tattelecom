@@ -52,5 +52,10 @@ return array(
             'dimensions' => array('maxWidth' => 420, 'maxHeight' => 350)
         ),
 
-	)
+	),
+    'assets' => [
+        'js' => [
+            BUILD_PATH . 'js/roaming-page.js'
+        ]
+    ]
 );
