@@ -34,6 +34,12 @@
             </div>
         </div>
     </section>
+    <section>
+        <div class="gl__page-content">
+            <h2 class="gl__title">О Роуминге</h2>
+            <div class="b-info__text">Мы продолжаем активно развивать собственную сеть на территории Республики Татарстан. За ее пределами у нас нет собственной сети. Но даже находясь за пределами домашнего региона, вы всегда сможете оставаться на связи, благодаря нашим партнерам-операторам.</div>
+        </div>
+    </section>
     <div class="js-menu-tab-content gl__menu-tab-content" data-menu="russia">
         <section class="pricing-plans" id="pricing-plans-host">
             <div class="gl__page-content">

@@ -6,22 +6,22 @@
         <ul class="support__messages-list">
             <li class="support__messages-item">
                 <a href="#" class="support__messages-link">
-                    <img src="/local/js/template/tattelecom-1/img/common/apps/wp.svg" alt="" class="support__messages-icon">
+                    <img src="/local/js/template/tattelecom/img/common/apps/wp.svg" alt="" class="support__messages-icon">
                 </a>
             </li>
             <li class="support__messages-item">
                 <a href="#" class="support__messages-link">
-                    <img src="/local/js/template/tattelecom-1/img/common/apps/telegram.svg" alt="" class="support__messages-icon">
+                    <img src="/local/js/template/tattelecom/img/common/apps/telegram.png" alt="" class="support__messages-icon">
                 </a>
             </li>
             <li class="support__messages-item">
                 <a href="#" class="support__messages-link">
-                    <img src="/local/js/template/tattelecom-1/img/common/apps/vk.svg" alt="" class="support__messages-icon">
+                    <img src="/local/js/template/tattelecom/img/common/apps/vk.png" alt="" class="support__messages-icon">
                 </a>
             </li>
             <li class="support__messages-item">
                 <a href="#" class="support__messages-link">
-                    <img src="/local/js/template/tattelecom-1/img/common/apps/facebook.svg" alt="" class="support__messages-icon">
+                    <img src="/local/js/template/tattelecom/img/common/apps/facebook.svg" alt="" class="support__messages-icon">
                 </a>
             </li>
         </ul>
