@@ -1,11 +1,14 @@
 <header class="header">
     <div class="site-container">
         <div class="header__inner">
-            <a class="header__logo" href="<?=SITE_DIR?>">
+            <a class="header__logo" href="/">
                 <img class="header__logo-img" src="/local/js/vatc/build/assets/images/logo.svg" alt="Logo">
             </a>
             <nav class="nav header__nav">
                 <ul class="nav__list">
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="/">Главная</a>
+                    </li>
                     <li class="nav__list-item">
                         <a class="nav__list-link" href="#description">Что это</a>
                     </li>
@@ -30,6 +33,9 @@
         <div class="site-container">
             <nav class="nav">
                 <ul class="nav__list">
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="/">Главная</a>
+                    </li>
                     <li class="nav__list-item">
                         <a class="nav__list-link" href="#description">Что это</a>
                     </li>

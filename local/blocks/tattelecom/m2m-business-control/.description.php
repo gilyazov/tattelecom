@@ -33,7 +33,7 @@ return array(
         '.b-page-banner__right-image' => array(
             'name' => 'Картинка',
             'type' => 'img',
-            'dimensions' => array('maxWidth' => 500, 'maxHeight' => 500)
+            'dimensions' => array('maxWidth' => 1920, 'maxHeight' => 1080)
         ),
 	),
     'groups' => array(
