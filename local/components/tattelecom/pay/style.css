@@ -1,0 +1,28 @@
+.form-radio-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    grid-gap: 1.4rem;
+}
+.form-radio-wrapper .radio__wrapper{
+    border: 2px solid var(--border-color);
+    border-radius: 7px;
+
+    margin: -1rem 0;
+    position: relative;
+}
+.form-radio-wrapper .radio__wrapper:hover{
+    border-color: var(--main-color);
+}
+
+.top-up-account__form-radio-wrapper .top-up-account__form-radio-caption{
+    margin-bottom: 0;
+}
+
+.radio__wrapper:has(input[type="radio"]:checked){
+    border-color: var(--main-color);
+}
+.sbp-ico{
+    position: absolute;
+    right: 1rem;
+}

@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     $(formdata ).each(function(index, obj){
                         data[obj.name] = obj.value;
                     });
+                    let windowReference = window.open();
 
                     BX.ajax.runComponentAction('tattelecom:pay',
                         'payUrl', {
@@ -38,7 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 }
 
                                 if (responseData.url){
-                                    window.open(responseData.url, '_blank');
+                                    windowReference.location = responseData.url;
+                                    //window.open(responseData.url, '_blank');
                                 }
 
                                 BX.closeWait(form, wait);

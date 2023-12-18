@@ -4,6 +4,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var string $templateFolder */
 $this->addExternalJS(BUILD_PATH . 'js/payment-services-page.js');
 $this->addExternalJS($componentPath . '/script.js');
+$this->addExternalCss($componentPath . '/style.css');
 ?>
 <form
     action="" method="post"
@@ -23,6 +24,30 @@ $this->addExternalJS($componentPath . '/script.js');
             <input type="email" class="gl-input__input" placeholder="Электронная почта" name="user_email" data-parsley-required="">
         </label>
     </div>
+
+    <!--<div class="top-up-account__form-radio-wrapper">
+        <div class="top-up-account__form-radio-caption">Способ оплаты:</div>
+
+        <div class="form-radio-wrapper">
+            <div class="top-up-account__form-radio-wrapper">
+                <label class="radio__wrapper">
+                    <input type="radio" class="radio" name="pay_service" value="card" data-parsley-required="" checked="checked">
+                    <span class="radio__content"></span>
+                    <span class="radio__text">Банковская карта</span>
+                </label>
+            </div>
+            <div class="top-up-account__form-radio-wrapper">
+                <label class="radio__wrapper">
+                    <input type="radio" class="radio" name="pay_service" value="raifaizen" data-parsley-required="">
+                    <span class="radio__content"></span>
+
+                    <span class="radio__text">СБП</span>
+                    <img src="https://static.beeline.ru/upload/images/b2c/index-redesign-payment-icons/sfp.svg" class="sbp-ico" alt="">
+                </label>
+            </div>
+        </div>
+    </div>-->
+
     <div>
         <div class="payment-services__form-btn-wrapper">
             <button type="submit" class="payment-services__form-btn gl__main-btn">Продолжить</button>

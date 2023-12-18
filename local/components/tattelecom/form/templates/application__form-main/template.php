@@ -26,7 +26,7 @@ $this->addExternalJS($componentPath . '/script.js');
                     <use xlink:href="#checkbox-checked"></use>
                 </svg>
             </span>
-            <span class="checkbox__text mod-modal">Я согласен на <a href="https://tattelecom.ru/app/personaldata/" target="_blank">обработку своих персональных данных</a></span>
+            <span class="checkbox__text mod-modal">Я согласен на <a href="/app/personaldata/" target="_blank">обработку своих персональных данных</a></span>
         </label>
     </div>
 </form>

@@ -134,7 +134,22 @@ $this->setFrameMode(true);
                                     </li>
                                 <?endforeach;?>
                             </ul>
-                            <div class="rates-list-internet__item-block"></div>
+                            <?if($arOptions = $ITEM["PROPERTIES"]["OPTIONS"]["VALUE"]):?>
+                                <div class="rates-list-internet__item-block">
+                                    <div class="rates-list-internet__item-wifi-wrapper">
+                                        <div class="rates-list-internet__item-wifi">
+                                            <?=$arOptions["SUB_VALUES"]["OPTIONS_V"]["VALUE"]?>
+                                            <?if($arOptions["SUB_VALUES"]["OPTIONS_H"]["VALUE"]):?>
+                                                <div class="rates-list-internet__item-wifi-dropdown">
+                                                    <div class="rates-list-internet__item-wifi-dropdown-inner">
+                                                        <?=$arOptions["SUB_VALUES"]["OPTIONS_H"]["~VALUE"]["TEXT"]?>
+                                                    </div>
+                                                </div>
+                                            <?endif;?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?endif;?>
                         </div>
                         <div class="rates-list-internet__item-down">
                             <div class="rates-list-internet__item-price-wrapper">

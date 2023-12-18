@@ -53,6 +53,10 @@ class TtkPay extends \CBitrixComponent implements Controllerable
             $data['account_number'] = $post['account_number'];
         }
 
+        if ($post['pay_service'] == "raifaizen"){
+            $data['pay_service'] = "raifaizen";
+        }
+
         if ($post['phone_number']){
             $data['phone_number'] = $post['phone_number'];
         }

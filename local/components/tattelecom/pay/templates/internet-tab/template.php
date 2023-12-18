@@ -20,8 +20,31 @@ $this->addExternalJS($componentPath . '/script.js');
             <span class="gl-input__title">Электронная почта</span>
             <input type="email" class="gl-input__input" placeholder="Электронная почта" name="user_email" data-parsley-required="">
         </label>
-
     </div>
+
+    <!--<div class="top-up-account__form-radio-wrapper">
+        <div class="top-up-account__form-radio-caption">Способ оплаты:</div>
+
+        <div class="form-radio-wrapper">
+            <div class="top-up-account__form-radio-wrapper">
+                <label class="radio__wrapper">
+                    <input type="radio" class="radio" name="pay_service" value="card" data-parsley-required="" checked="checked">
+                    <span class="radio__content"></span>
+                    <span class="radio__text">Банковская карта</span>
+                </label>
+            </div>
+            <div class="top-up-account__form-radio-wrapper">
+                <label class="radio__wrapper">
+                    <input type="radio" class="radio" name="pay_service" value="raifaizen" data-parsley-required="">
+                    <span class="radio__content"></span>
+
+                    <span class="radio__text">СБП</span>
+                    <img src="https://static.beeline.ru/upload/images/b2c/index-redesign-payment-icons/sfp.svg" class="sbp-ico" alt="">
+                </label>
+            </div>
+        </div>
+    </div>-->
+
     <div class="callback__content-checkbox-wrapper">
         <label class="checkbox__wrapper">
             <input type="checkbox" class="checkbox" name="modal-callback-agree" data-parsley-required="" data-parsley-multiple="modal-callback-agree">
@@ -30,7 +53,7 @@ $this->addExternalJS($componentPath . '/script.js');
                     <use xlink:href="#checkbox-checked"></use>
                 </svg>
             </span>
-            <span class="checkbox__text mod-modal">Я согласен на <a href="https://tattelecom.ru/app/personaldata/" target="_blank">обработку своих персональных данных</a></span>
+            <span class="checkbox__text mod-modal">Я согласен на <a href="/app/personaldata/" target="_blank">обработку своих персональных данных</a></span>
         </label>
     </div>
     <div class="services__btn-submit-wrapper">
