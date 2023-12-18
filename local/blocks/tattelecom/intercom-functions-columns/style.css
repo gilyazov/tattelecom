@@ -1,0 +1,9 @@
+.black-color .intercom-functions__item{
+    background: none;
+}
+.black-color .intercom-functions__item-text{
+    color: black;
+}
+.black-color .intercom-functions__item-image{
+    filter: invert(1);
+}
