@@ -41,8 +41,11 @@
         <div class="footer__bottom-block-contacts">
             <div class="footer__contacts-title">Контакт-центр:</div>
             <div class="footer__contact-phone-wrapper" itemscope itemtype="http://schema.org/Organization">
-                <a href="tel:+7<?php echo preg_replace("/\D/","",\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_CONTACT_CENTER"));?>" class="footer__contact-phone">
-                    <span itemprop="telephone"><?php echo \Bitrix\Main\Config\Option::get( "askaron.settings", "UF_CONTACT_CENTER");?></span>
+                <?
+                    $phoneCode = (SITE_ID == "s2" ? "UF_B2B_CONTACT_CENTER" : "UF_CONTACT_CENTER");
+                ?>
+                <a href="tel:+7<?php echo preg_replace("/\D/","",\Bitrix\Main\Config\Option::get( "askaron.settings", $phoneCode));?>" class="footer__contact-phone">
+                    <span itemprop="telephone"><?php echo \Bitrix\Main\Config\Option::get( "askaron.settings", $phoneCode);?></span>
                 </a>
             </div>
             <?$APPLICATION->IncludeComponent("bitrix:news.list", "footer-socials",
@@ -85,11 +88,11 @@
             );?>
         </div>
         <div class="footer__bottom-block-agreement-wrapper">
-            <div class="footer__agreement-text">Продолжая использовать наш сайт, вы даете согласие на обработку файлов Cookies и других пользовательских данных, в соответствии с <a href="https://tattelecom.ru/policy.php" target="_blank" class="footer__agreement-link">Политикой конфиденциальности</a>.</div>
+            <div class="footer__agreement-text">Продолжая использовать наш сайт, вы даете согласие на обработку файлов Cookies и других пользовательских данных, в соответствии с <a href="https://letai.ru/policy.php" target="_blank" class="footer__agreement-link">Политикой конфиденциальности</a>.</div>
             <div class="footer__copyright">© <?=date('Y');?> <?=\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_FOOTER_TEXT")?> <a target="_blank" href="<?=CFile::GetPath(\Bitrix\Main\Config\Option::get( "askaron.settings", "UF_SMI_LICENSE"));?>">Эл №ФС77-66502 от 14.07.2016</a></div>
         </div>
         <div class="footer__autor">
-            <a target="_blank" rel="nofollow" href="https://markweber.ru/">Разработано в сотрудничестве с Mark Weber</a>
+            <a target="_blank" href="https://markweber.ru/">Разработано в сотрудничестве с Mark Weber</a>
         </div>
     </div>
 </footer>

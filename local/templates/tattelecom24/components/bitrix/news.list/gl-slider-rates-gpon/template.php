@@ -123,10 +123,9 @@ $this->setFrameMode(true);
                                 <div class="rates-list-internet__item-subtitle mod-orange"><?=$ITEM["PROPERTIES"]["SUBTITLE"]["VALUE"]?></div>
                             </div>
                             <ul class="rates-list-internet__item-block rates-list-internet__proposal-list">
-<!--                                --><?//var_dump($ITEM["PROPERTIES"]["BENEFITS"]);?>
                                 <?foreach ($ITEM["PROPERTIES"]["BENEFITS"]["VALUE"] as $benefit):?>
                                     <li class="rates-list-internet__item-proposal">
-                                        <img src="<?=BUILD_PATH?>img/promo-gpon-page/<?=$benefit["SUB_VALUES"]["BENEFITS_I"]["VALUE_XML_ID"]?>.svg" alt="" class="rates-list-internet__item-proposal-img">
+                                        <img src="<?=BUILD_PATH?>img/rates-internet-list-page/<?=$benefit["SUB_VALUES"]["BENEFITS_I"]["VALUE_XML_ID"]?>.svg" alt="" class="rates-list-internet__item-proposal-img">
                                         <div>
                                             <div class="gpon-rates-list__caption"><?=$benefit["SUB_VALUES"]["BENEFITS_V"]["VALUE"]?></div>
 <!--                                            <div class="gpon-rates-list__caption-value">телеканалов</div>-->
