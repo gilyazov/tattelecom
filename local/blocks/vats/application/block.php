@@ -12,7 +12,7 @@
                     "CUSTOM_TITLE_DETAIL_PICTURE" => "",
                     "CUSTOM_TITLE_DETAIL_TEXT" => "",
                     "CUSTOM_TITLE_IBLOCK_SECTION" => "",
-                    "CUSTOM_TITLE_NAME" => "Как к Вам обращаться?",
+                    "CUSTOM_TITLE_NAME" => "Ваше имя",
                     "CUSTOM_TITLE_PREVIEW_PICTURE" => "",
                     "CUSTOM_TITLE_PREVIEW_TEXT" => "",
                     "CUSTOM_TITLE_TAGS" => "",

@@ -35,5 +35,14 @@ return array(
             'name' => 'Преимущество',
             'type' => 'text',
         ),
+
+        '.landing-node-first-title' => array(
+            'name' => 'Заголовок слева',
+            'type' => 'text',
+        ),
+        '.landing-node-second-title' => array(
+            'name' => 'Заголовок справа',
+            'type' => 'text',
+        ),
 	)
 );
