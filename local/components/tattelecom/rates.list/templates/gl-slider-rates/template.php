@@ -34,6 +34,19 @@ $this->setFrameMode(true);
                                 <div class="rates-list__slide-title"><?=$arItem["NAME"]?></div>
                                 <div class="rates-list__slide-subtitle"><?=$arItem["PROPERTIES"]["SUBTITLE"]["VALUE"]?></div>
 
+                                <?if($arBenefits = $arItem["PROPERTIES"]["BENEFITS"]["VALUE"]):?>
+                                    <div class="rates-list-internet__item-block">
+                                        <?foreach ($arBenefits as $arBenefit):?>
+                                            <div class="rates-list-internet__item-proposal">
+                                                <img
+                                                        src="<?=BUILD_PATH?>img/rates-internet-list-page/<?=$arBenefit["SUB_VALUES"]["BENEFITS_I"]["VALUE_XML_ID"]?><?=($arItem["PROPERTIES"]["ORANGE"]["VALUE"]?"-white":"")?>.svg" alt=""
+                                                        class="rates-list-internet__item-proposal-img">
+                                                <div class="rates-list-internet__item-proposal-caption"><?=$arBenefit["SUB_VALUES"]["BENEFITS_V"]["VALUE"]?></div>
+                                            </div>
+                                        <?endforeach;?>
+                                    </div>
+                                <?endif?>
+
                                 <ul class="rates-list__slide-conditions-list">
                                     <?foreach ($arItem["PROPERTIES"]["BENEFITS"]["VALUE"] as $benefit):?>
                                         <?

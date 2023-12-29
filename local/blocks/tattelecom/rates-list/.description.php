@@ -35,6 +35,12 @@ return array(
                 )
             )
         ),
+
+        '.landing-node-all-rates' => [
+            'name' => 'Смотреть все',
+            'type' => 'link',
+            'skipContent' => true
+        ]
 	),
     'groups' => array(
 

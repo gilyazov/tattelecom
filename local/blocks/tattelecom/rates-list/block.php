@@ -3,7 +3,7 @@
         <div class="gl__title-head">
             <h1 class="gl__title">Тарифы мобильной связи</h1>
             <div class="gl__xs-hide">
-                <a href="/mobile/rates/" class="gl__link-show-all">Все тарифы<svg width="20" height="20" aria-hidden="true" class="gl__link-show-all-icon">
+                <a href="/mobile/rates/" class="gl__link-show-all landing-node-all-rates">Все тарифы<svg width="20" height="20" aria-hidden="true" class="gl__link-show-all-icon">
                         <use xlink:href="#arrow-right"></use>
                     </svg>
                 </a>

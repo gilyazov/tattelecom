@@ -143,7 +143,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
 );?>
 
 <?if($arParams['IBLOCK_ID'] == 6):?>
-<section class="rates-list" id="rates-list-host">
+    <section class="rates-list" id="rates-list-host">
     <div class="gl__page-content">
         <div class="gl__title-head">
             <h2 class="gl__title">Рекомендуемые тарифы</h2>
@@ -228,6 +228,16 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
         );?>
     </div>
 </section>
+<?endif;?>
+
+<?if($arResult['VARIABLES']['SECTION_CODE'] == 'v-chastnyy-dom'): ?>
+    <section class="gpon-map" id="gpon-map-host">
+        <div class="gl__page-content">
+            <h2 class="gl__title">Охватываем оптоволоконными сетями по технологии GPON многие поселки нашей республики</h2>
+
+            <script data-skip-moving="true" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac7d37bee42fb6ff90a0d408388e134529c9087958b6c9468bda6a03177651675&width=100%25&height=720&lang=ru_RU&scroll=true"></script>
+        </div>
+    </section>
 <?endif;?>
 
 <section class="info-links" id="info-links-host">
