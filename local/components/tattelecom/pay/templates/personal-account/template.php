@@ -24,7 +24,7 @@ $this->addExternalJS($componentPath . '/script.js');
         </label>
     </div>
 
-    <!--<div class="top-up-account__form-radio-wrapper">
+    <div class="top-up-account__form-radio-wrapper">
         <div class="top-up-account__form-radio-caption">Способ оплаты:</div>
 
         <div class="form-radio-wrapper">
@@ -45,7 +45,7 @@ $this->addExternalJS($componentPath . '/script.js');
                 </label>
             </div>
         </div>
-    </div>-->
+    </div>
 
     <div>
         <div class="payment-services__form-btn-wrapper">

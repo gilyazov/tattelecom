@@ -22,7 +22,7 @@ $this->addExternalCss($componentPath . '/style.css');
         </label>
     </div>
 
-    <!--<div class="top-up-account__form-radio-wrapper">
+    <div class="top-up-account__form-radio-wrapper">
         <div class="top-up-account__form-radio-caption">Способ оплаты:</div>
 
         <div class="form-radio-wrapper">
@@ -43,7 +43,7 @@ $this->addExternalCss($componentPath . '/style.css');
                 </label>
             </div>
         </div>
-    </div>-->
+    </div>
 
     <div class="callback__content-checkbox-wrapper">
         <label class="checkbox__wrapper">
