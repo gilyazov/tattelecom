@@ -53,7 +53,7 @@ $this->addExternalCss($componentPath . '/style.css');
             <button type="submit" class="payment-services__form-btn gl__main-btn">Продолжить</button>
         </div>
         <div class="payment-services__form-hint-wrapper">
-            <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете условия пользовательского соглашения.</div>
+            <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете <a href="/app/serviceuse/">условия пользовательского соглашения</a>.</div>
             <div class="payment-services__form-hint-icons-wrapper">
                 <img src="<?=BUILD_PATH?>img/common/pay/mastercard.svg" alt="" class="payment-services__form-hint-icon">
                 <img src="<?=BUILD_PATH?>img/common/pay/mir.svg" alt="" class="payment-services__form-hint-icon">

@@ -52,7 +52,7 @@ $this->addExternalJS($componentPath . '/script.js');
             <button type="submit" class="payment-services__form-btn gl__main-btn">Продолжить</button>
         </div>
         <div class="payment-services__form-hint-wrapper">
-            <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете условия пользовательского соглашения.</div>
+            <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете <a href="/app/serviceuse/">условия пользовательского соглашения</a>.</div>
             <!--<button type="button" class="payment-services__form-link">Подробнее об услуге</button>-->
         </div>
     </div>
