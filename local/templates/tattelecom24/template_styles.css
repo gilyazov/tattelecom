@@ -101,9 +101,9 @@
 }
 
 .is-admin .gl__visually-hidden{
-	position: relative;
-	width: auto;
-	height: auto;
+	position: relative !important;
+	width: auto !important;
+	height: auto !important;
 	opacity: 0.2;
 }
 .d-none{
