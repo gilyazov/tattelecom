@@ -3,6 +3,7 @@
 
 namespace Tattelecom\Core\EventHandlers\Iblock;
 
+use Bitrix\Main\Web\HttpClient;
 
 class Element
 {
@@ -23,13 +24,13 @@ class Element
                 return false;
             }
 
-            if ($arFields["PROPERTY_VALUES"]["239"]){
+            if ($arFields["PROPERTY_VALUES"]["239"]) {
                 $arFilter = array("IBLOCK_ID" => $arFields["IBLOCK_ID"], "PROPERTY_TIME" => $arFields["PROPERTY_VALUES"]["239"], "ACTIVE" => "Y");
                 $res = \CIBlockElement::GetList(array(), $arFilter, ["PROPERTY_TIME"]);
                 if ($ob = $res->GetNextElement()) {
                     $arFieldsBx = $ob->GetFields();
 
-                    if ($arFieldsBx["CNT"] >= 18){
+                    if ($arFieldsBx["CNT"] >= 18) {
                         global $APPLICATION;
                         $APPLICATION->throwException("На этот временной слот не осталось мест.");
                         return false;
@@ -73,6 +74,10 @@ class Element
                         }
                     }
                 }
+
+                if ($arFields['IBLOCK_ID'] == 45) {
+                    self::b2bCrmSend($arFieldsBx["NAME"], $arProps["PHONE"]["VALUE"]);
+                }
             }
 
             \Bitrix\Main\Mail\Event::send(array(
@@ -89,5 +94,21 @@ class Element
             echo \Bitrix\Main\Web\Json::encode(['ID' => $arFields['ID']]);
             die();
         }
+    }
+
+    protected static function b2bCrmSend($name, $phone)
+    {
+        $httpClient = new HttpClient();
+        $httpClient
+            ->setHeader('Authorization', 'Bearer app:AvNZ2DtJSREbZnKx:1')
+            ->setHeader('Content-Type', 'application/json', true);
+        $data = [
+            "type" => "irbis",
+            "billing_data" => [
+                "name" => $name,
+                "contact_phone" => $phone
+            ]
+        ];
+        $response = $httpClient->post("http://192.168.143.246:8000/terrasoft/lead", \Bitrix\Main\Web\Json::encode($data));
     }
 }
