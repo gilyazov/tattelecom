@@ -1,0 +1,22 @@
+@import "utils/reset";
+@import "utils/fontface";
+@import "utils/mixins";
+@import "utils/fontface";
+@import "utils/global";
+@import "utils/utils";
+
+@import "parts/header";
+@import "parts/footer";
+@import "parts/burger-modal";
+@import "parts/modal";
+
+@import "ui/button";
+
+@import "components/banner";
+@import "components/advantages";
+@import "components/safe-yard";
+@import "components/rational-use-bg";
+@import "components/video-scheme";
+@import "components/video-scheme-list";
+@import "components/watch-video";
+@import "components/application";

@@ -1,0 +1,158 @@
+.application {
+  padding: 6.4rem 0 8rem;
+  color: white;
+  background-color: #2b2b2b;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 5rem;
+    text-align: center;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+    color: white;
+
+    width: 100%;
+    max-width: 99.5rem;
+
+    @include breakpoint(tablet) {
+      font-size: 3rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 70rem;
+  }
+}
+
+
+.form {
+  .input {
+    margin-bottom: 3rem;
+
+    &.is-error {
+      input {
+        border: 0.2rem solid #FFB990;
+        color: #FFB990;
+
+        &::placeholder {
+          color: #FFB990;
+        }
+      }
+    }
+  }
+
+  .input__control {
+    padding: 1.9rem 3rem;
+    color: white;
+    font-weight: 500;
+    font-size: 3.5rem;
+    border: 0.2rem solid white;
+    border-radius: 1rem;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  .cheackbox {
+    input:checked~.checkbox__container {
+      .checkbox__control {
+        &::after {
+          display: block;
+        }
+      }
+    }
+
+    &.is-error {
+      color: #FFB990;
+
+      .checkbox__control {
+        &::before {
+          border: 0.2rem solid #FFB990;
+        }
+      }
+    }
+  }
+
+  .checkbox__control {
+    display: block;
+    position: relative;
+    padding-left: 4.4rem;
+    font-size: 2rem;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0.2rem solid white;
+      content: '';
+
+      @include breakpoint(tablet) {
+        top: 0;
+        transform: translateY(0);
+      }
+    }
+
+    &::after {
+      display: none;
+      top: 50%;
+      left: 0.3rem;
+      transform: translateY(-70%);
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      content: '';
+      background-size: contain;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='23' viewBox='0 0 24 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='14.7095' width='2' height='10' transform='rotate(-40.7422 0 14.7095)' fill='white'/%3E%3Crect x='6.52637' y='22.2861' width='2' height='21.9045' transform='rotate(-130.742 6.52637 22.2861)' fill='white'/%3E%3C/svg%3E");
+
+      @include breakpoint(tablet) {
+        top: -.4rem;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__button {
+    align-self: center;
+    margin-top: 8.2rem;
+    max-width: 45rem;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      margin-top: 3.2rem;
+      border-radius: 1rem;
+      width: 32rem;
+      height: 7.5rem;
+
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 2.8rem;
+      color: #fff;
+    }
+  }
+}
+
+.visually-hidden {
+  display: none;
+}

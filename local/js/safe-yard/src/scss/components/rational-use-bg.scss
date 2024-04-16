@@ -1,0 +1,73 @@
+.rational-use {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding-bottom: 10rem;
+
+  .safe-yard__box--mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: (992px)) {
+    background-image: url("../assets/img/rational-use-bg-2.png") !important;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__mini-box {
+    padding: 2rem;
+    border-radius: 1.8rem;
+    box-shadow: 0 2.700000047683716px 19.799999237060547px 0 #0000007D;
+    width: 22.7rem;
+    height: 17.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    &-icon {
+      width: 8rem;
+      height: 8rem;
+      object-fit: contain;
+    }
+
+    &-text {
+      text-align: center;
+      font: 700 2rem/1 var(--font-family);
+    }
+  }
+
+  &__text {
+    font: 400 2.5rem/1 var(--font-family);
+    margin-left: 2rem;
+
+    span {
+      color: #FE5000;
+    }
+
+    @media only screen and (max-width: (992px)) {
+      margin-left: 0;
+      margin-bottom: 3rem;
+      font: 400 2.4rem/1 var(--font-family);
+    }
+  }
+
+  @media only screen and (max-width: (992px)) {
+    .safe-yard__box {
+      display: none;
+    }
+
+    .safe-yard__box--mobile {
+      display: block;
+    }
+  }
+}

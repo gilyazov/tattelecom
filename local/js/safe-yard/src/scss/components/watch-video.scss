@@ -1,0 +1,66 @@
+.watch-video {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  padding-top: 5.2rem;
+  padding-bottom: 9.4rem;
+
+  @media only screen and (max-width: (992px)) {
+    background-image: url("../assets/img/advantages-bg-2.png") !important;
+    background-size: cover;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6rem;
+    text-align: center;
+    font: 700 4.8rem/1 var(--font-family);
+
+    @media only screen and (max-width: (992px)) {
+      font: 700 3.2rem/1 var(--font-family);
+    }
+  }
+
+  ol {
+    font: 500 3rem/1 var(--font-family);
+    margin-bottom: 25rem;
+
+    @media only screen and (max-width: (992px)) {
+      font: 500 2.4rem/1 var(--font-family);
+    }
+
+    li {
+      position: relative;
+      padding-left: 4rem;
+      margin-bottom: 1.5rem;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__qr {
+    @media only screen and (max-width: (992px)) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @media only screen and (max-width: (992px)) {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

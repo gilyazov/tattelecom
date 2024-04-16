@@ -1,0 +1,276 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #1e1e1e, $alpha: 60%);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s ease all;
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+    transition: .3s ease all;
+  }
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    width: 100%;
+    max-width: 120rem;
+    height: 100%;
+    background-color: white;
+    border-radius: 1.6rem;
+    box-shadow: 1rem 1rem 2rem 0 rgba(0, 0, 0, 0.25), -1rem -1rem 2rem 0 rgba(0, 0, 0, 0.25);
+    transform: translate(-50%, -50%);
+
+    &.modal-open {
+      display: block;
+    }
+
+    &.modal--application {
+      height: auto;
+      border-radius: 1rem;
+
+      .input__control,
+      .form .checkbox__control::before {
+        background: #8C8C8C;
+      }
+
+      @include breakpoint(tablet) {
+        border-radius: 1.6rem;
+      }
+    }
+
+    &.modal--success {
+      height: auto;
+      border-radius: 1rem;
+
+      @include breakpoint(tablet) {
+        border-radius: 1.6rem;
+      }
+
+      .modal__title {
+        margin: 8rem 0;
+        color: #fe5000;
+
+        @include breakpoint(tablet) {
+          margin: 4rem 0;
+        }
+      }
+    }
+
+    &.modal--error {
+      height: auto;
+      border-radius: 7.4rem;
+
+      @include breakpoint(tablet) {
+        border-radius: 1.6rem;
+      }
+
+      .modal__title {
+        margin: 8rem 0;
+
+        @include breakpoint(tablet) {
+          margin: 4rem 0;
+        }
+      }
+    }
+  }
+
+  &__content {
+    // position: relative;
+    height: 100%;
+    padding: 6.5rem;
+    overflow-y: auto;
+
+    @include breakpoint(laptop) {
+      padding: 6.5rem 4rem;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 3rem 3rem 3rem 2rem;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 2.8rem;
+    right: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    background-color: #fe5000;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include breakpoint(tablet) {
+      top: 1.2rem;
+      right: 1.2rem;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &:hover {
+      /** span {
+        background-color: var(--color-light-green);
+      }
+      **/
+    }
+
+    &:active {
+      /**  span {
+        background-color: var(--color-dark-green);
+      } **/
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 2.4rem;
+      height: 0.3rem;
+      background-color: white;
+      transform: translate(-50%, -50%);
+      transition: background-color .3s;
+
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+
+  &__legend {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 8rem;
+
+    @include breakpoint(laptop) {
+      font-size: 5rem;
+    }
+
+    @include breakpoint(tablet) {
+      text-align: center;
+      font-size: 3.2rem;
+    }
+  }
+
+  &__price {
+    margin-bottom: 4.7rem;
+    font-weight: 700;
+    font-size: 5rem;
+
+    @include breakpoint(laptop) {
+      font-size: 4rem;
+    }
+
+    @include breakpoint(tablet) {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 3rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0.7rem 3rem;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__list-item-img {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1rem;
+    object-fit: cover;
+  }
+
+  &__list-item-text {
+    font-weight: 500;
+    font-size: 3.5rem;
+
+    @include breakpoint(laptop) {
+      font-size: 2.5rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__button {
+    margin-top: 6.4rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 4rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 5rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+      font-size: 3rem;
+    }
+  }
+
+  .input__control {
+    border: 0.2rem solid black
+  ;
+    color: #8C8C8C;
+
+    &::placeholder {
+      color: #8C8C8C;
+    }
+  }
+
+  .checkbox__control {
+    &::before {
+      border: 0.2rem solid black;
+    }
+
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='23' viewBox='0 0 24 23' fill='none'%3E%3Crect y='14.7095' width='2' height='10' transform='rotate(-40.7422 0 14.7095)' fill='%232B2B2B'/%3E%3Crect x='6.52637' y='22.2861' width='2' height='21.9045' transform='rotate(-130.742 6.52637 22.2861)' fill='%232B2B2B'/%3E%3C/svg%3E");
+    }
+  }
+
+  &__form {
+    margin: 0 auto;
+    max-width: 68.8rem;
+  }
+
+  .form__button {
+    display: block;
+    margin: 8.2rem auto 0;
+  }
+}

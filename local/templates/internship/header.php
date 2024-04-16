@@ -23,6 +23,9 @@ $language= \Bitrix\Landing\Manager::getLangISO();
 	<meta name="MobileOptimized" content="width">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<title><?$APPLICATION->ShowTitle();?></title>
+    <link rel="icon" href="/local/templates/.default/include/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/local/templates/.default/include/favicon/favicon.png" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="/local/templates/.default/include/favicon/favicon.png">
 	<?
 	$APPLICATION->ShowHead();
 	$APPLICATION->ShowProperty('MetaOG');

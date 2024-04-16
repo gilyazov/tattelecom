@@ -1,0 +1,74 @@
+{
+  "tariffs": {
+    "cards": [
+      {
+        "title": "Бесплатное подключение",
+        "text": "Все работы по подключению проводятся абсолютно бесплатно",
+        "icon": "assets/icons/cloud.svg"
+      },
+      {
+        "title": "Выгодная цена",
+        "text": "Интернет, телевидение и мобильная связь всего за\n590 руб/мес",
+        "icon": "assets/icons/cost.svg"
+      },
+      {
+        "title": "Удобство оплаты",
+        "text": "Оплата всех необходимых услуг по одному номеру",
+        "icon": "assets/icons/nfc.svg"
+      },
+      {
+        "title": "Sim-карты для близких",
+        "text": "До 5-ти дополнительных sim-карт на выгодных условиях",
+        "icon": "assets/icons/sim.svg"
+      }
+    ]
+  },
+  "info": {
+    "cards": [
+      {
+        "title": "Домашний\nинтернет\nдо 100 Мбит/с",
+        "icon": "assets/icons/network.svg"
+      },
+      {
+        "title": "Телевидение до\n231 каналов\nдо 40 в HD",
+        "icon": "assets/icons/tv.svg"
+      },
+      {
+        "title": "Безлимитный\nмобильный интернет",
+        "icon": "assets/icons/unlimited.svg"
+      },
+      {
+        "title": "Безлимитные\nзвонки внутри сети",
+        "icon": "assets/icons/phone.svg"
+      },
+      {
+        "title": "1000 минут\nна звонки по\nРФ и РТ",
+        "icon": "assets/icons/call.svg"
+      },
+      {
+        "title": "100 сообщений\nпо РТ",
+        "icon": "assets/icons/sms.svg"
+      }
+    ]
+  },
+  "extra": {
+    "list": [
+      {
+        "text": "Мобильный интернет: 30 ГБ",
+        "icon": "assets/icons/unlimited.svg"
+      },
+      {
+        "text": "Безлимитные звонки внутри сети",
+        "icon": "assets/icons/phone.svg"
+      },
+      {
+        "text": "300 минут по РФ и РТ",
+        "icon": "assets/icons/call.svg"
+      },
+      {
+        "text": "300 cообщений по РТ",
+        "icon": "assets/icons/sms.svg"
+      }
+    ]
+  }
+}

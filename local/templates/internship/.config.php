@@ -16,15 +16,15 @@ foreach ($jsConfig as $code => $ext)
 
 return [
     'js_core_public' => [
-        'internship.letai',
+        (SITE_ID == "s8" ? 'safe-yard.dist' : 'internship.letai'),
         'landing_core'
     ],
     'js_core_edit' => [
-        'internship.letai',
+        (SITE_ID == "s8" ? 'safe-yard.dist' : 'internship.letai'),
         'landing_core_admin'
     ],
     'disable_namespace' => [],
-    'enable_namespace' => ['internship'],
+    'enable_namespace' => [(SITE_ID == "s8" ? 'safe-yard' : 'internship'),],
     'public_wrapper_block' => false,
     'google_font' => false
 ];

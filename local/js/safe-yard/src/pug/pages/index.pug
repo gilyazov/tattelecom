@@ -1,0 +1,23 @@
+extends ../layout/index
+
+include ../components/banner
+include ../components/advantages
+include ../components/safe-yard
+include ../components/rational-use
+include ../components/video-scheme
+include ../components/video-scheme-list
+include ../components/watch-video
+include ../components/application
+
+block constants
+  - const title = "Главная"
+
+block page
+  +banner()
+  +advantages()
+  +safe-yard()
+  +rational-use()
+  +video-scheme()
+  +video-scheme-list()
+  +watch-video()
+  +application()

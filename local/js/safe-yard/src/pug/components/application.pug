@@ -1,0 +1,20 @@
+mixin application()
+  section.application
+    .container
+      .application__inner
+        h2.application__title.title
+          | Остались вопросы?
+          | Оставьте заявку и наш специалист
+          | свяжется с вами в самое ближайшее время
+        form.application__form.form(action="/" data-need-validation id="form")
+          .input.js-validation-wrapper
+            input.input__control(type="text" name="name" placeholder="Как к Вам обращаться?" required)
+          .input.js-validation-wrapper
+            input.input__control(type="text" name="name" class="js-phone-mask" placeholder="+7(___)___-__-__" required)
+          .input.js-validation-wrapper
+            input.input__control(type="text" name="inn" placeholder="ИНН")
+          .cheackbox
+            input(type="checkbox" class="visually-hidden" id="checkbox-1" required)
+            label(for="checkbox-1" class="checkbox__container")
+              span.checkbox__control Отправляя заявку, я соглашаюсь на обработку персональных данных
+          button.form__button.button(type="submit") Отправить заявку
