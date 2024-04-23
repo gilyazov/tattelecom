@@ -46,7 +46,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
     $APPLICATION->ShowHead();
     $APPLICATION->ShowProperty('MetaOG');
     $APPLICATION->ShowProperty('BeforeHeadClose');
-    \Bitrix\Main\UI\Extension::load('template.tattelecom');
+    \Bitrix\Main\UI\Extension::load('tattelecom.build');
     //\Bitrix\Main\UI\Extension::load('template.banner');
     ?>
 

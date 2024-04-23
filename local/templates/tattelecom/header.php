@@ -55,7 +55,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
     $APPLICATION->ShowHead();
     $APPLICATION->ShowProperty('MetaOG');
     $APPLICATION->ShowProperty('BeforeHeadClose');
-    \Bitrix\Main\UI\Extension::load('template.tattelecom');
+    \Bitrix\Main\UI\Extension::load('tattelecom.build');
     ?>
     <meta name="apple-itunes-app" content="app-id=1574494891">
     <!-- Google Tag Manager -->
