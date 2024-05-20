@@ -35,7 +35,7 @@
                     "MAX_LEVELS" => "100000",
                     "MAX_USER_ENTRIES" => "100000",
                     "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-                    "PROPERTY_CODES" => ["NAME", "174"],
+                    "PROPERTY_CODES" => ["NAME", "174", "309"],
                     "PROPERTY_CODES_REQUIRED" => ["NAME", "174"],
                     "RESIZE_IMAGES" => "N",
                     "SEF_MODE" => "N",
