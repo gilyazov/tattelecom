@@ -16,15 +16,15 @@ foreach ($jsConfig as $code => $ext)
 
 return [
     'js_core_public' => [
-        'vatc.build',
+        (SITE_ID == "s7" ? 'Letai.dist' : 'vatc.build'),
         'landing_core'
     ],
     'js_core_edit' => [
-        'vatc.build',
+        (SITE_ID == "s7" ? 'Letai.dist' : 'vatc.build'),
         'landing_core_admin'
     ],
     'disable_namespace' => [],
-    'enable_namespace' => ['vats'],
+    'enable_namespace' => [(SITE_ID == "s7" ? 'konvergent' : 'vats')],
     'public_wrapper_block' => false,
     'google_font' => false
 ];

@@ -1,0 +1,9 @@
+.new-price{
+    color: #fe5000;
+    font-weight: 500;
+    padding-right: 5px;
+}
+/*
+.old-price, .services-calculation__total-number{
+    text-decoration: line-through;
+}*/

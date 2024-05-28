@@ -1,0 +1,11 @@
+.application__inner{
+    font-family: var(--font-family);
+}
+
+.form .checkbox__control a{
+    color: #fff;
+    border-bottom: 1px solid;
+}
+.form .checkbox__control a:hover{
+    border-bottom: none;
+}

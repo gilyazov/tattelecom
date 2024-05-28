@@ -12,7 +12,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(false);
-$this->addExternalJS($templateFolder . "/jquery.form.min.js");
+//$this->addExternalJS($templateFolder . "/jquery.form.min.js");
 
 if (!empty($arResult["ERRORS"])):
     global $APPLICATION;
@@ -26,7 +26,7 @@ if ($arResult["MESSAGE"] <> ''):?>
 <?endif?>
 
 <form name="iblock_add"
-      class="application__form form"
+      class="modal__form form"
       action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data" data-need-validation>
 
     <?if (is_array($arResult["PROPERTY_LIST"]) && !empty($arResult["PROPERTY_LIST"])):?>
@@ -383,14 +383,14 @@ if ($arResult["MESSAGE"] <> ''):?>
     <?endif?>
 
     <div class="cheackbox">
-        <input class="visually-hidden" type="checkbox" id="checkbox-1" required>
-        <label class="checkbox__container" for="checkbox-1">
+        <input class="visually-hidden" type="checkbox" id="checkbox-2" required>
+        <label class="checkbox__container" for="checkbox-2">
             <span class="checkbox__control">Отправляя заявку, я соглашаюсь на обработку персональных данных</span>
         </label>
     </div>
 
     <input type="hidden" name="<?=$templateName?>_<?=$arParams["IBLOCK_ID"]?>_iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
-    <button class="form__button button" type="submit">Отправить заявку</button>
+    <button class="form__button button" type="submit">Скачать презентацию</button>
 
     <?if ($arParams["LIST_URL"] <> ''):?>
         <input type="submit" name="iblock_apply" value="<?=GetMessage("IBLOCK_FORM_APPLY")?>" />

@@ -18,8 +18,11 @@ $language= \Bitrix\Landing\Manager::getLangISO();
 <head>
 	<?$APPLICATION->ShowProperty('AfterHeadOpen');?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?$APPLICATION->ShowTitle();?></title>
+    <link rel="icon" href="/local/templates/.default/include/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/local/templates/.default/include/favicon/favicon.png" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="/local/templates/.default/include/favicon/favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<?
 	$APPLICATION->ShowHead();

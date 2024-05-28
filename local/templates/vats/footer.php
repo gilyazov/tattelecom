@@ -23,7 +23,8 @@ $APPLICATION->ShowProperty('FooterJS');
 
 
 </div>
-<div class="modal">
+<?if(SITE_ID != "s7"):?>
+    <div class="modal">
     <div class="modal__container modal--tariffs" data-target="modal-tariff">
         <div class="modal__content">
             <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
@@ -32,51 +33,51 @@ $APPLICATION->ShowProperty('FooterJS');
             <div class="modal__price">990 ₽</div>
             <ul class="modal__list">
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
                 <li class="modal__list-item">
-                    <img class="modal__list-item-img" src="/local/js/vatc/assets/images/modal/icon-1.svg" alt="">
+                    <img class="modal__list-item-img" src="/local/js/vatc/build/assets/images/modal/icon-1.svg" alt="">
                     <div class="modal__list-item-text">Перехват, перевод вызовов dfwe fwefwefwe</div>
                 </li>
             </ul>
@@ -88,20 +89,42 @@ $APPLICATION->ShowProperty('FooterJS');
             <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
             </button>
             <div class="modal__title">Оставьте заявку</div>
-            <form class="modal__form form" action="" data-need-validation>
-                <div class="input js-validation-wrapper">
-                    <input class="input__control" type="text" placeholder="Как к Вам обращаться?" required>
-                </div>
-                <div class="input js-validation-wrapper">
-                    <input class="input__control js-phone-mask" type="text" placeholder="+7(___)___-__-__" required>
-                </div>
-                <div class="cheackbox">
-                    <input class="visually-hidden" type="checkbox" id="checkbox-2" required>
-                    <label class="checkbox__container" for="checkbox-2"><span class="checkbox__control">Отправляя заявку, я соглашаюсь на обработку персональных данных</span>
-                    </label>
-                </div>
-                <button class="form__button button" type="submit">Отправить заявку</button>
-            </form>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:iblock.element.add.form",
+                "modal__form",
+                Array(
+                    "CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
+                    "CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
+                    "CUSTOM_TITLE_DETAIL_PICTURE" => "",
+                    "CUSTOM_TITLE_DETAIL_TEXT" => "",
+                    "CUSTOM_TITLE_IBLOCK_SECTION" => "",
+                    "CUSTOM_TITLE_NAME" => "Ваше имя",
+                    "CUSTOM_TITLE_PREVIEW_PICTURE" => "",
+                    "CUSTOM_TITLE_PREVIEW_TEXT" => "",
+                    "CUSTOM_TITLE_TAGS" => "",
+                    "DEFAULT_INPUT_SIZE" => "30",
+                    "DETAIL_TEXT_USE_HTML_EDITOR" => "N",
+                    "ELEMENT_ASSOC" => "CREATED_BY",
+                    "GROUPS" => array("2"),
+                    "IBLOCK_ID" => "67",
+                    "IBLOCK_TYPE" => "forms",
+                    "LEVEL_LAST" => "Y",
+                    "LIST_URL" => "",
+                    "MAX_FILE_SIZE" => "0",
+                    "MAX_LEVELS" => "100000",
+                    "MAX_USER_ENTRIES" => "100000",
+                    "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
+                    "PROPERTY_CODES" => ["NAME", "299", "300"],
+                    "PROPERTY_CODES_REQUIRED" => ["NAME", "299", "300"],
+                    "RESIZE_IMAGES" => "N",
+                    "SEF_MODE" => "N",
+                    "STATUS" => "ANY",
+                    "STATUS_NEW" => "N",
+                    "USER_MESSAGE_ADD" => "",
+                    "USER_MESSAGE_EDIT" => "",
+                    "USE_CAPTCHA" => "N"
+                )
+            );?>
         </div>
     </div>
     <div class="modal__container modal--success" data-target="modal-success">
@@ -109,6 +132,9 @@ $APPLICATION->ShowProperty('FooterJS');
             <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
             </button>
             <div class="modal__title">Ваша заявка успешно отправлена!<br>Мы перезвоним Вам в течение получаса</div>
+            <div class="intro__btns" style="text-align: center;">
+                <a class="intro__btn button" href="/upload/medialibrary/163/i63je93rcrj1fsq0y273h6rwupdxgwin/Oblachnaya-ATS-ot-Letay-Biznes.pdf" target="_blank" download="">Скачать презентацию</a>
+            </div>
         </div>
     </div>
     <div class="modal__container modal--error" data-target="modal-error">
@@ -119,6 +145,7 @@ $APPLICATION->ShowProperty('FooterJS');
         </div>
     </div>
 </div>
+<?endif;?>
 <?php $APPLICATION->ShowProperty('BeforeBodyClose');?>
 
 <?php if (\Bitrix\Landing\Connector\Mobile::isMobileHit()):
