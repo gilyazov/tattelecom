@@ -88,7 +88,7 @@ $APPLICATION->ShowProperty('FooterJS');
         <div class="modal__content">
             <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
             </button>
-            <div class="modal__title">Оставьте заявку</div>
+            <div class="modal__title">Скачать презентацию</div>
             <?$APPLICATION->IncludeComponent(
                 "bitrix:iblock.element.add.form",
                 "modal__form",
@@ -114,7 +114,7 @@ $APPLICATION->ShowProperty('FooterJS');
                     "MAX_LEVELS" => "100000",
                     "MAX_USER_ENTRIES" => "100000",
                     "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-                    "PROPERTY_CODES" => ["NAME", "299", "300"],
+                    "PROPERTY_CODES" => ["NAME", "299", "300", "310"],
                     "PROPERTY_CODES_REQUIRED" => ["NAME", "299", "300"],
                     "RESIZE_IMAGES" => "N",
                     "SEF_MODE" => "N",

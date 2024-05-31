@@ -29,6 +29,7 @@ if ($arResult["MESSAGE"] <> ''):?>
       class="modal__form form"
       action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data" data-need-validation>
 
+    <input type="hidden" name="PROPERTY[310]" value="286" id="property_286">
     <?if (is_array($arResult["PROPERTY_LIST"]) && !empty($arResult["PROPERTY_LIST"])):?>
         <?foreach ($arResult["PROPERTY_LIST"] as $propertyID):?>
             <?if (intval($propertyID) > 0):?>
