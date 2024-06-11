@@ -17,7 +17,7 @@ $this->setFrameMode(true);
     <?php foreach($arResult["ITEMS"] as $arItem):?>
     <?php if($arItem["PROPERTIES"]["COORDINATES"]["VALUE"]):?>
         <li
-                class="sales-offices-map__item js-offices-item"
+                class="sales-offices-map__item js-offices-item<?if($arItem["PROPERTIES"]["IS_PARTNER"]["VALUE_XML_ID"] == "Y"):?> mod-hide-partner<?endif;?>"
                 data-coord="[<?=$arItem["PROPERTIES"]["COORDINATES"]["VALUE"]?>]"
                 <?php if($arItem["PROPERTIES"]["IS_PARTNER"]["VALUE_XML_ID"] == "Y"):?>
                     data-is-partner
