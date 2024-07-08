@@ -21,6 +21,9 @@
                     <li class="nav__list-item">
                         <a class="nav__list-link" href="https://help.vats.letai.ru/" target="_blank" rel="nofollow">База знаний</a>
                     </li>
+                    <li class="nav__list-item">
+                        <a class="nav__list-link nav__list-phone" href="tel:88432380000" rel="nofollow">8 843 238 00 00</a>
+                    </li>
                 </ul>
             </nav>
             <button class="header__btn"><span></span><span></span><span></span>

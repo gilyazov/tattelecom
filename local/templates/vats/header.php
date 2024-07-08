@@ -30,7 +30,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
 	$APPLICATION->ShowProperty('BeforeHeadClose');
 	?>
 </head>
-<body class="page-home <?$APPLICATION->ShowProperty('BodyClass');?>" <?$APPLICATION->ShowProperty('BodyTag');?> ontouchstart="">
+<body class="<?$APPLICATION->ShowProperty('BodyClass');?>" <?$APPLICATION->ShowProperty('BodyTag');?> ontouchstart="">
 <?
 /*
 This is commented to avoid Project Quality Control warning

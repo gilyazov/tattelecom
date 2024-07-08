@@ -16,7 +16,23 @@ $arUrlRewrite=array (
     'PATH' => '/dynamic/helpdesk/technical-works/index.php',
     'SORT' => 100,
   ),
-  4 => 
+  12 => 
+  array (
+    'CONDITION' => '#^/stocks/safe-dom/rates/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/dynamic/safe-dom/rates/index.php',
+    'SORT' => 100,
+  ),
+  18 => 
+  array (
+    'CONDITION' => '#^/internet-in-a-cube/#',
+    'RULE' => NULL,
+    'ID' => 'bitrix:landing.pub',
+    'PATH' => '/internet-in-a-cube/index.php',
+    'SORT' => 100,
+  ),
+  15 => 
   array (
     'CONDITION' => '#^/internet/rates/#',
     'RULE' => '',
@@ -30,6 +46,22 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/dynamic/mobile/rates/index.php',
+    'SORT' => 100,
+  ),
+  13 => 
+  array (
+    'CONDITION' => '#^/letai-racing/#',
+    'RULE' => NULL,
+    'ID' => 'bitrix:landing.pub',
+    'PATH' => '/letai-racing/index.php',
+    'SORT' => 100,
+  ),
+  17 => 
+  array (
+    'CONDITION' => '#^/safe-yard/lp/#',
+    'RULE' => NULL,
+    'ID' => 'bitrix:landing.pub',
+    'PATH' => '/safe-yard/lp/index.php',
     'SORT' => 100,
   ),
   11 => 
@@ -48,7 +80,7 @@ $arUrlRewrite=array (
     'PATH' => '/dynamic/tv/online/index.php',
     'SORT' => 100,
   ),
-  5 => 
+  14 => 
   array (
     'CONDITION' => '#^/tv/rates/#',
     'RULE' => '',
@@ -64,7 +96,7 @@ $arUrlRewrite=array (
     'PATH' => '/dynamic/phone/index.php',
     'SORT' => 100,
   ),
-  2 => 
+  16 => 
   array (
     'CONDITION' => '#^/news/#',
     'RULE' => '',

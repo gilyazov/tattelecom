@@ -13,5 +13,15 @@ class Main
             $class = ' is-admin';
             $APPLICATION->SetPageProperty("BodyClass", $class);
         }
+
+        if (SITE_TEMPLATE_ID == "vats"){
+            $bodyClass = "page-home";
+            if ($APPLICATION->GetCurPage(false)== '/internet-in-a-cube/') {
+                $bodyClass = "page-cube";
+            }
+
+            $APPLICATION->SetPageProperty("BodyClass",$bodyClass);
+        }
+
     }
 }
