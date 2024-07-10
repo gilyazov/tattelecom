@@ -20,7 +20,7 @@
                     </li>
                 </ul>
             </nav>
-            <button class="header__call button-2" href="#application">Позвонить</button>
+            <button class="header__call button-2" href="#application">Оставить заявку</button>
             <button class="header__btn"><span></span><span></span><span></span>
             </button>
         </div>
@@ -46,7 +46,7 @@
                     </li>
                 </ul>
             </nav>
-            <button class="header__call button-2" href="#coverage">Позвонить</button>
+            <button class="header__call button-2" href="#coverage">Оставить заявку</button>
         </div>
     </div>
 </div>

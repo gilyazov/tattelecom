@@ -20,9 +20,9 @@
     <div class="site-container-2">
         <div class="cube-tariff__wrapper">
             <h2 class="cube-tariff__title title-2">Тарифы</h2>
-            <ul class="cube-tariff__items cube-tariff__swiper">
+            <div class="cube-tariff__items cube-tariff__swiper">
                 <div class="swiper-wrapper">
-                    <li class="swiper-slide cube-tariff__item cube-tariff__item--colm-2">
+                    <div class="swiper-slide cube-tariff__item cube-tariff__item--colm-2">
                         <div class="cube-tariff__item-title">Летай. Оранжевый. Профит</div>
                         <div class="cube-tariff__item-desc">Интернет + ТВ</div>
                         <ul class="cube-tariff__item-list">
@@ -53,6 +53,13 @@
                         </ul>
                         <div class="cube-tariff__item-price">
                             <div class="cube-tariff__item-price-discount">скидка на 3 месяца</div>
+                            <div class="services-box__item-tooltip">
+                                <button class="services-box__item-tooltip-close-btn" type="button"><span></span><span></span>
+                                </button>
+                                <div class="services-box__item-tooltip-content">
+                                    <p>Скидка предоставляется при подключении с покупкой роутера</p>
+                                </div>
+                            </div>
                             <div class="cube-tariff__item-price-box">
                                 <div class="cube-tariff__item-price-elem"><span>275</span>₽/мес</div>
                                 <div class="cube-tariff__item-price-crossed"><span>550</span>₽/мес</div>
@@ -60,8 +67,8 @@
                         </div>
                         <a class="cube-tariff__item-button button-2" href="#">Подключить</a>
                         <a class="cube-tariff__item-link" href="/internet/rates/domashniy-internet-tv/letay-oranzhevyy-profit-/">Подробнее о тарифе</a>
-                    </li>
-                    <li class="swiper-slide cube-tariff__item cube-tariff__item--colm-2">
+                    </div>
+                    <div class="swiper-slide cube-tariff__item cube-tariff__item--colm-2">
                         <div class="cube-tariff__item-title">Летай. Всё и сразу</div>
                         <div class="cube-tariff__item-desc">Интернет + ТВ + Мобильная связь</div>
                         <ul class="cube-tariff__item-list">
@@ -106,6 +113,13 @@
                         </ul>
                         <div class="cube-tariff__item-price">
                             <div class="cube-tariff__item-price-discount">скидка на 3 месяца</div>
+                            <div class="services-box__item-tooltip">
+                                <button class="services-box__item-tooltip-close-btn" type="button"><span></span><span></span>
+                                </button>
+                                <div class="services-box__item-tooltip-content">
+                                    <p>Скидка предоставляется при подключении с покупкой роутера</p>
+                                </div>
+                            </div>
                             <div class="cube-tariff__item-price-box">
                                 <div class="cube-tariff__item-price-elem"><span>295</span>₽/мес</div>
                                 <div class="cube-tariff__item-price-crossed"><span>590</span>₽/мес</div>
@@ -113,8 +127,8 @@
                         </div>
                         <a class="cube-tariff__item-button button-2" href="#">Подключить</a>
                         <a class="cube-tariff__item-link" href="/internet/rates/domashniy-internet-tv-mobilnaya-svyaz/letay-vse-i-srazu/">Подробнее о тарифе</a>
-                    </li>
-                    <li class="swiper-slide cube-tariff__item">
+                    </div>
+                    <div class="swiper-slide cube-tariff__item">
                         <div class="cube-tariff__item-title">Летай. Оранжевый 250</div>
                         <div class="cube-tariff__item-desc">Интернет</div>
                         <ul class="cube-tariff__item-list cube-tariff__item-list--colm-1">
@@ -145,8 +159,8 @@
                         </div>
                         <a class="cube-tariff__item-button button-2" href="#">Подключить</a>
                         <a class="cube-tariff__item-link" href="/internet/rates/tarify-500-mbit/letay-oranzhevyy-250/">Подробнее о тарифе</a>
-                    </li>
-                    <li class="swiper-slide cube-tariff__item">
+                    </div>
+                    <div class="swiper-slide cube-tariff__item">
                         <div class="cube-tariff__item-title">Летай. Оранжевый 500</div>
                         <div class="cube-tariff__item-desc">Интернет</div>
                         <ul class="cube-tariff__item-list cube-tariff__item-list--colm-1">
@@ -177,8 +191,8 @@
                         </div>
                         <a class="cube-tariff__item-button button-2" href="#">Подключить</a>
                         <a class="cube-tariff__item-link" href="/internet/rates/tarify-500-mbit/letay-oranzhevyy-500/">Подробнее о тарифе</a>
-                    </li>
-                    <li class="swiper-slide cube-tariff__item">
+                    </div>
+                    <div class="swiper-slide cube-tariff__item">
                         <div class="cube-tariff__item-title">Летай. Оранжевый 250+ТВ</div>
                         <div class="cube-tariff__item-desc">Интернет + ТВ</div>
                         <ul class="cube-tariff__item-list cube-tariff__item-list--colm-1">
@@ -214,8 +228,8 @@
                         </div>
                         <a class="cube-tariff__item-button button-2" href="#">Подключить</a>
                         <a class="cube-tariff__item-link" href="/internet/rates/tarify-500-mbit/letay-oranzhevyy-250-tv/">Подробнее о тарифе</a>
-                    </li>
-                    <li class="swiper-slide cube-tariff__item">
+                    </div>
+                    <div class="swiper-slide cube-tariff__item">
                         <div class="cube-tariff__item-title">Летай. Оранжевый 500+ТВ</div>
                         <div class="cube-tariff__item-desc">Интернет + ТВ</div>
                         <ul class="cube-tariff__item-list cube-tariff__item-list--colm-1">
@@ -251,7 +265,7 @@
                         </div>
                         <a class="cube-tariff__item-button button-2" href="#">Подключить</a>
                         <a class="cube-tariff__item-link" href="/internet/rates/tarify-500-mbit/letay-oranzhevyy-500-tv/">Подробнее о тарифе</a>
-                    </li>
+                    </div>
                 </div>
                 <div class="swiper-navigation">
                     <button class="swiper-navigation__prev">
@@ -261,7 +275,7 @@
                         <img class="swiper-navigation__img" src="/local/js/vatc/build/assets/images/cube-tariffs/slider-btn.svg" alt="">
                     </button>
                 </div>
-            </ul>
+            </div>
             <a class="cube-tariff__button button-2">Посмотреть все тарифы</a>
         </div>
     </div>
