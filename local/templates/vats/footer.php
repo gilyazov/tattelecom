@@ -131,10 +131,12 @@ $APPLICATION->ShowProperty('FooterJS');
         <div class="modal__content">
             <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
             </button>
-            <div class="modal__title">Ваша заявка успешно отправлена!<br>Мы перезвоним Вам в течение получаса</div>
-            <div class="intro__btns" style="text-align: center;">
-                <a class="intro__btn button" href="/upload/medialibrary/163/i63je93rcrj1fsq0y273h6rwupdxgwin/Oblachnaya-ATS-ot-Letay-Biznes.pdf" target="_blank" download="">Скачать презентацию</a>
-            </div>
+            <div class="modal__title">Ваша заявка успешно отправлена!<br>Мы перезвоним Вам в ближайшее время</div>
+            <?if(SITE_ID == "s6"):?>
+                <div class="intro__btns" style="text-align: center;">
+                    <a class="intro__btn button" href="/upload/medialibrary/163/i63je93rcrj1fsq0y273h6rwupdxgwin/Oblachnaya-ATS-ot-Letay-Biznes.pdf" target="_blank" download="">Скачать презентацию</a>
+                </div>
+            <?endif;?>
         </div>
     </div>
     <div class="modal__container modal--error" data-target="modal-error">

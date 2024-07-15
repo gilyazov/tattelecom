@@ -26,7 +26,7 @@ if ($arResult["MESSAGE"] <> ''):?>
 <?endif?>
 
 <form name="iblock_add"
-      class="application__form form"
+      class="application__form form js-vats"
       action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data" data-need-validation>
 
     <?if (is_array($arResult["PROPERTY_LIST"]) && !empty($arResult["PROPERTY_LIST"])):?>

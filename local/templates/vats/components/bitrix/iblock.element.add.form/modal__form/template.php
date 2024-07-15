@@ -26,7 +26,7 @@ if ($arResult["MESSAGE"] <> ''):?>
 <?endif?>
 
 <form name="iblock_add"
-      class="modal__form form"
+      class="modal__form form js-vats"
       action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data" data-need-validation>
 
     <input type="hidden" name="PROPERTY[310]" value="286" id="property_286">

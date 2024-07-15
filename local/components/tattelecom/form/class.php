@@ -58,6 +58,7 @@ class Form extends \CBitrixComponent implements Controllerable
         $url = $this->buildUrl();
         $phone = $this->parsePhone($post['phone']);
         $utm = $this->getUtmQuery();
+        
         $recaptchaResponse = GoogleReCaptcha::checkClientResponse($post['recaptcha_response']);
 
         if ($recaptchaResponse['score'] < 0.5){
@@ -108,6 +109,37 @@ class Form extends \CBitrixComponent implements Controllerable
 
     public function executeComponent()
     {
+        // для лендинга ватс
+        if ($this->request->isPost()){
+            $post = $this->request->getValues();
+
+            global $APPLICATION;
+            $APPLICATION->RestartBuffer();
+            try {
+                $response = $this->sendLeadAction($post);
+                if($response["status"] == 1){
+                    $el = new \CIBlockElement;
+                    $PROP = array();
+                    $PROP[311] = $post['phone'];
+                    $PROP[312] = $post['param_comment'];
+                    $arLoadProductArray = Array(
+                        "IBLOCK_ID"      => 70,
+                        "PROPERTY_VALUES"=> $PROP,
+                        "NAME"           => ($post['firstname'] ? $post['firstname'] : "Нет Имени"),
+                    );
+                    $PRODUCT_ID = $el->Add($arLoadProductArray);
+                    echo \Bitrix\Main\Web\Json::encode(["ID" => 1]);
+                }
+            }
+            catch (Exception $e){
+                echo $e->getMessage();
+                \CHTTP::SetStatus("500 Internal Server Error");
+
+//                throw new Exception($e->getMessage());
+            }
+            die();
+        }
+
         $this->includeComponentTemplate();
     }
 }
