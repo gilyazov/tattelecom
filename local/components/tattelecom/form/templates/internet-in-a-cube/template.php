@@ -4,6 +4,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 ?>
 <form action="" class="application__form form" data-need-validation="data-need-validation">
     <input type="hidden" name="param_referer" value="<?=$APPLICATION->GetTitle()?>">
+    <input type="hidden" name="param_comment" value="">
 
     <div class="input js-validation-wrapper">
         <input type="text"

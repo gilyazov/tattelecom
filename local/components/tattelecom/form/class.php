@@ -110,7 +110,7 @@ class Form extends \CBitrixComponent implements Controllerable
     public function executeComponent()
     {
         // для лендинга ватс
-        if ($this->request->isPost()){
+        if ($this->request->isPost() && SITE_ID == "s9"){
             $post = $this->request->getValues();
 
             global $APPLICATION;
