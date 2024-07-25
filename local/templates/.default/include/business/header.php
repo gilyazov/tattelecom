@@ -43,7 +43,7 @@
                                         <use xlink:href="#geolocation"></use>
                                     </svg><?=$_SESSION['city']['name']?>
                                 </a>
-                                <a href="https://web.tattelecom.ru/" target="_blank" class="header__top-menu-items-link mod-with-icons">
+                                <a href="https://web.tattelecom.ru/" target="_blank" rel="nofollow" class="header__top-menu-items-link mod-with-icons">
                                     <svg width="20" height="20" aria-hidden="true" class="header__top-menu-items-link-icon">
                                         <use xlink:href="#lk"></use>
                                     </svg>Войти

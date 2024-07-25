@@ -207,6 +207,7 @@ if ($arResult["MESSAGE"] <> ''):?>
                                     $code = $arResult["PROPERTY_LIST_FULL"][$propertyID]["CODE"];
                                     $additionalClass = "js-input-text";
                                     $type = "text";
+                                    $mask = "";
                                     if ($code == "PHONE"){
                                         $additionalClass = "js-input-tel";
                                         $mask = " js-phone-mask";
@@ -365,7 +366,7 @@ if ($arResult["MESSAGE"] <> ''):?>
         </p>
     </div>
 
-    <input type="hidden" name="iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
+    <input type="hidden" name="<?=$templateName?>_<?=$arParams["IBLOCK_ID"]?>_iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
     <button type="submit" class="gl__main-btn mod-business">Получить консультацию</button>
     <?if ($arParams["LIST_URL"] <> ''):?>
                     <input type="submit" name="iblock_apply" value="<?=GetMessage("IBLOCK_FORM_APPLY")?>" />
