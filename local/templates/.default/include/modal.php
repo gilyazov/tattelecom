@@ -71,7 +71,7 @@
             <div class="send-request__content">
                 <div class="send-request__info">
                     <div class="send-request__price">
-                        <span class="number">240</span>₽/мес
+                        <span class="number">240</span><span class="tariffing">₽/мес</span>
                     </div>
                     <div class="send-request__info-hint">
                         <div>Укажите имя и контактный номер телефона.</div>
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="send-request__product-wrapper">
-                    <img src="" alt="" class="send-request__product-img">
+                    <img src="#" alt="" class="send-request__product-img">
                     <div>
                         <div class="send-request__product-caption">тип</div>
                         <div class="send-request__product-value">модель</div>

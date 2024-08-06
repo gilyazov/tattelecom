@@ -72,6 +72,7 @@ $this->addExternalJS(BUILD_PATH . "js/rates-mobile-list-page.js");
                         <div class="rates-list__slide-btns-wrapper">
                             <button type="button"
                                     data-tariff-name="<?=$arItem["NAME"]?>"
+                                    data-tariffing="<?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?>"
                                     data-prise="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>"
                                     class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal">
                                 Подключить
