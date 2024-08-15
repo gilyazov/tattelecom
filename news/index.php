@@ -58,7 +58,7 @@ $APPLICATION->SetPageProperty("description", "Свежие новости опе
             "BROWSER_TITLE" => "-",
             "DETAIL_ACTIVE_DATE_FORMAT" => "d F Y",
             "DETAIL_FIELD_CODE" => array(
-                0 => "",
+                0 => "SHOW_COUNTER",
                 1 => "",
             ),
             "DETAIL_PROPERTY_CODE" => array(
