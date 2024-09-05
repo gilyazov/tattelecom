@@ -32,7 +32,7 @@ $this->setFrameMode(true);
                         <?endif;?>
                     </div>
                     <div class="rates-preview__img-wrapper">
-                        <img src="<?=\Tattelecom\Core\Tools::resizeImage($arItem["DETAIL_PICTURE"]["ID"], 1920, 470, true)?>" alt="" class="rates-preview__img">
+                        <img src="<?=\Tattelecom\Core\Tools::resizeImage($arItem["DETAIL_PICTURE"]["ID"], 2880, 705, true)?>" alt="" class="rates-preview__img">
                     </div>
                 </div>
             </section>
