@@ -105,7 +105,7 @@
                                 </svg>
                             </button>
                             <button type="button" class="header__bottom-btn header__btn-subscriber gl__main-btn js-open-callback-modal">
-                                Стать абонентом
+                                Оставить заявку
                             </button>
                         </div>
                     </div>
