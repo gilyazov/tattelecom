@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
 
     if (!block) return;
 
-    const listItems = block.querySelectorAll('.cube-tariff__item--colm-2');
+    /*const listItems = block.querySelectorAll('.cube-tariff__item--colm-2');
 
     listItems.forEach(item => {
         const title = item.querySelector('.cube-tariff__item-price-discount');
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){ // Аналог $(docu
         tooltipButtonClose.addEventListener('click', function () {
             tooltip.classList.remove("active");
         })
-    });
+    });*/
 
     // кнопки подключить
     const buttons = document.querySelectorAll('.cube-tariff__item-button');
