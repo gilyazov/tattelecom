@@ -11,3 +11,7 @@ while($ob = $res->GetNextElement()){
     $arResult["CONDITIONS"][] = $arFields;
 }
 //end
+
+if ($fileId = $arResult["PROPERTIES"]["FILE"]["VALUE"]){
+    LocalRedirect(CFile::GetPath($fileId));;
+}
