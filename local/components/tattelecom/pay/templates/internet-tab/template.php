@@ -28,18 +28,18 @@ $this->addExternalJS($componentPath . '/script.js');
         <div class="form-radio-wrapper">
             <div class="top-up-account__form-radio-wrapper">
                 <label class="radio__wrapper">
-                    <input type="radio" class="radio" name="pay_service" value="card" data-parsley-required="" checked="checked">
-                    <span class="radio__content"></span>
-                    <span class="radio__text">Банковская карта</span>
-                </label>
-            </div>
-            <div class="top-up-account__form-radio-wrapper">
-                <label class="radio__wrapper">
-                    <input type="radio" class="radio" name="pay_service" value="raifaizen" data-parsley-required="">
+                    <input type="radio" class="radio" name="pay_service" value="raifaizen" data-parsley-required="" checked="checked">
                     <span class="radio__content"></span>
 
                     <span class="radio__text">СБП</span>
                     <img src="https://static.beeline.ru/upload/images/b2c/index-redesign-payment-icons/sfp.svg" class="sbp-ico" alt="">
+                </label>
+            </div>
+            <div class="top-up-account__form-radio-wrapper">
+                <label class="radio__wrapper">
+                    <input type="radio" class="radio" name="pay_service" value="card" data-parsley-required="">
+                    <span class="radio__content"></span>
+                    <span class="radio__text">Банковская карта</span>
                 </label>
             </div>
         </div>
