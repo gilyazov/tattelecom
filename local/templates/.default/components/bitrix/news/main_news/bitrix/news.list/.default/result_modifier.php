@@ -1,4 +1,6 @@
 <?php
+/** @var array $arResult */
+
 $years = [];
 $types = [];
 $arSelect = Array("ID", "IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM", "PROPERTY_TYPE");
@@ -30,3 +32,9 @@ $months = array('01' => "Январь", '02' => "Февраль", '03'=> 'Мар
 $arResult["YEARS"] = $years;
 $arResult["TYPES"] = $types;
 $arResult["MONTHS"] = $months;
+
+foreach ($arResult["ITEMS"] as $key => $arItem) {
+    if ($fileId = $arItem["PROPERTIES"]["FILE"]["VALUE"]){
+        $arResult["ITEMS"][$key]["DETAIL_PAGE_URL"] = CFile::GetPath($fileId);
+    }
+}
