@@ -28,7 +28,7 @@ class GoogleReCaptcha
         try {
             $arResponse = \Bitrix\Main\Web\Json::decode($response,true);
         } catch (\Bitrix\Main\SystemException $e) {
-            throw new Exception($e->getMessage() . "IP: " . $data["remoteip"]);
+            throw new Exception($e->getMessage() . "response: " . $response);
         }
 
         return $arResponse;

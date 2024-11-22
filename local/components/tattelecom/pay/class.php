@@ -62,8 +62,13 @@ class TtkPay extends \CBitrixComponent implements Controllerable
         }
 
         $response = $this->httpClient->post($url, \Bitrix\Main\Web\Json::encode($data));
+        try {
+            $arResponse = \Bitrix\Main\Web\Json::decode($response);
+        } catch (\Bitrix\Main\SystemException $e) {
+            throw new Exception($e->getMessage() . "response: " . $response);
+        }
 
-        return \Bitrix\Main\Web\Json::decode($response);
+        return $arResponse;
     }
 
     protected function buildUrl(): string
