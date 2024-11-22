@@ -5,6 +5,7 @@ use Bitrix\Main\Web\HttpClient;
 use Bitrix\Main\Engine\Contract\Controllerable;
 use Bitrix\Main\PhoneNumber\Format;
 use Bitrix\Main\PhoneNumber\Parser;
+use Bitrix\Main\Loader;
 
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
@@ -67,12 +68,31 @@ class Form extends \CBitrixComponent implements Controllerable
         $data = [
             "phone" => $phone,
             "service" => 2,
-            "name" => ($post['firstname'] ? $post['firstname'] : "Нет Имени"),
+            "name" => ($post['firstname'] ?: "Нет Имени"),
             "referer" => $post['param_referer'],
             "address" => $_SESSION['city']['name'],
             "comment" => $post['param_comment'],
             "utm" => $utm,
         ];
+
+        // логируем локально
+        Loader::includeModule("iblock");
+        $el = new \CIBlockElement;
+        $PROP = array();
+        $PROP[314] = $phone;
+        $PROP[315] = $post['param_referer'];
+        $PROP[316] = $_SESSION['city']['name'];
+        $PROP[317] = $post['param_comment'];
+        $PROP[318] = $utm;
+        $arLoadProductArray = Array(
+            "IBLOCK_ID"      => 71,
+            "PROPERTY_VALUES"=> $PROP,
+            "NAME"           => ($post['firstname'] ?: "Нет Имени"),
+        );
+        if(!$el->Add($arLoadProductArray)){
+            throw new Exception($el->LAST_ERROR);
+        }
+        // end
 
         $response = $this->httpClient->post($url, \Bitrix\Main\Web\Json::encode($data));
 

@@ -12,7 +12,7 @@ class GoogleReCaptcha
     public static function checkClientResponse($captchaResponse)
     {
         if (!$captchaResponse){
-            return "";
+            throw new Exception("Не найден токен капчи. Возможно вы робот?");
         }
 
         $url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -23,8 +23,14 @@ class GoogleReCaptcha
         );
 
         $httpClient = new HttpClient();
-        $response = $httpClient->post($url,$data);
+        $response = $httpClient->post($url, $data);
 
-        return \Bitrix\Main\Web\Json::decode($response,true);
+        try {
+            $arResponse = \Bitrix\Main\Web\Json::decode($response,true);
+        } catch (\Bitrix\Main\SystemException $e) {
+            throw new Exception($e->getMessage() . "IP: " . $data["remoteip"]);
+        }
+
+        return $arResponse;
     }
 }
