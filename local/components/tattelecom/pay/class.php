@@ -63,10 +63,10 @@ class TtkPay extends \CBitrixComponent implements Controllerable
 
         $response = $this->httpClient->post($url, \Bitrix\Main\Web\Json::encode($data));
         if (!$response){
-            throw new Exception("Не поступил ответ от сервиса оплат: " . implode("," , $data));
+            throw new Exception($this->httpClient->getStatus() . " Не поступил ответ от сервиса оплат: " . implode("," , $data));
         }
 
-        return \Bitrix\Main\Web\Json::decode($response);;
+        return \Bitrix\Main\Web\Json::decode($response);
     }
 
     protected function buildUrl(): string
