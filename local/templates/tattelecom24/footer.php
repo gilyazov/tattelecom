@@ -20,6 +20,61 @@ $APPLICATION->ShowProperty('FooterJS');
 ?>
 <? include_once(DEFAULT_PATH . 'include/'.(SITE_ID == 's2' ? 'business/' : '').'modal.php');?>
 
+<?
+$page = $APPLICATION->GetCurPage(); // результат - /ru/index.php
+if ($page == "/domofon/"):
+?>
+    <!-- Виджет для просмотра видео -->
+    <div class="video__widget-container">
+        <button type="button" class="video__widget-close" onclick="this.parentElement.style.display='none'">
+            <svg width="32" height="32" aria-hidden="true" class="modal__close-icon">
+                <use xlink:href="#close"></use>
+            </svg>
+        </button>
+        <div class="video__widget-content">
+            <video autoplay muted controls>
+                <source src="/local/js/tattelecom/build/assets/videos/domofon.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+
+    <style>
+        .video__widget-container {
+            position: fixed;
+            z-index: 9999999;
+            right: 50px; /* отступ справа */
+            bottom: 50px; /* отступ снизу */
+            max-width: 200px; /* максимальная ширина виджета */
+        }
+        @media (max-width: 768px) {
+            .video__widget-container{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .video__widget-content{
+            transition: border-radius 0.3s ease-out, box-shadow 0.2s ease-out, background-color 0.3s ease, border-color 0.3s ease;
+            border-radius: 10px;
+            z-index: 100;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(255, 255, 255, 1);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .video__widget-content video{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .video__widget-close {
+            position: absolute;
+            top: -1.5rem;
+            right: -1.5rem;
+            background: white;
+        }
+    </style>
+<?endif;?>
+
 <div class="modal" id="modal-about-tariff-host">
     <div class="modal__container mod-middle js-modal-container">
         <div class="modal__content js-modal-content">
