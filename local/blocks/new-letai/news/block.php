@@ -34,7 +34,7 @@
                 </a>
             </li>
             <li class="news__list-item">
-                <a href="#" class="news__card news__card--with-image">
+                <a href="#training-and-development" class="news__card news__card--with-image">
                     <img src="/local/js/new-letai/dist/images/news/8.webp" alt="" class="news__card-image">
                     <h3 class="news__card-title">
                         Обучение и развитие
@@ -86,7 +86,60 @@
     </div>
 </section>
 
+<div class="text-modal js-modal" id="training-and-development">
+    <div class="text-modal__inner">
+        <button class="text-modal__close js-modal-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M13.4343 15.9346L23.036 25.5362L25.9711 22.601L16.3695 12.9994L25.8329 3.53599L22.8977 0.600813L13.4343 10.0642L3.83361 0.463507L0.898437 3.39868L10.4992 12.9994L1.03504 22.4635L3.97021 25.3987L13.4343 15.9346Z" />
+            </svg>
+        </button>
+        <h3 class="text-modal__heading">
+            Обучение и развитие
+        </h3>
 
+        <div class="text-modal__text">
+            <p>
+                <b>Дайджест декабря!</b>
+                <br>
+                Первый месяц зимы! Этот холодный и снежный, но волшебный месяц уже наступил. Не упусти возможность посетить открытые тренинги Корпоративного университета в 2024 году!
+                <br>
+                Нематериальная мотивация
+                <br>
+                Повышать ЗП уже некуда, а сотрудник так и не мотивирован покорять горы? Приходи на этот тренинг и узнай, что помимо денег помогает выполнять план. Где: Казань, улица Николая Ершова, 57В, Корпоративный университет Когда: 5 декабря, старт в 10:00
+                <br>
+                Записаться можно по ссылке: <a href="https://energy.tattelecom.ru/catalog/content/info/3003" target="_blank">https://energy.tattelecom.ru/catalog/content/info/3003</a>
+            </p>
+            <p>
+                <b>Управление конфликтами</b>
+                <br>
+                Каждый день мы сталкиваемся с конфликтами, которые могут перерасти в крупные проблемы. Но что, если вместо войны слов и эмоций мы могли бы найти мир и согласие?
+                <br>
+                Где: Казань, улица Николая Ершова, 57В, Корпоративный университет
+                <br>
+                Когда: 5 декабря, старт в 10:00
+                <br>
+                Записаться можно по ссылке: <a href="https://energy.tattelecom.ru/catalog/content/info/2281" target="_blank">https://energy.tattelecom.ru/catalog/content/info/2281</a>
+            </p>
+            <p>
+                <b>Эмоциональный интеллект</b>
+                <br>
+                Вы когда-нибудь задавались вопросом, что происходит в голове другого человека? Каждый из нас испытывает эмоции, но не все знают, как с ними справляться. На этом тренинге приоткроем завесу тайны.
+                <br>
+                Где: Казань, улица Николая Ершова, 57В, Корпоративный университет
+                <br>
+                Когда: 19 декабря, старт в 10:00
+                <br>
+                Записаться можно по ссылке: <a href="https://energy.tattelecom.ru/catalog/content/info/2279" target="_blank">https://energy.tattelecom.ru/catalog/content/info/2279</a>
+            </p>
+            <p>
+                <b>Как записаться?</b>
+                <br>
+                Просто выберите интересующий вас курс в нашем "Каталоге" на платформе TTK Energy и зарегистрируйтесь. Не упустите возможность присоединиться к нам в Казани и расширить свои горизонты!
+            </p>
+        </div>
+    </div>
+</div>
 <div class="text-modal js-modal" id="career-horizons">
     <div class="text-modal__inner">
         <button class="text-modal__close js-modal-close">
