@@ -1,0 +1,9 @@
+.intro__numpad-grayscale .intro__numpad-card{
+    filter: grayscale(100%);
+}
+.js-attempt-container{
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    display: flex
+}
