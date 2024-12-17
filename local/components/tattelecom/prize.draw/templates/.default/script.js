@@ -66,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function(){
                     modal.querySelector('.win-modal__prize-icon svg use').setAttribute('xlink:href', ico);
                     modal.getElementsByClassName('win-modal__prize-name')[0].textContent = title;
                     modal.classList.add("active");
+
+                    document.getElementsByClassName('js-attempt-container')[0].style.display = 'none';
                 }
             }, function (response) {
                 BX.closeWait(button, wait);
