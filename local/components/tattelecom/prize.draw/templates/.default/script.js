@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     modal.getElementsByClassName('win-modal__prize-name')[0].textContent = title;
                     modal.classList.add("active");
 
+                    document.getElementsByClassName('intro__form-text')[0].style.display = 'none';
                     document.getElementsByClassName('js-attempt-container')[0].textContent = 'Поздравляем! В ближайшее время с вами свяжутся по электронной почте';
                 }
             }, function (response) {
