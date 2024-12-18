@@ -4,7 +4,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var array $arResult */
 //\Bitrix\Main\UI\Extension::load("ui.inputmask");
 ?>
-<form action="/" method="POST" class="intro__form" id="draw">
+<form action="/" method="POST" class="intro__form">
     <div class="intro__form-row">
         <div class="intro__form-field">
             <input type="email" class="intro__form-input" placeholder="Введите Ваш Email" required="">
@@ -17,7 +17,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
         </div>
     </div>
     <div class="intro__form-text">
-        Введи email с доменом tattelecom.ru и забери свой приз.
+        Введи email с&nbsp;доменом tattelecom.ru и&nbsp;находи призы, переворачивая поля. У&nbsp;вас будет 3&nbsp;попытки. Удачи!
         <!--Найди три одинаковых поля и забери свой приз. Осталось попыток: <span class="attempt-rate">3</span>-->
     </div>
     <div class="intro__numpad intro__numpad-grayscale">
