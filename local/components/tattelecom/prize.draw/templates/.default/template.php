@@ -17,7 +17,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
         </div>
     </div>
     <div class="intro__form-text">
-        Введи email с&nbsp;доменом tattelecom.ru и&nbsp;находи призы, переворачивая поля. У&nbsp;вас будет 3&nbsp;попытки. Удачи!
+        Введите email с&nbsp;доменом tattelecom.ru, открывайте ячейки и&nbsp;находите призы. У&nbsp;вас будет 3&nbsp;попытки. Удачи!
         <!--Найди три одинаковых поля и забери свой приз. Осталось попыток: <span class="attempt-rate">3</span>-->
     </div>
     <div class="intro__numpad intro__numpad-grayscale">
