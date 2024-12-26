@@ -31,9 +31,13 @@ document.addEventListener('DOMContentLoaded', function(){
             if (container.classList.contains('intro__numpad-grayscale')) {
                 return;
             }
-            const wait = BX.showWait(button);
 
             const attempt = document.getElementsByClassName('attempt-rate')[0];
+            if (attempt.textContent === "0"){
+                return;
+            }
+            const wait = BX.showWait(button);
+
             BX.ajax.runComponentAction('tattelecom:prize.draw', 'raffle', {
                 mode: 'class',
                 data: {
@@ -60,6 +64,17 @@ document.addEventListener('DOMContentLoaded', function(){
                 // покажем в окошке приз
                 button.classList.add("active");
                 BX.closeWait(button, wait);
+
+                let attemptText = "";
+                if (attempt.textContent == "0"){
+                    attemptText = 'К сожалению, в этот раз Вам не удалось выиграть в новогоднем розыгрыше. Но впереди еще много интересных конкурсов, в которых у Вас обязательно будет шанс на победу!';
+
+                    if (response.data.id){
+                        attemptText = 'Поздравляем! В ближайшее время с вами свяжутся по электронной почте';
+                    }
+
+                    document.getElementsByClassName('js-attempt-container')[0].textContent = attemptText;
+                }
                 if (response.data.id){
                     const modal = document.getElementById('win-modal');
                     document.body.classList.add("modal-open");
@@ -68,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function(){
                     modal.classList.add("active");
 
                     document.getElementsByClassName('intro__form-text')[0].style.display = 'none';
-                    document.getElementsByClassName('js-attempt-container')[0].textContent = 'Поздравляем! В ближайшее время с вами свяжутся по электронной почте';
                 }
             }, function (response) {
                 BX.closeWait(button, wait);

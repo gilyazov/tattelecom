@@ -37,6 +37,10 @@ class PrizeDraw extends \CBitrixComponent implements Controllerable
 
         if ($attempt == 1){
             $resultArr = $arPrizes;
+
+            if (count($arPrizes) == 0){
+                $resultArr = $arWish;
+            }
         }
         else{
             $resultArr = array_merge($arWish, $arPrizes);
