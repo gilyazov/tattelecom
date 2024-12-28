@@ -15,6 +15,11 @@
                 <?
                 global $arrFilterNews;
                 $arrFilterNews = array(
+                    Array(
+                        "LOGIC" => "OR",
+                        "PROPERTY_VISIBILITY" => false,
+                        "=PROPERTY_VISIBILITY" => 291
+                    ),
                     "PROPERTY_TYPE_VALUE" => "О компании"
                 );
                 ?>
