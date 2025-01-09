@@ -2,7 +2,7 @@
     <div class="modal__container mod-small js-modal-container">
         <div class="modal__content js-modal-content">
             <div class="modal__head">
-                <div class="modal__title">Оставьте свой номер, мы перезвоним Вам в течение 15 минут.</div>
+                <div class="modal__title">Оставьте свой номер и мы свяжемся с Вами в ближайшее время.</div>
                 <button type="button" class="modal__btn-close js-close-callback-modal">
                     <svg width="32" height="32" aria-hidden="true" class="modal__close-icon">
                         <use xlink:href="#close"></use>
@@ -153,7 +153,7 @@
                     </div>
                     <div class="send-request__info-hint">
                         <div>Укажите имя и контактный номер телефона.</div>
-                        <div>Мы перезвоним Вам в течение 15 минут.</div>
+                        <!--<div>Мы перезвоним Вам в течение 15 минут.</div>-->
                         <div>Клиентская служба работает с 08-00 до 20-00.</div>
                     </div>
                 </div>
