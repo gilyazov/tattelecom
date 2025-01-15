@@ -6,10 +6,10 @@
         </picture>
         <div class="intro__top-content">
             <h1 class="intro__heading">
-                Ритм жизни Летай
+                Летай.Connect:
             </h1>
             <div class="intro__heading-text">
-                Открой для себя мир компании
+                платформа, где команда становится семьей
             </div>
             <div class="intro__win">
                 <div class="intro__win-card">
