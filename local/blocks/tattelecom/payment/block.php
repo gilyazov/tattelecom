@@ -32,7 +32,7 @@
                     <div class="payment-services__form-inputs-wrapper"></div>
                     <div>
                         <div class="payment-services__form-btn-wrapper">
-                            <a href="https://lk.letai.ru/template.LOGIN/" target="_blank" class="payment-services__form-btn gl__main-btn js-open-top-up-account-modal">Продолжить</a>
+                            <a href="https://newlk.letai.ru/" target="_blank" class="payment-services__form-btn gl__main-btn js-open-top-up-account-modal">Продолжить</a>
                         </div>
                         <div class="payment-services__form-hint-wrapper">
                             <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете условия пользовательского соглашения.</div>
@@ -48,7 +48,7 @@
                     <div class="payment-services__form-inputs-wrapper"></div>
                     <div>
                         <div class="payment-services__form-btn-wrapper">
-                            <a href="https://lk.letai.ru/template.LOGIN/" target="_blank" class="payment-services__form-btn gl__main-btn js-open-top-up-account-modal">Продолжить</a>
+                            <a href="https://newlk.letai.ru/" target="_blank" class="payment-services__form-btn gl__main-btn js-open-top-up-account-modal">Продолжить</a>
                         </div>
                         <div class="payment-services__form-hint-wrapper">
                             <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете условия пользовательского соглашения.</div>
