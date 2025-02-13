@@ -21,7 +21,7 @@ if (!$USER->IsAdmin()){
             <div class="quiz-modal__radios">
                 <?foreach ($arItem["ANSWER"] as $arAnswer):?>
                     <label class="quiz-modal__radio">
-                        <input type="radio" name="question-<?=$arItem["ID"]?>" class="quiz-modal__radio-input" value="<?=$arAnswer["ID"]?>">
+                        <input type="radio" name="question-<?=$arItem["ID"]?>" class="quiz-modal__radio-input" value="<?=$arAnswer["ID"]?>" required>
                         <span class="quiz-modal__radio-mark">
 
                         </span>

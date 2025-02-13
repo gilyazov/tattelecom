@@ -72,7 +72,7 @@ class QuizeModal extends \CBitrixComponent implements Controllerable
             $arAnswer[$arr["IBLOCK_SECTION_ID"]][] = $arr;
         }
 
-        //  вопросы
+        // вопросы
         $q = new \Bitrix\Main\Entity\Query(Bitrix\Iblock\SectionTable::getEntity());
         $q
             ->registerRuntimeField(
