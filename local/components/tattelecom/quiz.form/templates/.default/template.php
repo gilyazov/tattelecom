@@ -7,7 +7,7 @@ if (!$USER->IsAdmin()){
     return false;
 }
 ?>
-<div class="intro__win" id="draw">
+
 <div class="intro__quiz-label">
     <img src="/local/js/new-letai/dist/images/quiz-icon.svg" alt="" class="intro__quiz-image">
     Интеллектуальная викторина
@@ -123,7 +123,7 @@ if (!$USER->IsAdmin()){
                 </div>
                 <div class="intro__quiz-rules-card-text">
                     Новые вопросы откроются<br>
-                    <b>03.02</b>, <b>05.02</b>, <b>10.02</b>, <b>12.02.</b>
+                    <b>17.02</b>, <b>20.02</b>, <b>24.02</b>, <b>27.02.</b>
                 </div>
             </div>
         </li>
@@ -181,7 +181,7 @@ if (!$USER->IsAdmin()){
                     Первые <b>10 лучших</b> результатов в каждом подразделении будут вознаграждены
                     особым
                     призом.<br>
-                    <b>Подведение итогов 17 февраля.</b>
+                    <b>Подведение итогов 3 марта.</b>
                 </div>
             </div>
         </li>

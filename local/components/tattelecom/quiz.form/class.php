@@ -29,12 +29,14 @@ class QuizeForm extends \CBitrixComponent implements Controllerable
     public function startAction($unit, $email)
     {
         if ($this->checkEmailUniqueness($email)){
-            throw new Exception("Розыгрыш с этой почтой уже проведен");
+            throw new Exception("Вы уже принимали участие в викторине");
         }
 
         $el = new \CIBlockElement;
         $PROP = array();
         $PROP[324] = $unit;
+        $PROP[329] = 300;
+        $PROP[330] = 0;
         $arLoadProductArray = Array(
             "IBLOCK_ID"      => 74,
             "PROPERTY_VALUES"=> $PROP,

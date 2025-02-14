@@ -32,6 +32,17 @@ class QuizeModal extends \CBitrixComponent implements Controllerable
             throw new Exception("Не выбран участник");
         }
 
+        $db_props = CIBlockElement::GetProperty(75, $answer, array("sort" => "asc"), Array("CODE"=>"CORRECT"));
+        if($ar_props = $db_props->Fetch()){
+            if ($ar_props["VALUE"]){
+                $currentAnswers = CIBlockElement::GetProperty(74, $participant, array("sort" => "asc"), Array("CODE"=>"CORRECT_ANSWERS"))->Fetch()["VALUE"];
+                CIBlockElement::SetPropertyValuesEx($participant, false, array("CORRECT_ANSWERS" => ($currentAnswers+1)));
+            }
+        }
+
+        // уточнить правильный ли ответ @answer
+        // если да, возьмем у $participant количество балов и +1
+
         $el = new \CIBlockElement;
         $PROP = array();
         $PROP[326] = $participant;
@@ -49,18 +60,6 @@ class QuizeModal extends \CBitrixComponent implements Controllerable
         }
 
         return $result;
-    }
-
-    protected function checkEmailUniqueness($email): bool
-    {
-        $arFilter = Array("IBLOCK_ID"=>74, "NAME" => $email);
-        $res = \CIBlockElement::GetList(Array(), $arFilter, false, false, ["ID"]);
-        if($ob = $res->GetNextElement())
-        {
-            return true;
-        }
-
-        return false;
     }
 
     protected function getQuestions(): array
@@ -86,7 +85,8 @@ class QuizeModal extends \CBitrixComponent implements Controllerable
             ->setFilter([
                 'ACTIVE' => 'Y',
                 'IBLOCK_ID' => 75,
-            ]);
+            ])
+            ->setLimit(5);
 
         $rsSection = $q->exec();
         while ($arSection=$rsSection->fetch())

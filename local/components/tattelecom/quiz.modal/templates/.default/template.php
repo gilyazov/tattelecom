@@ -13,7 +13,7 @@ if (!$USER->IsAdmin()){
             <input type="hidden" name="index" value="<?=($key+1)?>">
             <input type="hidden" name="question" value="<?=$arItem["ID"]?>">
             <div class="quiz-modal__steps">
-                Этап <?=($key + 1)?> из <?=count($arResult["QUESTION"])?>
+                Вопрос <?=($key + 1)?> из <?=count($arResult["QUESTION"])?>
             </div>
             <h3 class="quiz-modal__greeting-secondary-heading">
                 <?=$arItem["TITLE"]?>

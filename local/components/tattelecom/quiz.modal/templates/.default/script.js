@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
             const participant = document.getElementById('quiz-modal').dataset.participant;
             const question = form.querySelector('input[name=question]').value;
-            const answer = form.querySelector('input[name=question-'+question+']').value;
+            const answer = form.querySelector('input[name=question-'+question+']:checked').value;
 
             BX.ajax.runComponentAction('tattelecom:quiz.modal', 'answer', {
                 mode: 'class',
