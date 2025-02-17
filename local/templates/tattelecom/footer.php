@@ -883,6 +883,14 @@
         </div>
     </div>
 </div>
+<?$APPLICATION->IncludeComponent(
+    "tattelecom:cookienotice",
+    "",
+    Array(
+        "NOTICE_BUTTON" => "Принять",
+        "NOTICE_TEXT" => "Продолжая использовать наш сайт вы соглашаетесь на сбор персональных данных, осуществляемой согласно <a href=\"/upload/iblock/192/q8uziupqd1cnr3xuu75gl33do7hyjqpz/Politika.docx\">политике ПАО «Таттелеком» в отношении обработки персональных данных»</a>."
+    )
+);?>
 
 <script src="https://api-maps.yandex.ru/2.1/?apikey=978d9dde-738d-4b87-8d8a-1de67b511402&lang=ru_RU"
         type="text/javascript"></script>

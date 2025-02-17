@@ -43,15 +43,9 @@ if ($page == "/domofon/"):
         .video__widget-container {
             position: fixed;
             z-index: 9999999;
-            right: 50px; /* отступ справа */
-            bottom: 50px; /* отступ снизу */
-            max-width: 200px; /* максимальная ширина виджета */
-        }
-        @media (max-width: 768px) {
-            .video__widget-container{
-                left: 50%;
-                transform: translateX(-50%);
-            }
+            right: 5rem; /* отступ справа */
+            bottom: 5rem; /* отступ снизу */
+            max-width: 20rem; /* максимальная ширина виджета */
         }
         .video__widget-content{
             transition: border-radius 0.3s ease-out, box-shadow 0.2s ease-out, background-color 0.3s ease, border-color 0.3s ease;
@@ -952,6 +946,14 @@ if ($page == "/domofon/"):
         </div>
     </div>
 </div>
+<?$APPLICATION->IncludeComponent(
+    "tattelecom:cookienotice",
+    "",
+    Array(
+        "NOTICE_BUTTON" => "Принять",
+        "NOTICE_TEXT" => "Продолжая использовать наш сайт вы соглашаетесь на сбор персональных данных, осуществляемой согласно <a href=\"/upload/iblock/192/q8uziupqd1cnr3xuu75gl33do7hyjqpz/Politika.docx\">политике ПАО «Таттелеком» в отношении обработки персональных данных»</a>."
+    )
+);?>
 
 <script src="https://api-maps.yandex.ru/2.1/?apikey=978d9dde-738d-4b87-8d8a-1de67b511402&lang=ru_RU"
         type="text/javascript"></script>
