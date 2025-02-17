@@ -3,9 +3,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var string $componentPath */
 /** @var array $arResult */
 //\Bitrix\Main\UI\Extension::load("ui.inputmask");
-if (!$USER->IsAdmin()){
-    return false;
-}
 ?>
 <?foreach ($arResult["QUESTION"] as $key => $arItem):?>
     <div class="quiz-modal__question<?=($key != 0 ? " hidden" : "")?>">

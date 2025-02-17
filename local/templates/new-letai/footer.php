@@ -295,7 +295,8 @@ $APPLICATION->ShowProperty('FooterJS');
             Спасибо за участие!
         </h3>
         <div class="quiz-modal__success-bottom-text">
-            2 Этап откроется 5 февраля!
+            Даты следующих этапов: <br>
+            20 февраля, 24 февраля, 27 февраля
         </div>
     </div>
 </div>
@@ -317,8 +318,7 @@ $APPLICATION->ShowProperty('FooterJS');
             Сожалеем, 1 раунд закончен!
         </div>
         <div class="quiz-modal__timeout-message-text">
-            Не расстраивайтесь, 5 февраля откроется новый раунд, где у вас есть все шансы
-            проявить себя.
+            Не расстраивайтесь, 20, 24, 27 февраля откроются новые раунды
         </div>
     </div>
 </div>
