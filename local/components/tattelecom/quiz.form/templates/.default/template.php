@@ -3,9 +3,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var string $componentPath */
 /** @var array $arResult */
 //\Bitrix\Main\UI\Extension::load("ui.inputmask");
-if (!$USER->IsAdmin()){
-    return false;
-}
 ?>
 
 <div class="intro__quiz-label">
