@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                     window.openThanksModal('#modal-thanks');
                                     onloadCallbackRecap(); // обновим токен капчи
+                                    ym(48331871,'reachGoal','5555560');
                                 }
                             }
                         }, function (response){
