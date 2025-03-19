@@ -287,7 +287,7 @@ $APPLICATION->ShowProperty('FooterJS');
         </button>
         <div class="quiz-modal__success-text">
             <b>
-                1 Этап
+                3 Этап
             </b><br>
             успешно пройден!
         </div>
@@ -295,8 +295,8 @@ $APPLICATION->ShowProperty('FooterJS');
             Спасибо за участие!
         </h3>
         <div class="quiz-modal__success-bottom-text">
-            Даты следующих этапов: <br>
-            20 февраля, 24 февраля, 27 февраля
+            Дата подведения результатов: <br>
+            5 марта
         </div>
     </div>
 </div>

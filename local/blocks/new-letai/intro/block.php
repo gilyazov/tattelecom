@@ -13,7 +13,7 @@
             </div>
             <div class="intro__win" id="draw">
                 <?$APPLICATION->IncludeComponent(
-                    "tattelecom:quiz.form",
+                    "tattelecom:spring.horoscope",
                     "",
                     [],
                     false
