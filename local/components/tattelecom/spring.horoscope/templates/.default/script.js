@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 modal.getElementsByClassName('win-modal__text')[0].textContent = response.data.horoscope;
                 modal.getElementsByClassName('win-modal__date')[0].textContent = response.data.today;
                 modal.getElementsByClassName('win-modal__heading')[0].textContent = response.data.zodiac;
-                modal.querySelector('.intro__numpad-card-back svg use').setAttribute('xlink:href', response.data.zodiac_code);
+                modal.querySelector('svg use').setAttribute('xlink:href', '#' + response.data.zodiac_code);
             },1000);
 
             BX.closeWait(form, wait);
