@@ -28,6 +28,10 @@
 }
 .cookie-popup .cookie-popup__wrap .cookie-popup__subtitle a {
     color: #fff;
+    text-decoration: underline;
+}
+.cookie-popup .cookie-popup__wrap .cookie-popup__subtitle a:hover {
+    text-decoration: none;
 }
 .cookie-popup .cookie-popup__wrap .cookie-popup__button {
     margin-top: 20px;
