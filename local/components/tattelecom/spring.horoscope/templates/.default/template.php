@@ -214,14 +214,15 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
     </div>
     <div class="intro__goroscope-text-content">
         <h3 class="intro__goroscope-title">
-            Добро пожаловать!
+
         </h3>
         <div class="intro__goroscope-text">
-            Заходи на сайт каждый день, читай свое предсказание и заряжайся энергией звезд.
+            Мы рады объявить <a href="#result-modal" style="text-decoration: underline">победителей</a> среди самых активных участников нашего корпоративного гороскопа. Спасибо за ваш энтузиазм и интерес!
             <br><br>
-            Через 2 недели мы выберем 12 самых активных участников (по одному от каждого знака зодиака) и вручим приятные призы. Возможно, повезет именно тебе!
+            Подарки для победителей можно забрать в 220 кабинете Управления в рабочее время.
         </div>
     </div>
+
     <div class="intro__goroscope-rules">
         <h3 class="intro__goroscope-rules-title">
             Как участвовать:
@@ -312,9 +313,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
             <div class="intro__quiz-form-field">
                 <select class="intro__quiz-form-select" name="zodiac" required="">
                     <option value="" disabled="" selected="" hidden="">Знак зодиака</option>
-                    <?foreach ($arResult["ZODIAC"] as $id => $value):?>
-                        <option value="<?=$id?>"><?=$value?></option>
-                    <?endforeach;?>
+                    <?/*foreach ($arResult["ZODIAC"] as $id => $value):*/?>
+                        <option value="<?php /*=$id*/?>"><?php /*=$value*/?></option>
+                    <?/*endforeach;*/?>
                 </select>
             </div>
         </div>
@@ -327,6 +328,20 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
             </button>
         </div>
     </form>
+</div>
+
+<div class="win-modal win-modal--goroscope js-modal" id="result-modal">
+    <div class="win-modal__inner">
+        <button class="win-modal__close js-modal-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M13.4343 15.9346L23.036 25.5362L25.9711 22.601L16.3695 12.9994L25.8329 3.53599L22.8977 0.600813L13.4343 10.0642L3.83361 0.463507L0.898437 3.39868L10.4992 12.9994L1.03504 22.4635L3.97021 25.3987L13.4343 15.9346Z" />
+            </svg>
+        </button>
+        <div class="intro__quiz-rules" style="justify-content: center;display: flex;">
+            <img src="<?=$templateFolder?>/results/result.png" alt="">
+        </div>
+    </div>
 </div>
 
 <div class="win-modal win-modal--goroscope js-modal" id="goroscope-modal">
