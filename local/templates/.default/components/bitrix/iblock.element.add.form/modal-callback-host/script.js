@@ -32,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                 ym(93374862,'reachGoal','zv_b2b');
                                 console.log("zv_b2b");
 
+                                let modalComponent;
+                                let idModal = $(form).closest('.mod-show').attr('id');
+                                if (idModal){
+                                    modalComponent = new window.classModal(document.querySelector('#' + idModal));
+                                    modalComponent.onCloseModal();
+                                }
+
                                 modalComponent = new window.classModal(document.querySelector('#b-modal-thanks'));
                                 modalComponent.onOpenModal();
                             } else {
