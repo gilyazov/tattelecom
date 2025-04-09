@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                     .parsley()
                                     .reset();
 
+                                ym(93374862,'reachGoal','zv_b2b');
+                                console.log("zv_b2b");
+
                                 modalComponent = new window.classModal(document.querySelector('#b-modal-thanks'));
                                 modalComponent.onOpenModal();
                             } else {
