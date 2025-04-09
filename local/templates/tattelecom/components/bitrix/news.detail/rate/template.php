@@ -84,7 +84,7 @@ $this->setFrameMode(true);
                             <span class="rates-list__slide-old-price"><?=$arResult["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span><?=$arResult["PROPERTIES"]["TARIFFING"]["VALUE"]?></span></span>
                         <?endif;?>
                     </div>
-                    <button type="button" class="rates-info__preview-btn gl__main-btn js-open-send-request-modal mod-business" data-prise="<?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?>" data-tariff-name="<?=$arResult["NAME"]?>">Подключить</button>
+                    <button type="button" class="rates-info__preview-btn gl__main-btn js-open-callback-modal mod-business" data-prise="<?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?>" data-tariff-name="<?=$arResult["NAME"]?>">Подключить</button>
                 </div>
             </div>
             <?if($title = $arResult["PROPERTIES"]["ADDITIONAL_CONDITION_TITLE"]["VALUE"]):?>
