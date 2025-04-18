@@ -240,11 +240,43 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
     </section>
 <?endif;?>
 
-<section class="info-links" id="info-links-host">
+
+<section class="services" id="services-host">
+    <div class="gl__page-content">
+        <ul class="services__list js-menu-tabs-container">
+
+            <li class="services__item-wrapper gl__white-container mod-painted">
+                <?$APPLICATION->IncludeComponent(
+                    "tattelecom:form",
+                    "transfer",
+                    [],
+                    false
+                );?>
+            </li>
+            <li class="services__item-wrapper gl__white-container">
+                <h3 class="services__item-info-title">Красивые номера</h3>
+                <div class="services__item-info-container">
+                    <div class="services__item-info-content">
+                        <div class="services__item-info-text">Выберите номер с любимыми цифрами</div>
+                        <a href="/mobile/beautiful-numbers/" class="services__item-info-btn">
+                            <span class="services__item-info-btn-text">Подобрать</span>
+                            <svg width="40" height="40" aria-hidden="true" class="services__item-info-btn-icon">
+                                <use xlink:href="#arrow-line-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <img src="/local/js/template/tattelecom-1/img/main-page/services/ellipse-image-2.svg" alt="" class="services__item-info-image">
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<?/*<section class="info-links" id="info-links-host">
     <div class="gl__page-content">
         <ul class="info-links__list">
             <!--<li class="info-links__item gl__white-container cashback__slide gl__link-arrow-container">
-                <img src="<?/*=BUILD_PATH*/?>img/rates-mobile-list-page/img-2.png" alt="" class="cashback__slide-img info-links__slide-img">
+                <img src="<?=BUILD_PATH?>img/rates-mobile-list-page/img-2.png" alt="" class="cashback__slide-img info-links__slide-img">
                 <div class="cashback__slide-content-wrapper">
                     <div class="cashback__slide-title info-links__slide-title mod-black">
                         <div>Смартфоны в рассрочку</div>
@@ -291,7 +323,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
             </li>
         </ul>
     </div>
-</section>
+</section>*/?>
 
 <?if($arParams["USE_RATING"]=="Y" && $ElementID):?>
 <?$APPLICATION->IncludeComponent(
