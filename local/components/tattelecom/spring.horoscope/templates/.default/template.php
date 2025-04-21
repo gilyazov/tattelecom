@@ -313,9 +313,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
             <div class="intro__quiz-form-field">
                 <select class="intro__quiz-form-select" name="zodiac" required="">
                     <option value="" disabled="" selected="" hidden="">Знак зодиака</option>
-                    <?/*foreach ($arResult["ZODIAC"] as $id => $value):*/?>
-                        <option value="<?php /*=$id*/?>"><?php /*=$value*/?></option>
-                    <?/*endforeach;*/?>
+                    <?foreach ($arResult["ZODIAC"] as $id => $value):?>
+                        <option value="<?=$id?>"><?=$value?></option>
+                    <?endforeach;?>
                 </select>
             </div>
         </div>
