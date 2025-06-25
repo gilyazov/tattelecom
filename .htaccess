@@ -65,3 +65,6 @@ ErrorDocument 404 /404.php
 	ExpiresByType image/jpeg "access plus 3 day"
 	ExpiresByType image/gif "access plus 3 day"
 </IfModule>
+
+Redirect 301 /stocks/konvergent_2023/ /all-at-once-2024/
+Redirect 301 /app/ /applications/
