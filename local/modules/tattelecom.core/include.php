@@ -15,6 +15,10 @@ $eventManager->addEventHandler('iblock', 'OnBeforeIBlockElementAdd', ['\Tattelec
 $eventManager->addEventHandler('iblock', 'OnAfterIBlockElementAdd', ['\Tattelecom\Core\EventHandlers\Iblock\Element', 'OnAfterIBlockElementAddHandler']);
 
 $arClasses = array(
-    "GoogleReCaptcha" => "classes/GoogleReCaptcha.php"
+    "GoogleReCaptcha" => "classes/GoogleReCaptcha.php",
+    "YandexSmartCaptcha" => "classes/YandexSmartCaptcha.php",
 );
 CModule::AddAutoloadClasses("tattelecom.core", $arClasses);
+
+// captcha
+$eventManager->addEventHandler('main', 'OnPageStart', ['\Tattelecom\Core\Captcha\Yandex', 'OnPageStart']);
