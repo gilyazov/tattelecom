@@ -106,6 +106,10 @@ $this->setFrameMode(true);
                         )
                     ];
                 }
+                // костыль для интернета и гпон 100 тарифа
+                if ($arParams['IBLOCK_ID'] == 17){
+                    $arrFilterCity[] = ["!CODE" => "gpon-letay-100"];
+                }
                 ?>
                 <?$APPLICATION->IncludeComponent(
                     "bitrix:news.list",
