@@ -50,10 +50,10 @@ class Form extends \CBitrixComponent implements Controllerable
 
     public function sendLeadAction($post)
     {
-        $recaptchaResponse = GoogleReCaptcha::checkClientResponse($post['recaptcha_response']);
+		/*$recaptchaResponse = GoogleReCaptcha::checkClientResponse($post['recaptcha_response']);
         if ($recaptchaResponse['score'] < 0.5){
             throw new Exception('Не пройдена проверка на робота. Ваш результат: ' . $recaptchaResponse['score']);
-        }
+}*/
 
         // валидация номера телефона
         $parsedPhone = Parser::getInstance()->parse($post['phone']);

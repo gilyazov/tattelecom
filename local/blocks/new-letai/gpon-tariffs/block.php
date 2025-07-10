@@ -18,7 +18,7 @@
                             <div class="swiper-slide">
                                 <div class="tariffs__slider-card">
                                     <h4 class="tariffs__slider-card-title">
-                                        GPON Летай 100 + ТВ
+                                        GPON Летай 200 + ТВ
                                     </h4>
                                     <ul class="tariffs__slider-card-list">
                                         <li class="tariffs__slider-card-list-item">
@@ -78,7 +78,7 @@
                             <div class="swiper-slide">
                                 <div class="tariffs__slider-card">
                                     <h4 class="tariffs__slider-card-title">
-                                        Летай. Оранжевый 250
+                                        GPON Летай 350 + ТВ
                                     </h4>
                                     <ul class="tariffs__slider-card-list">
                                         <li class="tariffs__slider-card-list-item">
@@ -138,7 +138,7 @@
                             <div class="swiper-slide">
                                 <div class="tariffs__slider-card">
                                     <h4 class="tariffs__slider-card-title">
-                                        Летай. Оранжевый 500
+                                        GPON Летай 500 +ТВ
                                     </h4>
                                     <ul class="tariffs__slider-card-list">
                                         <li class="tariffs__slider-card-list-item">

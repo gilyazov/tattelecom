@@ -1,0 +1,7 @@
+.has-questions__form-policy-checkbox a{
+    color: #fff;
+    border-bottom: 1px solid;
+}
+.has-questions__form-policy-checkbox a:hover{
+    border-bottom: none;
+}
