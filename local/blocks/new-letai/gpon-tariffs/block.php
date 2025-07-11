@@ -66,7 +66,7 @@
                                         850 <span>₽/мес</span>
                                     </div>
                                     <div class="tariffs__slider-card-wrapper">
-                                        <a href="#tariff-modal" class="tariffs__slider-card-link">
+                                        <a href="#tariff-modal" class="tariffs__slider-card-link" data-tariff-name="GPON Летай 200 + ТВ" data-price="850">
                                             Подключить
                                         </a>
                                         <div class="tariffs__slider-card-remark">
@@ -126,7 +126,7 @@
                                         1000 <span>₽/мес</span>
                                     </div>
                                     <div class="tariffs__slider-card-wrapper">
-                                        <a href="#tariff-modal" class="tariffs__slider-card-link">
+                                        <a href="#tariff-modal" class="tariffs__slider-card-link" data-tariff-name="GPON Летай 350 + ТВ" data-price="1000">
                                             Подключить
                                         </a>
                                         <div class="tariffs__slider-card-remark">
@@ -186,7 +186,7 @@
                                         1150 <span>₽/мес</span>
                                     </div>
                                     <div class="tariffs__slider-card-wrapper">
-                                        <a href="#tariff-modal" class="tariffs__slider-card-link">
+                                        <a href="#tariff-modal" class="tariffs__slider-card-link" data-tariff-name="GPON Летай 500 +ТВ" data-price="1150">
                                             Подключить
                                         </a>
                                         <div class="tariffs__slider-card-remark">

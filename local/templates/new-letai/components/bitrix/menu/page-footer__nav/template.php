@@ -15,9 +15,9 @@ foreach($arResult as $arItem):?>
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
             <li>
-                <a href="javascript:;>">
+                <span>
                     <?=$arItem["TEXT"]?>
-                </a>
+                </span>
                 <ul>
 		<?else:?>
 			<li<?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><a href="<?=$arItem["LINK"]?>" class="parent"><?=$arItem["TEXT"]?></a>

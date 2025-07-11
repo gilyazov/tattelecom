@@ -341,36 +341,14 @@ $APPLICATION->ShowProperty('FooterJS');
                 Мы перезвоним Вам в течении 15 минут.
                 Клиентская служба работает с 08-00 ло 20-00.
             </div>
-            <form action="/" method="POST" class="modal__form js-form-validation">
-                <div class="modal__form-fields">
-                    <div class="modal__form-field">
-                        <div class="modal__form-input-wrapper">
-                            <input type="text" class="modal__form-input" name="your-name" placeholder="Ваше имя">
-                        </div>
-                    </div>
-                    <div class="modal__form-field">
-                        <div class="modal__form-input-wrapper">
-                            <input type="tel" class="modal__form-input" name="your-phone" placeholder="+7 (___) ___-__-__">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal__form-policy">
-                    <label class="modal__form-policy-checkbox">
 
-                        <input type="checkbox" name="policy" class="modal__form-policy-checkbox-input" value="Y">
-                        <span class="modal__form-policy-checkbox-mark">
+            <?$APPLICATION->IncludeComponent(
+                "tattelecom:form",
+                "modal__form",
+                [],
+                false
+            );?>
 
-                            </span>
-                        <span class="modal__form-policy-checkbox-text">
-                                Я согласна на обработку своих персонльных данных
-                            </span>
-                    </label>
-                </div>
-                <button class="modal__form-submit" type="submit">
-                    Отправить заявку
-                </button>
-
-            </form>
             <div class="modal__form-rules">
                 Нажимая кнопку “Отправить заявку”, вы принимаете условия пользовательского соглашения и политику
                 конфиденциальности. Защита от спама reCAPTCHA Конфиденциальность и Условия использования.
