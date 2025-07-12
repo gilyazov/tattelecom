@@ -163,8 +163,10 @@
                                         </li>
                                         <li class="tariffs__slider-card-list-item">
                                             <div class="tariffs__slider-card-item">
-                                                <img src="/local/js/new-letai/dist/images/tariffs/3-new.svg" alt=""
-                                                     class="tariffs__slider-card-item-icon">
+                                                <label class="switcher">
+                                                    <input class="visually-hidden" type="checkbox" name="swicher">
+                                                    <div class="switcher__container"><span class="switcher__control"></span></div>
+                                                </label>
                                                 <div class="tariffs__slider-card-content">
                                                     <b> Аренда роутера </b><br>
                                                     120 ₽/мес

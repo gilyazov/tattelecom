@@ -14,4 +14,25 @@ document.addEventListener('DOMContentLoaded', function(){
             modalPriceElem.innerText = dataPrice + ' ₽/мес';
         });
     });
+
+
+    const items = document.querySelectorAll('.tariffs__slider-card');
+
+    items.forEach(item => {
+        const switcher = item.querySelector('.switcher');
+        const checkbox = switcher.querySelector('input');
+        const tariffSum = item.querySelector('.tariffs__slider-card-link').dataset.price;
+        let total = item.querySelector('.tariffs__slider-card-price');
+
+        let basePrice = total.textContent;
+        basePrice = parseInt(basePrice.replace(/\D/g, ''), 10);
+
+        checkbox.addEventListener('input', () => {
+            if (checkbox.checked) {
+                total.innerHTML = parseInt(basePrice) + 120 + ' <span>₽/мес</span>';
+            } else {
+                total.innerHTML = parseInt(tariffSum) + ' <span>₽/мес</span>';
+            }
+        });
+    });
 });
