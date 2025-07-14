@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const checkbox = switcher.querySelector('input');
         const tariffSum = item.querySelector('.tariffs__slider-card-link').dataset.price;
         let total = item.querySelector('.tariffs__slider-card-price');
+        const link = item.querySelector('.tariffs__slider-card-link');
 
         let basePrice = total.textContent;
         basePrice = parseInt(basePrice.replace(/\D/g, ''), 10);
@@ -30,7 +31,9 @@ document.addEventListener('DOMContentLoaded', function(){
         checkbox.addEventListener('input', () => {
             if (checkbox.checked) {
                 total.innerHTML = parseInt(basePrice) + 120 + ' <span>₽/мес</span>';
+                link.setAttribute('data-price', parseInt(basePrice) + 120);
             } else {
+                link.setAttribute('data-price', parseInt(tariffSum));
                 total.innerHTML = parseInt(tariffSum) + ' <span>₽/мес</span>';
             }
         });
