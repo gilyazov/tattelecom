@@ -235,7 +235,7 @@ $this->addExternalJS(BUILD_PATH . 'js/mobile-communication-page.js');
         <div class="gl__page-content">
             <h2 class="gl__title">Охватываем оптоволоконными сетями по технологии GPON многие поселки нашей республики</h2>
 
-            <script data-skip-moving="true" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0277eae3a0d77756c6276b38f63357600efe4c25cd3d2bf9e01348ae4cb14b15&width=100%&height=720&lang=ru_RU&scroll=true"></script>
+            <script data-skip-moving="true" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac88ebf419e0626a25285ec5c475d1f6f21c87773223967c6a28a0ca39bb7a677&&width=100%&height=720&lang=ru_RU&scroll=true"></script>
         </div>
     </section>
 <?endif;?>
