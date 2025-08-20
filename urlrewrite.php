@@ -72,6 +72,14 @@ $arUrlRewrite=array (
     'PATH' => '/internship/index.php',
     'SORT' => 100,
   ),
+  19 => 
+  array (
+    'CONDITION' => '#^/letai-team/#',
+    'RULE' => NULL,
+    'ID' => 'bitrix:landing.pub',
+    'PATH' => '/letai-team/index.php',
+    'SORT' => 100,
+  ),
   6 => 
   array (
     'CONDITION' => '#^/tv/online/#',
@@ -102,6 +110,14 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/news/index.php',
+    'SORT' => 100,
+  ),
+  20 => 
+  array (
+    'CONDITION' => '#^/gpon/#',
+    'RULE' => NULL,
+    'ID' => 'bitrix:landing.pub',
+    'PATH' => '/gpon/index.php',
     'SORT' => 100,
   ),
   10 => 
