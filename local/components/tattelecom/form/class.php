@@ -73,6 +73,7 @@ class Form extends \CBitrixComponent implements Controllerable
             "address" => $_SESSION['city']['name'],
             "comment" => $post['param_comment'],
             "utm" => $utm,
+            "yandexClientId" => $post['clientId'],
         ];
 
         // логируем локально
@@ -84,6 +85,7 @@ class Form extends \CBitrixComponent implements Controllerable
         $PROP[316] = $_SESSION['city']['name'];
         $PROP[317] = $post['param_comment'];
         $PROP[318] = $utm;
+        $PROP[335] = $post['clientId'];
         $arLoadProductArray = Array(
             "IBLOCK_ID"      => 71,
             "PROPERTY_VALUES"=> $PROP,

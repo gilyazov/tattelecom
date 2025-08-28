@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         data[obj.name] = obj.value;
                     });
 
+                    // clientId
+                    let yaID;
+                    ym(48331871, 'getClientID', function(clientID) {
+                        yaID = clientID
+                    });
+                    data['clientId'] = yaID;
+
                     data['recaptcha_response'] = document.getElementById('recaptchaResponse').dataset.value;
 
                     BX.ajax.runComponentAction('tattelecom:form',
