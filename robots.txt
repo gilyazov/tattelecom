@@ -67,5 +67,6 @@ Clean-param: advert&hs&erid&rb_clickid&ID&sphrase_id&msg_error&check_id&email&da
 Clean-param: _ym_debug&a&m&clear_cache&disableGlobalInfoCollect&news&text&tpclid&utm_expid&utm_referrer&utmsource&yandex_ad_client_id&yandex_ad_order_id&yandex-source&cat&page&id
 Clean-param:route&resp&media-test-tag&yadclid&yadordid&address&tok&next_link&nid&promo&checkbox-ofice&paymenttypeid&urflag&v&url
 Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_type&type&_openstat&gclid&yclid&ymclid&from&cid&frommarket
+Clean-param: ctime
 
 Sitemap: https://letai.ru/sitemap.xml
