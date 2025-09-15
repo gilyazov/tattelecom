@@ -1,0 +1,6 @@
+.participate__form-checkbox-text a{
+    border-bottom: 1px solid white;
+}
+.participate__form-checkbox-text a:hover{
+    border-bottom: none;
+}
