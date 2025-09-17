@@ -376,7 +376,7 @@ if ($arResult["MESSAGE"] <> ''):?>
 
                               </span>
                 <span class="participate__form-checkbox-text">
-                  Даю согласие ПАО «Таттелеком» на <a href="/upload/medialibrary/d31/c32s9l41ywwhdyydi0a8ue47saunhv9x/Peredacha-PnD-tretim-litsam.docx">публикацию моего имени (ФИО)</a> в случае выигрыша в соцсетях, на сайте и в пресс-материалах.
+                    Даю <a href="/upload/medialibrary/d31/c32s9l41ywwhdyydi0a8ue47saunhv9x/Peredacha-PnD-tretim-litsam.docx">согласие на передачу</a> моих персональных данных (ФИО, номер телефона) третьим лицам.
               </span>
             </label>
         </div>

@@ -9,21 +9,22 @@ class Element
 {
     public static function OnBeforeIBlockElementAddHandler(&$arFields)
     {
-        // регистрация на мероприятия
-        if ($arFields["IBLOCK_ID"] == 57 && $event = $arFields["PROPERTY_VALUES"]["240"]) {
+        if ($arFields["IBLOCK_ID"] == 80) {
             $arFilter = array(
                 "IBLOCK_ID" => $arFields["IBLOCK_ID"],
-                "PROPERTY_PHONE" => $arFields["PROPERTY_VALUES"]["238"],
-                "PROPERTY_EVENT" => $event,
+                "PROPERTY_PHONE" => $arFields["PROPERTY_VALUES"]["336"],
                 "ACTIVE" => "Y"
             );
             $res = \CIBlockElement::GetList([], $arFilter, false, false, ["ID"]);
             if ($ob = $res->GetNextElement()) {
                 global $APPLICATION;
-                $APPLICATION->throwException("Есть активная заявка по вашему номеру.");
-                return false;
+                $APPLICATION->RestartBuffer();
+                echo \Bitrix\Main\Web\Json::encode(["error" => "Есть активная заявка по вашему номеру."]);
+                die();
             }
-
+        }
+        // регистрация на мероприятия
+        if ($arFields["IBLOCK_ID"] == 57 && $event = $arFields["PROPERTY_VALUES"]["240"]) {
             if ($arFields["PROPERTY_VALUES"]["239"]) {
                 $arFilter = array("IBLOCK_ID" => $arFields["IBLOCK_ID"], "PROPERTY_TIME" => $arFields["PROPERTY_VALUES"]["239"], "ACTIVE" => "Y");
                 $res = \CIBlockElement::GetList(array(), $arFilter, ["PROPERTY_TIME"]);
@@ -49,7 +50,7 @@ class Element
             66 => 36,
             67 => 32,
         ];
-        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63, 66, 67])) {
+        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63, 66, 67, 80])) {
             global $APPLICATION;
             $APPLICATION->RestartBuffer();
         }
@@ -90,7 +91,7 @@ class Element
             ));
         }
 
-        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63, 66, 67])) {
+        if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63, 66, 67, 80])) {
             echo \Bitrix\Main\Web\Json::encode(['ID' => $arFields['ID']]);
             die();
         }
