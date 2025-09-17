@@ -19,7 +19,7 @@ class Element
             if ($ob = $res->GetNextElement()) {
                 global $APPLICATION;
                 $APPLICATION->RestartBuffer();
-                echo \Bitrix\Main\Web\Json::encode(["error" => "Есть активная заявка по вашему номеру."]);
+                echo \Bitrix\Main\Web\Json::encode(["error" => "Вы уже принимаете участие в розыгрыше."]);
                 die();
             }
         }
