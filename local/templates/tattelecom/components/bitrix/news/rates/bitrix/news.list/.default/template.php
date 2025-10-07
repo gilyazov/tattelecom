@@ -69,6 +69,8 @@ $this->addExternalJS(BUILD_PATH . "js/rates-mobile-list-page.js");
                             </div>
                         </div>
 
+                        <?if($arItem["HINT"]):?><div class="rates-list__slide-subtitle"><?=$arItem["HINT"]?></div><?endif;?>
+
                         <div class="rates-list__slide-btns-wrapper">
                             <button type="button"
                                     data-tariff-name="<?=$arItem["NAME"]?>"

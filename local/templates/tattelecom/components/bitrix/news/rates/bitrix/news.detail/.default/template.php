@@ -138,8 +138,9 @@ $this->setFrameMode(true);
                         <div class="rates-info__preview-price-wrapper">
                             <span class="number"><?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?></span><?=$arResult["PROPERTIES"]["TARIFFING"]["VALUE"]?>
                             <?if($arResult["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
-                                <span class="rates-list__slide-old-price"><?=$arResult["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span><?=$arResult["PROPERTIES"]["TARIFFING"]["VALUE"]?>
+                                <span class="rates-list__slide-old-price"><?=$arResult["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><?=$arResult["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
                             <?endif;?>
+                            <?if($arResult["HINT"]):?><div class="rates-list__slide-subtitle" style="color: #aaa;margin-top: 1rem;margin-bottom: 0;"><?=$arResult["HINT"]?></div><?endif;?>
                         </div>
                         <button type="button" class="rates-info__preview-btn gl__main-btn js-open-send-request-modal" data-prise="<?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?>" data-tariff-name="<?=$arResult["NAME"]?>">Подключить</button>
                     </div>

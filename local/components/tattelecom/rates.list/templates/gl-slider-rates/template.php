@@ -88,6 +88,8 @@ $this->setFrameMode(true);
                                     </div>
                                 </div>
 
+                                <?if($arItem["HINT"]):?><div class="rates-list__slide-subtitle"><?=$arItem["HINT"]?></div><?endif;?>
+
                                 <div class="rates-list__slide-btns-wrapper">
                                     <button type="button"
                                             data-tariff-name="<?=$arItem["NAME"]?>"

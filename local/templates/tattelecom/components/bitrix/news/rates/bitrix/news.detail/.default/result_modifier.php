@@ -11,3 +11,11 @@ while($ob = $res->GetNextElement()){
     $arResult["CONDITIONS"][] = $arFields;
 }
 //end
+
+if ($arResult["CODE"] == "bezlimit"){
+    $hint = "Акция действует при переходе с сохранением номера";
+}
+elseif ($arResult["CODE"] == "bezlimit-ekstra"){
+    $hint = "Акция действует при переходе с сохранением номера";
+}
+$arResult["HINT"] = $hint;
