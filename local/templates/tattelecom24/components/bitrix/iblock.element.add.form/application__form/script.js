@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                                 modalComponentForm = new window.classModal(form.closest('.modal'));
                                 modalComponentForm.onCloseModal();
+
+                                window.open('/upload/medialibrary/163/i63je93rcrj1fsq0y273h6rwupdxgwin/Oblachnaya-ATS-ot-Letay-Biznes.pdf');
                             } else {
                                 data.errors.forEach((error) => {
                                     alert(error);

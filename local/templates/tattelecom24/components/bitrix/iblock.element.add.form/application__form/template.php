@@ -401,7 +401,7 @@ if ($arResult["MESSAGE"] <> ''):?>
 
 
     <div class="application__btn-wrapper mod-no-answer">
-        <input type="hidden" name="iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
+        <input type="hidden" name="<?=$templateName?>_<?=$arParams["IBLOCK_ID"]?>_iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
         <button type="submit" class="gl__main-btn application__btn">Зарегистрироваться</button>
     </div>
     <?if ($arParams["LIST_URL"] <> ''):?>
