@@ -29,7 +29,7 @@
                         "MAX_LEVELS" => "100000",
                         "MAX_USER_ENTRIES" => "100000",
                         "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-                        "PROPERTY_CODES" => array("NAME", "174", "220"),
+                        "PROPERTY_CODES" => array("NAME", "174", "220", "337", "338"),
                         "PROPERTY_CODES_REQUIRED" => ["NAME", "174", "220"],
                         "RESIZE_IMAGES" => "N",
                         "SEF_MODE" => "N",
@@ -45,7 +45,7 @@
                 <div>
                     <h3 class="b-support__contacts-title">Служба поддержки</h3>
                     <span class="b-support__contacts-label">Для оперативной связи со службой поддержки обращайтесь одним из удобных способов</span>
-                    <a class="b-support__contacts-tel" title="Позвонить" href="tel:+78432222222">(843) 238-00-00</a>
+                    <a class="b-support__contacts-tel" title="Позвонить" href="tel:+78432380000">(843) 238-00-00</a>
                     <?$APPLICATION->IncludeComponent("bitrix:news.list", "b-socials",
                         Array(
                             "IBLOCK_TYPE" => "about",
