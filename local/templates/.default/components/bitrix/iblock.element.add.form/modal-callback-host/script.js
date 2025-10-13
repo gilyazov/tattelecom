@@ -13,13 +13,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         .isValid()
                 ) {
 
-                    if (!$(form).find("input[name='recaptcha_response']").length){
+                    // clientId
+                    let yaID;
+                    ym(93374862, 'getClientID', function(clientID) {
+                        yaID = clientID
+                    });
+                    form.querySelector('input[name="PROPERTY[338][0]"]').value = yaID;
+
+                    /*if (!$(form).find("input[name='recaptcha_response']").length){
                         let captchaInput = document.createElement("input");
                         captchaInput.setAttribute("type", "hidden");
                         captchaInput.setAttribute("name", "recaptcha_response");
                         captchaInput.value = document.getElementById('recaptchaResponse').dataset.value;
                         form.appendChild(captchaInput);
-                    }
+                    }*/
 
                     let options = {
                         success: function(data){

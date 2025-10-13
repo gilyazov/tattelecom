@@ -365,14 +365,15 @@ if ($arResult["MESSAGE"] <> ''):?>
 
     <?endif?>
 
-    <input type="hidden" name="iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
+    <input type="hidden" name="<?=$templateName?>_<?=$arParams["IBLOCK_ID"]?><?=str_replace(' ', '', $arParams["FORM_CLASS"])?>_iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
     <button type="submit" class="gl__main-btn mod-business">Получить консультацию</button>
 
     <?if($arParams["USE_CAPTCHA"] == "Y" && $arParams["ID"] <= 0):?>
         <p class="modal__required-text checkbox__text">
             Нажимая кнопку, вы соглашаетесь на обработку персональных данных
-            <br> Защита от спама reCAPTCHA <a href="https://policies.google.com/privacy?hl=ru" target="_blank">Конфиденциальность</a> и <a href="https://policies.google.com/terms?hl=ru" target="_blank">Условия использования</a>.
+            <br> Защита от спама SmartCaptcha <a href="https://yandex.ru/legal/smartcaptcha_notice/ru/" target="_blank">Условия использования</a>.
         </p>
+        <div class="tanais-yandexcaptcha"></div>
     <?endif?>
 
     <?if ($arParams["LIST_URL"] <> ''):?>

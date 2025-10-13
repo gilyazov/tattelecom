@@ -27,6 +27,9 @@ if ($arResult["MESSAGE"] <> ''):?>
 	<?=bitrix_sessid_post()?>
 	<?if ($arParams["MAX_FILE_SIZE"] > 0):?><input type="hidden" name="MAX_FILE_SIZE" value="<?=$arParams["MAX_FILE_SIZE"]?>" /><?endif?>
 
+    <input type="hidden" name="PROPERTY[337][0]" value="<?=$arResult["UTM_QUERY"]?>">
+    <input type="hidden" name="PROPERTY[338][0]" value="">
+
     <?if (is_array($arResult["PROPERTY_LIST"]) && !empty($arResult["PROPERTY_LIST"])):?>
         <?foreach ($arResult["PROPERTY_LIST"] as $propertyID):?>
             <?if (intval($propertyID) > 0):?>
@@ -359,12 +362,15 @@ if ($arResult["MESSAGE"] <> ''):?>
             <?endforeach;?>
 
     <?endif?>
+
+    <div class="tanais-yandexcaptcha"></div>
     <div class="callback__form-input-wrap-b">
         <p class="modal__required-text">
             Нажимая кнопку, вы соглашаетесь на обработку персональных данных
-            <br> Защита от спама reCAPTCHA <a href="https://policies.google.com/privacy?hl=ru" target="_blank">Конфиденциальность</a> и <a href="https://policies.google.com/terms?hl=ru" target="_blank">Условия использования</a>.
+            <br> Защита от спама SmartCaptcha <a href="https://yandex.ru/legal/smartcaptcha_notice/ru/" target="_blank">Условия использования</a>.
         </p>
     </div>
+
 
     <input type="hidden" name="<?=$templateName?>_<?=$arParams["IBLOCK_ID"]?>_iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
     <button type="submit" class="gl__main-btn mod-business">Получить консультацию</button>
