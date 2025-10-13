@@ -31,6 +31,9 @@ if ($arResult["MESSAGE"] <> ''):?>
 	<?=bitrix_sessid_post()?>
 	<?if ($arParams["MAX_FILE_SIZE"] > 0):?><input type="hidden" name="MAX_FILE_SIZE" value="<?=$arParams["MAX_FILE_SIZE"]?>" /><?endif?>
 
+    <input type="hidden" name="PROPERTY[337][0]" value="<?=$arResult["UTM_QUERY"]?>">
+    <input type="hidden" name="PROPERTY[338][0]" value="">
+
     <?if (is_array($arResult["PROPERTY_LIST"]) && !empty($arResult["PROPERTY_LIST"])):?>
         <?foreach ($arResult["PROPERTY_LIST"] as $propertyID):?>
             <?if (intval($propertyID) > 0):?>

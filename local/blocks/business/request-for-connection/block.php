@@ -1,13 +1,13 @@
 <section class="b-request-for-connection gl__section">
     <div class="gl__page-content">
         <div class="b-request-for-connection__content">
-			<h3 class="b-request-for-connection__form-title">Оставить заявку на подключение</h3>
+            <h3 class="b-request-for-connection__form-title">Оставить заявку на подключение</h3>
             <span class="b-request-for-connection__form-label">Наши специалисты помогут подобрать решения, отталкиваясь от ваших бизнес-потребностей</span>
 
             <?$APPLICATION->IncludeComponent(
                 "bitrix:iblock.element.add.form",
                 "b-support__form",
-                Array(
+                array(
                     "CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
                     "CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
                     "CUSTOM_TITLE_DETAIL_PICTURE" => "",
@@ -20,7 +20,9 @@
                     "DEFAULT_INPUT_SIZE" => "30",
                     "DETAIL_TEXT_USE_HTML_EDITOR" => "N",
                     "ELEMENT_ASSOC" => "CREATED_BY",
-                    "GROUPS" => array("2"),
+                    "GROUPS" => array(
+                        0 => "2",
+                    ),
                     "IBLOCK_ID" => "45",
                     "IBLOCK_TYPE" => "buisness",
                     "LEVEL_LAST" => "Y",
@@ -29,8 +31,18 @@
                     "MAX_LEVELS" => "100000",
                     "MAX_USER_ENTRIES" => "100000",
                     "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-                    "PROPERTY_CODES" => ["NAME", "174", "309"],
-                    "PROPERTY_CODES_REQUIRED" => ["NAME", "174", "309"],
+                    "PROPERTY_CODES" => array(
+                        0 => "NAME",
+                        1 => "174",
+                        2 => "309",
+                        3 => "337",
+                        4 => "338",
+                    ),
+                    "PROPERTY_CODES_REQUIRED" => array(
+                        0 => "NAME",
+                        1 => "174",
+                        2 => "309",
+                    ),
                     "RESIZE_IMAGES" => "N",
                     "SEF_MODE" => "N",
                     "STATUS" => "ANY",
@@ -39,7 +51,8 @@
                     "USER_MESSAGE_EDIT" => "",
                     "USE_CAPTCHA" => "Y",
                     "FORM_CLASS" => "b-request-for-connection__form mod-4-in-row"
-                )
+                ),
+                false
             );?>
         </div>
     </div>
