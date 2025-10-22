@@ -43,17 +43,22 @@ class Form extends \CBitrixComponent implements Controllerable
     {
         return [
             'sendLead' => [ // Ajax-метод
-                'prefilters' => [],
+                'prefilters' => [
+                    new \Bitrix\Main\Engine\ActionFilter\HttpMethod([
+                        \Bitrix\Main\Engine\ActionFilter\HttpMethod::METHOD_POST
+                    ]),
+//                    new Bitrix\Main\Engine\ActionFilter\Csrf(),
+                ],
             ],
         ];
     }
 
     public function sendLeadAction($post)
     {
-		/*$recaptchaResponse = GoogleReCaptcha::checkClientResponse($post['recaptcha_response']);
-        if ($recaptchaResponse['score'] < 0.5){
-            throw new Exception('Не пройдена проверка на робота. Ваш результат: ' . $recaptchaResponse['score']);
-}*/
+        if (!YandexSmartCaptcha::checkCaptcha($post['smart-token'])) {
+            \Bitrix\Main\Diag\Debug::writeToFile("letai.ru | " . $post['smart-token'] . " | " . $post['phone'] . " | " . date("d.m.Y H:i:s") . " | " . $post['param_referer'] . " | " . $post["formId"]);
+//            throw new \Exception("Вы не прошли проверку роботом.");
+        }
 
         // валидация номера телефона
         $parsedPhone = Parser::getInstance()->parse($post['phone']);

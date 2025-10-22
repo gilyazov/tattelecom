@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                     data['clientId'] = yaID;
 
-                    data['recaptcha_response'] = document.getElementById('recaptchaResponse').dataset.value;
-
                     BX.ajax.runComponentAction('tattelecom:form',
                         'sendLead', {
                             mode: 'class',
@@ -50,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                     }
 
                                     window.openThanksModal('#modal-thanks');
-                                    onloadCallbackRecap(); // обновим токен капчи
                                     ym(48331871,'reachGoal','5555560');
                                 }
                             }
