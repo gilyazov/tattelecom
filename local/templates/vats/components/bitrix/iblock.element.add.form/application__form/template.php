@@ -29,6 +29,9 @@ if ($arResult["MESSAGE"] <> ''):?>
       class="application__form form js-vats"
       action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data" data-need-validation>
 
+    <input type="hidden" name="PROPERTY[339][0]" value="<?=$arResult["UTM_QUERY"]?>">
+    <input type="hidden" name="PROPERTY[340][0]" value="">
+
     <?if (is_array($arResult["PROPERTY_LIST"]) && !empty($arResult["PROPERTY_LIST"])):?>
         <?foreach ($arResult["PROPERTY_LIST"] as $propertyID):?>
             <?if (intval($propertyID) > 0):?>
@@ -366,20 +369,6 @@ if ($arResult["MESSAGE"] <> ''):?>
                             break;
                         endswitch;?>
             <?endforeach;?>
-
-        <?if($arParams["USE_CAPTCHA"] == "Y" && $arParams["ID"] <= 0):?>
-                <tr>
-                    <td><?=GetMessage("IBLOCK_FORM_CAPTCHA_TITLE")?></td>
-                    <td>
-                        <input type="hidden" name="captcha_sid" value="<?=$arResult["CAPTCHA_CODE"]?>" />
-                        <img src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["CAPTCHA_CODE"]?>" width="180" height="40" alt="CAPTCHA" />
-                    </td>
-                </tr>
-                <tr>
-                    <td><?=GetMessage("IBLOCK_FORM_CAPTCHA_PROMPT")?><span class="starrequired">*</span>:</td>
-                    <td><input type="text" name="captcha_word" maxlength="50" value=""></td>
-                </tr>
-            <?endif?>
     <?endif?>
 
     <div class="cheackbox">
@@ -388,6 +377,14 @@ if ($arResult["MESSAGE"] <> ''):?>
             <span class="checkbox__control">Отправляя заявку, я соглашаюсь на обработку персональных данных</span>
         </label>
     </div>
+
+    <?if($arParams["USE_CAPTCHA"] == "Y" && $arParams["ID"] <= 0):?>
+        <div class="cheackbox">
+            Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+            <br> Защита от спама SmartCaptcha <a href="https://yandex.ru/legal/smartcaptcha_notice/ru/" target="_blank">Условия использования</a>.
+        </div>
+        <div class="tanais-yandexcaptcha"></div>
+    <?endif?>
 
     <input type="hidden" name="<?=$templateName?>_<?=$arParams["IBLOCK_ID"]?>_iblock_submit" value="<?=GetMessage("IBLOCK_FORM_SUBMIT")?>" />
     <button class="form__button button" type="submit">Отправить заявку</button>

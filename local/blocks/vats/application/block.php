@@ -1,4 +1,4 @@
-<section class="application" id="application">
+<section class="application" id="application" style="">
     <div class="site-container">
         <div class="application__inner">
             <h2 class="application__title title">Оставьте заявку</h2>
@@ -28,7 +28,7 @@
                     "MAX_LEVELS" => "100000",
                     "MAX_USER_ENTRIES" => "100000",
                     "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-                    "PROPERTY_CODES" => ["NAME", "299", "300"],
+                    "PROPERTY_CODES" => ["NAME", "299", "300", "339", "340"],
                     "PROPERTY_CODES_REQUIRED" => ["NAME", "299", "300"],
                     "RESIZE_IMAGES" => "N",
                     "SEF_MODE" => "N",
@@ -36,7 +36,7 @@
                     "STATUS_NEW" => "N",
                     "USER_MESSAGE_ADD" => "",
                     "USER_MESSAGE_EDIT" => "",
-                    "USE_CAPTCHA" => "N"
+                    "USE_CAPTCHA" => "Y"
                 )
             );?>
         </div>

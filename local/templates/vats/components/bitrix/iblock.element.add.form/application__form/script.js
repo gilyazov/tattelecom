@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+    // clientId
+    const form = document.querySelector('form.js-vats');
+    let yaID;
+    ym(95307715, 'getClientID', function(clientID) {
+        yaID = clientID
+    });
+    form.querySelector('input[name="PROPERTY[340][0]"]').value = yaID;
     /*const js_form = document.querySelectorAll('form.form');
 
     js_form.forEach((form) => {

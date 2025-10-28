@@ -134,7 +134,7 @@ $APPLICATION->ShowProperty('FooterJS');
             <div class="modal__title">Ваша заявка успешно отправлена!<br>Мы перезвоним Вам в ближайшее время</div>
             <?if(SITE_ID == "s6"):?>
                 <div class="intro__btns" style="text-align: center;">
-                    <a class="intro__btn button" href="/upload/medialibrary/163/i63je93rcrj1fsq0y273h6rwupdxgwin/Oblachnaya-ATS-ot-Letay-Biznes.pdf" target="_blank" download="">Скачать презентацию</a>
+                    <a class="intro__btn button" href="/upload/medialibrary/7c6/eo9k23zs8amqj9z6b3l12nlgdzhk3hdy/Prezentatsiya-VATS.pptx.pdf" target="_blank" download="">Скачать презентацию</a>
                 </div>
             <?endif;?>
         </div>
