@@ -22,3 +22,5 @@ CModule::AddAutoloadClasses("tattelecom.core", $arClasses);
 
 // captcha
 $eventManager->addEventHandler('main', 'OnPageStart', ['\Tattelecom\Core\Captcha\Yandex', 'OnPageStart']);
+
+$eventManager->addEventHandler('search', 'BeforeIndex', ['\Tattelecom\Core\Search\ReIndex\File', 'BeforeIndex']);
