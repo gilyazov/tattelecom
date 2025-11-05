@@ -18,3 +18,17 @@ foreach ($arResult["ITEMS"] as $key => $arItem){
     }
     $arResult["ITEMS"][$key]["HINT"] = $hint;
 }
+
+foreach ($arResult["ITEMS"] as $key => $arItem){
+    if($arItem["PROPERTIES"]["HIT"]["VALUE"] == "Y"){
+        $promoClass = "rates-list__slide-hit";
+    }
+    elseif($arItem["PROPERTIES"]["PROMO_RATE"]["VALUE"] == "Y"){
+        $promoClass = "rates-list__slide-promo";
+    }
+    else{
+        continue;
+    }
+
+    $arResult["ITEMS"][$key]["PROMO_CLASS"] = $promoClass;
+}

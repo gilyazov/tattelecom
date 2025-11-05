@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -15,80 +15,80 @@ $this->setFrameMode(true);
 <div class="gl-slider js-swiper" data-swiper-slides-preview="4">
     <div class="gl-slider__container swiper-container js-swiper-container">
         <ul class="gl-slider__wrapper swiper-wrapper">
-            <?foreach($arResult["ITEMS"] as $arItem):?>
-                <?
+            <?php foreach($arResult["ITEMS"] as $arItem):?>
+                <?php
                 $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
                 ?>
                 <li class="swiper-slide" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
                     <a
                             href="<?=$arItem['DETAIL_PAGE_URL']?>"
-                            class="gl__no-default-hover rates-list__slide gl__white-container <?if($arItem["PROPERTIES"]["HIT"]["VALUE"]):?>rates-list__slide-hit<?endif;?>">
-                        <?if($arItem["PROPERTIES"]["HIT"]["VALUE"]):?>
+                            class="gl__no-default-hover rates-list__slide gl__white-container<?php if($arItem["PROMO_CLASS"]):?> <?=$arItem["PROMO_CLASS"]?><?php endif;?>">
+                        <?php if($arItem["PROPERTIES"]["HIT"]["VALUE"]):?>
                             <img src="<?=BUILD_PATH?>img/main-page/rates-list/hit-background.svg" alt="" class="rates-list__slide-hit-background">
                             <img src="<?=BUILD_PATH?>img/main-page/rates-list/hit-mark.svg" alt="" class="rates-list__slide-hit-mark">
-                        <?endif;?>
+                        <?php endif;?>
 
                         <div class="rates-list__slide-content">
                             <div class="rates-list__slide-up">
                                 <div class="rates-list__slide-title"><?=$arItem["NAME"]?></div>
                                 <div class="rates-list__slide-subtitle"><?=$arItem["PROPERTIES"]["SUBTITLE"]["VALUE"]?></div>
 
-                                <?if(count($arItem["PROPERTIES"]["BENEFITS"]["VALUE"]) > 0 && $arParams["IBLOCK_ID"] == 17):?>
+                                <?php if(count($arItem["PROPERTIES"]["BENEFITS"]["VALUE"]) > 0 && $arParams["IBLOCK_ID"] == 17):?>
                                     <div class="rates-list-internet__item-block">
-                                        <?foreach ($arItem["PROPERTIES"]["BENEFITS"]["VALUE"] as $arBenefit):?>
+                                        <?php foreach ($arItem["PROPERTIES"]["BENEFITS"]["VALUE"] as $arBenefit):?>
                                             <div class="rates-list-internet__item-proposal">
                                                 <img
                                                         src="<?=BUILD_PATH?>img/rates-internet-list-page/<?=$arBenefit["SUB_VALUES"]["BENEFITS_I"]["VALUE_XML_ID"]?><?=($arItem["PROPERTIES"]["ORANGE"]["VALUE"]?"-white":"")?>.svg" alt=""
                                                         class="rates-list-internet__item-proposal-img">
                                                 <div class="rates-list-internet__item-proposal-caption"><?=$arBenefit["SUB_VALUES"]["BENEFITS_V"]["VALUE"]?></div>
                                             </div>
-                                        <?endforeach;?>
+                                        <?php endforeach;?>
                                     </div>
-                                <?endif?>
+                                <?php endif?>
 
                                 <ul class="rates-list__slide-conditions-list">
-                                    <?foreach ($arItem["PROPERTIES"]["BENEFITS"]["VALUE"] as $benefit):?>
-                                        <?
+                                    <?php foreach ($arItem["PROPERTIES"]["BENEFITS"]["VALUE"] as $benefit):?>
+                                        <?php
                                         if(!is_array($benefit["SUB_VALUES"])){
                                             continue;
                                         }
                                         ?>
                                         <li class="rates-list__slide-condition-item">
-                                            <?if(is_array($benefit["SUB_VALUES"]["B_ICO"])):?>
+                                            <?php if(is_array($benefit["SUB_VALUES"]["B_ICO"])):?>
                                                 <img src="<?=BUILD_PATH?>img/main-page/rates-list/<?=$benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]?>.svg" alt=""
                                                     class="rates-list__slide-condition-item-icon">
-                                            <?endif;?>
+                                            <?php endif;?>
                                             <div class="rates-list__slide-condition-item-text"><?=$benefit["SUB_VALUES"]["B_VALUE"]["VALUE"]?></div>
                                         </li>
-                                    <?endforeach;?>
+                                    <?php endforeach;?>
                                 </ul>
                             </div>
 
                             <div class="rates-list__slide-down">
-                                <?if($arItem["PROPERTIES"]["FEATURES"]["VALUE"]):?>
+                                <?php if($arItem["PROPERTIES"]["FEATURES"]["VALUE"]):?>
                                     <div class="rates-list__opportunities-wrapper">
                                         <div class="rates-list__opportunities-title">Возможности</div>
 
-                                        <?foreach ($arItem["PROPERTIES"]["FEATURES"]["VALUE"] as $benefit):?>
+                                        <?php foreach ($arItem["PROPERTIES"]["FEATURES"]["VALUE"] as $benefit):?>
                                             <div class="rates-list__opportunities-text"><?=$benefit?></div>
-                                        <?endforeach;?>
+                                        <?php endforeach;?>
                                     </div>
-                                <?endif;?>
+                                <?php endif;?>
 
                                 <div class="rates-list__slide-price-wrapper">
-                                    <?if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
+                                    <?php if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
                                         <div class="rates-list__slide-old-price">
                                             <?=$arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
                                         </div>
-                                    <?endif;?>
+                                    <?php endif;?>
                                     <div class="rates-list__slide-price">
                                         <span class="big"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></span>
                                         <span class="small"><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
                                     </div>
                                 </div>
 
-                                <?if($arItem["HINT"]):?><div class="rates-list__slide-subtitle"><?=$arItem["HINT"]?></div><?endif;?>
+                                <?php if($arItem["HINT"]):?><div class="rates-list__slide-subtitle"><?=$arItem["HINT"]?></div><?php endif;?>
 
                                 <div class="rates-list__slide-btns-wrapper">
                                     <button type="button"
@@ -108,7 +108,7 @@ $this->setFrameMode(true);
                         </div>
                     </a>
                 </li>
-            <?endforeach;?>
+            <?php endforeach;?>
         </ul>
     </div>
     <div class="gl__bg-hide">
