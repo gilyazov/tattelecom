@@ -24,8 +24,13 @@ $this->setFrameMode(true);
                     <a
                             href="<?=$arItem['DETAIL_PAGE_URL']?>"
                             class="gl__no-default-hover rates-list__slide gl__white-container<?php if($arItem["PROMO_CLASS"]):?> <?=$arItem["PROMO_CLASS"]?><?php endif;?>">
-                        <?php if($arItem["PROPERTIES"]["HIT"]["VALUE"]):?>
+                        <?php if($arItem["PROMO_CLASS"]):?>
                             <img src="<?=BUILD_PATH?>img/main-page/rates-list/hit-background.svg" alt="" class="rates-list__slide-hit-background">
+                        <?php endif;?>
+                        <?php if($arItem["PROPERTIES"]["PROMO_RATE"]["VALUE"]):?>
+                            <img src="<?=BUILD_PATH?>img/main-page/rates-list/promo-mark.svg" alt="" class="rates-list__slide-hit-mark">
+                        <?php endif;?>
+                        <?php if($arItem["PROPERTIES"]["HIT"]["VALUE"]):?>
                             <img src="<?=BUILD_PATH?>img/main-page/rates-list/hit-mark.svg" alt="" class="rates-list__slide-hit-mark">
                         <?php endif;?>
 
