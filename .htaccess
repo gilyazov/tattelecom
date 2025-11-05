@@ -73,3 +73,5 @@ Redirect 301 /payment-methods/ /payment/
 Redirect 301 /tv/rates/televidenie/ultra-tv/ /televidenie/letai-tv/
 Redirect 301 /tv/rates/pakety-kanalov/match-premer/ /televidenie/letai-tv/
 Redirect 301 /mobile/switch/ /stocks/mobile-test-drive/
+Redirect 301 /tv/rates/televidenie/bazovyy-iptv/ /tv/rates/televidenie/hd-bazovyy/
+Redirect 301 /arkhiv/mobile-app_tpne/ https://redirect.appmetrica.yandex.com/serve/822191862776382254
