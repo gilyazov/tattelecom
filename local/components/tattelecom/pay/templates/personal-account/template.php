@@ -53,7 +53,12 @@ $this->addExternalJS($componentPath . '/script.js');
         </div>
         <div class="payment-services__form-hint-wrapper">
             <div class="payment-services__form-hint-text">Нажимая кнопку «Продолжить», вы принимаете <a href="/app/serviceuse/">условия пользовательского соглашения</a>.</div>
-            <!--<button type="button" class="payment-services__form-link">Подробнее об услуге</button>-->
+            <div class="payment-services__form-hint-icons-wrapper">
+                <img src="<?=BUILD_PATH?>img/common/pay/mastercard.svg" alt="" class="payment-services__form-hint-icon">
+                <img src="<?=BUILD_PATH?>img/common/pay/mir.svg" alt="" class="payment-services__form-hint-icon">
+                <img src="<?=BUILD_PATH?>img/common/pay/visa.svg" alt="" class="payment-services__form-hint-icon">
+                <a href="https://uniteller.ru/" target="_blank" rel="nofollow" class="payment-services__form-hint-icon"><img src="/local/components/tattelecom/pay/templates/mobile/img/uniteller.svg" height="23" alt=""></a>
+            </div>
         </div>
     </div>
 </form>

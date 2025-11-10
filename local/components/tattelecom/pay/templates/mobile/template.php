@@ -58,8 +58,6 @@ $this->addExternalCss($componentPath . '/style.css');
                 <img src="<?=BUILD_PATH?>img/common/pay/mastercard.svg" alt="" class="payment-services__form-hint-icon">
                 <img src="<?=BUILD_PATH?>img/common/pay/mir.svg" alt="" class="payment-services__form-hint-icon">
                 <img src="<?=BUILD_PATH?>img/common/pay/visa.svg" alt="" class="payment-services__form-hint-icon">
-                <img src="<?=$templateFolder?>/img/yapay.svg" alt="" class="payment-services__form-hint-icon">
-                <img src="<?=$templateFolder?>/img/spay.png" height="23" alt="" class="payment-services__form-hint-icon">
                 <a href="https://uniteller.ru/" target="_blank" rel="nofollow" class="payment-services__form-hint-icon"><img src="<?=$templateFolder?>/img/uniteller.svg" height="23" alt=""></a>
             </div>
         </div>
