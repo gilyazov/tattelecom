@@ -93,7 +93,7 @@ $this->setFrameMode(true);
                                     </div>
                                 </div>
 
-                                <?php if($arItem["HINT"]):?><div class="rates-list__slide-subtitle"><?=$arItem["HINT"]?></div><?php endif;?>
+                                <?php if($hint = $arItem["PROPERTIES"]["HINT"]["VALUE"]):?><div class="rates-list__slide-subtitle"><?=$hint?></div><?php endif;?>
 
                                 <div class="rates-list__slide-btns-wrapper">
                                     <button type="button"
