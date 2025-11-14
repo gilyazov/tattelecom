@@ -3,7 +3,7 @@
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
 
-$arSelect = Array("ID", "NAME", "IBLOCK_SECTION_ID");
+$arSelect = Array("ID", "NAME", "IBLOCK_SECTION_ID", "DATE_CREATE");
 $arFilter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE"=>"Y");
 $res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
 while($ob = $res->GetNextElement())

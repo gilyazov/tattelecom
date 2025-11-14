@@ -1,0 +1,5 @@
+.documents-list__item-content-unit-date{
+    color: var(--main-grey-color);
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
