@@ -1,16 +1,31 @@
+window.Parsley.addValidator('house', {
+    validateString: function (value) {
+        let house;
+        house = $('[name = uuid]').data('house');
+
+        return !!house;
+    },
+    messages: {
+        en: 'Need a house',
+        ru: "Необходимо выбрать дом"
+    }
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     $("#address").suggestions({
         token: "a289c2b7ddef08f438c0c3d326f474d32a3e4a7c",
         type: "ADDRESS",
-        onSelect: function(suggestion) {
-            //console.log(suggestion);
-            $('[name = uuid]').val(suggestion.data.fias_id);
+        onSelect: function (suggestion) {
+            $('[name = uuid]')
+                .attr('data-house', suggestion.data.house)
+                .val(suggestion.data.fias_id);
         }
     });
 
     const connectForm = document.querySelector('.js-internet-connect-form');
     if (connectForm) {
-        connectForm.addEventListener('submit', function(event) {
+        connectForm.addEventListener('submit', function (event) {
             event.preventDefault();
             if (
                 $(connectForm)
@@ -24,18 +39,24 @@ document.addEventListener('DOMContentLoaded', () => {
                         mode: 'class',
                         data: {post: BX.ajax.prepareForm(connectForm).data}, // ключи объекта data соответствуют параметрам метода
                     })
-                    .then(function(response) {
+                    .then(function (response) {
                         if (response.status === 'success') {
                             let modalComponent;
 
-                            if (response.data.opportunity == false){
+                            if (response.data.opportunity == false) {
                                 modalComponent = new window.classModal(document.querySelector('#modal-badRequestLetai-host'));
                                 modalComponent.onOpenModal();
-                            }
-                            else{
+                            } else {
                                 modalComponent = new window.classModal(document.querySelector('#modal-requestLetai-host'));
                                 modalComponent.onOpenModal();
                             }
+
+                            const btnsClose = document.querySelectorAll('.js-close-requestLetai-modal');
+                            btnsClose.forEach(btn => {
+                                btn.onclick = () => {
+                                    modalComponent.onCloseModal();
+                                }
+                            })
 
                             BX.closeWait(connectForm, wait);
                         }

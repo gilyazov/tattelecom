@@ -39,7 +39,7 @@ $this->setFrameMode(true);
                                             <div class="documents-list__item-content-unit-text">
                                                 <h4 class="documents-list__item-content-unit-name"><?=$arItem["NAME"]?></h4>
                                                 <span class="documents-list__item-content-unit-description">(<?=$arItem["FILE_EXTENSION"]?>, <?=$arItem["FILE_SIZE"]?>)</span>
-                                                <span class="documents-list__item-content-unit-date"><?=FormatDate("d.m.Y", MakeTimeStamp($arItem["DATE_CREATE"]))?></span>
+                                                <span class="documents-list__item-content-unit-date"><?=FormatDate("d.m.Y", MakeTimeStamp($arItem["TIMESTAMP_X"]))?></span>
                                             </div>
                                         </a>
                                     </li>
