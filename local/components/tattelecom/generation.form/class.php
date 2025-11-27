@@ -150,7 +150,7 @@ class GenerationForm extends \CBitrixComponent implements Controllerable
             array(
                 "LOGIC" => "OR",
                 array("NAME" => $email, "PROPERTY_CLIENT_ID" => false),
-                array("NAME" => $email, "PROPERTY_CLIENT_ID" => $clientID),
+                array("PROPERTY_CLIENT_ID" => $clientID),
             ),
 
         );
