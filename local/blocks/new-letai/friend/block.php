@@ -135,26 +135,25 @@
             </svg>
             <div class="friend__text">
                 <p>
-                    Вы&nbsp;получаете выплаты:<br> 5&nbsp;000&nbsp;₽&nbsp;&mdash; после трудоустройства<br> +15&nbsp;000&nbsp;₽&nbsp;&mdash;
-                    через 3&nbsp;месяца работы
+                    Вы получаете выплаты:<br> 5 000 ₽ — после трудоустройства<br> +15 000 ₽ —
+                    через 3 месяца работы
                 </p>
                 <p>
-                    20&nbsp;000&nbsp;₽ за&nbsp;рекомендацию действует на&nbsp;вакансии по&nbsp;<a href="#">ссылке</a>
+                    Актуальные вакансии, на которые действует двойной бонус публикуются в <a href="https://t.me/letaiteam" target="_blank">нашем тг-канале</a>
                 </p>
                 <p>
-                    Для остальных вакансий бонус&nbsp;&mdash; 10&nbsp;000&nbsp;₽.
+                    Для остальных вакансий бонус — 10 000 ₽.
                 </p>
             </div>
 
         </div>
-        <a class="friend__link" href="https://forms.yandex.ru/cloud/67594e55eb6146b80ad5c5ef/?page=1" target="_blank">
-                <span>
-                   Заполни небольшую анкету на этой странице
-                </span>
+        <a class="friend__link" href="https://forms.yandex.ru/cloud/683fd7cd90fa7bae7df38e77/" target="_blank">
             <span>
-                    Заполни анкету
-                </span>
-
+               Скопировать ссылку на анкету для друга
+            </span>
+            <span>
+                Скопировать ссылку
+            </span>
         </a>
     </div>
 </section>
