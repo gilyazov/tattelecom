@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости компании «Летай»");
-$APPLICATION->SetPageProperty("title", "Свежие новости | Оператор Летай в Татарстане");
+$APPLICATION->SetPageProperty("title", "Свежие новости");
 $APPLICATION->SetPageProperty("description", "Свежие новости оператора связи Летай в Татарстане. Интересные факты и советы. Узнать подробнее об услугах компании и тарифах связи можно на сайте или по телефону +7 (843) 222-22-22.");
 ?><section class="news-page <?=(SITE_ID == "s2") ? "mod-business" : ""?>">
     <div class="gl__page-content">
