@@ -1,4 +1,4 @@
-<section class="cube-tariffs">
+<section class="cube-tariffs" id="tariffs">
     <div class="cube-tariffs__content">
         <h2 class="cube-tariffs__heading">
             Тарифы

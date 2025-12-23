@@ -1,4 +1,4 @@
-<section class="cube-solution">
+<section class="cube-solution" id="router">
     <div class="cube-solution__content">
         <h2 class="cube-solution__heading">
             Эксклюзивное решение, роутер RX - 22220
