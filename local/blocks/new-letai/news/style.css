@@ -2,3 +2,7 @@
     color: #fe5000;
     text-decoration: underline;
 }
+.news{
+    z-index: 40;
+    background: none;
+}
