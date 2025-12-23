@@ -183,3 +183,36 @@ $this->setFrameMode(true);
         </div>
     </div>
 </section>
+
+<?if($arParams['IBLOCK_ID'] == 17):?>
+    <section class="faq" id="faq-host">
+        <div class="gl__page-content">
+            <h2 class="gl__title">Часто задаваемые вопросы</h2>
+            <ul class="faq__list-wrapper">
+                <li class="faq__item">
+                    <button type="button" class="faq__item-btn-wrapper faq__item-btn-hover gl__drop-menu-btn js-drop-menu-btn">
+                        <svg width="24" height="24" aria-hidden="true" class="faq__item-btn-icon gl__drop-menu-icon">
+                            <use xlink:href="#arrow-down"></use>
+                        </svg>
+                        <span class="faq__item-text">Какая скорость интернета нужна для дома в Казани?</span>
+                    </button>
+                    <div class="faq__item-content-wrapper gl__drop-menu-container js-drop-menu-container">
+                        <div class="gl__text gl__drop-menu js-drop-menu">
+                            <p>Для большинства квартир в Казани достаточно скорости 100–300 Мбит/с: этого хватает для онлайн-видео, работы, учебы и одновременной работы нескольких устройств. Для 4K-стриминга, онлайн-игр и удаленной работы нескольких человек оптимально выбирать 500 Мбит/с и выше. Именно такие скорости доступны в тарифах домашнего интернета Летай.</p>
+                            <p>
+                                Как выбрать подходящую скорость интернета
+                                100 Мбит/с — серфинг, видео в HD, соцсети, 1–2 пользователя
+                                300 Мбит/с — семья, несколько устройств, стабильная работа и учеба
+                                500 Мбит/с и выше — 4K-стриминг, онлайн-игры, удаленная работа, умный дом
+                            </p>
+                            <p>
+                                Учитывайте количество одновременно подключенных устройств.
+                                Для стабильной скорости выбирайте подключение по оптоволокну, которое использует Летай
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+<?endif;?>

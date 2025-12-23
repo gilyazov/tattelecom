@@ -32,6 +32,14 @@ $arUrlRewrite=array (
     'PATH' => '/internet-in-a-cube/index.php',
     'SORT' => 100,
   ),
+    22 =>
+        array (
+            'CONDITION' => '#^/internet-in-a-cube-3/#',
+            'RULE' => NULL,
+            'ID' => 'bitrix:landing.pub',
+            'PATH' => '/internet-in-a-cube-3/index.php',
+            'SORT' => 100,
+        ),
   15 => 
   array (
     'CONDITION' => '#^/internet/rates/#',
@@ -94,6 +102,14 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/dynamic/tv/rates/index.php',
+    'SORT' => 100,
+  ),
+  21 => 
+  array (
+    'CONDITION' => '#^/kdw2025/#',
+    'RULE' => NULL,
+    'ID' => 'bitrix:landing.pub',
+    'PATH' => '/kdw2025/index.php',
     'SORT' => 100,
   ),
   8 => 
