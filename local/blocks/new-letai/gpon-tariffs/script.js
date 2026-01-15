@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
         checkbox.addEventListener('input', () => {
             if (checkbox.checked) {
-                total.innerHTML = parseInt(basePrice) + 120 + ' <span>₽/мес</span>';
-                link.setAttribute('data-price', parseInt(basePrice) + 120);
+                total.innerHTML = parseInt(basePrice) + 150 + ' <span>₽/мес</span>';
+                link.setAttribute('data-price', parseInt(basePrice) + 150);
             } else {
                 link.setAttribute('data-price', parseInt(tariffSum));
                 total.innerHTML = parseInt(tariffSum) + ' <span>₽/мес</span>';
