@@ -67,7 +67,6 @@ ErrorDocument 404 /404.php
 </IfModule>
 
 Redirect 301 /app/ /applications/
-Redirect 301 /all-at-once-2024/ /internet/rates/
 Redirect 301 /payment-methods/ /payment/
 Redirect 301 /tv/rates/televidenie/ultra-tv/ /televidenie/letai-tv/
 Redirect 301 /tv/rates/pakety-kanalov/match-premer/ /televidenie/letai-tv/
