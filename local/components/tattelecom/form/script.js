@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                     window.openThanksModal('#modal-thanks');
                                     ym(48331871,'reachGoal','5555560');
+                                    _tmr.push({ type: 'reachGoal', id: 3310517, goal: 'Lidvk'});
                                 }
                             }
                         }, function (response){
