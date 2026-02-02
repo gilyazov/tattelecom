@@ -27,7 +27,7 @@ $language= \Bitrix\Landing\Manager::getLangISO();
         fbq('init', '362895258597454');
         fbq('track', 'PageView');
     </script>
-    <meta name="google-site-verification" content="q_4yEnnXsP770LmNk9KkEI_pMEvmcm0XHA2R_qeg_xo" />
+    <meta name="google-site-verification" content="0Rr7R52gVPRfKBqKyj3RthFOKtPEYwAtMRqKe60AnEM" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
