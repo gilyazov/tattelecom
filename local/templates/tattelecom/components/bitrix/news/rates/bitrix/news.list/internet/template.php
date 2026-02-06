@@ -20,8 +20,14 @@ $this->addExternalJS(BUILD_PATH . "js/rates-internet-list-page.js");
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
         <li id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+            <?if($arItem["PROPERTIES"]["VIJU"]["VALUE"]):?>
+                <div class="rates-list__slide-viju-container">
+                    <img src="<?=BUILD_PATH?>img/main-page/rates-list/viju-mark.png" alt="" class="rates-list__slide-viju-mark">
+                </div>
+            <?endif;?>
+
             <div
-                class="rates-list__slide rates-list-internet__item gl__no-default-hover gl__white-container <?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?>mod-orange<?endif;?>">
+                class="rates-list__slide rates-list-internet__item gl__no-default-hover gl__white-container <?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?>mod-orange<?endif;?><?if($arItem["PROPERTIES"]["VIJU"]["VALUE"]):?>mod-viju<?endif;?>">
                 <?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?>
                     <img src="<?=BUILD_PATH?>img/rates-internet-list-page/background-mark.svg" alt="" class="rates-list-internet__item-background">
                 <?endif;?>
