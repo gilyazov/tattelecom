@@ -15,19 +15,6 @@
                 [],
                 false
             );?>
-
-            <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallbackRecap&render=<?=GoogleReCaptcha::PUBLIC_KEY?>" async defer></script>
-            <script>
-                var onloadCallbackRecap = () => {
-                    grecaptcha.ready(function () {
-                        grecaptcha.execute('<?=GoogleReCaptcha::PUBLIC_KEY?>', { action: 'contact_callback' }).then(function (token) {
-                            var recaptchaResponse = document.getElementById('recaptchaResponse');
-                            recaptchaResponse.dataset.value = token;
-                        });
-                    });
-                };
-            </script>
-            <div id="recaptchaResponse" data-value=""></div>
         </div>
     </div>
 </div>
@@ -106,14 +93,14 @@
     <div class="modal__container mod-small js-modal-container">
         <div class="modal__content js-modal-content">
             <div class="modal__head">
-                <div class="modal__title">Поздравляем! Адрес подходит для подключения пакетной услуги Летай.</div>
+                <div class="modal__title">Поздравляем! Ваш адрес подходит для подключения услуги.</div>
                 <button type="button" class="modal__btn-close js-close-requestLetai-modal">
                     <svg width="32" height="32" aria-hidden="true" class="modal__close-icon">
                         <use xlink:href="#close"></use>
                     </svg>
                 </button>
             </div>
-            <p class="modal__text">Оставьте номер телефона и дождитесь звонка оператора для подтверждения технической возможности подключения новых абонентов</p>
+            <p class="modal__text">Оставьте заявку и дождитесь звонка оператора для подтверждения возможности подключения и консультации по тарифам, доступным для вашего адреса.</p>
             <?$APPLICATION->IncludeComponent(
                 "tattelecom:form",
                 "",
