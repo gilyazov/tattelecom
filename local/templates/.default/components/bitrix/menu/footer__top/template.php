@@ -33,7 +33,10 @@ foreach($arResult as $arItem):?>
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
 				<li><a href="<?=$arItem["LINK"]?>" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>">11<?=$arItem["TEXT"]?></a></li>
 			<?else:?>
-				<li class="footer__link-item"><a href="<?=$arItem["LINK"]?>" class="footer__link"><?=$arItem["TEXT"]?></a></li>
+				<li class="footer__link-item"><a
+                            href="<?=$arItem["LINK"]?>"
+                            <?if($arItem["PARAMS"]["YA_GOAL"]):?>onclick="ym(48331871,'reachGoal','<?=$arItem["PARAMS"]["YA_GOAL"]?>');"<?endif;?>
+                            class="footer__link"><?=$arItem["TEXT"]?></a></li>
 			<?endif?>
 
 		<?else:?>

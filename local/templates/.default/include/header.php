@@ -34,6 +34,9 @@
                         <div class="header__top-block-right">
                             <ul class="header__top-menu-items-list gl__bg-hide">
                                 <li class="header__top-menu-items">
+                                    <a href="https://kazan.hh.ru/employer/672459" class="header__top-menu-items-link" target="_blank" onclick="ym(48331871,'reachGoal','job_header')" rel="nofollow">Работа в компании</a>
+                                </li>
+                                <li class="header__top-menu-items">
                                     <a href="/support/" class="header__top-menu-items-link">Поддержка</a>
                                 </li>
                                 <li class="header__top-menu-items">
