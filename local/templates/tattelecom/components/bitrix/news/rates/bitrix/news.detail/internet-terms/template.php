@@ -26,6 +26,21 @@ $this->addExternalJS(BUILD_PATH . "js/rates-internet-item-page.js");
                                 <div class="rates-info__preview-rows-caption-wrapper">
                                     <div class="rates-info__preview-rows-caption">
                                         <span><?=$arTerm["SUB_VALUES"]["TERMS_T"]["VALUE"]?></span>
+                                        <?if($hint = $arTerm["SUB_VALUES"]["TERMS_H"]["VALUE"]):?>
+                                            <div class="rates-info__preview-rows-caption-tooltip">
+                                                <div class="btn-info__container">
+                                                    <button type="button" class="btn-info__btn">
+                                                        <svg width="24" height="24" aria-hidden="true" class="btn-info__icon">
+                                                            <use xlink:href="#info-ellipse"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="btn-info__content">
+                                                        <?=$hint?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?endif;?>
+
                                     </div>
                                 </div>
                                 <div class="rates-info__preview-rows-caption-value"><?=$arTerm["SUB_VALUES"]["TERMS_V"]["VALUE"]?></div>
