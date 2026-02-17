@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -14,19 +14,25 @@ $this->setFrameMode(true);
 $this->addExternalJS(BUILD_PATH . "js/rates-mobile-list-page.js");
 ?>
 <ul class="rates-list__list">
-    <?foreach($arResult["ITEMS"] as $arItem):?>
-        <?
+    <?php foreach($arResult["ITEMS"] as $arItem):?>
+        <?php
         $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
         <li class="  " id="<?=$this->GetEditAreaId($arItem['ID']);?>">
             <a
                 href="<?=$arItem['DETAIL_PAGE_URL']?>"
-                class="gl__no-default-hover rates-list__slide gl__white-container <?if($arItem["PROPERTIES"]["HIT"]["VALUE"]):?>rates-list__slide-hit<?endif;?>">
-                <?if($arItem["PROPERTIES"]["HIT"]["VALUE"]):?>
+                class="gl__no-default-hover rates-list__slide gl__white-container <?=($arItem["PROMO_CLASS"] ? : "");?>">
+
+                <?php if($arItem["PROMO_CLASS"]):?>
                     <img src="<?=BUILD_PATH?>img/main-page/rates-list/hit-background.svg" alt="" class="rates-list__slide-hit-background">
+                <?php endif;?>
+                <?php if($arItem["PROPERTIES"]["PROMO_RATE"]["VALUE"]):?>
+                    <img src="<?=BUILD_PATH?>img/main-page/rates-list/promo-mark.svg" alt="" class="rates-list__slide-hit-mark">
+                <?php endif;?>
+                <?php if($arItem["PROPERTIES"]["HIT"]["VALUE"]):?>
                     <img src="<?=BUILD_PATH?>img/main-page/rates-list/hit-mark.svg" alt="" class="rates-list__slide-hit-mark">
-                <?endif;?>
+                <?php endif;?>
 
                 <div class="rates-list__slide-content">
                     <div class="rates-list__slide-up">
@@ -34,42 +40,42 @@ $this->addExternalJS(BUILD_PATH . "js/rates-mobile-list-page.js");
                         <div class="rates-list__slide-subtitle"><?=$arItem["PROPERTIES"]["SUBTITLE"]["VALUE"]?></div>
 
                         <ul class="rates-list__slide-conditions-list">
-                            <?foreach ($arItem["PROPERTIES"]["BENEFITS"]["VALUE"] as $benefit):?>
+                            <?php foreach ($arItem["PROPERTIES"]["BENEFITS"]["VALUE"] as $benefit):?>
                                 <li class="rates-list__slide-condition-item">
-                                    <?if($benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]):?>
+                                    <?php if($benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]):?>
                                         <img src="<?=BUILD_PATH?>img/main-page/rates-list/<?=$benefit["SUB_VALUES"]["B_ICO"]["VALUE_XML_ID"]?>.svg" alt=""
                                             class="rates-list__slide-condition-item-icon">
-                                    <?endif?>
+                                    <?php endif?>
                                     <div class="rates-list__slide-condition-item-text"><?=$benefit["SUB_VALUES"]["B_VALUE"]["VALUE"]?></div>
                                 </li>
-                            <?endforeach;?>
+                            <?php endforeach;?>
                         </ul>
                     </div>
 
                     <div class="rates-list__slide-down">
-                        <?if($arItem["PROPERTIES"]["FEATURES"]["VALUE"]):?>
+                        <?php if($arItem["PROPERTIES"]["FEATURES"]["VALUE"]):?>
                             <div class="rates-list__opportunities-wrapper">
                                 <div class="rates-list__opportunities-title">Возможности</div>
 
-                                <?foreach ($arItem["PROPERTIES"]["FEATURES"]["VALUE"] as $benefit):?>
+                                <?php foreach ($arItem["PROPERTIES"]["FEATURES"]["VALUE"] as $benefit):?>
                                     <div class="rates-list__opportunities-text"><?=$benefit?></div>
-                                <?endforeach;?>
+                                <?php endforeach;?>
                             </div>
-                        <?endif;?>
+                        <?php endif;?>
 
                         <div class="rates-list__slide-price-wrapper">
-                            <?if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
+                            <?php if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>
                                 <div class="rates-list__slide-old-price">
                                     <?=$arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]?><span><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
                                 </div>
-                            <?endif;?>
+                            <?php endif;?>
                             <div class="rates-list__slide-price">
                                 <span class="big"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></span>
                                 <span class="small"><?=$arItem["PROPERTIES"]["TARIFFING"]["VALUE"]?></span>
                             </div>
                         </div>
 
-                        <?if($hint = $arItem["PROPERTIES"]["HINT"]["VALUE"]):?><div class="rates-list__slide-subtitle"><?=$hint?></div><?endif;?>
+                        <?php if($hint = $arItem["PROPERTIES"]["HINT"]["VALUE"]):?><div class="rates-list__slide-subtitle"><?=$hint?></div><?php endif;?>
 
                         <div class="rates-list__slide-btns-wrapper">
                             <button type="button"
@@ -89,9 +95,9 @@ $this->addExternalJS(BUILD_PATH . "js/rates-mobile-list-page.js");
                 </div>
             </a>
         </li>
-    <?endforeach;?>
+    <?php endforeach;?>
 </ul>
 
-<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+<?php if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?>
-<?endif;?>
+<?php endif;?>
