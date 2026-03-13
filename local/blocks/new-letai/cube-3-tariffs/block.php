@@ -49,7 +49,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="cube-tariffs__slider-card-features-list-item">
+                                    <!--<li class="cube-tariffs__slider-card-features-list-item">
                                         <div class="cube-tariffs__slider-card-features-item">
                                             <img alt="" class="cube-tariffs__slider-card-features-item-icon"
                                                  src="/local/js/new-letai/dist/images/cube-tariffs/3.svg">
@@ -62,7 +62,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li>-->
                                 </ul>
                                 <div class="cube-tariffs__slider-card-price">
                                     550 <span>₽/мес</span>
@@ -117,7 +117,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="cube-tariffs__slider-card-features-list-item">
+                                    <!--<li class="cube-tariffs__slider-card-features-list-item">
                                         <div class="cube-tariffs__slider-card-features-item">
                                             <img alt="" class="cube-tariffs__slider-card-features-item-icon"
                                                  src="/local/js/new-letai/dist/images/cube-tariffs/3.svg">
@@ -130,7 +130,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li>-->
                                 </ul>
                                 <div class="cube-tariffs__slider-card-price">
                                     650 <span>₽/мес</span>
@@ -184,7 +184,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="cube-tariffs__slider-card-features-list-item">
+                                    <!--<li class="cube-tariffs__slider-card-features-list-item">
                                         <div class="cube-tariffs__slider-card-features-item">
                                             <img alt="" class="cube-tariffs__slider-card-features-item-icon"
                                                  src="/local/js/new-letai/dist/images/cube-tariffs/3.svg">
@@ -197,7 +197,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li>-->
                                 </ul>
                                 <div class="cube-tariffs__slider-card-price">
                                     450 <span>₽/мес</span>
@@ -265,7 +265,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="cube-tariffs__slider-card-features-list-item">
+                                    <!--<li class="cube-tariffs__slider-card-features-list-item">
                                         <div class="cube-tariffs__slider-card-features-item">
                                             <img alt="" class="cube-tariffs__slider-card-features-item-icon"
                                                  src="/local/js/new-letai/dist/images/cube-tariffs/3.svg">
@@ -278,7 +278,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li>-->
                                 </ul>
                                 <div class="cube-tariffs__slider-card-price">
                                     800 <span>₽/мес</span>
@@ -346,7 +346,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="cube-tariffs__slider-card-features-list-item">
+                                    <!--<li class="cube-tariffs__slider-card-features-list-item">
                                         <div class="cube-tariffs__slider-card-features-item">
                                             <img alt="" class="cube-tariffs__slider-card-features-item-icon"
                                                  src="/local/js/new-letai/dist/images/cube-tariffs/3.svg">
@@ -359,7 +359,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li>-->
                                 </ul>
                                 <div class="cube-tariffs__slider-card-price">
                                     600 <span>₽/мес</span>
@@ -427,7 +427,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="cube-tariffs__slider-card-features-list-item">
+                                    <!--<li class="cube-tariffs__slider-card-features-list-item">
                                         <div class="cube-tariffs__slider-card-features-item">
                                             <img alt="" class="cube-tariffs__slider-card-features-item-icon"
                                                  src="/local/js/new-letai/dist/images/cube-tariffs/3.svg">
@@ -440,7 +440,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li>-->
                                 </ul>
                                 <div class="cube-tariffs__slider-card-price">
                                     700 <span>₽/мес</span>

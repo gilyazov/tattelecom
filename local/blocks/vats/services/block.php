@@ -11,28 +11,28 @@
                         <div class="js-range-single" data-price="" data-value="1" data-start="7" data-min="7" data-max="1000" data-step="1"></div>
                     </label>
                 </div>
-                <div class="services-box__staff"><span class="services-box__staff-number">200</span>₽ за каждого дополнительного сотрудника</div>
+                <div class="services-box__staff"><span class="services-box__staff-number">210</span>₽ за каждого дополнительного сотрудника</div>
             </div>
             <div class="services-box__name">Расширенный функционал</div>
             <ul class="services-box__list">
                 <li class="services-box__item">
-                    <div class="services-box__item-title">Записи звонков на 3 месяца</div>
+                    <div class="services-box__item-title">Записи разговоров на 1 год</div>
                     <div class="services-box__item-tooltip">
                         <button class="services-box__item-tooltip-close-btn" type="button"><span></span><span></span>
                         </button>
                         <div class="services-box__item-tooltip-content">
-                            <h4>Записи звонков на 3 месяца</h4>
+                            <h4>Записи звонков на 1 год</h4>
                             <p>Повышение качества обслуживания и защита бизнеса от юридических рисков.</p>
                             <ul>
-                                <li>Срок хранения записей — 3 месяца.</li>
+                                <li>Срок хранения записей — 12 месяцев.</li>
                                 <li>Неограниченный объем хранилища.</li>
                                 <li>Выгрузка записей на ftp-сервер.</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="services-box__item-price">990 ₽</div>
+                    <div class="services-box__item-price">1550 ₽</div>
                     <div class="switcher">
-                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-1" name="swicher" value="990" />
+                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-1" name="swicher" value="1550" />
                         <label class="switcher__container" for="s-1"><span class="switcher__control"></span>
                         </label>
                     </div>
@@ -75,9 +75,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="services-box__item-price">500 ₽</div>
+                    <div class="services-box__item-price">1050 ₽</div>
                     <div class="switcher">
-                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-2" name="swicher" value="500" />
+                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-2" name="swicher" value="1050" />
                         <label class="switcher__container" for="s-2"><span class="switcher__control"></span>
                         </label>
                     </div>
@@ -93,9 +93,9 @@
                             <p>Сводка ключевых показателей: входящие, исходящие и непринятые звонки с детализацией по сотрудникам.</p>
                         </div>
                     </div>
-                    <div class="services-box__item-price">500 ₽</div>
+                    <div class="services-box__item-price">830 ₽</div>
                     <div class="switcher">
-                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-3" name="swicher" value="500" />
+                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-3" name="swicher" value="830" />
                         <label class="switcher__container" for="s-3"><span class="switcher__control"></span>
                         </label>
                     </div>
@@ -115,9 +115,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="services-box__item-price">500 ₽</div>
+                    <div class="services-box__item-price">1050 ₽</div>
                     <div class="switcher">
-                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-4" name="swicher" value="500" />
+                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-4" name="swicher" value="1050" />
                         <label class="switcher__container" for="s-4"><span class="switcher__control"></span>
                         </label>
                     </div>
@@ -137,9 +137,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="services-box__item-price">500 ₽</div>
+                    <div class="services-box__item-price">830 ₽</div>
                     <div class="switcher">
-                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-5" name="swicher" value="500" />
+                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-5" name="swicher" value="830" />
                         <label class="switcher__container" for="s-5"><span class="switcher__control"></span>
                         </label>
                     </div>
@@ -154,9 +154,9 @@
                             <p>Интеграция ВАТС с офисной IP АТС или c другими доменами ВАТС.</p>
                         </div>
                     </div>
-                    <div class="services-box__item-price">2000 ₽</div>
+                    <div class="services-box__item-price">3000 ₽</div>
                     <div class="switcher">
-                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-6" name="swicher" value="2000" />
+                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-6" name="swicher" value="3000" />
                         <label class="switcher__container" for="s-6"><span class="switcher__control"></span>
                         </label>
                     </div>
@@ -180,9 +180,9 @@
                             </p>
                         </div>
                     </div>
-                    <div class="services-box__item-price">990 ₽</div>
+                    <div class="services-box__item-price">1050 ₽</div>
                     <div class="switcher">
-                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-7" name="swicher" value="990" />
+                        <input class="visually-hidden js-service-switcher" type="checkbox" id="s-7" name="swicher" value="1050" />
                         <label class="switcher__container" for="s-7"><span class="switcher__control"></span>
                         </label>
                     </div>
@@ -203,7 +203,7 @@
                 </div>
             </div>
             <div class="services-calculation__total">
-                <div class="services-calculation__title">ИТОГО<span class="services-calculation__total-number">990 ₽</span>
+                <div class="services-calculation__title">ИТОГО<span class="services-calculation__total-number">1450 ₽</span>
                 </div>
                 <a class="services-calculation__button button" href="#application">Отправить заявку</a>
             </div>
