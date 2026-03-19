@@ -68,7 +68,7 @@
                                         </div>
                                     </li>-->
                                 </ul>
-                                <div class="cube-tariffs__slider-card-price">
+                                <div class="cube-tariffs__slider-card-price" data-price="550">
                                     550 <span>₽/мес</span>
                                 </div>
                                 <div class="cube-tariffs__slider-card-bottom">
@@ -140,7 +140,7 @@
                                         </div>
                                     </li>-->
                                 </ul>
-                                <div class="cube-tariffs__slider-card-price">
+                                <div class="cube-tariffs__slider-card-price" data-price="650">
                                     650 <span>₽/мес</span>
                                 </div>
                                 <div class="cube-tariffs__slider-card-bottom">
@@ -211,7 +211,7 @@
                                         </div>
                                     </li>-->
                                 </ul>
-                                <div class="cube-tariffs__slider-card-price">
+                                <div class="cube-tariffs__slider-card-price" data-price="450">
                                     450 <span>₽/мес</span>
                                 </div>
                                 <div class="cube-tariffs__slider-card-bottom">
@@ -296,7 +296,7 @@
                                         </div>
                                     </li>-->
                                 </ul>
-                                <div class="cube-tariffs__slider-card-price">
+                                <div class="cube-tariffs__slider-card-price" data-price="800">
                                     800 <span>₽/мес</span>
                                 </div>
                                 <div class="cube-tariffs__slider-card-bottom">
@@ -381,7 +381,7 @@
                                         </div>
                                     </li>-->
                                 </ul>
-                                <div class="cube-tariffs__slider-card-price">
+                                <div class="cube-tariffs__slider-card-price" data-price="600">
                                     600 <span>₽/мес</span>
                                 </div>
                                 <div class="cube-tariffs__slider-card-bottom">
@@ -466,7 +466,7 @@
                                         </div>
                                     </li>-->
                                 </ul>
-                                <div class="cube-tariffs__slider-card-price">
+                                <div class="cube-tariffs__slider-card-price" data-price="700">
                                     700 <span>₽/мес</span>
                                 </div>
                                 <div class="cube-tariffs__slider-card-bottom">
