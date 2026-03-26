@@ -34,6 +34,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
     </button>
 
     <input type="hidden" name="param_referer" value="<?=$APPLICATION->GetTitle()?>">
+    <input type="hidden" name="formId" value="<?=$templateName?>">
     <input type="hidden" name="recaptcha_response" value="">
 </form>
 
