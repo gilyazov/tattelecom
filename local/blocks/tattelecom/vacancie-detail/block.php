@@ -89,7 +89,7 @@ $elementCode = $variables['sef'][0] ?? "";
                     "MAX_LEVELS" => "100000",
                     "MAX_USER_ENTRIES" => "100000",
                     "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-                    "PROPERTY_CODES" => ["NAME", "362", "363", "364", "365"],
+                    "PROPERTY_CODES" => ["NAME", "362", "363", "364", "365", "366"],
                     "PROPERTY_CODES_REQUIRED" => ["NAME", "364"],
                     "RESIZE_IMAGES" => "N",
                     "SEF_MODE" => "N",
@@ -98,6 +98,7 @@ $elementCode = $variables['sef'][0] ?? "";
                     "USER_MESSAGE_ADD" => "Ваш отклик успешно получен! Ожидайте.",
                     "USER_MESSAGE_EDIT" => "",
                     "USE_CAPTCHA" => "Y",
+                    "VACANCY" => $ElementID,
                     "FORM_CLASS" => "vacancy-response-form__form"
                 )
             );?>

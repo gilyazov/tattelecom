@@ -16,6 +16,7 @@ $this->setFrameMode(false);
 if (!empty($arResult["ERRORS"])):?>
 	<?ShowError(implode("<br />", $arResult["ERRORS"]))?>
 <?endif;?>
+
 <div class="vacancy-response-form__card">
     <form name="iblock_add"
           data-need-validation data-parsley-validate data-parsley-focus="none" class="vacancy-response-form__form"
@@ -28,6 +29,8 @@ if (!empty($arResult["ERRORS"])):?>
                 <?ShowNote($arResult["MESSAGE"])?>
             </div>
         <?endif?>
+
+        <input type="hidden" name="PROPERTY[366][0]" value="<?=$arParams["VACANCY"]?>">
 
         <?if (is_array($arResult["PROPERTY_LIST"]) && !empty($arResult["PROPERTY_LIST"])):?>
             <?foreach ($arResult["PROPERTY_LIST"] as $propertyID):?>
