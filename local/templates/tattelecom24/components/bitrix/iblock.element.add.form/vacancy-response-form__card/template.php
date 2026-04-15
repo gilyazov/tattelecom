@@ -15,16 +15,19 @@ $this->setFrameMode(false);
 
 if (!empty($arResult["ERRORS"])):?>
 	<?ShowError(implode("<br />", $arResult["ERRORS"]))?>
-<?endif;
-if ($arResult["MESSAGE"] <> ''):?>
-	<?ShowNote($arResult["MESSAGE"])?>
-<?endif?>
+<?endif;?>
 <div class="vacancy-response-form__card">
     <form name="iblock_add"
           data-need-validation data-parsley-validate data-parsley-focus="none" class="vacancy-response-form__form"
           action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data">
         <?=bitrix_sessid_post()?>
         <?if ($arParams["MAX_FILE_SIZE"] > 0):?><input type="hidden" name="MAX_FILE_SIZE" value="<?=$arParams["MAX_FILE_SIZE"]?>" /><?endif?>
+
+        <?if ($arResult["MESSAGE"] <> ''):?>
+            <div class="vacancy-response-form__field">
+                <?ShowNote($arResult["MESSAGE"])?>
+            </div>
+        <?endif?>
 
         <?if (is_array($arResult["PROPERTY_LIST"]) && !empty($arResult["PROPERTY_LIST"])):?>
             <?foreach ($arResult["PROPERTY_LIST"] as $propertyID):?>

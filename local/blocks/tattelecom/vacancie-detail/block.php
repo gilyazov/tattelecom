@@ -95,64 +95,12 @@ $elementCode = $variables['sef'][0] ?? "";
                     "SEF_MODE" => "N",
                     "STATUS" => "ANY",
                     "STATUS_NEW" => "N",
-                    "USER_MESSAGE_ADD" => "",
+                    "USER_MESSAGE_ADD" => "Ваш отклик успешно получен! Ожидайте.",
                     "USER_MESSAGE_EDIT" => "",
                     "USE_CAPTCHA" => "Y",
                     "FORM_CLASS" => "vacancy-response-form__form"
                 )
             );?>
-            <div class="vacancy-response-form__card">
-                <form class="vacancy-response-form__form" data-need-validation data-parsley-validate data-parsley-focus="none">
-                    <div class="vacancy-response-form__field">
-                        <div class="select">
-                            <div class="select__container" id="vacancy-city">
-                                <label class="select__wrapper">
-                                    <span class="gl__input-mark-required"></span>
-                                    <select class="gl__select js-custom-select" data-parsley-class-handler="#vacancy-city" name="vacancy-city" data-parsley-required="" data-parsley-trigger="change">
-                                        <option placeholder value="">Выберите город</option>
-                                        <option value="Казань">Казань</option>
-                                        <option value="Набережные Челны">Набережные Челны</option>
-                                    </select>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="vacancy-response-form__field">
-                        <label class="gl-input__wrapper js-input-text">
-                            <input type="text" class="gl-input__input" placeholder="Имя" name="vacancy-name" data-parsley-required="" data-parsley-minlength="2">
-                        </label>
-                    </div>
-                    <div class="vacancy-response-form__field">
-                        <label class="gl-input__wrapper js-input-text">
-                            <input type="text" class="gl-input__input" placeholder="Фамилия" name="vacancy-surname" data-parsley-required="" data-parsley-minlength="2">
-                        </label>
-                    </div>
-                    <div class="vacancy-response-form__field">
-                        <label class="gl-input__wrapper js-input-tel">
-                            <input type="tel" class="gl-input__input js-phone-mask" placeholder="+7 (___) ___-__-__" name="vacancy-phone" data-parsley-required="">
-                        </label>
-                    </div>
-                    <div class="vacancy-response-form__field">
-                        <label class="gl-input__wrapper js-input-text">
-                            <input type="text" class="gl-input__input" placeholder="Дата рождения" name="vacancy-birthdate" data-parsley-required="">
-                        </label>
-                    </div>
-                    <div class="vacancy-response-form__checkbox">
-                        <label class="checkbox__wrapper">
-                            <input type="checkbox" class="checkbox" name="vacancy-policy" data-parsley-required="">
-                            <span class="checkbox__content mod-main">
-												<svg width="16" height="16" aria-hidden="true" class="checkbox__content-icon">
-													<use xlink:href="#checkbox-checked"></use>
-												</svg>
-											</span>
-                            <span class="checkbox__text mod-black">Я принимаю условия политики ПАО &quot;Таттелеком&quot; и даю согласие субъекта на обработку персональных данных</span>
-                        </label>
-                    </div>
-                    <div class="vacancy-response-form__actions">
-                        <button type="submit" class="vacancy-response-form__btn gl__main-btn">Откликнуться</button>
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
 </section>

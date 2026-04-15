@@ -49,6 +49,7 @@ class Element
             63 => 35,
             66 => 36,
             67 => 32,
+            85 => 37
         ];
         if ($arFields["ID"] && in_array($arFields['IBLOCK_ID'], [45, 57, 62, 63, 66, 67, 80])) {
             global $APPLICATION;
