@@ -70,7 +70,11 @@ class Element
                 foreach ($arProps as $prop) {
                     if ($prop['PROPERTY_TYPE'] == 'F') {
                         $sendFields['FIELDS'] .= "<tr><td>$prop[NAME]</td><td><a href='" . \CFile::GetPath($prop["VALUE"]) . "'>Скачать</a></td></tr>";
-                    } else {
+                    }
+                    elseif ($prop['PROPERTY_TYPE'] == 'E') {
+                        $sendFields['FIELDS'] .= "<tr><td>$prop[NAME]</td><td>".\CIBlockElement::GetByID($prop["VALUE"])->Fetch()["NAME"]."</td></tr>";
+                    }
+                    else {
                         if ($prop['VALUE']) {
                             $sendFields['FIELDS'] .= "<tr><td>$prop[NAME]</td><td>$prop[VALUE]</td></tr>";
                         }

@@ -330,7 +330,7 @@ if (!empty($arResult["ERRORS"])):?>
                                                 <div class="select__container" id="vacancy-city">
                                                     <label class="select__wrapper">
                                                         <span class="gl__input-mark-required"></span>
-                                                        <select class="gl__select js-custom-select" name="PROPERTY[<?=$propertyID?>]<?=$type=="multiselect" ? "[]\" size=\"".$arResult["PROPERTY_LIST_FULL"][$propertyID]["ROW_COUNT"]."\" multiple=\"multiple" : ""?>">
+                                                        <select class="gl__select js-custom-select" name="PROPERTY[<?=$propertyID?>]<?=$type=="multiselect" ? "[]\" size=\"".$arResult["PROPERTY_LIST_FULL"][$propertyID]["ROW_COUNT"]."\" multiple=\"multiple" : ""?><?=($arResult["PROPERTY_LIST_FULL"][$propertyID]["LINK_IBLOCK_ID"] ? "[]" : "")?>">
                                                             <option value=""><?echo GetMessage("CT_BIEAF_PROPERTY_VALUE_NA")?></option>
                                                             <?
                                                                 if (intval($propertyID) > 0) $sKey = "ELEMENT_PROPERTIES";
