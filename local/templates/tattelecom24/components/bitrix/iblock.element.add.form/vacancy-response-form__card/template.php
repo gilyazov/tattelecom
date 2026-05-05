@@ -97,6 +97,7 @@ if (!empty($arResult["ERRORS"])):?>
                                             $value = "";
                                             $description = "";
                                         }
+
                                         echo call_user_func_array($arResult["PROPERTY_LIST_FULL"][$propertyID]["GetPublicEditHTML"],
                                             array(
                                                 $arResult["PROPERTY_LIST_FULL"][$propertyID],
@@ -110,7 +111,7 @@ if (!empty($arResult["ERRORS"])):?>
                                                     "FORM_NAME"=>"iblock_add",
                                                 ),
                                             ));
-                                    ?><br /><?
+                                    ?><?
                                     }
                                 break;
                                 case "TAGS":
@@ -219,6 +220,11 @@ if (!empty($arResult["ERRORS"])):?>
                                         elseif ($code == "EMAIL"){
                                             $additionalClass = "js-input-email";
                                             $type = "email";
+                                        }
+                                        elseif ($code == "BIRTHDAY"){
+                                            $additionalClass = "js-input-date";
+                                            $type = "text";
+                                            $mask = " js-date-mask";
                                         }
                                         else{
                                             $additionalClass = "js-input-text";
@@ -383,7 +389,8 @@ if (!empty($arResult["ERRORS"])):?>
                         <use xlink:href="#checkbox-checked"></use>
                     </svg>
                 </span>
-                <span class="checkbox__text mod-black">Я принимаю условия политики ПАО &quot;Таттелеком&quot; и даю согласие субъекта на обработку персональных данных</span>
+                <span class="checkbox__text mod-black">Я принимаю <a href="/upload/iblock/adf/8e2j4d8wtkrfeuv2sofu6hxh2ymt2cjz/Politika_PAO_Tattelekom_v_otnoshenii_obrabotki_personalnykh_dannykh.pdf" target="_blank">условия политики</a> ПАО &quot;Таттелеком&quot; и <a
+                            href="/upload/iblock/339/k09bbr314wuxb9qiv75q6tth722rhzfz/Soglasie_na_obrabotku_personalnykh_dannykh_kandidatov.pdf" target="_blank">даю согласие субъекта на обработку персональных данных</a></span>
             </label>
         </div>
 

@@ -11,5 +11,5 @@ $MESS["IBLOCK_FORM_FILE_DOWNLOAD"] = "скачать";
 $MESS["IBLOCK_FORM_FILE_DELETE"] = "удалить файл";
 $MESS["IBLOCK_FORM_CAPTCHA_TITLE"] = "Защита от автоматического заполнения";
 $MESS["IBLOCK_FORM_CAPTCHA_PROMPT"] = "Введите слово с картинки";
-$MESS["CT_BIEAF_PROPERTY_VALUE_NA"] = "(не установлено)";
+$MESS["CT_BIEAF_PROPERTY_VALUE_NA"] = "Город";
 ?>
