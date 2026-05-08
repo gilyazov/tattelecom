@@ -70,7 +70,7 @@
                 <div class="gl__page-content header__bottom-block-content">
                     <div class="header__logo-wrapper">
                         <a href="<?=SITE_DIR?>" class="header__logo-link">
-                            <img src="<?=BUILD_PATH?>img/header/logo-new.svg" alt="" class="header__logo mod-fly">
+                            <img src="<?=BUILD_PATH?>img/header/logo-9-may.png" alt="" class="header__logo mod-fly">
                         </a>
                     </div>
                     <?$APPLICATION->IncludeComponent(
