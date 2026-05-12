@@ -11,6 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$this->addExternalJs(BUILD_PATH . "js/common.js");
+$this->addExternalJs(BUILD_PATH . "js/mobile-communication-page.js");
 ?>
 
 <?if($arParams["USE_RSS"]=="Y"):?>
@@ -173,3 +175,49 @@ $this->setFrameMode(true);
         </div>
     </div>
 </section>
+
+<?$section = $arResult["VARIABLES"]["SECTION_CODE"];?>
+<?if($section == "modem"):?>
+    <section class="useful-information" id="useful-information-host">
+        <div class="gl__page-content">
+            <h2 class="gl__title">Полезная информация</h2>
+            <div class="gl-slider js-swiper" data-swiper-slides-preview="3">
+                <div class="gl-slider__container swiper-container js-swiper-container">
+                    <ul class="gl-slider__wrapper swiper-wrapper">
+                        <li class="swiper-slide gl__white-container useful-information__slide-wrapper">
+                            <a href="/articles/internet-for-modem/" class="gl__link-arrow-container useful-information__slide">
+                                <div class="useful-information__slide-image-wrapper">
+                                    <img src="/upload/medialibrary/90b/fz7gaqejjcnc1926i214oeon3c412ukw/bannery_na_sai_t_02_1_.jpg" alt="" class="useful-information__slide-image" srcset="/upload/landing/5dd/i4f7ifr80g7yal5om7ndgt5poj2r0vjo/oblozhka_mnp_07102025_2x.jpg 2x" data-fileid="20010" data-fileid2x="20011" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;#&quot;,&quot;target&quot;:&quot;_blank&quot;,&quot;enabled&quot;:false}" />
+                                </div>
+                                <div class="gl__link-arrow-block useful-information__slide-content">
+                                    <div class="useful-information__slide-content-text">Работа и отдых на удаленке</div>
+                                    <div class="useful-information__link-arrow-wrapper gl__link-arrow-wrapper">
+                                        <div class="gl__link-arrow-link">
+                                            <svg width="26" height="26" aria-hidden="true" class="gl__link-arrow-icon">
+                                                <use xlink:href="#arrow-line-right"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gl__hg-show">
+                    <div class="gl__bg-hide">
+                        <button type="button" class="gl-slider__slider-btn mod-prev js-slider-btn-prev">
+                            <svg width="26" height="26" aria-hidden="true" class="gl-slider__slider-btn-icon">
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="gl-slider__slider-btn mod-next js-slider-btn-next">
+                            <svg width="26" height="26" aria-hidden="true" class="gl-slider__slider-btn-icon">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<?endif;?>
