@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                     data['clientId'] = yaID;
 
+                    // текущий урл пользователя
+                    data['currentUrl'] = window.location.href;
+
                     BX.ajax.runComponentAction('tattelecom:form',
                         'sendLead', {
                             mode: 'class',

@@ -6,6 +6,7 @@ use Bitrix\Main\Engine\Contract\Controllerable;
 use Bitrix\Main\PhoneNumber\Format;
 use Bitrix\Main\PhoneNumber\Parser;
 use Bitrix\Main\Loader;
+use Tattelecom\Core\Crm\Potok2LeadClient;
 
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
@@ -48,6 +49,13 @@ class Form extends \CBitrixComponent implements Controllerable
                         \Bitrix\Main\Engine\ActionFilter\HttpMethod::METHOD_POST
                     ]),
 //                    new Bitrix\Main\Engine\ActionFilter\Csrf(),
+                ],
+            ],
+            'sendLeadPotok2' => [
+                'prefilters' => [
+                    new \Bitrix\Main\Engine\ActionFilter\HttpMethod([
+                        \Bitrix\Main\Engine\ActionFilter\HttpMethod::METHOD_POST
+                    ]),
                 ],
             ],
         ];
@@ -101,9 +109,60 @@ class Form extends \CBitrixComponent implements Controllerable
         }
         // end
 
+        // potok2
+        $this->sendLeadPotok2Action($post);
+        // end
+
         $response = $this->httpClient->post($url, \Bitrix\Main\Web\Json::encode($data));
 
         return \Bitrix\Main\Web\Json::decode($response);
+    }
+
+    public function sendLeadPotok2Action($post)
+    {
+        // валидация номера телефона
+        $parsedPhone = Parser::getInstance()->parse($post['phone']);
+        if (!$parsedPhone->isValid()){
+            throw new Exception('Некорректный номер телефона: ' . $post['phone']);
+        }
+
+        $phone = $this->parsePhone($post['phone']);
+        $utm = $this->getUtmQuery();
+
+        // базовый набор полей, дальше можно расширять под контракт новой CRM
+        $payload = [
+            "phone" => $phone,
+            "name" => ($post['firstname'] ?: "Нет Имени"), // firstname
+
+            "surname" => "",
+            "patronymic" => "",
+            "email" => "",
+            "gender" => "",
+            "birth_date" => "",
+
+            "city" => $_SESSION['city']['name'],
+            "refer_url" => $post['currentUrl'],
+            "source_id" => 1677,
+            "bitrix_client_id" => (string)$post['clientId'],
+            "ip" => \Bitrix\Main\Service\GeoIp\Manager::getRealIp(),
+
+            "comment" => $post['param_comment'],
+            "utm" => $utm,
+            "utm_source" => $_COOKIE["utm_source"],
+            "utm_medium" => $_COOKIE["utm_medium"],
+            "utm_campaign" => $_COOKIE["utm_campaign"],
+            "utm_content" => $_COOKIE["utm_content"],
+            "utm_term" => $_COOKIE["utm_term"],
+        ];
+        if ($post["potokType"] == "mono"){
+            $payload['invoice_tariff_id'] = $post["potokId"];
+        }
+        else{
+            $payload['invoice_policy_id'] = $post["potokId"];
+        }
+
+        $client = new Potok2LeadClient();
+        return $client->storeLead($payload);
     }
 
     protected function getUtmQuery()

@@ -5,7 +5,12 @@ $this->addExternalJS($componentPath . '/script.js');
 ?>
 <form class="js-form-modal js-potok-form" data-need-validation data-parsley-validate data-parsley-focus="none">
     <input type="hidden" name="param_referer" value="<?=$APPLICATION->GetTitle()?>">
+    <input type="hidden" name="formId" value="<?=$templateName?>">
     <input type="hidden" name="param_comment" value="IP: <?=\Bitrix\Main\Service\GeoIp\Manager::getRealIp()?>">
+
+    <input type="hidden" name="potokId" value="">
+    <input type="hidden" name="potokType" value="">
+
     <div class="send-request__form-inputs">
         <label class="gl-input__wrapper js-input-text">
             <input type="text" class="gl-input__input" placeholder="Ваше имя" name="firstname" data-parsley-required="">
@@ -27,5 +32,9 @@ $this->addExternalJS($componentPath . '/script.js');
         </label>
     </div>
     <button type="submit" class="gl__main-btn modal__btn-submit js-btn-submit">Отправить заявку</button>
-    <span class="checkbox__text mod-modal">Нажимая кнопку «Отправить заявку», вы принимаете <b>условия пользовательского соглашения</b> и <a href="/policy.php"><b>политику конфиденциальности</b></a>.<br> Защита от спама reCAPTCHA <a href="https://policies.google.com/privacy?hl=ru" target="_blank">Конфиденциальность</a> и <a href="https://policies.google.com/terms?hl=ru" target="_blank">Условия использования</a>.</span>
+    <div class="tanais-yandexcaptcha"></div>
+    <span class="checkbox__text mod-modal">
+        Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+        <br> Защита от спама SmartCaptcha <a href="https://yandex.ru/legal/smartcaptcha_notice/ru/" target="_blank">Условия использования</a>.
+    </span>
 </form>
