@@ -154,11 +154,25 @@ class Form extends \CBitrixComponent implements Controllerable
             "utm_content" => $_COOKIE["utm_content"],
             "utm_term" => $_COOKIE["utm_term"],
         ];
-        if ($post["potokType"] == "mono"){
-            $payload['invoice_tariff_id'] = $post["potokId"];
-        }
-        else{
-            $payload['invoice_policy_id'] = $post["potokId"];
+
+        if ($rateId = $post["rateId"]){
+            $arSelect = Array("ID", "IBLOCK_ID");
+            $arFilter = Array(
+                "ID" => $rateId
+            );
+            $res = \CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
+            if($ob = $res->GetNextElement())
+            {
+                $arProps = $ob->GetProperties();
+
+                $payload["service_ids"] = $arProps["POTOK_SERVICE"]["VALUE"];
+                if ($arProps["POTOK_TYPE"]["VALUE_XML_ID"] == "mono"){
+                    $payload['invoice_tariff_id'] = $arProps["POTOK_ID"]["VALUE"];
+                }
+                else{
+                    $payload['invoice_policy_id'] = $arProps["POTOK_ID"]["VALUE"];
+                }
+            }
         }
 
         $client = new Potok2LeadClient();

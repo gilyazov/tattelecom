@@ -80,8 +80,7 @@ $this->addExternalJS(BUILD_PATH . "js/rates-internet-list-page.js");
                         <button type="button"
                                 class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal<?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?> mod-white<?endif?>"
                                 data-tariff-name="<?=$arItem["NAME"]?>"
-                                data-potok-type="<?=$arItem["PROPERTIES"]["POTOK_TYPE"]["VALUE_XML_ID"]?>"
-                                data-potok-id="<?=$arItem["PROPERTIES"]["POTOK_ID"]["VALUE"]?>"
+                                data-id="<?=$arItem["ID"]?>"
                                 data-prise="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Подключить</button>
                         <div class="rates-list__slide-link-detailed-wrapper">
                             <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="gl__secondary-btn <?if($arItem["PROPERTIES"]["ORANGE"]["VALUE"]):?> mod-white<?endif?>">Подробнее о тарифе</a>

@@ -100,8 +100,7 @@ $this->setFrameMode(true);
                                             data-tariff-name="<?=$arItem["NAME"]?>"
                                             data-comment="Тариф: <?=$arItem["NAME"]?>"
                                             data-prise="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>"
-                                            data-potok-type="<?=$arItem["PROPERTIES"]["POTOK_TYPE"]["VALUE_XML_ID"]?>"
-                                            data-potok-id="<?=$arItem["PROPERTIES"]["POTOK_ID"]["VALUE"]?>"
+                                            data-id="<?=$arItem["ID"]?>"
                                             class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal">
                                         Подключить
                                     </button>

@@ -64,6 +64,17 @@ $this->addExternalJS(BUILD_PATH . "js/b-rates-mobile-list.js");
                         </div>
                         <?php endif; ?>
                     </div>
+                    <div class="rates-list__slide-down">
+                        <?if($arItem["PROPERTIES"]["FEATURES"]["VALUE"]):?>
+                            <div class="rates-list__opportunities-wrapper">
+                                <div class="rates-list__opportunities-title">Возможности</div>
+
+                                <?foreach ($arItem["PROPERTIES"]["FEATURES"]["VALUE"] as $benefit):?>
+                                    <div class="rates-list__opportunities-text"><?=$benefit?></div>
+                                <?endforeach;?>
+                            </div>
+                        <?endif;?>
+                    </div>
                     <div class="b-tariffs-item__footer">
                         <div class="b-tariffs-item__cost-block">
                             <?if($arItem["PROPERTIES"]["OLD_PRICE"]["VALUE"]):?>

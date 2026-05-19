@@ -1,6 +1,8 @@
-<?
+<?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var string $componentPath */
+/** @var string $templateName */
+/** @global CMain $APPLICATION */
 $this->addExternalJS($componentPath . '/script.js');
 ?>
 <form class="js-form-modal js-potok-form" data-need-validation data-parsley-validate data-parsley-focus="none">
@@ -8,8 +10,7 @@ $this->addExternalJS($componentPath . '/script.js');
     <input type="hidden" name="formId" value="<?=$templateName?>">
     <input type="hidden" name="param_comment" value="IP: <?=\Bitrix\Main\Service\GeoIp\Manager::getRealIp()?>">
 
-    <input type="hidden" name="potokId" value="">
-    <input type="hidden" name="potokType" value="">
+    <input type="hidden" name="rateId" value="">
 
     <div class="send-request__form-inputs">
         <label class="gl-input__wrapper js-input-text">
