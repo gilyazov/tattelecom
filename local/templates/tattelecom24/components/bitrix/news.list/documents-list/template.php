@@ -38,7 +38,7 @@ $this->setFrameMode(true);
                                 }
                             ?>
                             <li class="documents-list__item-content-unit">
-                                <a class="documents-list__item-content-unit-link" title="Скачать" href="<?=$arFile["SRC"]?>" download>
+                                <a class="documents-list__item-content-unit-link" title="Скачать" href="<?=$arFile["SRC"]?>" target="_blank">
                                     <svg class="documents-list__item-content-unit-icon" aria-hidden="true">
                                         <use xlink:href="#download"></use>
                                     </svg>

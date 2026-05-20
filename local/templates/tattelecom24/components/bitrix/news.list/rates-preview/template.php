@@ -22,7 +22,9 @@ $this->setFrameMode(true);
             <section class="rates-preview mod-main-page" style="background-image: url('<?=\Tattelecom\Core\Tools::resizeImage($arItem["PREVIEW_PICTURE"]["ID"], 2880, 705)?>')" id="rates-preview-host">
                 <div class="gl__page-content rates-preview__content-wrapper">
                     <div class="rates-preview__content <?=$arItem["PROPERTIES"]["COLOR"]["VALUE_XML_ID"]?>">
-                        <div class="rates-preview__content-title"><?=$arItem["NAME"]?></div>
+                        <?if(!$arItem["PROPERTIES"]["HIDE_TITLE"]["VALUE"]):?>
+                            <div class="rates-preview__content-title"><?=$arItem["NAME"]?></div>
+                        <?endif;?>
                         <div class="rates-preview__content-subtitle"><?=$arItem["PROPERTIES"]["SUBTITLE"]["VALUE"]?></div>
                         <div class="rates-preview__content-caption-wrapper">
                             <div class="rates-preview__content-caption"><?=$arItem["PROPERTIES"]["DESCRIPTION"]["VALUE"]?></div>

@@ -147,7 +147,10 @@ $this->setFrameMode(true);
                                 </div>
                             </div>
                             <div class="rates-list__slide-btns-wrapper">
-                                <button type="button" class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal" data-tariff-name="<?=$ITEM["NAME"]?>" data-prise="<?=$ITEM["PROPERTIES"]["PRICE"]["VALUE"]?>">Подключить</button>
+                                <button type="button" class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal"
+                                        data-tariff-name="<?=$ITEM["NAME"]?>"
+                                        data-id="<?=$ITEM["ID"]?>"
+                                        data-prise="<?=$ITEM["PROPERTIES"]["PRICE"]["VALUE"]?>">Подключить</button>
                                 <div class="rates-list__slide-link-detailed-wrapper">
                                     <button type="button" class="gl__secondary-btn js-open-about-tariff-modal">Подробнее о тарифе</button>
                                 </div>

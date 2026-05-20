@@ -72,6 +72,7 @@ $this->setFrameMode(true);
                                     <button type="button"
                                             data-tariff-name="<?=$arItem["NAME"]?>"
                                             data-prise="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>"
+                                            data-id="<?=$arItem["ID"]?>"
                                             class="rates-list__slide-btn-plug gl__main-btn js-open-send-request-modal">
                                         Подключить
                                     </button>
