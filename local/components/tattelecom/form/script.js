@@ -5,11 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (form) {
             form.addEventListener('submit', function(event) {
                 event.preventDefault();
+
+                const submitButton = form.querySelector('button[type="submit"]');
+                if (submitButton.disabled) return;
+
                 if (
                     $(form)
                         .parsley()
                         .isValid()
                 ) {
+                    submitButton.disabled = true;
                     const wait = BX.showWait(form);
 
                     // BX.ajax.prepareForm(mobileForm).data не работает ;(
@@ -52,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 window.openThanksModal('#modal-thanks');
                                 ym(48331871,'reachGoal','5555560');
                                 _tmr.push({ type: 'reachGoal', id: 3310517, goal: 'Lidvk'});
+                                submitButton.disabled = false;
                             }
                         }, function (response){
                             alert(response.errors[0].message);
