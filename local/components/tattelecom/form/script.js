@@ -35,25 +35,23 @@ document.addEventListener('DOMContentLoaded', () => {
                             data: {post: data}, // ключи объекта data соответствуют параметрам метода
                         })
                         .then(function(response) {
-                            if (response.status === 'success') {
+                            if ('errorCode' in response.data){
+                                alert("ошибка " + response.data.errorCode);
+                                console.log(response.data.details);
+                            }
+                            else{
+                                form.reset();
 
-                                if (response.data.status === false){
-                                    alert(response.data.error_text);
+                                let modalComponent;
+                                let idModal = $(form).closest('.mod-show').attr('id');
+                                if (idModal){
+                                    modalComponent = new window.classModal(document.querySelector('#' + idModal));
+                                    modalComponent.onCloseModal();
                                 }
-                                else{
-                                    form.reset();
-                                    
-                                    let modalComponent;
-                                    let idModal = $(form).closest('.mod-show').attr('id');
-                                    if (idModal){
-                                        modalComponent = new window.classModal(document.querySelector('#' + idModal));
-                                        modalComponent.onCloseModal();
-                                    }
 
-                                    window.openThanksModal('#modal-thanks');
-                                    ym(48331871,'reachGoal','5555560');
-                                    _tmr.push({ type: 'reachGoal', id: 3310517, goal: 'Lidvk'});
-                                }
+                                window.openThanksModal('#modal-thanks');
+                                ym(48331871,'reachGoal','5555560');
+                                _tmr.push({ type: 'reachGoal', id: 3310517, goal: 'Lidvk'});
                             }
                         }, function (response){
                             alert(response.errors[0].message);

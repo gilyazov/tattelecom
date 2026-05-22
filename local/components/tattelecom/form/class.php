@@ -109,13 +109,12 @@ class Form extends \CBitrixComponent implements Controllerable
         }
         // end
 
-        // potok2
-        $this->sendLeadPotok2Action($post);
-        // end
-
         $response = $this->httpClient->post($url, \Bitrix\Main\Web\Json::encode($data));
 
-        return \Bitrix\Main\Web\Json::decode($response);
+        // \Bitrix\Main\Web\Json::decode($response)
+
+        // potok2
+        return $this->sendLeadPotok2Action($post);
     }
 
     public function sendLeadPotok2Action($post)
@@ -166,13 +165,27 @@ class Form extends \CBitrixComponent implements Controllerable
                 $arProps = $ob->GetProperties();
 
                 $payload["service_ids"] = $arProps["POTOK_SERVICE"]["VALUE"];
-                if ($arProps["POTOK_TYPE"]["VALUE_XML_ID"] == "mono"){
-                    $payload['invoice_tariff_id'] = $arProps["POTOK_ID"]["VALUE"];
-                }
-                else{
-                    $payload['invoice_policy_id'] = $arProps["POTOK_ID"]["VALUE"];
+
+                if($arProps["POTOK_ID"]["VALUE"]){
+                    if ($arProps["POTOK_TYPE"]["VALUE_XML_ID"] == "mono"){
+                        $payload['invoice_tariff_id'] = $arProps["POTOK_ID"]["VALUE"];
+                    }
+                    else{
+                        $payload['invoice_policy_id'] = $arProps["POTOK_ID"]["VALUE"];
+                    }
                 }
             }
+        }
+
+        // домофон
+        if ($post['currentUrl'] == 'https://letai.ru/domofon/'){
+            $payload["service_ids"] = [1775];
+        }
+
+        // все и сразу
+        if ($post['currentUrl'] == 'https://letai.ru/stocks/vse_i_srazy/'){
+            $payload["invoice_policy_id"] = 684;
+            $payload["service_ids"] = [1772, 1810, 1773];
         }
 
         $client = new Potok2LeadClient();

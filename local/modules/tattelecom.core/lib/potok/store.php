@@ -172,7 +172,7 @@ class Store
         foreach ($arOffices as $office)
         {
             if (!$office['amount']) continue;
-
+            
             $prop[] = [
                 "SUBPROP_VALUES" => [
                     "A_OFFICE" => $office['title'],
