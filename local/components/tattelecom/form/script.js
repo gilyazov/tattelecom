@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                         }, function (response){
                             alert(response.errors[0].message);
+                            submitButton.disabled = false;
                             console.log(response);
                         });
 

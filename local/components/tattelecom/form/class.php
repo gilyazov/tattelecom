@@ -109,7 +109,7 @@ class Form extends \CBitrixComponent implements Controllerable
         }
         // end
 
-        $response = $this->httpClient->post($url, \Bitrix\Main\Web\Json::encode($data));
+//        $response = $this->httpClient->post($url, \Bitrix\Main\Web\Json::encode($data)); // поток 1
 
         // \Bitrix\Main\Web\Json::decode($response)
 
