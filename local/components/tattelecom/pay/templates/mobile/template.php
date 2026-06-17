@@ -16,8 +16,8 @@ $this->addExternalCss($componentPath . '/style.css');
             <input type="tel" class="gl-input__input js-phone-mask" placeholder="+7 (___) ___-__-__" name="phone_number" data-parsley-required="">
         </label>
         <label class="gl-input__wrapper js-input-number">
-            <span class="gl-input__title">От 10 до 30 000 Р</span>
-            <input type="number" class="gl-input__input" placeholder="Сумма" name="amount_of_pay" min="10" max="30000" data-parsley-required="">
+            <span class="gl-input__title">От 10 до 15 000 Р</span>
+            <input type="number" class="gl-input__input" placeholder="Сумма" name="amount_of_pay" min="10" max="15000" data-parsley-required="">
         </label>
         <label class="gl-input__wrapper js-input-email">
             <span class="gl-input__title">Электронная почта</span>
